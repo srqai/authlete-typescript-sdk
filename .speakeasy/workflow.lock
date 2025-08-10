@@ -2,26 +2,27 @@ speakeasyVersion: 1.600.2
 sources:
     Authlete API Explorer:
         sourceNamespace: authlete-api-explorer
-        sourceRevisionDigest: sha256:1e497a70db44207d3ce7f61b2a441fbed5e95c744060dcbb1034e6303d912a48
-        sourceBlobDigest: sha256:cce2ca4efe11683e3420423cda50825b600e8b0f76596d759fa4c2ea92102d6b
+        sourceRevisionDigest: sha256:00a4b496edbe3b58c8df564fcbe1555c6b478007060a5c3bb4871a496c393ea8
+        sourceBlobDigest: sha256:b5988dd009b439691420c34597ab7bc8d275655354e9a7550b13e92ce494f506
         tags:
             - latest
+            - speakeasy-sdk-regen-1754838373
             - 3.0.0
 targets:
     authlete:
         source: Authlete API Explorer
         sourceNamespace: authlete-api-explorer
-        sourceRevisionDigest: sha256:1e497a70db44207d3ce7f61b2a441fbed5e95c744060dcbb1034e6303d912a48
-        sourceBlobDigest: sha256:cce2ca4efe11683e3420423cda50825b600e8b0f76596d759fa4c2ea92102d6b
+        sourceRevisionDigest: sha256:00a4b496edbe3b58c8df564fcbe1555c6b478007060a5c3bb4871a496c393ea8
+        sourceBlobDigest: sha256:b5988dd009b439691420c34597ab7bc8d275655354e9a7550b13e92ce494f506
         codeSamplesNamespace: authlete-api-explorer-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:e96ace9bc2dd3a8fd59ab6dec22d6915bafdf0d69141ab483ba63d2c0f4c11c1
+        codeSamplesRevisionDigest: sha256:92aa283b148c95f62a7904f6e9e3b441f73019a7dd703302240a01358a82dd77
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         Authlete API Explorer:
             inputs:
-                - location: ../new.yaml
+                - location: .speakeasy/spec/new.yaml
             transformations:
                 - removeUnused: true
             output: .speakeasy/out.openapi.yaml
@@ -31,6 +32,9 @@ workflow:
         authlete:
             target: typescript
             source: Authlete API Explorer
+            publish:
+                npm:
+                    token: $npm_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/v0/1/authlete-api-explorer-typescript-code-samples
