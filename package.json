@@ -1,6 +1,6 @@
 {
   "name": "authlete-typescript-sdk",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Speakeasy",
   "type": "module",
   "tshy": {
@@ -19,6 +19,10 @@
     }
   },
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srqai/authlete-typescript-sdk.git"
+  },
   "scripts": {
     "lint": "eslint --cache --max-warnings=0 src",
     "build": "tshy",
