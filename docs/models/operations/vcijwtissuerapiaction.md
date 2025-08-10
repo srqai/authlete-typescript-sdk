@@ -8,7 +8,7 @@ a response from Authlete's `/vci/jwtissuer` API.
 ## Example Usage
 
 ```typescript
-import { VciJwtissuerApiAction } from "authlete-typescript-sdk/models/operations";
+import { VciJwtissuerApiAction } from "authlete-2/models/operations";
 
 let value: VciJwtissuerApiAction = "NOT_FOUND";
 ```

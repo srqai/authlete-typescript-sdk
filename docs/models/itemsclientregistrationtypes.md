@@ -8,7 +8,7 @@ Values for the `client_registration_types` RP metadata and the
 ## Example Usage
 
 ```typescript
-import { ItemsClientRegistrationTypes } from "authlete-typescript-sdk/models";
+import { ItemsClientRegistrationTypes } from "authlete-2/models";
 
 let value: ItemsClientRegistrationTypes = "AUTOMATIC";
 ```

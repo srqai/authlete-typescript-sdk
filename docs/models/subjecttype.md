@@ -10,7 +10,7 @@ This property corresponds to `subject_type` in
 ## Example Usage
 
 ```typescript
-import { SubjectType } from "authlete-typescript-sdk/models";
+import { SubjectType } from "authlete-2/models";
 
 let value: SubjectType = "PUBLIC";
 ```

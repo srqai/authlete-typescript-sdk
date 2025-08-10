@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { APILBraceserviceIdRBraceAuthIntrospectionStandard } from "authlete-typescript-sdk/models";
+import { APILBraceserviceIdRBraceAuthIntrospectionStandard } from "authlete-2/models";
 
 let value: APILBraceserviceIdRBraceAuthIntrospectionStandard = {};
 ```

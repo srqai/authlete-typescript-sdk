@@ -8,7 +8,7 @@ Supported attachment types. This property corresponds to the `attachments_suppor
 ## Example Usage
 
 ```typescript
-import { SupportedAttachment } from "authlete-typescript-sdk/models";
+import { SupportedAttachment } from "authlete-2/models";
 
 let value: SupportedAttachment = "EMBEDDED";
 ```

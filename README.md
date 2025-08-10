@@ -138,25 +138,25 @@ The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https
 ### NPM
 
 ```bash
-npm add authlete-typescript-sdk
+npm add authlete-2
 ```
 
 ### PNPM
 
 ```bash
-pnpm add authlete-typescript-sdk
+pnpm add authlete-2
 ```
 
 ### Bun
 
 ```bash
-bun add authlete-typescript-sdk
+bun add authlete-2
 ```
 
 ### Yarn
 
 ```bash
-yarn add authlete-typescript-sdk zod
+yarn add authlete-2 zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
@@ -178,7 +178,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {
@@ -213,7 +213,7 @@ This SDK supports the following security schemes globally:
 
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {
@@ -557,7 +557,7 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {
@@ -590,7 +590,7 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   retryConfig: {
@@ -637,8 +637,8 @@ run();
 
 ### Example
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
-import * as errors from "authlete-typescript-sdk/models/errors";
+import { Authlete } from "authlete-2";
+import * as errors from "authlete-2/models/errors";
 
 const authlete = new Authlete({
   security: {
@@ -648,7 +648,9 @@ const authlete = new Authlete({
 
 async function run() {
   try {
-    const result = await authlete.utilityEndpoints.infoApi();
+    const result = await authlete.serviceManagement.serviceGetApi({
+      serviceId: "<id>",
+    });
 
     console.log(result);
   } catch (error) {
@@ -660,7 +662,7 @@ async function run() {
       console.log(error.headers);
 
       // Depending on the method different errors may be thrown
-      if (error instanceof errors.BadRequestError) {
+      if (error instanceof errors.APIInfo400Error) {
         console.log(error.data$.resultCode); // string
         console.log(error.data$.resultMessage); // string
       }
@@ -673,10 +675,12 @@ run();
 ```
 
 ### Error Classes
-**Primary error:**
+**Primary errors:**
 * [`AuthleteError`](./src/models/errors/authleteerror.ts): The base class for HTTP error responses.
+  * [`APIInfo4002Error`](./src/models/errors/apiinfo4002error.ts): . *
+  * [`APIInfo400Error`](./src/models/errors/apiinfo400error.ts): . Status code `400`. *
 
-<details><summary>Less common errors (8)</summary>
+<details><summary>Less common errors (7)</summary>
 
 <br />
 
@@ -690,7 +694,6 @@ run();
 
 **Inherit from [`AuthleteError`](./src/models/errors/authleteerror.ts)**:
 * [`BadRequestError`](./src/models/errors/badrequesterror.ts): . Status code `400`. Applicable to 1 of 115 methods.*
-* [`APIInfo4002Error`](./src/models/errors/apiinfo4002error.ts): . Applicable to 1 of 115 methods.*
 * [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>
@@ -715,7 +718,7 @@ You can override the default server globally by passing a server index to the `s
 #### Example
 
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   serverIdx: 3,
@@ -740,7 +743,7 @@ run();
 
 The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   serverURL: "https://br.authlete.com",
@@ -780,8 +783,8 @@ custom header and a timeout to requests and how to use the `"requestError"` hook
 to log errors:
 
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
-import { HTTPClient } from "authlete-typescript-sdk/lib/http";
+import { Authlete } from "authlete-2";
+import { HTTPClient } from "authlete-2/lib/http";
 
 const httpClient = new HTTPClient({
   // fetcher takes a function that has the same signature as native `fetch`.
@@ -822,7 +825,7 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-2";
 
 const sdk = new Authlete({ debugLogger: console });
 ```

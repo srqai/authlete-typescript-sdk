@@ -19,7 +19,7 @@ This API verifies a JOSE object.
 
 <!-- UsageSnippet language="typescript" operationID="jose_verify_api" method="post" path="/api/{serviceId}/jose/verify" -->
 ```typescript
-import { Authlete } from "authlete-typescript-latest";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {
@@ -49,8 +49,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-latest/core.js";
-import { joseObjectJoseVerifyApi } from "authlete-typescript-latest/funcs/joseObjectJoseVerifyApi.js";
+import { AuthleteCore } from "authlete-2/core.js";
+import { joseObjectJoseVerifyApi } from "authlete-2/funcs/joseObjectJoseVerifyApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -96,12 +96,12 @@ run();
 
 ### Errors
 
-| Error Type                                                        | Status Code                                                       | Content Type                                                      |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
-| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.APIInfo400Error      | 400                         | application/json            |
+| errors.APIInfo4002Error     | 401, 403                    | application/json            |
+| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## joseVerifyApiForm
 
@@ -112,7 +112,7 @@ This API verifies a JOSE object.
 
 <!-- UsageSnippet language="typescript" operationID="jose_verify_api_form" method="post" path="/api/{serviceId}/jose/verify" -->
 ```typescript
-import { Authlete } from "authlete-typescript-latest";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {
@@ -136,8 +136,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-latest/core.js";
-import { joseObjectJoseVerifyApiForm } from "authlete-typescript-latest/funcs/joseObjectJoseVerifyApiForm.js";
+import { AuthleteCore } from "authlete-2/core.js";
+import { joseObjectJoseVerifyApiForm } from "authlete-2/funcs/joseObjectJoseVerifyApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -177,9 +177,9 @@ run();
 
 ### Errors
 
-| Error Type                                                        | Status Code                                                       | Content Type                                                      |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
-| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.APIInfo400Error      | 400                         | application/json            |
+| errors.APIInfo4002Error     | 401, 403                    | application/json            |
+| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

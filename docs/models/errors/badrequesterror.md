@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BadRequestError } from "authlete-typescript-sdk/models/errors";
+import { BadRequestError } from "authlete-2/models/errors";
 
 // No examples available for this model
 ```

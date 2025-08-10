@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GrantMApiRequestBody } from "authlete-typescript-sdk/models/operations";
+import { GrantMApiRequestBody } from "authlete-2/models/operations";
 
 let value: GrantMApiRequestBody = {};
 ```

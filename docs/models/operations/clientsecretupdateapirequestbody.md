@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ClientSecretUpdateApiRequestBody } from "authlete-typescript-sdk/models/operations";
+import { ClientSecretUpdateApiRequestBody } from "authlete-2/models/operations";
 
 let value: ClientSecretUpdateApiRequestBody = {
   clientSecret: "<value>",

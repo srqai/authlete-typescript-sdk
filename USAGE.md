@@ -1,6 +1,6 @@
 <!-- Start SDK Example Usage [usage] -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {

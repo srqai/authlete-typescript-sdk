@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeviceCompleteApiRequestBody } from "authlete-typescript-sdk/models/operations";
+import { DeviceCompleteApiRequestBody } from "authlete-2/models/operations";
 
 let value: DeviceCompleteApiRequestBody = {
   userCode: "<value>",

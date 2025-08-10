@@ -9,7 +9,7 @@ The `grant_management_action` request parameter is defined in
 ## Example Usage
 
 ```typescript
-import { GmAction } from "authlete-typescript-sdk/models/operations";
+import { GmAction } from "authlete-2/models/operations";
 
 let value: GmAction = "CREATE";
 ```

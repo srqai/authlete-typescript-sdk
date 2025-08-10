@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ItemsFapiModes } from "authlete-typescript-sdk/models";
+import { ItemsFapiModes } from "authlete-2/models";
 
 let value: ItemsFapiModes = "FAPI2_SECURITY";
 ```

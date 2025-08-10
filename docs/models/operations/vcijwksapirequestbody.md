@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { VciJwksApiRequestBody } from "authlete-typescript-sdk/models/operations";
+import { VciJwksApiRequestBody } from "authlete-2/models/operations";
 
 let value: VciJwksApiRequestBody = {
   pretty: false,

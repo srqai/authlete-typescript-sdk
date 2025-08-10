@@ -5,7 +5,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { AuthTokenUpdateApiAction } from "authlete-typescript-sdk/models/operations";
+import { AuthTokenUpdateApiAction } from "authlete-2/models/operations";
 
 let value: AuthTokenUpdateApiAction = "BAD_REQUEST";
 ```

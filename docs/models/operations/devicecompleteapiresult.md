@@ -7,7 +7,7 @@ described in the description.
 ## Example Usage
 
 ```typescript
-import { DeviceCompleteApiResult } from "authlete-typescript-sdk/models/operations";
+import { DeviceCompleteApiResult } from "authlete-2/models/operations";
 
 let value: DeviceCompleteApiResult = "ACCESS_DENIED";
 ```

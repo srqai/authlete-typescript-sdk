@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ClientExtensionRequestablesScopesUpdateApiRequestBody } from "authlete-typescript-sdk/models/operations";
+import { ClientExtensionRequestablesScopesUpdateApiRequestBody } from "authlete-2/models/operations";
 
 let value: ClientExtensionRequestablesScopesUpdateApiRequestBody = {};
 ```

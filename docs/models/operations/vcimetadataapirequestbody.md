@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { VciMetadataApiRequestBody } from "authlete-typescript-sdk/models/operations";
+import { VciMetadataApiRequestBody } from "authlete-2/models/operations";
 
 let value: VciMetadataApiRequestBody = {
   pretty: true,

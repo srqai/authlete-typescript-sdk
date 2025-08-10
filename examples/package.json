@@ -1,5 +1,5 @@
 {
-  "name": "authlete-typescript-sdk-examples",
+  "name": "authlete-2-examples",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,6 @@
     "tsx": "^4.19.2"
   },
   "dependencies": {
-    "authlete-typescript-sdk": "file:.."
+    "authlete-2": "file:.."
   }
 }

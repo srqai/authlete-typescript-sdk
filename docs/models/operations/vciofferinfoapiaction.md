@@ -5,7 +5,7 @@ The result of the `/vci/offer/info` API call.
 ## Example Usage
 
 ```typescript
-import { VciOfferInfoApiAction } from "authlete-typescript-sdk/models/operations";
+import { VciOfferInfoApiAction } from "authlete-2/models/operations";
 
 let value: VciOfferInfoApiAction = "NOT_FOUND";
 ```

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { VciDeferredIssueApiRequestBody } from "authlete-typescript-sdk/models/operations";
+import { VciDeferredIssueApiRequestBody } from "authlete-2/models/operations";
 
 let value: VciDeferredIssueApiRequestBody = {};
 ```

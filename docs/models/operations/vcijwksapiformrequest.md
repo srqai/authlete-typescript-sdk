@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { VciJwksApiFormRequest } from "authlete-typescript-sdk/models/operations";
+import { VciJwksApiFormRequest } from "authlete-2/models/operations";
 
 let value: VciJwksApiFormRequest = {
   serviceId: "<id>",

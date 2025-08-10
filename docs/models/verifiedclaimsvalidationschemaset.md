@@ -6,7 +6,7 @@ OIDC4IDA / verifiedClaimsValidationSchemaSet
 ## Example Usage
 
 ```typescript
-import { VerifiedClaimsValidationSchemaSet } from "authlete-typescript-sdk/models";
+import { VerifiedClaimsValidationSchemaSet } from "authlete-2/models";
 
 let value: VerifiedClaimsValidationSchemaSet = "standard+id_document";
 ```

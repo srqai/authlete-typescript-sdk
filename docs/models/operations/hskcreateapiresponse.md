@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { HskCreateApiResponse } from "authlete-typescript-sdk/models/operations";
+import { HskCreateApiResponse } from "authlete-2/models/operations";
 
 let value: HskCreateApiResponse = {};
 ```

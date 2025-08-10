@@ -6,7 +6,7 @@ The grant type of the access token when the access token was created.
 ## Example Usage
 
 ```typescript
-import { AuthTokenApiActorTokenType } from "authlete-typescript-sdk/models/operations";
+import { AuthTokenApiActorTokenType } from "authlete-2/models/operations";
 
 let value: AuthTokenApiActorTokenType = "DEVICE_CODE";
 ```

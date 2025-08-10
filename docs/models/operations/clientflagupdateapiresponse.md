@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ClientFlagUpdateApiResponse } from "authlete-typescript-sdk/models/operations";
+import { ClientFlagUpdateApiResponse } from "authlete-2/models/operations";
 
 let value: ClientFlagUpdateApiResponse = {
   resultCode: "<value>",

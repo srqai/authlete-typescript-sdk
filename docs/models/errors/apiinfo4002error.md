@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { APIInfo4002Error } from "authlete-typescript-sdk/models/errors";
+import { APIInfo4002Error } from "authlete-2/models/errors";
 
 // No examples available for this model
 ```

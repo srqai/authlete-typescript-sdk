@@ -5,7 +5,7 @@ The next action that the credential endpoint should take.
 ## Example Usage
 
 ```typescript
-import { VciSingleParseApiAction } from "authlete-typescript-sdk/models/operations";
+import { VciSingleParseApiAction } from "authlete-2/models/operations";
 
 let value: VciSingleParseApiAction = "OK";
 ```
