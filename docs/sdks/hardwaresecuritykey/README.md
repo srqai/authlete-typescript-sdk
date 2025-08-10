@@ -21,7 +21,7 @@ Create Security Key
 
 <!-- UsageSnippet language="typescript" operationID="hsk_create_api" method="post" path="/api/{serviceId}/hsk/create" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -46,8 +46,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { hardwareSecurityKeyHskCreateApi } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskCreateApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { hardwareSecurityKeyHskCreateApi } from "authlete-typescript-latest/funcs/hardwareSecurityKeyHskCreateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -88,9 +88,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## hskCreateApiForm
 
@@ -100,7 +103,7 @@ Create Security Key
 
 <!-- UsageSnippet language="typescript" operationID="hsk_create_api_form" method="post" path="/api/{serviceId}/hsk/create" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -111,7 +114,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.hardwareSecurityKey.hskCreateApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceHskCreate: {},
+    1api1ServiceId1hsk1createPostRequestBodyContentApplication1jsonSchema: {},
   });
 
   console.log(result);
@@ -125,8 +128,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { hardwareSecurityKeyHskCreateApiForm } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskCreateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { hardwareSecurityKeyHskCreateApiForm } from "authlete-typescript-latest/funcs/hardwareSecurityKeyHskCreateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -139,7 +142,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await hardwareSecurityKeyHskCreateApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceHskCreate: {},
+    1api1ServiceId1hsk1createPostRequestBodyContentApplication1jsonSchema: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -167,9 +170,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## hskDeleteApi
 
@@ -179,7 +185,7 @@ Delete Security Key
 
 <!-- UsageSnippet language="typescript" operationID="hsk_delete_api" method="delete" path="/api/{serviceId}/hsk/delete/{handle}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -204,8 +210,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { hardwareSecurityKeyHskDeleteApi } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { hardwareSecurityKeyHskDeleteApi } from "authlete-typescript-latest/funcs/hardwareSecurityKeyHskDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -246,9 +252,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## hskGetApi
 
@@ -258,7 +267,7 @@ Get Security Key
 
 <!-- UsageSnippet language="typescript" operationID="hsk_get_api" method="get" path="/api/{serviceId}/hsk/get/{handle}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -283,8 +292,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { hardwareSecurityKeyHskGetApi } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskGetApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { hardwareSecurityKeyHskGetApi } from "authlete-typescript-latest/funcs/hardwareSecurityKeyHskGetApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -325,9 +334,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## hskGetListApi
 
@@ -337,7 +349,7 @@ List Security Keys
 
 <!-- UsageSnippet language="typescript" operationID="hsk_get_list_api" method="get" path="/api/{serviceId}/hsk/get/list" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -361,8 +373,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { hardwareSecurityKeyHskGetListApi } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskGetListApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { hardwareSecurityKeyHskGetListApi } from "authlete-typescript-latest/funcs/hardwareSecurityKeyHskGetListApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -402,6 +414,9 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |

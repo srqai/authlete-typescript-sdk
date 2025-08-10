@@ -13,9 +13,8 @@ API endpoints for implementing OAuth 2.0 Authorization Endpoint.
 * [authAuthorizationFailApiForm](#authauthorizationfailapiform) - Fail Authorization Request
 * [authAuthorizationIssueApi](#authauthorizationissueapi) - Issue Authorization Response
 * [authAuthorizationIssueApiForm](#authauthorizationissueapiform) - Issue Authorization Response
-* [getApiServiceIdAuthAuthorizationTicketInfo](#getapiserviceidauthauthorizationticketinfo) - Get Ticket Information
-* [postApiServiceIdAuthAuthorizationTicketUpdate](#postapiserviceidauthauthorizationticketupdate) - Update Ticket Information
-* [postApiServiceIdAuthAuthorizationTicketUpdateForm](#postapiserviceidauthauthorizationticketupdateform) - Update Ticket Information
+* [pathsPost](#pathspost) - Update Ticket Information
+* [pathsPostForm](#pathspostform) - Update Ticket Information
 
 ## authAuthorizationApi
 
@@ -558,7 +557,7 @@ above in the description for the case of `action=NO_INTERACTION`.
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_api" method="post" path="/api/{serviceId}/auth/authorization" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -585,8 +584,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { authorizationEndpointAuthAuthorizationApi } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { authorizationEndpointAuthAuthorizationApi } from "authlete-typescript-latest/funcs/authorizationEndpointAuthAuthorizationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -629,9 +628,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authAuthorizationApiForm
 
@@ -1174,7 +1176,7 @@ above in the description for the case of `action=NO_INTERACTION`.
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_api_form" method="post" path="/api/{serviceId}/auth/authorization" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1185,7 +1187,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.authorizationEndpoint.authAuthorizationApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthAuthorization: {},
+    1api1ServiceId1auth1authorizationPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
 
   console.log(result);
@@ -1199,8 +1203,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { authorizationEndpointAuthAuthorizationApiForm } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { authorizationEndpointAuthAuthorizationApiForm } from "authlete-typescript-latest/funcs/authorizationEndpointAuthAuthorizationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1213,7 +1217,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await authorizationEndpointAuthAuthorizationApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthAuthorization: {},
+    1api1ServiceId1auth1authorizationPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1241,9 +1247,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authAuthorizationFailApi
 
@@ -1363,7 +1372,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_fail_api" method="post" path="/api/{serviceId}/auth/authorization/fail" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1391,8 +1400,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { authorizationEndpointAuthAuthorizationFailApi } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationFailApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { authorizationEndpointAuthAuthorizationFailApi } from "authlete-typescript-latest/funcs/authorizationEndpointAuthAuthorizationFailApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1436,9 +1445,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authAuthorizationFailApiForm
 
@@ -1558,7 +1570,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_fail_api_form" method="post" path="/api/{serviceId}/auth/authorization/fail" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1569,7 +1581,10 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.authorizationEndpoint.authAuthorizationFailApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthAuthorizationFail: {},
+    1api1ServiceId1auth1authorization1failPostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      reason: "NOT_AUTHENTICATED",
+    },
   });
 
   console.log(result);
@@ -1583,8 +1598,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { authorizationEndpointAuthAuthorizationFailApiForm } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationFailApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { authorizationEndpointAuthAuthorizationFailApiForm } from "authlete-typescript-latest/funcs/authorizationEndpointAuthAuthorizationFailApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1597,7 +1612,10 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await authorizationEndpointAuthAuthorizationFailApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthAuthorizationFail: {},
+    1api1ServiceId1auth1authorization1failPostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      reason: "NOT_AUTHENTICATED",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1625,9 +1643,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authAuthorizationIssueApi
 
@@ -1750,7 +1771,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_issue_api" method="post" path="/api/{serviceId}/auth/authorization/issue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1778,8 +1799,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { authorizationEndpointAuthAuthorizationIssueApi } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { authorizationEndpointAuthAuthorizationIssueApi } from "authlete-typescript-latest/funcs/authorizationEndpointAuthAuthorizationIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1823,9 +1844,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authAuthorizationIssueApiForm
 
@@ -1948,7 +1972,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_issue_api_form" method="post" path="/api/{serviceId}/auth/authorization/issue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1959,7 +1983,10 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.authorizationEndpoint.authAuthorizationIssueApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthAuthorizationIssue: {},
+    1api1ServiceId1auth1authorization1issuePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      subject: "<value>",
+    },
   });
 
   console.log(result);
@@ -1973,8 +2000,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { authorizationEndpointAuthAuthorizationIssueApiForm } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationIssueApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { authorizationEndpointAuthAuthorizationIssueApiForm } from "authlete-typescript-latest/funcs/authorizationEndpointAuthAuthorizationIssueApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1987,7 +2014,10 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await authorizationEndpointAuthAuthorizationIssueApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthAuthorizationIssue: {},
+    1api1ServiceId1auth1authorization1issuePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      subject: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -2015,98 +2045,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
-## getApiServiceIdAuthAuthorizationTicketInfo
-
-Get Ticket Information
-
-### Example Usage
-
-<!-- UsageSnippet language="typescript" operationID="get_/api/{serviceId}/auth/authorization/ticket/info" method="get" path="/api/{serviceId}/auth/authorization/ticket/info" -->
-```typescript
-import { Authlete } from "authlete-typescript-sdk";
-
-const authlete = new Authlete({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const result = await authlete.authorizationEndpoint.getApiServiceIdAuthAuthorizationTicketInfo({
-    serviceId: "<id>",
-    ticket: "<value>",
-  });
-
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo } from "authlete-typescript-sdk/funcs/authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo.js";
-
-// Use `AuthleteCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const authlete = new AuthleteCore({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const res = await authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo(authlete, {
-    serviceId: "<id>",
-    ticket: "<value>",
-  });
-  if (res.ok) {
-    const { value: result } = res;
-    console.log(result);
-  } else {
-    console.log("authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo failed:", res.error);
-  }
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.GetApiServiceIdAuthAuthorizationTicketInfoRequest](../../models/operations/getapiserviceidauthauthorizationticketinforequest.md)                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[operations.GetApiServiceIdAuthAuthorizationTicketInfoResponse](../../models/operations/getapiserviceidauthauthorizationticketinforesponse.md)\>**
-
-### Errors
-
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
-
-## postApiServiceIdAuthAuthorizationTicketUpdate
+## pathsPost
 
 Update Ticket Information
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="post_/api/{serviceId}/auth/authorization/ticket/update" method="post" path="/api/{serviceId}/auth/authorization/ticket/update" -->
+<!-- UsageSnippet language="typescript" operationID="paths_post" method="post" path="/api/{serviceId}/auth/authorization/ticket/update" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -2115,7 +2069,7 @@ const authlete = new Authlete({
 });
 
 async function run() {
-  const result = await authlete.authorizationEndpoint.postApiServiceIdAuthAuthorizationTicketUpdate({
+  const result = await authlete.authorizationEndpoint.pathsPost({
     serviceId: "<id>",
     requestBody: {
       ticket: "<value>",
@@ -2134,8 +2088,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate } from "authlete-typescript-sdk/funcs/authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { authorizationEndpointPathsPost } from "authlete-typescript-latest/funcs/authorizationEndpointPathsPost.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2146,7 +2100,7 @@ const authlete = new AuthleteCore({
 });
 
 async function run() {
-  const res = await authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate(authlete, {
+  const res = await authorizationEndpointPathsPost(authlete, {
     serviceId: "<id>",
     requestBody: {
       ticket: "<value>",
@@ -2157,7 +2111,7 @@ async function run() {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate failed:", res.error);
+    console.log("authorizationEndpointPathsPost failed:", res.error);
   }
 }
 
@@ -2168,30 +2122,33 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.PostApiServiceIdAuthAuthorizationTicketUpdateRequest](../../models/operations/postapiserviceidauthauthorizationticketupdaterequest.md)                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.PathsPostRequest](../../models/operations/pathspostrequest.md)                                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[operations.PostApiServiceIdAuthAuthorizationTicketUpdateResponse](../../models/operations/postapiserviceidauthauthorizationticketupdateresponse.md)\>**
+**Promise\<[operations.PathsPostResponse](../../models/operations/pathspostresponse.md)\>**
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
-## postApiServiceIdAuthAuthorizationTicketUpdateForm
+## pathsPostForm
 
 Update Ticket Information
 
 ### Example Usage
 
-<!-- UsageSnippet language="typescript" operationID="post_/api/{serviceId}/auth/authorization/ticket/update_form" method="post" path="/api/{serviceId}/auth/authorization/ticket/update" -->
+<!-- UsageSnippet language="typescript" operationID="paths_post_form" method="post" path="/api/{serviceId}/auth/authorization/ticket/update" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -2200,9 +2157,12 @@ const authlete = new Authlete({
 });
 
 async function run() {
-  const result = await authlete.authorizationEndpoint.postApiServiceIdAuthAuthorizationTicketUpdateForm({
+  const result = await authlete.authorizationEndpoint.pathsPostForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthAuthorizationTicketUpdate: {},
+    1api1ServiceId1auth1authorization1ticket1updatePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      info: "<value>",
+    },
   });
 
   console.log(result);
@@ -2216,8 +2176,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm } from "authlete-typescript-sdk/funcs/authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { authorizationEndpointPathsPostForm } from "authlete-typescript-latest/funcs/authorizationEndpointPathsPostForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2228,15 +2188,18 @@ const authlete = new AuthleteCore({
 });
 
 async function run() {
-  const res = await authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm(authlete, {
+  const res = await authorizationEndpointPathsPostForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthAuthorizationTicketUpdate: {},
+    1api1ServiceId1auth1authorization1ticket1updatePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      info: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
   } else {
-    console.log("authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm failed:", res.error);
+    console.log("authorizationEndpointPathsPostForm failed:", res.error);
   }
 }
 
@@ -2247,17 +2210,20 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.PostApiServiceIdAuthAuthorizationTicketUpdateFormRequest](../../models/operations/postapiserviceidauthauthorizationticketupdateformrequest.md)                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.PathsPostFormRequest](../../models/operations/pathspostformrequest.md)                                                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
 
 ### Response
 
-**Promise\<[operations.PostApiServiceIdAuthAuthorizationTicketUpdateFormResponse](../../models/operations/postapiserviceidauthauthorizationticketupdateformresponse.md)\>**
+**Promise\<[operations.PathsPostFormResponse](../../models/operations/pathspostformresponse.md)\>**
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |

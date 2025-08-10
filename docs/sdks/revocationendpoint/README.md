@@ -150,7 +150,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_revocation_api" method="post" path="/api/{serviceId}/auth/revocation" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -179,8 +179,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { revocationEndpointAuthRevocationApi } from "authlete-typescript-sdk/funcs/revocationEndpointAuthRevocationApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { revocationEndpointAuthRevocationApi } from "authlete-typescript-latest/funcs/revocationEndpointAuthRevocationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -225,9 +225,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authRevocationApiForm
 
@@ -369,7 +372,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_revocation_api_form" method="post" path="/api/{serviceId}/auth/revocation" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -380,7 +383,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.revocationEndpoint.authRevocationApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthRevocation: {},
+    1api1ServiceId1auth1revocationPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
 
   console.log(result);
@@ -394,8 +399,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { revocationEndpointAuthRevocationApiForm } from "authlete-typescript-sdk/funcs/revocationEndpointAuthRevocationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { revocationEndpointAuthRevocationApiForm } from "authlete-typescript-latest/funcs/revocationEndpointAuthRevocationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -408,7 +413,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await revocationEndpointAuthRevocationApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthRevocation: {},
+    1api1ServiceId1auth1revocationPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -436,6 +443,9 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |

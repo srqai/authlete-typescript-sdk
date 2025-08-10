@@ -466,7 +466,7 @@ Cache-Control: no-cache, no-store
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_api" method="post" path="/api/{serviceId}/auth/token" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -495,8 +495,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { tokenEndpointAuthTokenApi } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { tokenEndpointAuthTokenApi } from "authlete-typescript-latest/funcs/tokenEndpointAuthTokenApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -541,9 +541,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authTokenApiForm
 
@@ -996,7 +999,7 @@ Cache-Control: no-cache, no-store
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_api_form" method="post" path="/api/{serviceId}/auth/token" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1007,7 +1010,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.tokenEndpoint.authTokenApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthToken: {},
+    1api1ServiceId1auth1tokenPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
 
   console.log(result);
@@ -1021,8 +1026,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { tokenEndpointAuthTokenApiForm } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { tokenEndpointAuthTokenApiForm } from "authlete-typescript-latest/funcs/tokenEndpointAuthTokenApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1035,7 +1040,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await tokenEndpointAuthTokenApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthToken: {},
+    1api1ServiceId1auth1tokenPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1063,9 +1070,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authTokenFailApi
 
@@ -1144,7 +1154,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_fail_api" method="post" path="/api/{serviceId}/auth/token/fail" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1172,8 +1182,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { tokenEndpointAuthTokenFailApi } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenFailApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { tokenEndpointAuthTokenFailApi } from "authlete-typescript-latest/funcs/tokenEndpointAuthTokenFailApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1217,9 +1227,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authTokenFailApiForm
 
@@ -1298,7 +1311,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_fail_api_form" method="post" path="/api/{serviceId}/auth/token/fail" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1309,7 +1322,10 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.tokenEndpoint.authTokenFailApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthTokenFail: {},
+    1api1ServiceId1auth1token1failPostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      reason: "UNKNOWN",
+    },
   });
 
   console.log(result);
@@ -1323,8 +1339,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { tokenEndpointAuthTokenFailApiForm } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenFailApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { tokenEndpointAuthTokenFailApiForm } from "authlete-typescript-latest/funcs/tokenEndpointAuthTokenFailApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1337,7 +1353,10 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await tokenEndpointAuthTokenFailApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthTokenFail: {},
+    1api1ServiceId1auth1token1failPostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      reason: "UNKNOWN",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1365,9 +1384,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authTokenIssueApi
 
@@ -1446,7 +1468,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_issue_api" method="post" path="/api/{serviceId}/auth/token/issue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1474,8 +1496,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { tokenEndpointAuthTokenIssueApi } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { tokenEndpointAuthTokenIssueApi } from "authlete-typescript-latest/funcs/tokenEndpointAuthTokenIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1519,9 +1541,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## authTokenIssueApiForm
 
@@ -1600,7 +1625,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_issue_api_form" method="post" path="/api/{serviceId}/auth/token/issue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1611,7 +1636,10 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.tokenEndpoint.authTokenIssueApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthTokenIssue: {},
+    1api1ServiceId1auth1token1issuePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      subject: "<value>",
+    },
   });
 
   console.log(result);
@@ -1625,8 +1653,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { tokenEndpointAuthTokenIssueApiForm } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenIssueApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { tokenEndpointAuthTokenIssueApiForm } from "authlete-typescript-latest/funcs/tokenEndpointAuthTokenIssueApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1639,7 +1667,10 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await tokenEndpointAuthTokenIssueApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthTokenIssue: {},
+    1api1ServiceId1auth1token1issuePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      subject: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1667,9 +1698,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## idtokenReissueApi
 
@@ -1684,7 +1718,7 @@ token.
 
 <!-- UsageSnippet language="typescript" operationID="idtoken_reissue_api" method="post" path="/api/{serviceId}/idtoken/reissue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1708,8 +1742,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { tokenEndpointIdtokenReissueApi } from "authlete-typescript-sdk/funcs/tokenEndpointIdtokenReissueApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { tokenEndpointIdtokenReissueApi } from "authlete-typescript-latest/funcs/tokenEndpointIdtokenReissueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1749,6 +1783,9 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |

@@ -118,7 +118,7 @@ and return to the client application.
 
 <!-- UsageSnippet language="typescript" operationID="device_authorization_api" method="post" path="/api/{serviceId}/device/authorization" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -147,8 +147,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { deviceFlowDeviceAuthorizationApi } from "authlete-typescript-sdk/funcs/deviceFlowDeviceAuthorizationApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { deviceFlowDeviceAuthorizationApi } from "authlete-typescript-latest/funcs/deviceFlowDeviceAuthorizationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -193,9 +193,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## deviceAuthorizationApiForm
 
@@ -301,7 +304,7 @@ and return to the client application.
 
 <!-- UsageSnippet language="typescript" operationID="device_authorization_api_form" method="post" path="/api/{serviceId}/device/authorization" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -312,7 +315,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.deviceFlow.deviceAuthorizationApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceDeviceAuthorization: {},
+    1api1ServiceId1device1authorizationPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
 
   console.log(result);
@@ -326,8 +331,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { deviceFlowDeviceAuthorizationApiForm } from "authlete-typescript-sdk/funcs/deviceFlowDeviceAuthorizationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { deviceFlowDeviceAuthorizationApiForm } from "authlete-typescript-latest/funcs/deviceFlowDeviceAuthorizationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -340,7 +345,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await deviceFlowDeviceAuthorizationApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceDeviceAuthorization: {},
+    1api1ServiceId1device1authorizationPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -368,9 +375,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## deviceVerificationApi
 
@@ -421,7 +431,7 @@ to ask whether she approves or rejects the authorization request from the device
 
 <!-- UsageSnippet language="typescript" operationID="device_verification_api" method="post" path="/api/{serviceId}/device/verification" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -448,8 +458,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { deviceFlowDeviceVerificationApi } from "authlete-typescript-sdk/funcs/deviceFlowDeviceVerificationApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { deviceFlowDeviceVerificationApi } from "authlete-typescript-latest/funcs/deviceFlowDeviceVerificationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -492,9 +502,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## deviceVerificationApiForm
 
@@ -545,7 +558,7 @@ to ask whether she approves or rejects the authorization request from the device
 
 <!-- UsageSnippet language="typescript" operationID="device_verification_api_form" method="post" path="/api/{serviceId}/device/verification" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -556,7 +569,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.deviceFlow.deviceVerificationApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceDeviceVerification: {},
+    1api1ServiceId1device1verificationPostRequestBodyContentApplication1jsonSchema: {
+      userCode: "<value>",
+    },
   });
 
   console.log(result);
@@ -570,8 +585,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { deviceFlowDeviceVerificationApiForm } from "authlete-typescript-sdk/funcs/deviceFlowDeviceVerificationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { deviceFlowDeviceVerificationApiForm } from "authlete-typescript-latest/funcs/deviceFlowDeviceVerificationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -584,7 +599,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await deviceFlowDeviceVerificationApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceDeviceVerification: {},
+    1api1ServiceId1device1verificationPostRequestBodyContentApplication1jsonSchema: {
+      userCode: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -612,9 +629,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## deviceCompleteApi
 
@@ -694,7 +714,7 @@ using.
 
 <!-- UsageSnippet language="typescript" operationID="device_complete_api" method="post" path="/api/{serviceId}/device/complete" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -723,8 +743,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { deviceFlowDeviceCompleteApi } from "authlete-typescript-sdk/funcs/deviceFlowDeviceCompleteApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { deviceFlowDeviceCompleteApi } from "authlete-typescript-latest/funcs/deviceFlowDeviceCompleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -769,9 +789,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## deviceCompleteApiForm
 
@@ -851,7 +874,7 @@ using.
 
 <!-- UsageSnippet language="typescript" operationID="device_complete_api_form" method="post" path="/api/{serviceId}/device/complete" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -862,7 +885,11 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.deviceFlow.deviceCompleteApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceDeviceComplete: {},
+    1api1ServiceId1device1completePostRequestBodyContentApplication1jsonSchema: {
+      userCode: "<value>",
+      result: "AUTHORIZED",
+      subject: "<value>",
+    },
   });
 
   console.log(result);
@@ -876,8 +903,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { deviceFlowDeviceCompleteApiForm } from "authlete-typescript-sdk/funcs/deviceFlowDeviceCompleteApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { deviceFlowDeviceCompleteApiForm } from "authlete-typescript-latest/funcs/deviceFlowDeviceCompleteApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -890,7 +917,11 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await deviceFlowDeviceCompleteApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceDeviceComplete: {},
+    1api1ServiceId1device1completePostRequestBodyContentApplication1jsonSchema: {
+      userCode: "<value>",
+      result: "AUTHORIZED",
+      subject: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -918,6 +949,9 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |

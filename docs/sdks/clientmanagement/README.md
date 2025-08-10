@@ -17,15 +17,15 @@ API endpoints for managing OAuth clients, including creation, update, and deleti
 * [clientSecretRefreshApi](#clientsecretrefreshapi) - Rotate Client Secret
 * [clientSecretUpdateApi](#clientsecretupdateapi) - Update Client Secret
 * [clientSecretUpdateApiForm](#clientsecretupdateapiform) - Update Client Secret
-* [clientAuthorizationGetListApi](#clientauthorizationgetlistapi) - Get Authorized Applications
 * [clientAuthorizationUpdateApi](#clientauthorizationupdateapi) - Update Client Tokens
 * [clientAuthorizationUpdateApiForm](#clientauthorizationupdateapiform) - Update Client Tokens
-* [clientAuthorizationDeleteApi](#clientauthorizationdeleteapi) - Delete Client Tokens
-* [clientGrantedScopesGetApi](#clientgrantedscopesgetapi) - Get Granted Scopes
-* [clientGrantedScopesDeleteApi](#clientgrantedscopesdeleteapi) - Delete Granted Scopes
 * [clientExtensionRequestablesScopesGetApi](#clientextensionrequestablesscopesgetapi) - Get Requestable Scopes
 * [clientExtensionRequestablesScopesUpdateApi](#clientextensionrequestablesscopesupdateapi) - Update Requestable Scopes
 * [clientExtensionRequestablesScopesDeleteApi](#clientextensionrequestablesscopesdeleteapi) - Delete Requestable Scopes
+* [clientAuthorizationGetListApi](#clientauthorizationgetlistapi) - Get Authorized Applications
+* [clientAuthorizationDeleteApi](#clientauthorizationdeleteapi) - Delete Client Tokens
+* [clientGrantedScopesGetApi](#clientgrantedscopesgetapi) - Get Granted Scopes
+* [clientGrantedScopesDeleteApi](#clientgrantedscopesdeleteapi) - Delete Granted Scopes
 
 ## clientGetApi
 
@@ -36,7 +36,7 @@ Get a client.
 
 <!-- UsageSnippet language="typescript" operationID="client_get_api" method="get" path="/api/{serviceId}/client/get/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -61,8 +61,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientGetApi } from "authlete-typescript-sdk/funcs/clientManagementClientGetApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientGetApi } from "authlete-typescript-latest/funcs/clientManagementClientGetApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -103,9 +103,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientGetListApi
 
@@ -121,7 +124,7 @@ service are returned.
 
 <!-- UsageSnippet language="typescript" operationID="client_get_list_api" method="get" path="/api/{serviceId}/client/get/list" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -145,8 +148,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientGetListApi } from "authlete-typescript-sdk/funcs/clientManagementClientGetListApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientGetListApi } from "authlete-typescript-latest/funcs/clientManagementClientGetListApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -186,9 +189,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientCreateApi
 
@@ -199,7 +205,7 @@ Create a new client.
 
 <!-- UsageSnippet language="typescript" operationID="client_create_api" method="post" path="/api/{serviceId}/client/create" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -253,8 +259,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientCreateApi } from "authlete-typescript-sdk/funcs/clientManagementClientCreateApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientCreateApi } from "authlete-typescript-latest/funcs/clientManagementClientCreateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -324,9 +330,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientUpdateApi
 
@@ -337,7 +346,7 @@ Update a client.
 
 <!-- UsageSnippet language="typescript" operationID="client_update_api" method="post" path="/api/{serviceId}/client/update/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -403,8 +412,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientUpdateApi } from "authlete-typescript-latest/funcs/clientManagementClientUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -486,9 +495,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientDeleteApi
 
@@ -499,7 +511,7 @@ Delete a client.
 
 <!-- UsageSnippet language="typescript" operationID="client_delete_api" method="delete" path="/api/{serviceId}/client/delete/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -524,8 +536,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientDeleteApi } from "authlete-typescript-sdk/funcs/clientManagementClientDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientDeleteApi } from "authlete-typescript-latest/funcs/clientManagementClientDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -566,9 +578,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientFlagUpdateApi
 
@@ -579,7 +594,7 @@ Lock and unlock a client
 
 <!-- UsageSnippet language="typescript" operationID="client_flag_update_api" method="post" path="/api/{serviceId}/client/lock_flag/update/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -607,8 +622,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientFlagUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientFlagUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientFlagUpdateApi } from "authlete-typescript-latest/funcs/clientManagementClientFlagUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -652,9 +667,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientFlagUpdateApiForm
 
@@ -665,7 +683,7 @@ Lock and unlock a client
 
 <!-- UsageSnippet language="typescript" operationID="client_flag_update_api_form" method="post" path="/api/{serviceId}/client/lock_flag/update/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -690,8 +708,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientFlagUpdateApiForm } from "authlete-typescript-sdk/funcs/clientManagementClientFlagUpdateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientFlagUpdateApiForm } from "authlete-typescript-latest/funcs/clientManagementClientFlagUpdateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -732,9 +750,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientSecretRefreshApi
 
@@ -748,7 +769,7 @@ If you want to specify a new value, use `/api/client/secret/update` API.
 
 <!-- UsageSnippet language="typescript" operationID="client_secret_refresh_api" method="get" path="/api/{serviceId}/client/secret/refresh/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -773,8 +794,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientSecretRefreshApi } from "authlete-typescript-sdk/funcs/clientManagementClientSecretRefreshApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientSecretRefreshApi } from "authlete-typescript-latest/funcs/clientManagementClientSecretRefreshApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -815,9 +836,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientSecretUpdateApi
 
@@ -831,7 +855,7 @@ API.
 
 <!-- UsageSnippet language="typescript" operationID="client_secret_update_api" method="post" path="/api/{serviceId}/client/secret/update/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -859,8 +883,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientSecretUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientSecretUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientSecretUpdateApi } from "authlete-typescript-latest/funcs/clientManagementClientSecretUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -904,9 +928,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientSecretUpdateApiForm
 
@@ -920,7 +947,7 @@ API.
 
 <!-- UsageSnippet language="typescript" operationID="client_secret_update_api_form" method="post" path="/api/{serviceId}/client/secret/update/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -932,7 +959,9 @@ async function run() {
   const result = await authlete.clientManagement.clientSecretUpdateApiForm({
     serviceId: "<id>",
     clientIdentifier: "<value>",
-    apilBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace: {},
+    1api1ServiceId1client1secret1update1ClientIdentifierPostRequestBodyContentApplication1jsonSchema: {
+      clientSecret: "<value>",
+    },
   });
 
   console.log(result);
@@ -946,8 +975,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientSecretUpdateApiForm } from "authlete-typescript-sdk/funcs/clientManagementClientSecretUpdateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientSecretUpdateApiForm } from "authlete-typescript-latest/funcs/clientManagementClientSecretUpdateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -961,7 +990,9 @@ async function run() {
   const res = await clientManagementClientSecretUpdateApiForm(authlete, {
     serviceId: "<id>",
     clientIdentifier: "<value>",
-    apilBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace: {},
+    1api1ServiceId1client1secret1update1ClientIdentifierPostRequestBodyContentApplication1jsonSchema: {
+      clientSecret: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -989,91 +1020,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
-
-## clientAuthorizationGetListApi
-
-Get a list of client applications that an end-user has authorized.
-
-The subject parameter is required and can be provided either in the path or as a query parameter.
-
-
-### Example Usage
-
-<!-- UsageSnippet language="typescript" operationID="client_authorization_get_list_api" method="get" path="/api/{serviceId}/client/authorization/get/list" -->
-```typescript
-import { Authlete } from "authlete-typescript-sdk";
-
-const authlete = new Authlete({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const result = await authlete.clientManagement.clientAuthorizationGetListApi({
-    serviceId: "<id>",
-    subject: "<value>",
-  });
-
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientAuthorizationGetListApi } from "authlete-typescript-sdk/funcs/clientManagementClientAuthorizationGetListApi.js";
-
-// Use `AuthleteCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const authlete = new AuthleteCore({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const res = await clientManagementClientAuthorizationGetListApi(authlete, {
-    serviceId: "<id>",
-    subject: "<value>",
-  });
-  if (res.ok) {
-    const { value: result } = res;
-    console.log(result);
-  } else {
-    console.log("clientManagementClientAuthorizationGetListApi failed:", res.error);
-  }
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.ClientAuthorizationGetListApiRequest](../../models/operations/clientauthorizationgetlistapirequest.md)                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[operations.ClientAuthorizationGetListApiResponse](../../models/operations/clientauthorizationgetlistapiresponse.md)\>**
-
-### Errors
-
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientAuthorizationUpdateApi
 
@@ -1084,7 +1036,7 @@ Update attributes of all existing access tokens given to a client application.
 
 <!-- UsageSnippet language="typescript" operationID="client_authorization_update_api" method="post" path="/api/{serviceId}/client/authorization/update/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1115,8 +1067,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientAuthorizationUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientAuthorizationUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientAuthorizationUpdateApi } from "authlete-typescript-latest/funcs/clientManagementClientAuthorizationUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1163,9 +1115,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientAuthorizationUpdateApiForm
 
@@ -1176,7 +1131,7 @@ Update attributes of all existing access tokens given to a client application.
 
 <!-- UsageSnippet language="typescript" operationID="client_authorization_update_api_form" method="post" path="/api/{serviceId}/client/authorization/update/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1201,8 +1156,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientAuthorizationUpdateApiForm } from "authlete-typescript-sdk/funcs/clientManagementClientAuthorizationUpdateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientAuthorizationUpdateApiForm } from "authlete-typescript-latest/funcs/clientManagementClientAuthorizationUpdateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1243,292 +1198,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
-
-## clientAuthorizationDeleteApi
-
-Delete all existing access tokens issued to a client application by an end-user.
-
-The subject parameter is required and can be provided either in the path or as a query parameter.
-
-
-### Example Usage
-
-<!-- UsageSnippet language="typescript" operationID="client_authorization_delete_api" method="delete" path="/api/{serviceId}/client/authorization/delete/{clientId}" -->
-```typescript
-import { Authlete } from "authlete-typescript-sdk";
-
-const authlete = new Authlete({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const result = await authlete.clientManagement.clientAuthorizationDeleteApi({
-    serviceId: "<id>",
-    clientId: "<id>",
-    subject: "<value>",
-  });
-
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientAuthorizationDeleteApi } from "authlete-typescript-sdk/funcs/clientManagementClientAuthorizationDeleteApi.js";
-
-// Use `AuthleteCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const authlete = new AuthleteCore({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const res = await clientManagementClientAuthorizationDeleteApi(authlete, {
-    serviceId: "<id>",
-    clientId: "<id>",
-    subject: "<value>",
-  });
-  if (res.ok) {
-    const { value: result } = res;
-    console.log(result);
-  } else {
-    console.log("clientManagementClientAuthorizationDeleteApi failed:", res.error);
-  }
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.ClientAuthorizationDeleteApiRequest](../../models/operations/clientauthorizationdeleteapirequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[models.APILBraceserviceIdRBraceClientGrantedScopesLBraceclientIdRBrace200](../../models/apilbraceserviceidrbraceclientgrantedscopeslbraceclientidrbrace200.md)\>**
-
-### Errors
-
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
-
-## clientGrantedScopesGetApi
-
-Get the set of scopes that a user has granted to a client application.
-
-<br>
-<details>
-<summary>Description</summary>
-
-Possible values for `requestableScopes` parameter in the response from this API are as follows.
-
-**null**
-
-The user has not granted authorization to the client application in the past, or records about the
-combination of the user and the client application have been deleted from Authlete's DB.
-
-**An empty set**
-
-The user has granted authorization to the client application in the past, but no scopes are associated
-with the authorization.
-
-**A set with at least one element**
-
-The user has granted authorization to the client application in the past and some scopes are associated
-with the authorization. These scopes are returned.
-Example: `[ "profile", "email" ]`
-
-The subject parameter is required and can be provided either in the path or as a query parameter.
-</details>
-
-
-### Example Usage
-
-<!-- UsageSnippet language="typescript" operationID="client_granted_scopes_get_api" method="get" path="/api/{serviceId}/client/granted_scopes/get/{clientId}" -->
-```typescript
-import { Authlete } from "authlete-typescript-sdk";
-
-const authlete = new Authlete({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const result = await authlete.clientManagement.clientGrantedScopesGetApi({
-    serviceId: "<id>",
-    clientId: "<id>",
-    subject: "<value>",
-  });
-
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientGrantedScopesGetApi } from "authlete-typescript-sdk/funcs/clientManagementClientGrantedScopesGetApi.js";
-
-// Use `AuthleteCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const authlete = new AuthleteCore({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const res = await clientManagementClientGrantedScopesGetApi(authlete, {
-    serviceId: "<id>",
-    clientId: "<id>",
-    subject: "<value>",
-  });
-  if (res.ok) {
-    const { value: result } = res;
-    console.log(result);
-  } else {
-    console.log("clientManagementClientGrantedScopesGetApi failed:", res.error);
-  }
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.ClientGrantedScopesGetApiRequest](../../models/operations/clientgrantedscopesgetapirequest.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[operations.ClientGrantedScopesGetApiResponse](../../models/operations/clientgrantedscopesgetapiresponse.md)\>**
-
-### Errors
-
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
-
-## clientGrantedScopesDeleteApi
-
-Delete the set of scopes that an end-user has granted to a client application.
-
-<br>
-<details>
-<summary>Description</summary>
-
-Even if records about granted scopes are deleted by calling this API, existing access tokens are
-not deleted and scopes of existing access tokens are not changed.
-</details>
-
-The subject parameter is required and can be provided either in the path or as a query parameter.
-
-
-### Example Usage
-
-<!-- UsageSnippet language="typescript" operationID="client_granted_scopes_delete_api" method="delete" path="/api/{serviceId}/client/granted_scopes/delete/{clientId}" -->
-```typescript
-import { Authlete } from "authlete-typescript-sdk";
-
-const authlete = new Authlete({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const result = await authlete.clientManagement.clientGrantedScopesDeleteApi({
-    serviceId: "<id>",
-    clientId: "<id>",
-    subject: "<value>",
-  });
-
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientGrantedScopesDeleteApi } from "authlete-typescript-sdk/funcs/clientManagementClientGrantedScopesDeleteApi.js";
-
-// Use `AuthleteCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const authlete = new AuthleteCore({
-  security: {
-    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
-  },
-});
-
-async function run() {
-  const res = await clientManagementClientGrantedScopesDeleteApi(authlete, {
-    serviceId: "<id>",
-    clientId: "<id>",
-    subject: "<value>",
-  });
-  if (res.ok) {
-    const { value: result } = res;
-    console.log(result);
-  } else {
-    console.log("clientManagementClientGrantedScopesDeleteApi failed:", res.error);
-  }
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.ClientGrantedScopesDeleteApiRequest](../../models/operations/clientgrantedscopesdeleteapirequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[operations.ClientGrantedScopesDeleteApiResponse](../../models/operations/clientgrantedscopesdeleteapiresponse.md)\>**
-
-### Errors
-
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientExtensionRequestablesScopesGetApi
 
@@ -1539,7 +1214,7 @@ Get the requestable scopes per client
 
 <!-- UsageSnippet language="typescript" operationID="client_extension_requestables_scopes_get_api" method="get" path="/api/{serviceId}/client/extension/requestable_scopes/get/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1564,8 +1239,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientExtensionRequestablesScopesGetApi } from "authlete-typescript-sdk/funcs/clientManagementClientExtensionRequestablesScopesGetApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientExtensionRequestablesScopesGetApi } from "authlete-typescript-latest/funcs/clientManagementClientExtensionRequestablesScopesGetApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1606,9 +1281,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientExtensionRequestablesScopesUpdateApi
 
@@ -1619,7 +1297,7 @@ Update requestable scopes of a client
 
 <!-- UsageSnippet language="typescript" operationID="client_extension_requestables_scopes_update_api" method="put" path="/api/{serviceId}/client/extension/requestable_scopes/update/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1645,8 +1323,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientExtensionRequestablesScopesUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientExtensionRequestablesScopesUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientExtensionRequestablesScopesUpdateApi } from "authlete-typescript-latest/funcs/clientManagementClientExtensionRequestablesScopesUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1688,9 +1366,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientExtensionRequestablesScopesDeleteApi
 
@@ -1701,7 +1382,7 @@ Delete requestable scopes of a client
 
 <!-- UsageSnippet language="typescript" operationID="client_extension_requestables_scopes_delete_api" method="delete" path="/api/{serviceId}/client/extension/requestable_scopes/delete/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1726,8 +1407,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { clientManagementClientExtensionRequestablesScopesDeleteApi } from "authlete-typescript-sdk/funcs/clientManagementClientExtensionRequestablesScopesDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientExtensionRequestablesScopesDeleteApi } from "authlete-typescript-latest/funcs/clientManagementClientExtensionRequestablesScopesDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1768,6 +1449,394 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+
+## clientAuthorizationGetListApi
+
+Get a list of client applications that an end-user has authorized.
+
+The subject parameter is required and can be provided either in the path or as a query parameter.
+
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="client_authorization_get_list_api" method="get" path="/api/{serviceId}/client/authorization/get/{subject}/list" -->
+```typescript
+import { Authlete } from "authlete-typescript-latest";
+
+const authlete = new Authlete({
+  security: {
+    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
+  },
+});
+
+async function run() {
+  const result = await authlete.clientManagement.clientAuthorizationGetListApi({
+    serviceId: "<id>",
+    subjectPathParameter: "<value>",
+    subjectQueryParameter: "<value>",
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientAuthorizationGetListApi } from "authlete-typescript-latest/funcs/clientManagementClientAuthorizationGetListApi.js";
+
+// Use `AuthleteCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const authlete = new AuthleteCore({
+  security: {
+    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
+  },
+});
+
+async function run() {
+  const res = await clientManagementClientAuthorizationGetListApi(authlete, {
+    serviceId: "<id>",
+    subjectPathParameter: "<value>",
+    subjectQueryParameter: "<value>",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("clientManagementClientAuthorizationGetListApi failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.ClientAuthorizationGetListApiRequest](../../models/operations/clientauthorizationgetlistapirequest.md)                                                             | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[operations.ClientAuthorizationGetListApiResponse](../../models/operations/clientauthorizationgetlistapiresponse.md)\>**
+
+### Errors
+
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+
+## clientAuthorizationDeleteApi
+
+Delete all existing access tokens issued to a client application by an end-user.
+
+The subject parameter is required and can be provided either in the path or as a query parameter.
+
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="client_authorization_delete_api" method="delete" path="/api/{serviceId}/client/authorization/delete/{clientId}/{subject}" -->
+```typescript
+import { Authlete } from "authlete-typescript-latest";
+
+const authlete = new Authlete({
+  security: {
+    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
+  },
+});
+
+async function run() {
+  const result = await authlete.clientManagement.clientAuthorizationDeleteApi({
+    serviceId: "<id>",
+    clientId: "<id>",
+    subjectPathParameter: "<value>",
+    subjectQueryParameter: "<value>",
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientAuthorizationDeleteApi } from "authlete-typescript-latest/funcs/clientManagementClientAuthorizationDeleteApi.js";
+
+// Use `AuthleteCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const authlete = new AuthleteCore({
+  security: {
+    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
+  },
+});
+
+async function run() {
+  const res = await clientManagementClientAuthorizationDeleteApi(authlete, {
+    serviceId: "<id>",
+    clientId: "<id>",
+    subjectPathParameter: "<value>",
+    subjectQueryParameter: "<value>",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("clientManagementClientAuthorizationDeleteApi failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.ClientAuthorizationDeleteApiRequest](../../models/operations/clientauthorizationdeleteapirequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[models.1api1ServiceId1client1grantedScopes1get1ClientId1SubjectGetResponses200ContentApplication1jsonSchema](../../models/oneapi1serviceid1client1grantedscopes1get1clientid1subjectgetresponses200contentapplication1jsonschema.md)\>**
+
+### Errors
+
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+
+## clientGrantedScopesGetApi
+
+Get the set of scopes that a user has granted to a client application.
+
+<br>
+<details>
+<summary>Description</summary>
+
+Possible values for `requestableScopes` parameter in the response from this API are as follows.
+
+**null**
+
+The user has not granted authorization to the client application in the past, or records about the
+combination of the user and the client application have been deleted from Authlete's DB.
+
+**An empty set**
+
+The user has granted authorization to the client application in the past, but no scopes are associated
+with the authorization.
+
+**A set with at least one element**
+
+The user has granted authorization to the client application in the past and some scopes are associated
+with the authorization. These scopes are returned.
+Example: `[ "profile", "email" ]`
+
+The subject parameter is required and can be provided either in the path or as a query parameter.
+</details>
+
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="client_granted_scopes_get_api" method="get" path="/api/{serviceId}/client/granted_scopes/get/{clientId}/{subject}" -->
+```typescript
+import { Authlete } from "authlete-typescript-latest";
+
+const authlete = new Authlete({
+  security: {
+    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
+  },
+});
+
+async function run() {
+  const result = await authlete.clientManagement.clientGrantedScopesGetApi({
+    serviceId: "<id>",
+    clientId: "<id>",
+    subjectPathParameter: "<value>",
+    subjectQueryParameter: "<value>",
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientGrantedScopesGetApi } from "authlete-typescript-latest/funcs/clientManagementClientGrantedScopesGetApi.js";
+
+// Use `AuthleteCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const authlete = new AuthleteCore({
+  security: {
+    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
+  },
+});
+
+async function run() {
+  const res = await clientManagementClientGrantedScopesGetApi(authlete, {
+    serviceId: "<id>",
+    clientId: "<id>",
+    subjectPathParameter: "<value>",
+    subjectQueryParameter: "<value>",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("clientManagementClientGrantedScopesGetApi failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.ClientGrantedScopesGetApiRequest](../../models/operations/clientgrantedscopesgetapirequest.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[operations.ClientGrantedScopesGetApiResponse](../../models/operations/clientgrantedscopesgetapiresponse.md)\>**
+
+### Errors
+
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+
+## clientGrantedScopesDeleteApi
+
+Delete the set of scopes that an end-user has granted to a client application.
+
+<br>
+<details>
+<summary>Description</summary>
+
+Even if records about granted scopes are deleted by calling this API, existing access tokens are
+not deleted and scopes of existing access tokens are not changed.
+</details>
+
+The subject parameter is required and can be provided either in the path or as a query parameter.
+
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="client_granted_scopes_delete_api" method="delete" path="/api/{serviceId}/client/granted_scopes/delete/{clientId}/{subject}" -->
+```typescript
+import { Authlete } from "authlete-typescript-latest";
+
+const authlete = new Authlete({
+  security: {
+    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
+  },
+});
+
+async function run() {
+  const result = await authlete.clientManagement.clientGrantedScopesDeleteApi({
+    serviceId: "<id>",
+    clientId: "<id>",
+    subjectPathParameter: "<value>",
+    subjectQueryParameter: "<value>",
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { clientManagementClientGrantedScopesDeleteApi } from "authlete-typescript-latest/funcs/clientManagementClientGrantedScopesDeleteApi.js";
+
+// Use `AuthleteCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const authlete = new AuthleteCore({
+  security: {
+    authlete: process.env["AUTHLETE_AUTHLETE"] ?? "",
+  },
+});
+
+async function run() {
+  const res = await clientManagementClientGrantedScopesDeleteApi(authlete, {
+    serviceId: "<id>",
+    clientId: "<id>",
+    subjectPathParameter: "<value>",
+    subjectQueryParameter: "<value>",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("clientManagementClientGrantedScopesDeleteApi failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.ClientGrantedScopesDeleteApiRequest](../../models/operations/clientgrantedscopesdeleteapirequest.md)                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[operations.ClientGrantedScopesDeleteApiResponse](../../models/operations/clientgrantedscopesdeleteapiresponse.md)\>**
+
+### Errors
+
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |

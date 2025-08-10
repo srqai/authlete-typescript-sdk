@@ -29,13 +29,13 @@ API endpoints for implementing and running a Verifiable Credential Issuer (VCI).
 
 ## vciMetadataApi
 
-null
+/api/{serviceId}/vci/metadata API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_metadata_api" method="post" path="/api/{serviceId}/vci/metadata" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -62,8 +62,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciMetadataApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciMetadataApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciMetadataApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciMetadataApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -106,19 +106,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciMetadataApiForm
 
-null
+/api/{serviceId}/vci/metadata API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_metadata_api_form" method="post" path="/api/{serviceId}/vci/metadata" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -129,7 +132,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciMetadataApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciMetadata: {},
+    1api1ServiceId1vci1metadataPostRequestBodyContentApplication1jsonSchema: {
+      pretty: true,
+    },
   });
 
   console.log(result);
@@ -143,8 +148,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciMetadataApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciMetadataApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciMetadataApiForm } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciMetadataApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -157,7 +162,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciMetadataApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciMetadata: {},
+    1api1ServiceId1vci1metadataPostRequestBodyContentApplication1jsonSchema: {
+      pretty: true,
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -185,19 +192,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciJwtissuerApi
 
-null
+/api/{serviceId}/vci/jwtissuer API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_jwtissuer_api" method="post" path="/api/{serviceId}/vci/jwtissuer" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -224,8 +234,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciJwtissuerApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciJwtissuerApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciJwtissuerApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciJwtissuerApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -268,19 +278,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciJwtissuerApiForm
 
-null
+/api/{serviceId}/vci/jwtissuer API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_jwtissuer_api_form" method="post" path="/api/{serviceId}/vci/jwtissuer" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -291,7 +304,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciJwtissuerApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciJwtissuer: {},
+    1api1ServiceId1vci1jwtissuerPostRequestBodyContentApplication1jsonSchema: {
+      pretty: true,
+    },
   });
 
   console.log(result);
@@ -305,8 +320,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciJwtissuerApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciJwtissuerApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciJwtissuerApiForm } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciJwtissuerApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -319,7 +334,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciJwtissuerApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciJwtissuer: {},
+    1api1ServiceId1vci1jwtissuerPostRequestBodyContentApplication1jsonSchema: {
+      pretty: true,
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -347,19 +364,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciJwksApi
 
-null
+/api/{serviceId}/vci/jwks API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_jwks_api" method="post" path="/api/{serviceId}/vci/jwks" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -386,8 +406,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciJwksApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciJwksApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciJwksApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciJwksApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -430,19 +450,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciJwksApiForm
 
-null
+/api/{serviceId}/vci/jwks API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_jwks_api_form" method="post" path="/api/{serviceId}/vci/jwks" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -453,7 +476,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciJwksApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciJwks: {},
+    1api1ServiceId1vci1jwksPostRequestBodyContentApplication1jsonSchema: {
+      pretty: false,
+    },
   });
 
   console.log(result);
@@ -467,8 +492,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciJwksApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciJwksApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciJwksApiForm } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciJwksApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -481,7 +506,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciJwksApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciJwks: {},
+    1api1ServiceId1vci1jwksPostRequestBodyContentApplication1jsonSchema: {
+      pretty: false,
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -509,19 +536,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciOfferCreateApi
 
-null
+/api/{serviceId}/vci/offer/create API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_offer_create_api" method="post" path="/api/{serviceId}/vci/offer/create" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -546,8 +576,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciOfferCreateApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciOfferCreateApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciOfferCreateApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciOfferCreateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -588,19 +618,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciOfferCreateApiForm
 
-null
+/api/{serviceId}/vci/offer/create API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_offer_create_api_form" method="post" path="/api/{serviceId}/vci/offer/create" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -611,7 +644,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciOfferCreateApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciOfferCreate: {},
+    1api1ServiceId1vci1offer1createPostRequestBodyContentApplication1jsonSchema: {},
   });
 
   console.log(result);
@@ -625,8 +658,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciOfferCreateApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciOfferCreateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciOfferCreateApiForm } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciOfferCreateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -639,7 +672,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciOfferCreateApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciOfferCreate: {},
+    1api1ServiceId1vci1offer1createPostRequestBodyContentApplication1jsonSchema: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -667,19 +700,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciOfferInfoApi
 
-null
+/api/{serviceId}/vci/offer/info API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_offer_info_api" method="post" path="/api/{serviceId}/vci/offer/info" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -704,8 +740,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciOfferInfoApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciOfferInfoApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciOfferInfoApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciOfferInfoApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -746,19 +782,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciOfferInfoApiForm
 
-null
+/api/{serviceId}/vci/offer/info API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_offer_info_api_form" method="post" path="/api/{serviceId}/vci/offer/info" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -769,7 +808,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciOfferInfoApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciOfferInfo: {},
+    1api1ServiceId1vci1offer1infoPostRequestBodyContentApplication1jsonSchema: {},
   });
 
   console.log(result);
@@ -783,8 +822,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciOfferInfoApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciOfferInfoApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciOfferInfoApiForm } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciOfferInfoApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -797,7 +836,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciOfferInfoApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciOfferInfo: {},
+    1api1ServiceId1vci1offer1infoPostRequestBodyContentApplication1jsonSchema: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -825,19 +864,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciSingleParseApi
 
-null
+/api/{serviceId}/vci/single/parse API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_single_parse_api" method="post" path="/api/{serviceId}/vci/single/parse" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -862,8 +904,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciSingleParseApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciSingleParseApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciSingleParseApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciSingleParseApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -904,19 +946,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciSingleParseApiForm
 
-null
+/api/{serviceId}/vci/single/parse API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_single_parse_api_form" method="post" path="/api/{serviceId}/vci/single/parse" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -927,7 +972,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciSingleParseApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciSingleParse: {},
+    1api1ServiceId1vci1single1parsePostRequestBodyContentApplication1jsonSchema: {},
   });
 
   console.log(result);
@@ -941,8 +986,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciSingleParseApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciSingleParseApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciSingleParseApiForm } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciSingleParseApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -955,7 +1000,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciSingleParseApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciSingleParse: {},
+    1api1ServiceId1vci1single1parsePostRequestBodyContentApplication1jsonSchema: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -983,19 +1028,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciSingleIssueApi
 
-null
+/api/{serviceId}/vci/single/issue API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_single_issue_api" method="post" path="/api/{serviceId}/vci/single/issue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1020,8 +1068,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciSingleIssueApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciSingleIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciSingleIssueApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciSingleIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1062,19 +1110,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciBatchParseApi
 
-null
+/api/{serviceId}/vci/batch/parse API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_batch_parse_api" method="post" path="/api/{serviceId}/vci/batch/parse" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1099,8 +1150,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciBatchParseApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciBatchParseApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciBatchParseApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciBatchParseApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1141,19 +1192,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciBatchParseApiForm
 
-null
+/api/{serviceId}/vci/batch/parse API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_batch_parse_api_form" method="post" path="/api/{serviceId}/vci/batch/parse" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1164,7 +1218,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciBatchParseApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciBatchParse: {},
+    1api1ServiceId1vci1batch1parsePostRequestBodyContentApplication1jsonSchema: {},
   });
 
   console.log(result);
@@ -1178,8 +1232,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciBatchParseApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciBatchParseApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciBatchParseApiForm } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciBatchParseApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1192,7 +1246,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciBatchParseApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciBatchParse: {},
+    1api1ServiceId1vci1batch1parsePostRequestBodyContentApplication1jsonSchema: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1220,19 +1274,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciBatchIssueApi
 
-null
+/api/{serviceId}/vci/batch/issue API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_batch_issue_api" method="post" path="/api/{serviceId}/vci/batch/issue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1257,8 +1314,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciBatchIssueApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciBatchIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciBatchIssueApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciBatchIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1299,19 +1356,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciDeferredParseApi
 
-null
+/api/{serviceId}/vci/deferred/parse API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_deferred_parse_api" method="post" path="/api/{serviceId}/vci/deferred/parse" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1336,8 +1396,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciDeferredParseApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciDeferredParseApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciDeferredParseApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciDeferredParseApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1378,19 +1438,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciDeferredParseApiForm
 
-null
+/api/{serviceId}/vci/deferred/parse API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_deferred_parse_api_form" method="post" path="/api/{serviceId}/vci/deferred/parse" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1401,7 +1464,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciDeferredParseApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciDeferredParse: {},
+    1api1ServiceId1vci1deferred1parsePostRequestBodyContentApplication1jsonSchema: {},
   });
 
   console.log(result);
@@ -1415,8 +1478,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciDeferredParseApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciDeferredParseApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciDeferredParseApiForm } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciDeferredParseApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1429,7 +1492,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciDeferredParseApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciDeferredParse: {},
+    1api1ServiceId1vci1deferred1parsePostRequestBodyContentApplication1jsonSchema: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1457,19 +1520,22 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## vciDeferredIssueApi
 
-null
+/api/{serviceId}/vci/deferred/issue API
 
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="vci_deferred_issue_api" method="post" path="/api/{serviceId}/vci/deferred/issue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1494,8 +1560,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { verifiableCredentialIssuerVciDeferredIssueApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciDeferredIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { verifiableCredentialIssuerVciDeferredIssueApi } from "authlete-typescript-latest/funcs/verifiableCredentialIssuerVciDeferredIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1536,6 +1602,9 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |

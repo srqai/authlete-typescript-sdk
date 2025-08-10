@@ -25,17 +25,17 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 typescript:
-  version: 0.0.5
+  version: 0.0.1
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
     peerDependencies: {}
   additionalPackageJSON: {}
   author: Speakeasy
-  baseErrorName: AuthleteError
+  baseErrorName: ""
   clientServerStatusCodesAsErrors: true
   constFieldsAlwaysOptional: false
-  defaultErrorName: AuthleteDefaultError
+  defaultErrorName: ""
   enableCustomCodeRegions: false
   enableMCPServer: false
   enableReactQuery: false
@@ -58,7 +58,7 @@ typescript:
   methodArguments: infer-optional-args
   moduleFormat: dual
   outputModelSuffix: output
-  packageName: authlete-typescript-sdk
+  packageName: authlete-2
   responseFormat: flat
   templateVersion: v2
   useIndexModules: true

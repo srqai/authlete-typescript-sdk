@@ -334,7 +334,7 @@ not have to be changed to support CIBA.
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_api" method="post" path="/api/{serviceId}/backchannel/authentication" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -363,8 +363,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { cibaBackchannelAuthenticationApi } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { cibaBackchannelAuthenticationApi } from "authlete-typescript-latest/funcs/cibaBackchannelAuthenticationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -409,9 +409,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## backchannelAuthenticationApiForm
 
@@ -731,7 +734,7 @@ not have to be changed to support CIBA.
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_api_form" method="post" path="/api/{serviceId}/backchannel/authentication" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -742,7 +745,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.ciba.backchannelAuthenticationApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceBackchannelAuthentication: {},
+    1api1ServiceId1backchannel1authenticationPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
 
   console.log(result);
@@ -756,8 +761,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { cibaBackchannelAuthenticationApiForm } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { cibaBackchannelAuthenticationApiForm } from "authlete-typescript-latest/funcs/cibaBackchannelAuthenticationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -770,7 +775,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await cibaBackchannelAuthenticationApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceBackchannelAuthentication: {},
+    1api1ServiceId1backchannel1authenticationPostRequestBodyContentApplication1jsonSchema: {
+      parameters: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -798,9 +805,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## backchannelAuthenticationIssueApi
 
@@ -899,7 +909,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_issue_api" method="post" path="/api/{serviceId}/backchannel/authentication/issue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -926,8 +936,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { cibaBackchannelAuthenticationIssueApi } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { cibaBackchannelAuthenticationIssueApi } from "authlete-typescript-latest/funcs/cibaBackchannelAuthenticationIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -970,9 +980,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## backchannelAuthenticationIssueApiForm
 
@@ -1071,7 +1084,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_issue_api_form" method="post" path="/api/{serviceId}/backchannel/authentication/issue" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1082,7 +1095,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.ciba.backchannelAuthenticationIssueApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceBackchannelAuthenticationIssue: {},
+    1api1ServiceId1backchannel1authentication1issuePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+    },
   });
 
   console.log(result);
@@ -1096,8 +1111,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { cibaBackchannelAuthenticationIssueApiForm } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationIssueApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { cibaBackchannelAuthenticationIssueApiForm } from "authlete-typescript-latest/funcs/cibaBackchannelAuthenticationIssueApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1110,7 +1125,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await cibaBackchannelAuthenticationIssueApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceBackchannelAuthenticationIssue: {},
+    1api1ServiceId1backchannel1authentication1issuePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1138,9 +1155,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## backchannelAuthenticationFailApi
 
@@ -1186,7 +1206,7 @@ server implementation should return a "403 Forbidden" response to the client app
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_fail_api" method="post" path="/api/{serviceId}/backchannel/authentication/fail" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1214,8 +1234,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { cibaBackchannelAuthenticationFailApi } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationFailApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { cibaBackchannelAuthenticationFailApi } from "authlete-typescript-latest/funcs/cibaBackchannelAuthenticationFailApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1259,9 +1279,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## backchannelAuthenticationFailApiForm
 
@@ -1307,7 +1330,7 @@ server implementation should return a "403 Forbidden" response to the client app
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_fail_api_form" method="post" path="/api/{serviceId}/backchannel/authentication/fail" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1318,7 +1341,10 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.ciba.backchannelAuthenticationFailApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceBackchannelAuthenticationFail: {},
+    1api1ServiceId1backchannel1authentication1failPostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      reason: "MISSING_USER_CODE",
+    },
   });
 
   console.log(result);
@@ -1332,8 +1358,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { cibaBackchannelAuthenticationFailApiForm } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationFailApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { cibaBackchannelAuthenticationFailApiForm } from "authlete-typescript-latest/funcs/cibaBackchannelAuthenticationFailApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1346,7 +1372,10 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await cibaBackchannelAuthenticationFailApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceBackchannelAuthenticationFail: {},
+    1api1ServiceId1backchannel1authentication1failPostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      reason: "MISSING_USER_CODE",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1374,9 +1403,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## backchannelAuthenticationCompleteApi
 
@@ -1494,7 +1526,7 @@ Content-Type: application/json
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_complete_api" method="post" path="/api/{serviceId}/backchannel/authentication/complete" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1523,8 +1555,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { cibaBackchannelAuthenticationCompleteApi } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationCompleteApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { cibaBackchannelAuthenticationCompleteApi } from "authlete-typescript-latest/funcs/cibaBackchannelAuthenticationCompleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1569,9 +1601,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## backchannelAuthenticationCompleteApiForm
 
@@ -1689,7 +1724,7 @@ Content-Type: application/json
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_complete_api_form" method="post" path="/api/{serviceId}/backchannel/authentication/complete" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1700,7 +1735,11 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.ciba.backchannelAuthenticationCompleteApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceBackchannelAuthenticationComplete: {},
+    1api1ServiceId1backchannel1authentication1completePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      result: "TRANSACTION_FAILED",
+      subject: "<value>",
+    },
   });
 
   console.log(result);
@@ -1714,8 +1753,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { cibaBackchannelAuthenticationCompleteApiForm } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationCompleteApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { cibaBackchannelAuthenticationCompleteApiForm } from "authlete-typescript-latest/funcs/cibaBackchannelAuthenticationCompleteApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1728,7 +1767,11 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await cibaBackchannelAuthenticationCompleteApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceBackchannelAuthenticationComplete: {},
+    1api1ServiceId1backchannel1authentication1completePostRequestBodyContentApplication1jsonSchema: {
+      ticket: "<value>",
+      result: "TRANSACTION_FAILED",
+      subject: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1756,6 +1799,9 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |

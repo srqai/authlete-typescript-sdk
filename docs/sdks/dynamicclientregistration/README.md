@@ -106,7 +106,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="client_registration_api" method="post" path="/api/{serviceId}/client/registration" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -133,8 +133,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { dynamicClientRegistrationClientRegistrationApi } from "authlete-typescript-sdk/funcs/dynamicClientRegistrationClientRegistrationApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { dynamicClientRegistrationClientRegistrationApi } from "authlete-typescript-latest/funcs/dynamicClientRegistrationClientRegistrationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -177,9 +177,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientRegistrationApiForm
 
@@ -272,7 +275,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="client_registration_api_form" method="post" path="/api/{serviceId}/client/registration" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -283,7 +286,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceClientRegistration: {},
+    1api1ServiceId1client1registrationPostRequestBodyContentApplication1jsonSchema: {
+      json: "{key: 6995014930124193, key1: null, key2: \"<value>\"}",
+    },
   });
 
   console.log(result);
@@ -297,8 +302,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { dynamicClientRegistrationClientRegistrationApiForm } from "authlete-typescript-sdk/funcs/dynamicClientRegistrationClientRegistrationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { dynamicClientRegistrationClientRegistrationApiForm } from "authlete-typescript-latest/funcs/dynamicClientRegistrationClientRegistrationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -311,7 +316,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await dynamicClientRegistrationClientRegistrationApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceClientRegistration: {},
+    1api1ServiceId1client1registrationPostRequestBodyContentApplication1jsonSchema: {
+      json: "{key: 6995014930124193, key1: null, key2: \"<value>\"}",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -339,9 +346,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientRegistrationGetApi
 
@@ -461,7 +471,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="client_registration_get_api" method="post" path="/api/{serviceId}/client/registration/get" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -472,7 +482,11 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationGetApi({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceClientRegistration: {},
+    1api1ServiceId1client1registrationPostRequestBodyContentApplication1jsonSchema: {
+      json: "{key: 8153909118751747, key1: null, key2: \"<value>\"}",
+      token: "qs4Tu5TV7qqDYT93bFs6ISyhTByMF9o-54GY4JU5vTA",
+      clientId: "26837717140341",
+    },
   });
 
   console.log(result);
@@ -486,8 +500,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { dynamicClientRegistrationClientRegistrationGetApi } from "authlete-typescript-sdk/funcs/dynamicClientRegistrationClientRegistrationGetApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { dynamicClientRegistrationClientRegistrationGetApi } from "authlete-typescript-latest/funcs/dynamicClientRegistrationClientRegistrationGetApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -500,7 +514,11 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await dynamicClientRegistrationClientRegistrationGetApi(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceClientRegistration: {},
+    1api1ServiceId1client1registrationPostRequestBodyContentApplication1jsonSchema: {
+      json: "{key: 7540933955061001, key1: null, key2: \"<value>\"}",
+      token: "qs4Tu5TV7qqDYT93bFs6ISyhTByMF9o-54GY4JU5vTA",
+      clientId: "26837717140341",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -524,13 +542,16 @@ run();
 
 ### Response
 
-**Promise\<[models.APILBraceserviceIdRBraceClientRegistration200](../../models/apilbraceserviceidrbraceclientregistration200.md)\>**
+**Promise\<[models.1api1ServiceId1client1registrationPostResponses200ContentApplication1jsonSchema](../../models/oneapi1serviceid1client1registrationpostresponses200contentapplication1jsonschema.md)\>**
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientRegistrationUpdateApi
 
@@ -650,7 +671,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="client_registration_update_api" method="post" path="/api/{serviceId}/client/registration/update" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -679,8 +700,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { dynamicClientRegistrationClientRegistrationUpdateApi } from "authlete-typescript-sdk/funcs/dynamicClientRegistrationClientRegistrationUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { dynamicClientRegistrationClientRegistrationUpdateApi } from "authlete-typescript-latest/funcs/dynamicClientRegistrationClientRegistrationUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -725,9 +746,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientRegistrationUpdateApiForm
 
@@ -847,7 +871,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="client_registration_update_api_form" method="post" path="/api/{serviceId}/client/registration/update" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -858,7 +882,11 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationUpdateApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceClientRegistrationUpdate: {},
+    1api1ServiceId1client1registration1updatePostRequestBodyContentApplication1jsonSchema: {
+      clientId: "<id>",
+      token: "<value>",
+      json: "{key: 7278695057340839, key1: null, key2: \"<value>\"}",
+    },
   });
 
   console.log(result);
@@ -872,8 +900,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { dynamicClientRegistrationClientRegistrationUpdateApiForm } from "authlete-typescript-sdk/funcs/dynamicClientRegistrationClientRegistrationUpdateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { dynamicClientRegistrationClientRegistrationUpdateApiForm } from "authlete-typescript-latest/funcs/dynamicClientRegistrationClientRegistrationUpdateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -886,7 +914,11 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await dynamicClientRegistrationClientRegistrationUpdateApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceClientRegistrationUpdate: {},
+    1api1ServiceId1client1registration1updatePostRequestBodyContentApplication1jsonSchema: {
+      clientId: "<id>",
+      token: "<value>",
+      json: "{key: 7278695057340839, key1: null, key2: \"<value>\"}",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -914,9 +946,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientRegistrationDeleteApi
 
@@ -1031,7 +1066,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="client_registration_delete_api" method="post" path="/api/{serviceId}/client/registration/delete" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1059,8 +1094,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { dynamicClientRegistrationClientRegistrationDeleteApi } from "authlete-typescript-sdk/funcs/dynamicClientRegistrationClientRegistrationDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { dynamicClientRegistrationClientRegistrationDeleteApi } from "authlete-typescript-latest/funcs/dynamicClientRegistrationClientRegistrationDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1104,9 +1139,12 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
 
 ## clientRegistrationDeleteApiForm
 
@@ -1221,7 +1259,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="client_registration_delete_api_form" method="post" path="/api/{serviceId}/client/registration/delete" -->
 ```typescript
-import { Authlete } from "authlete-typescript-sdk";
+import { Authlete } from "authlete-typescript-latest";
 
 const authlete = new Authlete({
   security: {
@@ -1232,7 +1270,10 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationDeleteApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceClientRegistration2: {},
+    1api1ServiceId1client1registration1deletePostRequestBodyContentApplication1jsonSchema: {
+      clientId: "<id>",
+      token: "<value>",
+    },
   });
 
   console.log(result);
@@ -1246,8 +1287,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-sdk/core.js";
-import { dynamicClientRegistrationClientRegistrationDeleteApiForm } from "authlete-typescript-sdk/funcs/dynamicClientRegistrationClientRegistrationDeleteApiForm.js";
+import { AuthleteCore } from "authlete-typescript-latest/core.js";
+import { dynamicClientRegistrationClientRegistrationDeleteApiForm } from "authlete-typescript-latest/funcs/dynamicClientRegistrationClientRegistrationDeleteApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1260,7 +1301,10 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await dynamicClientRegistrationClientRegistrationDeleteApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceClientRegistration2: {},
+    1api1ServiceId1client1registration1deletePostRequestBodyContentApplication1jsonSchema: {
+      clientId: "<id>",
+      token: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1288,6 +1332,9 @@ run();
 
 ### Errors
 
-| Error Type                  | Status Code                 | Content Type                |
-| --------------------------- | --------------------------- | --------------------------- |
-| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
+| Error Type                                                        | Status Code                                                       | Content Type                                                      |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
+| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
+| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
