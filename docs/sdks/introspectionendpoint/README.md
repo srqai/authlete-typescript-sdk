@@ -185,7 +185,7 @@ may be different.
 
 <!-- UsageSnippet language="typescript" operationID="auth_introspection_api" method="post" path="/api/{serviceId}/auth/introspection" -->
 ```typescript
-import { Authlete } from "authlete-typescript-latest";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {
@@ -217,8 +217,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-latest/core.js";
-import { introspectionEndpointAuthIntrospectionApi } from "authlete-typescript-latest/funcs/introspectionEndpointAuthIntrospectionApi.js";
+import { AuthleteCore } from "authlete-2/core.js";
+import { introspectionEndpointAuthIntrospectionApi } from "authlete-2/funcs/introspectionEndpointAuthIntrospectionApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -266,12 +266,12 @@ run();
 
 ### Errors
 
-| Error Type                                                        | Status Code                                                       | Content Type                                                      |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
-| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.APIInfo400Error      | 400                         | application/json            |
+| errors.APIInfo4002Error     | 401, 403                    | application/json            |
+| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authIntrospectionApiForm
 
@@ -446,7 +446,7 @@ may be different.
 
 <!-- UsageSnippet language="typescript" operationID="auth_introspection_api_form" method="post" path="/api/{serviceId}/auth/introspection" -->
 ```typescript
-import { Authlete } from "authlete-typescript-latest";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {
@@ -457,9 +457,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.introspectionEndpoint.authIntrospectionApiForm({
     serviceId: "<id>",
-    1api1ServiceId1auth1introspectionPostRequestBodyContentApplication1jsonSchema: {
-      token: "<value>",
-    },
+    apilBraceserviceIdRBraceAuthIntrospection: {},
   });
 
   console.log(result);
@@ -473,8 +471,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-latest/core.js";
-import { introspectionEndpointAuthIntrospectionApiForm } from "authlete-typescript-latest/funcs/introspectionEndpointAuthIntrospectionApiForm.js";
+import { AuthleteCore } from "authlete-2/core.js";
+import { introspectionEndpointAuthIntrospectionApiForm } from "authlete-2/funcs/introspectionEndpointAuthIntrospectionApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -487,9 +485,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await introspectionEndpointAuthIntrospectionApiForm(authlete, {
     serviceId: "<id>",
-    1api1ServiceId1auth1introspectionPostRequestBodyContentApplication1jsonSchema: {
-      token: "<value>",
-    },
+    apilBraceserviceIdRBraceAuthIntrospection: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -517,12 +513,12 @@ run();
 
 ### Errors
 
-| Error Type                                                        | Status Code                                                       | Content Type                                                      |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
-| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.APIInfo400Error      | 400                         | application/json            |
+| errors.APIInfo4002Error     | 401, 403                    | application/json            |
+| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authIntrospectionStandardApi
 
@@ -627,7 +623,7 @@ request does not satisfy authorization requirements imposed by your introspectio
 
 <!-- UsageSnippet language="typescript" operationID="auth_introspection_standard_api" method="post" path="/api/{serviceId}/auth/introspection/standard" -->
 ```typescript
-import { Authlete } from "authlete-typescript-latest";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {
@@ -654,8 +650,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-latest/core.js";
-import { introspectionEndpointAuthIntrospectionStandardApi } from "authlete-typescript-latest/funcs/introspectionEndpointAuthIntrospectionStandardApi.js";
+import { AuthleteCore } from "authlete-2/core.js";
+import { introspectionEndpointAuthIntrospectionStandardApi } from "authlete-2/funcs/introspectionEndpointAuthIntrospectionStandardApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -698,12 +694,12 @@ run();
 
 ### Errors
 
-| Error Type                                                        | Status Code                                                       | Content Type                                                      |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
-| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.APIInfo400Error      | 400                         | application/json            |
+| errors.APIInfo4002Error     | 401, 403                    | application/json            |
+| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authIntrospectionStandardApiForm
 
@@ -808,7 +804,7 @@ request does not satisfy authorization requirements imposed by your introspectio
 
 <!-- UsageSnippet language="typescript" operationID="auth_introspection_standard_api_form" method="post" path="/api/{serviceId}/auth/introspection/standard" -->
 ```typescript
-import { Authlete } from "authlete-typescript-latest";
+import { Authlete } from "authlete-2";
 
 const authlete = new Authlete({
   security: {
@@ -819,9 +815,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.introspectionEndpoint.authIntrospectionStandardApiForm({
     serviceId: "<id>",
-    1api1ServiceId1auth1introspection1standardPostRequestBodyContentApplication1jsonSchema: {
-      parameters: "<value>",
-    },
+    apilBraceserviceIdRBraceAuthIntrospectionStandard: {},
   });
 
   console.log(result);
@@ -835,8 +829,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-typescript-latest/core.js";
-import { introspectionEndpointAuthIntrospectionStandardApiForm } from "authlete-typescript-latest/funcs/introspectionEndpointAuthIntrospectionStandardApiForm.js";
+import { AuthleteCore } from "authlete-2/core.js";
+import { introspectionEndpointAuthIntrospectionStandardApiForm } from "authlete-2/funcs/introspectionEndpointAuthIntrospectionStandardApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -849,9 +843,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await introspectionEndpointAuthIntrospectionStandardApiForm(authlete, {
     serviceId: "<id>",
-    1api1ServiceId1auth1introspection1standardPostRequestBodyContentApplication1jsonSchema: {
-      parameters: "<value>",
-    },
+    apilBraceserviceIdRBraceAuthIntrospectionStandard: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -879,9 +871,9 @@ run();
 
 ### Errors
 
-| Error Type                                                        | Status Code                                                       | Content Type                                                      |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| errors.1api1infoGetResponses400Error                              | 400                                                               | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 401, 403                                                          | application/json                                                  |
-| errors.1api1infoGetResponses400ContentApplication1jsonSchemaError | 500                                                               | application/json                                                  |
-| errors.AuthleteDefaultError                                       | 4XX, 5XX                                                          | \*/\*                                                             |
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.APIInfo400Error      | 400                         | application/json            |
+| errors.APIInfo4002Error     | 401, 403                    | application/json            |
+| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

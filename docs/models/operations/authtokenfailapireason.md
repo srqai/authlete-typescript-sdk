@@ -6,7 +6,7 @@ The reason of the failure of the token request.
 ## Example Usage
 
 ```typescript
-import { AuthTokenFailApiReason } from "authlete-typescript-sdk/models/operations";
+import { AuthTokenFailApiReason } from "authlete-2/models/operations";
 
 let value: AuthTokenFailApiReason = "UNKNOWN";
 ```

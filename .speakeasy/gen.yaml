@@ -32,10 +32,10 @@ typescript:
     peerDependencies: {}
   additionalPackageJSON: {}
   author: Speakeasy
-  baseErrorName: ""
+  baseErrorName: AuthleteError
   clientServerStatusCodesAsErrors: true
   constFieldsAlwaysOptional: false
-  defaultErrorName: ""
+  defaultErrorName: AuthleteDefaultError
   enableCustomCodeRegions: false
   enableMCPServer: false
   enableReactQuery: false

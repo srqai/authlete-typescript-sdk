@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PushedAuthReqApiRequestBody } from "authlete-typescript-sdk/models/operations";
+import { PushedAuthReqApiRequestBody } from "authlete-2/models/operations";
 
 let value: PushedAuthReqApiRequestBody = {
   parameters: "<value>",

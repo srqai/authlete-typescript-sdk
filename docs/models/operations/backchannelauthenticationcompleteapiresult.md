@@ -7,7 +7,7 @@ described in the description.
 ## Example Usage
 
 ```typescript
-import { BackchannelAuthenticationCompleteApiResult } from "authlete-typescript-sdk/models/operations";
+import { BackchannelAuthenticationCompleteApiResult } from "authlete-2/models/operations";
 
 let value: BackchannelAuthenticationCompleteApiResult = "TRANSACTION_FAILED";
 ```

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AuthAuthorizationApiGrant } from "authlete-typescript-sdk/models/operations";
+import { AuthAuthorizationApiGrant } from "authlete-2/models/operations";
 
 let value: AuthAuthorizationApiGrant = {};
 ```

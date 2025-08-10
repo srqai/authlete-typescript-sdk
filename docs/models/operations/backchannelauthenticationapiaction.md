@@ -5,7 +5,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { BackchannelAuthenticationApiAction } from "authlete-typescript-sdk/models/operations";
+import { BackchannelAuthenticationApiAction } from "authlete-2/models/operations";
 
 let value: BackchannelAuthenticationApiAction = "BAD_REQUEST";
 ```

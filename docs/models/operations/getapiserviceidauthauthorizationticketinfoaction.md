@@ -5,7 +5,7 @@ The result of the `/auth/authorization/ticket/info` API call.
 ## Example Usage
 
 ```typescript
-import { GetApiServiceIdAuthAuthorizationTicketInfoAction } from "authlete-typescript-sdk/models/operations";
+import { GetApiServiceIdAuthAuthorizationTicketInfoAction } from "authlete-2/models/operations";
 
 let value: GetApiServiceIdAuthAuthorizationTicketInfoAction = "NOT_FOUND";
 ```

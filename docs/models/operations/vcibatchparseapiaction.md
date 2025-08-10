@@ -5,7 +5,7 @@ The next action that the batch credential endpoint should take.
 ## Example Usage
 
 ```typescript
-import { VciBatchParseApiAction } from "authlete-typescript-sdk/models/operations";
+import { VciBatchParseApiAction } from "authlete-2/models/operations";
 
 let value: VciBatchParseApiAction = "INTERNAL_SERVER_ERROR";
 ```

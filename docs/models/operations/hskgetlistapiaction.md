@@ -5,7 +5,7 @@ Result of the API call
 ## Example Usage
 
 ```typescript
-import { HskGetListApiAction } from "authlete-typescript-sdk/models/operations";
+import { HskGetListApiAction } from "authlete-2/models/operations";
 
 let value: HskGetListApiAction = "INVALID_REQUEST";
 ```

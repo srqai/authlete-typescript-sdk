@@ -18,6 +18,7 @@ import {
   RequestTimeoutError,
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
+import * as errors from "../models/errors/index.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
@@ -26,9 +27,6 @@ import { Result } from "../types/fp.js";
 
 /**
  * /api/{serviceId}/vci/deferred/parse API
- *
- * @remarks
- * null
  */
 export function verifiableCredentialIssuerVciDeferredParseApiForm(
   client: AuthleteCore,
@@ -37,6 +35,8 @@ export function verifiableCredentialIssuerVciDeferredParseApiForm(
 ): APIPromise<
   Result<
     operations.VciDeferredParseApiFormResponse,
+    | errors.APIInfo400Error
+    | errors.APIInfo4002Error
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -62,6 +62,8 @@ async function $do(
   [
     Result<
       operations.VciDeferredParseApiFormResponse,
+      | errors.APIInfo400Error
+      | errors.APIInfo4002Error
       | AuthleteError
       | ResponseValidationError
       | ConnectionError
@@ -149,8 +151,14 @@ async function $do(
   }
   const response = doResult.value;
 
+  const responseFields = {
+    HttpMeta: { Response: response, Request: req },
+  };
+
   const [result] = await M.match<
     operations.VciDeferredParseApiFormResponse,
+    | errors.APIInfo400Error
+    | errors.APIInfo4002Error
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -161,9 +169,12 @@ async function $do(
     | SDKValidationError
   >(
     M.json(200, operations.VciDeferredParseApiFormResponse$inboundSchema),
-    M.fail([400, 401, 403, "4XX"]),
-    M.fail([500, "5XX"]),
-  )(response, req);
+    M.jsonErr(400, errors.APIInfo400Error$inboundSchema),
+    M.jsonErr([401, 403], errors.APIInfo4002Error$inboundSchema),
+    M.jsonErr(500, errors.APIInfo4002Error$inboundSchema),
+    M.fail("4XX"),
+    M.fail("5XX"),
+  )(response, req, { extraFields: responseFields });
   if (!result.ok) {
     return [result, { status: "complete", request: req, response }];
   }

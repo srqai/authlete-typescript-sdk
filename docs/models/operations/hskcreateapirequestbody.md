@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { HskCreateApiRequestBody } from "authlete-typescript-sdk/models/operations";
+import { HskCreateApiRequestBody } from "authlete-2/models/operations";
 
 let value: HskCreateApiRequestBody = {};
 ```

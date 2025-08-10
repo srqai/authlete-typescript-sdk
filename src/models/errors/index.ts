@@ -3,6 +3,7 @@
  */
 
 export * from "./apiinfo4002error.js";
+export * from "./apiinfo400error.js";
 export * from "./authletedefaulterror.js";
 export * from "./httpclienterrors.js";
 export * from "./infoapi.js";
