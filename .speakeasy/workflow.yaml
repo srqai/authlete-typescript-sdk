@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     Authlete API Explorer:
         inputs:
-            - location: .speakeasy/spec/new.yaml
+            - location: .speakeasy/spec/new1.yaml
         transformations:
             - removeUnused: true
         output: .speakeasy/out.openapi.yaml
