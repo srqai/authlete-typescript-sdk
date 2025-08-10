@@ -1,0 +1,21 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    Authlete API Explorer:
+        inputs:
+            - location: ../new.yaml
+        transformations:
+            - removeUnused: true
+        output: .speakeasy/out.openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/v0/1/authlete-api-explorer
+targets:
+    authlete:
+        target: typescript
+        source: Authlete API Explorer
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/v0/1/authlete-api-explorer-typescript-code-samples
+            labelOverride:
+                fixedValue: Typescript (SDK)
+            blocking: false
