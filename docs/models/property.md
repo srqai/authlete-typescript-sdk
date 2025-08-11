@@ -1,5 +1,7 @@
 # Property
 
+An object containing property data
+
 ## Example Usage
 
 ```typescript

@@ -1,5 +1,7 @@
 # VciSingleParseApiResponse
 
+An object containing schema data
+
 ## Example Usage
 
 ```typescript
@@ -16,4 +18,4 @@ let value: VciSingleParseApiResponse = {};
 | `resultMessage`                                                                          | *string*                                                                                 | :heavy_minus_sign:                                                                       | A short message which explains the result of the API call.                               |
 | `action`                                                                                 | [operations.VciSingleParseApiAction](../../models/operations/vcisingleparseapiaction.md) | :heavy_minus_sign:                                                                       | The next action that the credential endpoint should take.                                |
 | `responseContent`                                                                        | *string*                                                                                 | :heavy_minus_sign:                                                                       | The content of the response to the request sender.                                       |
-| `info`                                                                                   | [models.CredentialRequestInfo](../../models/credentialrequestinfo.md)                    | :heavy_minus_sign:                                                                       | N/A                                                                                      |
+| `info`                                                                                   | [models.CredentialRequestInfo](../../models/credentialrequestinfo.md)                    | :heavy_minus_sign:                                                                       | An object containing credentialrequestinfo data                                          |

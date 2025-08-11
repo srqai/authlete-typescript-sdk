@@ -15,7 +15,7 @@ export type AuthTokenApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthToken: models.APILBraceserviceIdRBraceAuthToken;
+  apiServiceIdAuthToken: models.ApiServiceIdAuthToken;
 };
 
 /**
@@ -23,12 +23,13 @@ export type AuthTokenApiFormRequest = {
  */
 export const AuthTokenApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
-  InvalidClient: "INVALID_CLIENT",
   BadRequest: "BAD_REQUEST",
-  Password: "PASSWORD",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
-  TokenExchange: "TOKEN_EXCHANGE",
-  JwtBearer: "JWT_BEARER",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -63,6 +64,9 @@ export type AuthTokenApiFormActorTokenType = ClosedEnum<
   typeof AuthTokenApiFormActorTokenType
 >;
 
+/**
+ * An object containing actortokeninfo data
+ */
 export type AuthTokenApiFormActorTokenInfo = {
   /**
    * The client id.
@@ -96,6 +100,9 @@ export type AuthTokenApiFormActorTokenInfo = {
    * The array of the resources of the token.
    */
   resources?: Array<string> | undefined;
+  /**
+   * An object containing authorizationdetailselement data
+   */
   authorizationDetails?: models.AuthorizationDetailsElement | undefined;
   /**
    * The entity ID of the client.
@@ -111,6 +118,9 @@ export type AuthTokenApiFormActorTokenInfo = {
   clientEntityIdUsed?: boolean | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type AuthTokenApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -302,16 +312,35 @@ export type AuthTokenApiFormResponse = {
    * @remarks
    */
   audiences?: Array<string> | undefined;
+  /**
+   * The grant type of the access token when the access token was created.
+   *
+   * @remarks
+   */
   requestedTokenType?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType
+    | models.ApiServiceIdAuthTokenpropertiesactorTokenType
     | undefined;
+  /**
+   * A string value
+   */
   subjectToken?: string | undefined;
+  /**
+   * The grant type of the access token when the access token was created.
+   *
+   * @remarks
+   */
   subjectTokenType?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType
+    | models.ApiServiceIdAuthTokenpropertiesactorTokenType1
     | undefined;
+  /**
+   * An object containing api_serviceid_auth_tokenpropertiesactortokeninfo data
+   */
   subjectTokenInfo?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenInfo
+    | models.ApiServiceIdAuthTokenpropertiesactorTokenInfo
     | undefined;
+  /**
+   * A string value
+   */
   actorToken?: string | undefined;
   /**
    * The grant type of the access token when the access token was created.
@@ -319,6 +348,9 @@ export type AuthTokenApiFormResponse = {
    * @remarks
    */
   actorTokenType?: AuthTokenApiFormActorTokenType | undefined;
+  /**
+   * An object containing actortokeninfo data
+   */
   actorTokenInfo?: AuthTokenApiFormActorTokenInfo | undefined;
   /**
    * For RFC 7523 JSON Web Token (JWT) Profile for OAuth 2.0 Client Authentication and Authorization Grants
@@ -392,19 +424,17 @@ export const AuthTokenApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthToken:
-    models.APILBraceserviceIdRBraceAuthToken$inboundSchema,
+  api_serviceId_auth_token: models.ApiServiceIdAuthToken$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthToken": "apilBraceserviceIdRBraceAuthToken",
+    "api_serviceId_auth_token": "apiServiceIdAuthToken",
   });
 });
 
 /** @internal */
 export type AuthTokenApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthToken:
-    models.APILBraceserviceIdRBraceAuthToken$Outbound;
+  api_serviceId_auth_token: models.ApiServiceIdAuthToken$Outbound;
 };
 
 /** @internal */
@@ -414,11 +444,10 @@ export const AuthTokenApiFormRequest$outboundSchema: z.ZodType<
   AuthTokenApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthToken:
-    models.APILBraceserviceIdRBraceAuthToken$outboundSchema,
+  apiServiceIdAuthToken: models.ApiServiceIdAuthToken$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthToken: "APILBraceserviceIdRBraceAuthToken",
+    apiServiceIdAuthToken: "api_serviceId_auth_token",
   });
 });
 
@@ -622,15 +651,12 @@ export const AuthTokenApiFormResponse$inboundSchema: z.ZodType<
   grantId: z.string().optional(),
   audiences: z.array(z.string()).optional(),
   requestedTokenType: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$inboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenType$inboundSchema.optional(),
   subjectToken: z.string().optional(),
   subjectTokenType: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$inboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenType1$inboundSchema.optional(),
   subjectTokenInfo: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenInfo$inboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenInfo$inboundSchema.optional(),
   actorToken: z.string().optional(),
   actorTokenType: AuthTokenApiFormActorTokenType$inboundSchema.optional(),
   actorTokenInfo: z.lazy(() => AuthTokenApiFormActorTokenInfo$inboundSchema)
@@ -679,15 +705,11 @@ export type AuthTokenApiFormResponse$Outbound = {
   clientAuthMethod?: string | undefined;
   grantId?: string | undefined;
   audiences?: Array<string> | undefined;
-  requestedTokenType?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$Outbound
-    | undefined;
+  requestedTokenType?: string | undefined;
   subjectToken?: string | undefined;
-  subjectTokenType?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$Outbound
-    | undefined;
+  subjectTokenType?: string | undefined;
   subjectTokenInfo?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenInfo$Outbound
+    | models.ApiServiceIdAuthTokenpropertiesactorTokenInfo$Outbound
     | undefined;
   actorToken?: string | undefined;
   actorTokenType?: string | undefined;
@@ -741,15 +763,12 @@ export const AuthTokenApiFormResponse$outboundSchema: z.ZodType<
   grantId: z.string().optional(),
   audiences: z.array(z.string()).optional(),
   requestedTokenType: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$outboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenType$outboundSchema.optional(),
   subjectToken: z.string().optional(),
   subjectTokenType: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$outboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenType1$outboundSchema.optional(),
   subjectTokenInfo: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenInfo$outboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenInfo$outboundSchema.optional(),
   actorToken: z.string().optional(),
   actorTokenType: AuthTokenApiFormActorTokenType$outboundSchema.optional(),
   actorTokenInfo: z.lazy(() => AuthTokenApiFormActorTokenInfo$outboundSchema)

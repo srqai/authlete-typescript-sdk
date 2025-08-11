@@ -18,11 +18,14 @@ export type ClientFlagUpdateApiFormRequest = {
    * A client ID.
    */
   clientIdentifier: string;
-  apilBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace?:
-    | models.APILBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace
+  apiServiceIdClientLockFlagUpdateClientIdenti?:
+    | models.ApiServiceIdClientLockFlagUpdateClientIdenti
     | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ClientFlagUpdateApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -42,14 +45,12 @@ export const ClientFlagUpdateApiFormRequest$inboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientIdentifier: z.string(),
-  APILBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace:
-    models
-      .APILBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace$inboundSchema
-      .optional(),
+  api_serviceId_client_lock_flag_update_clientIdenti: models
+    .ApiServiceIdClientLockFlagUpdateClientIdenti$inboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace":
-      "apilBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace",
+    "api_serviceId_client_lock_flag_update_clientIdenti":
+      "apiServiceIdClientLockFlagUpdateClientIdenti",
   });
 });
 
@@ -57,8 +58,8 @@ export const ClientFlagUpdateApiFormRequest$inboundSchema: z.ZodType<
 export type ClientFlagUpdateApiFormRequest$Outbound = {
   serviceId: string;
   clientIdentifier: string;
-  APILBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace?:
-    | models.APILBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace$Outbound
+  api_serviceId_client_lock_flag_update_clientIdenti?:
+    | models.ApiServiceIdClientLockFlagUpdateClientIdenti$Outbound
     | undefined;
 };
 
@@ -70,14 +71,12 @@ export const ClientFlagUpdateApiFormRequest$outboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientIdentifier: z.string(),
-  apilBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace:
-    models
-      .APILBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace$outboundSchema
-      .optional(),
+  apiServiceIdClientLockFlagUpdateClientIdenti: models
+    .ApiServiceIdClientLockFlagUpdateClientIdenti$outboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace:
-      "APILBraceserviceIdRBraceClientLockFlagUpdateLBraceclientIdentifierRBrace",
+    apiServiceIdClientLockFlagUpdateClientIdenti:
+      "api_serviceId_client_lock_flag_update_clientIdenti",
   });
 });
 

@@ -15,8 +15,8 @@ export type BackchannelAuthenticationCompleteApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceBackchannelAuthenticationComplete:
-    models.APILBraceserviceIdRBraceBackchannelAuthenticationComplete;
+  apiServiceIdBackchannelAuthenticationComplete:
+    models.ApiServiceIdBackchannelAuthenticationComplete;
 };
 
 /**
@@ -25,9 +25,14 @@ export type BackchannelAuthenticationCompleteApiFormRequest = {
  * @remarks
  */
 export const BackchannelAuthenticationCompleteApiFormAction = {
-  ServerError: "SERVER_ERROR",
-  NoAction: "NO_ACTION",
-  Notification: "NOTIFICATION",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -38,6 +43,9 @@ export type BackchannelAuthenticationCompleteApiFormAction = ClosedEnum<
   typeof BackchannelAuthenticationCompleteApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type BackchannelAuthenticationCompleteApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -88,6 +96,9 @@ export type BackchannelAuthenticationCompleteApiFormResponse = {
    * @remarks
    */
   clientName?: string | undefined;
+  /**
+   * A string value
+   */
   deliveryMode?: models.DeliveryMode | undefined;
   /**
    * The client notification endpoint to which a notification needs to be sent. This corresponds
@@ -212,21 +223,20 @@ export const BackchannelAuthenticationCompleteApiFormRequest$inboundSchema:
     unknown
   > = z.object({
     serviceId: z.string(),
-    APILBraceserviceIdRBraceBackchannelAuthenticationComplete:
-      models
-        .APILBraceserviceIdRBraceBackchannelAuthenticationComplete$inboundSchema,
+    api_serviceId_backchannel_authentication_complete:
+      models.ApiServiceIdBackchannelAuthenticationComplete$inboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      "APILBraceserviceIdRBraceBackchannelAuthenticationComplete":
-        "apilBraceserviceIdRBraceBackchannelAuthenticationComplete",
+      "api_serviceId_backchannel_authentication_complete":
+        "apiServiceIdBackchannelAuthenticationComplete",
     });
   });
 
 /** @internal */
 export type BackchannelAuthenticationCompleteApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceBackchannelAuthenticationComplete:
-    models.APILBraceserviceIdRBraceBackchannelAuthenticationComplete$Outbound;
+  api_serviceId_backchannel_authentication_complete:
+    models.ApiServiceIdBackchannelAuthenticationComplete$Outbound;
 };
 
 /** @internal */
@@ -237,13 +247,12 @@ export const BackchannelAuthenticationCompleteApiFormRequest$outboundSchema:
     BackchannelAuthenticationCompleteApiFormRequest
   > = z.object({
     serviceId: z.string(),
-    apilBraceserviceIdRBraceBackchannelAuthenticationComplete:
-      models
-        .APILBraceserviceIdRBraceBackchannelAuthenticationComplete$outboundSchema,
+    apiServiceIdBackchannelAuthenticationComplete:
+      models.ApiServiceIdBackchannelAuthenticationComplete$outboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      apilBraceserviceIdRBraceBackchannelAuthenticationComplete:
-        "APILBraceserviceIdRBraceBackchannelAuthenticationComplete",
+      apiServiceIdBackchannelAuthenticationComplete:
+        "api_serviceId_backchannel_authentication_complete",
     });
   });
 

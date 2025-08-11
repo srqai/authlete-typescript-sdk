@@ -14,11 +14,12 @@ export type JoseVerifyApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceJoseVerify?:
-    | models.APILBraceserviceIdRBraceJoseVerify
-    | undefined;
+  apiServiceIdJoseVerify?: models.ApiServiceIdJoseVerify | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type JoseVerifyApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -67,19 +68,19 @@ export const JoseVerifyApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceJoseVerify: models
-    .APILBraceserviceIdRBraceJoseVerify$inboundSchema.optional(),
+  api_serviceId_jose_verify: models.ApiServiceIdJoseVerify$inboundSchema
+    .optional(),
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceJoseVerify": "apilBraceserviceIdRBraceJoseVerify",
+    "api_serviceId_jose_verify": "apiServiceIdJoseVerify",
   });
 });
 
 /** @internal */
 export type JoseVerifyApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceJoseVerify?:
-    | models.APILBraceserviceIdRBraceJoseVerify$Outbound
+  api_serviceId_jose_verify?:
+    | models.ApiServiceIdJoseVerify$Outbound
     | undefined;
 };
 
@@ -90,11 +91,11 @@ export const JoseVerifyApiFormRequest$outboundSchema: z.ZodType<
   JoseVerifyApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceJoseVerify: models
-    .APILBraceserviceIdRBraceJoseVerify$outboundSchema.optional(),
+  apiServiceIdJoseVerify: models.ApiServiceIdJoseVerify$outboundSchema
+    .optional(),
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceJoseVerify: "APILBraceserviceIdRBraceJoseVerify",
+    apiServiceIdJoseVerify: "api_serviceId_jose_verify",
   });
 });
 

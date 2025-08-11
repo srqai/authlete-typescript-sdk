@@ -13,5 +13,5 @@ let value: AuthTokenUpdateApiAction = "BAD_REQUEST";
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "FORBIDDEN" | "NOT_FOUND" | "OK"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

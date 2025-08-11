@@ -1,5 +1,7 @@
 # CredentialRequestInfo
 
+An object containing credentialrequestinfo data
+
 ## Example Usage
 
 ```typescript

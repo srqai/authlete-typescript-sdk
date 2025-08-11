@@ -29,6 +29,9 @@ export type ServiceJwksGetApiRequest = {
  */
 export type Key = {};
 
+/**
+ * An object containing schema data
+ */
 export type ServiceJwksGetApiResponse = {
   /**
    * An array of [JWK](https://datatracker.ietf.org/doc/html/rfc7517)s.

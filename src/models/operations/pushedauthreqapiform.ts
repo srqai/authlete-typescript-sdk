@@ -15,20 +15,21 @@ export type PushedAuthReqApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBracePushedAuthReq:
-    models.APILBraceserviceIdRBracePushedAuthReq;
+  apiServiceIdPushedAuthReq: models.ApiServiceIdPushedAuthReq;
 };
 
 /**
  * The next action that the authorization server implementation should take. Any other value other than "CREATED" should be handled as unsuccessful result.
  */
 export const PushedAuthReqApiFormAction = {
-  Created: "CREATED",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  PayloadTooLarge: "PAYLOAD_TOO_LARGE",
-  InternalServerError: "INTERNAL_SERVER_ERROR",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take. Any other value other than "CREATED" should be handled as unsuccessful result.
@@ -64,6 +65,9 @@ export type PushedAuthReqApiFormClientAuthMethod = ClosedEnum<
   typeof PushedAuthReqApiFormClientAuthMethod
 >;
 
+/**
+ * An object containing schema data
+ */
 export type PushedAuthReqApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -114,20 +118,17 @@ export const PushedAuthReqApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBracePushedAuthReq:
-    models.APILBraceserviceIdRBracePushedAuthReq$inboundSchema,
+  api_serviceId_pushed_auth_req: models.ApiServiceIdPushedAuthReq$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBracePushedAuthReq":
-      "apilBraceserviceIdRBracePushedAuthReq",
+    "api_serviceId_pushed_auth_req": "apiServiceIdPushedAuthReq",
   });
 });
 
 /** @internal */
 export type PushedAuthReqApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBracePushedAuthReq:
-    models.APILBraceserviceIdRBracePushedAuthReq$Outbound;
+  api_serviceId_pushed_auth_req: models.ApiServiceIdPushedAuthReq$Outbound;
 };
 
 /** @internal */
@@ -137,12 +138,10 @@ export const PushedAuthReqApiFormRequest$outboundSchema: z.ZodType<
   PushedAuthReqApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBracePushedAuthReq:
-    models.APILBraceserviceIdRBracePushedAuthReq$outboundSchema,
+  apiServiceIdPushedAuthReq: models.ApiServiceIdPushedAuthReq$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBracePushedAuthReq:
-      "APILBraceserviceIdRBracePushedAuthReq",
+    apiServiceIdPushedAuthReq: "api_serviceId_pushed_auth_req",
   });
 });
 

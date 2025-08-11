@@ -13,5 +13,5 @@ let value: DeviceVerificationApiAction = "INTERNAL_SERVER_ERROR";
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "NOT_EXIST" | "EXPIRED" | "VALID"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

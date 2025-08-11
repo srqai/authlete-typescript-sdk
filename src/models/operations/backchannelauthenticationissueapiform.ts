@@ -15,8 +15,8 @@ export type BackchannelAuthenticationIssueApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceBackchannelAuthenticationIssue:
-    models.APILBraceserviceIdRBraceBackchannelAuthenticationIssue;
+  apiServiceIdBackchannelAuthenticationIssue:
+    models.ApiServiceIdBackchannelAuthenticationIssue;
 };
 
 /**
@@ -24,7 +24,12 @@ export type BackchannelAuthenticationIssueApiFormRequest = {
  */
 export const BackchannelAuthenticationIssueApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
-  InvalidTicket: "INVALID_TICKET",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -34,6 +39,9 @@ export type BackchannelAuthenticationIssueApiFormAction = ClosedEnum<
   typeof BackchannelAuthenticationIssueApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type BackchannelAuthenticationIssueApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -83,21 +91,20 @@ export const BackchannelAuthenticationIssueApiFormRequest$inboundSchema:
     unknown
   > = z.object({
     serviceId: z.string(),
-    APILBraceserviceIdRBraceBackchannelAuthenticationIssue:
-      models
-        .APILBraceserviceIdRBraceBackchannelAuthenticationIssue$inboundSchema,
+    api_serviceId_backchannel_authentication_issue:
+      models.ApiServiceIdBackchannelAuthenticationIssue$inboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      "APILBraceserviceIdRBraceBackchannelAuthenticationIssue":
-        "apilBraceserviceIdRBraceBackchannelAuthenticationIssue",
+      "api_serviceId_backchannel_authentication_issue":
+        "apiServiceIdBackchannelAuthenticationIssue",
     });
   });
 
 /** @internal */
 export type BackchannelAuthenticationIssueApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceBackchannelAuthenticationIssue:
-    models.APILBraceserviceIdRBraceBackchannelAuthenticationIssue$Outbound;
+  api_serviceId_backchannel_authentication_issue:
+    models.ApiServiceIdBackchannelAuthenticationIssue$Outbound;
 };
 
 /** @internal */
@@ -108,13 +115,12 @@ export const BackchannelAuthenticationIssueApiFormRequest$outboundSchema:
     BackchannelAuthenticationIssueApiFormRequest
   > = z.object({
     serviceId: z.string(),
-    apilBraceserviceIdRBraceBackchannelAuthenticationIssue:
-      models
-        .APILBraceserviceIdRBraceBackchannelAuthenticationIssue$outboundSchema,
+    apiServiceIdBackchannelAuthenticationIssue:
+      models.ApiServiceIdBackchannelAuthenticationIssue$outboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      apilBraceserviceIdRBraceBackchannelAuthenticationIssue:
-        "APILBraceserviceIdRBraceBackchannelAuthenticationIssue",
+      apiServiceIdBackchannelAuthenticationIssue:
+        "api_serviceId_backchannel_authentication_issue",
     });
   });
 

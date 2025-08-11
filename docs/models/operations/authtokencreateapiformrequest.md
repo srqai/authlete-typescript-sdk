@@ -7,13 +7,16 @@ import { AuthTokenCreateApiFormRequest } from "authlete-2/models/operations";
 
 let value: AuthTokenCreateApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceAuthTokenCreate: {},
+  apiServiceIdAuthTokenCreate: {
+    grantType: "IMPLICIT",
+    clientId: 62300,
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                               | *string*                                                                                                  | :heavy_check_mark:                                                                                        | A service ID.                                                                                             |
-| `apilBraceserviceIdRBraceAuthTokenCreate`                                                                 | [models.APILBraceserviceIdRBraceAuthTokenCreate](../../models/apilbraceserviceidrbraceauthtokencreate.md) | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `serviceId`                                                                       | *string*                                                                          | :heavy_check_mark:                                                                | A service ID.                                                                     |
+| `apiServiceIdAuthTokenCreate`                                                     | [models.ApiServiceIdAuthTokenCreate](../../models/apiserviceidauthtokencreate.md) | :heavy_check_mark:                                                                | N/A                                                                               |

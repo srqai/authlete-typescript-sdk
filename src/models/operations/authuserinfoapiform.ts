@@ -15,8 +15,7 @@ export type AuthUserinfoApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthUserinfo:
-    models.APILBraceserviceIdRBraceAuthUserinfo;
+  apiServiceIdAuthUserinfo: models.ApiServiceIdAuthUserinfo;
 };
 
 /**
@@ -25,8 +24,11 @@ export type AuthUserinfoApiFormRequest = {
 export const AuthUserinfoApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -36,6 +38,9 @@ export type AuthUserinfoApiFormAction = ClosedEnum<
   typeof AuthUserinfoApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthUserinfoApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -289,20 +294,17 @@ export const AuthUserinfoApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthUserinfo:
-    models.APILBraceserviceIdRBraceAuthUserinfo$inboundSchema,
+  api_serviceId_auth_userinfo: models.ApiServiceIdAuthUserinfo$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthUserinfo":
-      "apilBraceserviceIdRBraceAuthUserinfo",
+    "api_serviceId_auth_userinfo": "apiServiceIdAuthUserinfo",
   });
 });
 
 /** @internal */
 export type AuthUserinfoApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthUserinfo:
-    models.APILBraceserviceIdRBraceAuthUserinfo$Outbound;
+  api_serviceId_auth_userinfo: models.ApiServiceIdAuthUserinfo$Outbound;
 };
 
 /** @internal */
@@ -312,12 +314,10 @@ export const AuthUserinfoApiFormRequest$outboundSchema: z.ZodType<
   AuthUserinfoApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthUserinfo:
-    models.APILBraceserviceIdRBraceAuthUserinfo$outboundSchema,
+  apiServiceIdAuthUserinfo: models.ApiServiceIdAuthUserinfo$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthUserinfo:
-      "APILBraceserviceIdRBraceAuthUserinfo",
+    apiServiceIdAuthUserinfo: "api_serviceId_auth_userinfo",
   });
 });
 

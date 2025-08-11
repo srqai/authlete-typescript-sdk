@@ -7,13 +7,15 @@ import { AuthIntrospectionStandardApiFormRequest } from "authlete-2/models/opera
 
 let value: AuthIntrospectionStandardApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceAuthIntrospectionStandard: {},
+  apiServiceIdAuthIntrospectionStandard: {
+    parameters: "<value>",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                                         | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                                                   | *string*                                                                                                                      | :heavy_check_mark:                                                                                                            | A service ID.                                                                                                                 |
-| `apilBraceserviceIdRBraceAuthIntrospectionStandard`                                                                           | [models.APILBraceserviceIdRBraceAuthIntrospectionStandard](../../models/apilbraceserviceidrbraceauthintrospectionstandard.md) | :heavy_check_mark:                                                                                                            | N/A                                                                                                                           |
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `serviceId`                                                                                           | *string*                                                                                              | :heavy_check_mark:                                                                                    | A service ID.                                                                                         |
+| `apiServiceIdAuthIntrospectionStandard`                                                               | [models.ApiServiceIdAuthIntrospectionStandard](../../models/apiserviceidauthintrospectionstandard.md) | :heavy_check_mark:                                                                                    | N/A                                                                                                   |

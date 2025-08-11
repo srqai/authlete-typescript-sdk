@@ -104,6 +104,9 @@ export const ClientRegistrationType = {
  */
 export type ClientRegistrationType = ClosedEnum<typeof ClientRegistrationType>;
 
+/**
+ * A string value
+ */
 export const FapiMode = {
   Fapi1Advanced: "FAPI1_ADVANCED",
   Fapi1Baseline: "FAPI1_BASELINE",
@@ -113,8 +116,14 @@ export const FapiMode = {
     "FAPI2_MESSAGE_SIGNING_INTROSPECTION_RES",
   Fapi2Security: "FAPI2_SECURITY",
 } as const;
+/**
+ * A string value
+ */
 export type FapiMode = ClosedEnum<typeof FapiMode>;
 
+/**
+ * A string value
+ */
 export const ResponseMode = {
   Query: "QUERY",
   Fragment: "FRAGMENT",
@@ -124,8 +133,14 @@ export const ResponseMode = {
   FragmentJwt: "FRAGMENT_JWT",
   FormPostJwt: "FORM_POST_JWT",
 } as const;
+/**
+ * A string value
+ */
 export type ResponseMode = ClosedEnum<typeof ResponseMode>;
 
+/**
+ * An object containing client data
+ */
 export type Client = {
   /**
    * The sequential number of the client. The value of this property is assigned by Authlete.
@@ -782,6 +797,9 @@ export type Client = {
    * @remarks
    */
   attributes?: Array<Pair> | undefined;
+  /**
+   * An object containing clientextension data
+   */
   extension?: ClientExtension | undefined;
   /**
    * The authorization details types that this client may use as values of the `type` field in
@@ -1067,6 +1085,9 @@ export type Client = {
   credentialResponseEncryptionRequired?: boolean | undefined;
 };
 
+/**
+ * An object containing client data
+ */
 export type ClientInput = {
   /**
    * The name of the client application. This property corresponds to `client_name` in
@@ -1666,6 +1687,9 @@ export type ClientInput = {
    * @remarks
    */
   attributes?: Array<Pair> | undefined;
+  /**
+   * An object containing clientextension data
+   */
   extension?: ClientExtension | undefined;
   /**
    * The authorization details types that this client may use as values of the `type` field in

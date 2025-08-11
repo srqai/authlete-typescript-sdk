@@ -10,6 +10,9 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
+/**
+ * An object containing schema data
+ */
 export type AuthTokenApiRequestBody = {
   /**
    * OAuth 2.0 token request parameters which are the request parameters that the OAuth 2.0 token endpoint of the authorization server
@@ -30,7 +33,7 @@ export type AuthTokenApiRequestBody = {
    * a means of client authentication, and the request from the client application contained its client ID
    * in `Authorization` header, the value should be extracted and set to this parameter.
    */
-  clientId?: string | undefined;
+  clientId?: number | undefined;
   /**
    * The client secret extracted from `Authorization` header of the token request from the client application.
    *
@@ -115,12 +118,13 @@ export type AuthTokenApiRequest = {
  */
 export const AuthTokenApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
-  InvalidClient: "INVALID_CLIENT",
   BadRequest: "BAD_REQUEST",
-  Password: "PASSWORD",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
-  TokenExchange: "TOKEN_EXCHANGE",
-  JwtBearer: "JWT_BEARER",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -155,6 +159,9 @@ export type AuthTokenApiActorTokenType = ClosedEnum<
   typeof AuthTokenApiActorTokenType
 >;
 
+/**
+ * An object containing actortokeninfo data
+ */
 export type AuthTokenApiActorTokenInfo = {
   /**
    * The client id.
@@ -188,6 +195,9 @@ export type AuthTokenApiActorTokenInfo = {
    * The array of the resources of the token.
    */
   resources?: Array<string> | undefined;
+  /**
+   * An object containing authorizationdetailselement data
+   */
   authorizationDetails?: models.AuthorizationDetailsElement | undefined;
   /**
    * The entity ID of the client.
@@ -203,6 +213,9 @@ export type AuthTokenApiActorTokenInfo = {
   clientEntityIdUsed?: boolean | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type AuthTokenApiResponse = {
   /**
    * The code which represents the result of the API call.
@@ -394,16 +407,35 @@ export type AuthTokenApiResponse = {
    * @remarks
    */
   audiences?: Array<string> | undefined;
+  /**
+   * The grant type of the access token when the access token was created.
+   *
+   * @remarks
+   */
   requestedTokenType?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType
+    | models.ApiServiceIdAuthTokenpropertiesactorTokenType
     | undefined;
+  /**
+   * A string value
+   */
   subjectToken?: string | undefined;
+  /**
+   * The grant type of the access token when the access token was created.
+   *
+   * @remarks
+   */
   subjectTokenType?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType
+    | models.ApiServiceIdAuthTokenpropertiesactorTokenType1
     | undefined;
+  /**
+   * An object containing api_serviceid_auth_tokenpropertiesactortokeninfo data
+   */
   subjectTokenInfo?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenInfo
+    | models.ApiServiceIdAuthTokenpropertiesactorTokenInfo
     | undefined;
+  /**
+   * A string value
+   */
   actorToken?: string | undefined;
   /**
    * The grant type of the access token when the access token was created.
@@ -411,6 +443,9 @@ export type AuthTokenApiResponse = {
    * @remarks
    */
   actorTokenType?: AuthTokenApiActorTokenType | undefined;
+  /**
+   * An object containing actortokeninfo data
+   */
   actorTokenInfo?: AuthTokenApiActorTokenInfo | undefined;
   /**
    * For RFC 7523 JSON Web Token (JWT) Profile for OAuth 2.0 Client Authentication and Authorization Grants
@@ -484,7 +519,7 @@ export const AuthTokenApiRequestBody$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   parameters: z.string(),
-  clientId: z.string().optional(),
+  clientId: z.number().int().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),
@@ -499,7 +534,7 @@ export const AuthTokenApiRequestBody$inboundSchema: z.ZodType<
 /** @internal */
 export type AuthTokenApiRequestBody$Outbound = {
   parameters: string;
-  clientId?: string | undefined;
+  clientId?: number | undefined;
   clientSecret?: string | undefined;
   clientCertificate?: string | undefined;
   clientCertificatePath?: string | undefined;
@@ -518,7 +553,7 @@ export const AuthTokenApiRequestBody$outboundSchema: z.ZodType<
   AuthTokenApiRequestBody
 > = z.object({
   parameters: z.string(),
-  clientId: z.string().optional(),
+  clientId: z.number().int().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),
@@ -793,15 +828,12 @@ export const AuthTokenApiResponse$inboundSchema: z.ZodType<
   grantId: z.string().optional(),
   audiences: z.array(z.string()).optional(),
   requestedTokenType: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$inboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenType$inboundSchema.optional(),
   subjectToken: z.string().optional(),
   subjectTokenType: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$inboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenType1$inboundSchema.optional(),
   subjectTokenInfo: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenInfo$inboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenInfo$inboundSchema.optional(),
   actorToken: z.string().optional(),
   actorTokenType: AuthTokenApiActorTokenType$inboundSchema.optional(),
   actorTokenInfo: z.lazy(() => AuthTokenApiActorTokenInfo$inboundSchema)
@@ -850,15 +882,11 @@ export type AuthTokenApiResponse$Outbound = {
   clientAuthMethod?: string | undefined;
   grantId?: string | undefined;
   audiences?: Array<string> | undefined;
-  requestedTokenType?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$Outbound
-    | undefined;
+  requestedTokenType?: string | undefined;
   subjectToken?: string | undefined;
-  subjectTokenType?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$Outbound
-    | undefined;
+  subjectTokenType?: string | undefined;
   subjectTokenInfo?:
-    | models.APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenInfo$Outbound
+    | models.ApiServiceIdAuthTokenpropertiesactorTokenInfo$Outbound
     | undefined;
   actorToken?: string | undefined;
   actorTokenType?: string | undefined;
@@ -912,15 +940,12 @@ export const AuthTokenApiResponse$outboundSchema: z.ZodType<
   grantId: z.string().optional(),
   audiences: z.array(z.string()).optional(),
   requestedTokenType: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$outboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenType$outboundSchema.optional(),
   subjectToken: z.string().optional(),
   subjectTokenType: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenType$outboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenType1$outboundSchema.optional(),
   subjectTokenInfo: models
-    .APILBraceserviceIdRBraceAuthToken200PropertiesActorTokenInfo$outboundSchema
-    .optional(),
+    .ApiServiceIdAuthTokenpropertiesactorTokenInfo$outboundSchema.optional(),
   actorToken: z.string().optional(),
   actorTokenType: AuthTokenApiActorTokenType$outboundSchema.optional(),
   actorTokenInfo: z.lazy(() => AuthTokenApiActorTokenInfo$outboundSchema)

@@ -132,8 +132,10 @@ export function introspectionEndpointAuthIntrospectionStandardApiForm(
 ): APIPromise<
   Result<
     operations.AuthIntrospectionStandardApiFormResponse,
-    | errors.APIInfo400Error
-    | errors.APIInfo4002Error
+    | errors.Error400
+    | errors.Error401
+    | errors.Error403
+    | errors.Error500
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -159,8 +161,10 @@ async function $do(
   [
     Result<
       operations.AuthIntrospectionStandardApiFormResponse,
-      | errors.APIInfo400Error
-      | errors.APIInfo4002Error
+      | errors.Error400
+      | errors.Error401
+      | errors.Error403
+      | errors.Error500
       | AuthleteError
       | ResponseValidationError
       | ConnectionError
@@ -187,7 +191,7 @@ async function $do(
   const payload = parsed.value;
 
   const body = Object.entries(
-    payload.APILBraceserviceIdRBraceAuthIntrospectionStandard || {},
+    payload.api_serviceId_auth_introspection_standard || {},
   ).map(([k, v]) => {
     return encodeBodyForm(k, v, { charEncoding: "percent" });
   }).join("&");
@@ -258,8 +262,10 @@ async function $do(
 
   const [result] = await M.match<
     operations.AuthIntrospectionStandardApiFormResponse,
-    | errors.APIInfo400Error
-    | errors.APIInfo4002Error
+    | errors.Error400
+    | errors.Error401
+    | errors.Error403
+    | errors.Error500
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -273,9 +279,10 @@ async function $do(
       200,
       operations.AuthIntrospectionStandardApiFormResponse$inboundSchema,
     ),
-    M.jsonErr(400, errors.APIInfo400Error$inboundSchema),
-    M.jsonErr([401, 403], errors.APIInfo4002Error$inboundSchema),
-    M.jsonErr(500, errors.APIInfo4002Error$inboundSchema),
+    M.jsonErr(400, errors.Error400$inboundSchema),
+    M.jsonErr(401, errors.Error401$inboundSchema),
+    M.jsonErr(403, errors.Error403$inboundSchema),
+    M.jsonErr(500, errors.Error500$inboundSchema),
     M.fail("4XX"),
     M.fail("5XX"),
   )(response, req, { extraFields: responseFields });

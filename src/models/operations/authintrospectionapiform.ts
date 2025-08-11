@@ -15,8 +15,7 @@ export type AuthIntrospectionApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthIntrospection:
-    models.APILBraceserviceIdRBraceAuthIntrospection;
+  apiServiceIdAuthIntrospection: models.ApiServiceIdAuthIntrospection;
 };
 
 /**
@@ -25,8 +24,11 @@ export type AuthIntrospectionApiFormRequest = {
 export const AuthIntrospectionApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -36,6 +38,9 @@ export type AuthIntrospectionApiFormAction = ClosedEnum<
   typeof AuthIntrospectionApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthIntrospectionApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -191,9 +196,10 @@ export type AuthIntrospectionApiFormResponse = {
    * , which is supported by Authlete 2.3 and newer versions.
    */
   grantId?: string | undefined;
-  grant?:
-    | models.APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant
-    | undefined;
+  /**
+   * An object containing api_serviceid_auth_authorizationpropertiesgrant data
+   */
+  grant?: models.ApiServiceIdAuthAuthorizationpropertiesgrant | undefined;
   /**
    * the flag which indicates whether the access token is for an external
    *
@@ -271,20 +277,19 @@ export const AuthIntrospectionApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthIntrospection:
-    models.APILBraceserviceIdRBraceAuthIntrospection$inboundSchema,
+  api_serviceId_auth_introspection:
+    models.ApiServiceIdAuthIntrospection$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthIntrospection":
-      "apilBraceserviceIdRBraceAuthIntrospection",
+    "api_serviceId_auth_introspection": "apiServiceIdAuthIntrospection",
   });
 });
 
 /** @internal */
 export type AuthIntrospectionApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthIntrospection:
-    models.APILBraceserviceIdRBraceAuthIntrospection$Outbound;
+  api_serviceId_auth_introspection:
+    models.ApiServiceIdAuthIntrospection$Outbound;
 };
 
 /** @internal */
@@ -294,12 +299,11 @@ export const AuthIntrospectionApiFormRequest$outboundSchema: z.ZodType<
   AuthIntrospectionApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthIntrospection:
-    models.APILBraceserviceIdRBraceAuthIntrospection$outboundSchema,
+  apiServiceIdAuthIntrospection:
+    models.ApiServiceIdAuthIntrospection$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthIntrospection:
-      "APILBraceserviceIdRBraceAuthIntrospection",
+    apiServiceIdAuthIntrospection: "api_serviceId_auth_introspection",
   });
 });
 
@@ -386,8 +390,7 @@ export const AuthIntrospectionApiFormResponse$inboundSchema: z.ZodType<
   clientAttributes: z.array(models.Pair$inboundSchema).optional(),
   scopeDetails: z.array(models.Scope$inboundSchema).optional(),
   grantId: z.string().optional(),
-  grant: models
-    .APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant$inboundSchema
+  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant$inboundSchema
     .optional(),
   forExternalAttachment: z.boolean().optional(),
   consentedClaims: z.array(z.string()).optional(),
@@ -429,7 +432,7 @@ export type AuthIntrospectionApiFormResponse$Outbound = {
   scopeDetails?: Array<models.Scope$Outbound> | undefined;
   grantId?: string | undefined;
   grant?:
-    | models.APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant$Outbound
+    | models.ApiServiceIdAuthAuthorizationpropertiesgrant$Outbound
     | undefined;
   forExternalAttachment?: boolean | undefined;
   consentedClaims?: Array<string> | undefined;
@@ -474,8 +477,7 @@ export const AuthIntrospectionApiFormResponse$outboundSchema: z.ZodType<
   clientAttributes: z.array(models.Pair$outboundSchema).optional(),
   scopeDetails: z.array(models.Scope$outboundSchema).optional(),
   grantId: z.string().optional(),
-  grant: models
-    .APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant$outboundSchema
+  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant$outboundSchema
     .optional(),
   forExternalAttachment: z.boolean().optional(),
   consentedClaims: z.array(z.string()).optional(),

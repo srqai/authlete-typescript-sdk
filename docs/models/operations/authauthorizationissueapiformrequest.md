@@ -7,13 +7,16 @@ import { AuthAuthorizationIssueApiFormRequest } from "authlete-2/models/operatio
 
 let value: AuthAuthorizationIssueApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceAuthAuthorizationIssue: {},
+  apiServiceIdAuthAuthorizationIssue: {
+    ticket: "<value>",
+    subject: "<value>",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                                   | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                                             | *string*                                                                                                                | :heavy_check_mark:                                                                                                      | A service ID.                                                                                                           |
-| `apilBraceserviceIdRBraceAuthAuthorizationIssue`                                                                        | [models.APILBraceserviceIdRBraceAuthAuthorizationIssue](../../models/apilbraceserviceidrbraceauthauthorizationissue.md) | :heavy_check_mark:                                                                                                      | N/A                                                                                                                     |
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `serviceId`                                                                                     | *string*                                                                                        | :heavy_check_mark:                                                                              | A service ID.                                                                                   |
+| `apiServiceIdAuthAuthorizationIssue`                                                            | [models.ApiServiceIdAuthAuthorizationIssue](../../models/apiserviceidauthauthorizationissue.md) | :heavy_check_mark:                                                                              | N/A                                                                                             |

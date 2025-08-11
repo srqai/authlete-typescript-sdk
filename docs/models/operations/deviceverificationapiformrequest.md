@@ -7,13 +7,15 @@ import { DeviceVerificationApiFormRequest } from "authlete-2/models/operations";
 
 let value: DeviceVerificationApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceDeviceVerification: {},
+  apiServiceIdDeviceVerification: {
+    userCode: "<value>",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                                     | *string*                                                                                                        | :heavy_check_mark:                                                                                              | A service ID.                                                                                                   |
-| `apilBraceserviceIdRBraceDeviceVerification`                                                                    | [models.APILBraceserviceIdRBraceDeviceVerification](../../models/apilbraceserviceidrbracedeviceverification.md) | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `serviceId`                                                                             | *string*                                                                                | :heavy_check_mark:                                                                      | A service ID.                                                                           |
+| `apiServiceIdDeviceVerification`                                                        | [models.ApiServiceIdDeviceVerification](../../models/apiserviceiddeviceverification.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |

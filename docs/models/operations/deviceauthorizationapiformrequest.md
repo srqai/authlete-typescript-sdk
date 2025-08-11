@@ -7,13 +7,15 @@ import { DeviceAuthorizationApiFormRequest } from "authlete-2/models/operations"
 
 let value: DeviceAuthorizationApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceDeviceAuthorization: {},
+  apiServiceIdDeviceAuthorization: {
+    parameters: "<value>",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                                       | *string*                                                                                                          | :heavy_check_mark:                                                                                                | A service ID.                                                                                                     |
-| `apilBraceserviceIdRBraceDeviceAuthorization`                                                                     | [models.APILBraceserviceIdRBraceDeviceAuthorization](../../models/apilbraceserviceidrbracedeviceauthorization.md) | :heavy_check_mark:                                                                                                | N/A                                                                                                               |
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `serviceId`                                                                               | *string*                                                                                  | :heavy_check_mark:                                                                        | A service ID.                                                                             |
+| `apiServiceIdDeviceAuthorization`                                                         | [models.ApiServiceIdDeviceAuthorization](../../models/apiserviceiddeviceauthorization.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |

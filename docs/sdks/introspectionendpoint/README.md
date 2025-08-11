@@ -268,9 +268,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authIntrospectionApiForm
@@ -457,7 +458,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.introspectionEndpoint.authIntrospectionApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthIntrospection: {},
+    apiServiceIdAuthIntrospection: {
+      token: "<value>",
+    },
   });
 
   console.log(result);
@@ -485,7 +488,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await introspectionEndpointAuthIntrospectionApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthIntrospection: {},
+    apiServiceIdAuthIntrospection: {
+      token: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -515,9 +520,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authIntrospectionStandardApi
@@ -696,9 +702,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authIntrospectionStandardApiForm
@@ -815,7 +822,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.introspectionEndpoint.authIntrospectionStandardApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthIntrospectionStandard: {},
+    apiServiceIdAuthIntrospectionStandard: {
+      parameters: "<value>",
+    },
   });
 
   console.log(result);
@@ -843,7 +852,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await introspectionEndpointAuthIntrospectionStandardApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthIntrospectionStandard: {},
+    apiServiceIdAuthIntrospectionStandard: {
+      parameters: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -873,7 +884,8 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

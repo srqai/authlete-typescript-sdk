@@ -9,6 +9,9 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
+/**
+ * An object containing schema data
+ */
 export type BackchannelAuthenticationIssueApiRequestBody = {
   /**
    * The ticket issued from Authlete's `/backchannel/authentication` API.
@@ -31,7 +34,12 @@ export type BackchannelAuthenticationIssueApiRequest = {
  */
 export const BackchannelAuthenticationIssueApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
-  InvalidTicket: "INVALID_TICKET",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -41,6 +49,9 @@ export type BackchannelAuthenticationIssueApiAction = ClosedEnum<
   typeof BackchannelAuthenticationIssueApiAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type BackchannelAuthenticationIssueApiResponse = {
   /**
    * The code which represents the result of the API call.

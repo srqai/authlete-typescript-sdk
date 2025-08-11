@@ -1,5 +1,7 @@
 # FederationRegistrationApiFormResponse
 
+An object containing schema data
+
 ## Example Usage
 
 ```typescript
@@ -16,4 +18,4 @@ let value: FederationRegistrationApiFormResponse = {};
 | `resultMessage`                                                                                                        | *string*                                                                                                               | :heavy_minus_sign:                                                                                                     | A short message which explains the result of the API call.                                                             |
 | `action`                                                                                                               | [operations.FederationRegistrationApiFormAction](../../models/operations/federationregistrationapiformaction.md)       | :heavy_minus_sign:                                                                                                     | The next action that the authorization server implementation should take.                                              |
 | `responseContent`                                                                                                      | *string*                                                                                                               | :heavy_minus_sign:                                                                                                     | The content that the authorization server implementation can use as the value of `WWW-Authenticate`<br/>header on errors.<br/> |
-| `client`                                                                                                               | [models.Client](../../models/client.md)                                                                                | :heavy_minus_sign:                                                                                                     | N/A                                                                                                                    |
+| `client`                                                                                                               | [models.Client](../../models/client.md)                                                                                | :heavy_minus_sign:                                                                                                     | An object containing client data                                                                                       |

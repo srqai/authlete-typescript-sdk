@@ -1,5 +1,7 @@
 # ClientExtensionRequestablesScopesUpdateApiResponse
 
+An object containing schema data
+
 ## Example Usage
 
 ```typescript
@@ -10,6 +12,6 @@ let value: ClientExtensionRequestablesScopesUpdateApiResponse = {};
 
 ## Fields
 
-| Field               | Type                | Required            | Description         |
-| ------------------- | ------------------- | ------------------- | ------------------- |
-| `requestableScopes` | *string*[]          | :heavy_minus_sign:  | N/A                 |
+| Field                               | Type                                | Required                            | Description                         |
+| ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
+| `requestableScopes`                 | *string*[]                          | :heavy_minus_sign:                  | An array of requestablescopes items |

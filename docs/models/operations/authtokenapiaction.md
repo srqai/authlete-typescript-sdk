@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { AuthTokenApiAction } from "authlete-2/models/operations";
 
-let value: AuthTokenApiAction = "PASSWORD";
+let value: AuthTokenApiAction = "UNAUTHORIZED";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "INVALID_CLIENT" | "BAD_REQUEST" | "PASSWORD" | "OK" | "TOKEN_EXCHANGE" | "JWT_BEARER"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

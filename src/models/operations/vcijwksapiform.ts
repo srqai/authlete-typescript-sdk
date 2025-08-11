@@ -15,7 +15,7 @@ export type VciJwksApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceVciJwks: models.APILBraceserviceIdRBraceVciJwks;
+  apiServiceIdVciJwks: models.ApiServiceIdVciJwks;
 };
 
 /**
@@ -26,9 +26,14 @@ export type VciJwksApiFormRequest = {
  * response from Authlete's `/vci/jwks` API.
  */
 export const VciJwksApiFormAction = {
-  Ok: "OK",
-  NotFound: "NOT_FOUND",
   InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the implementation of the JWK Set document
@@ -39,6 +44,9 @@ export const VciJwksApiFormAction = {
  */
 export type VciJwksApiFormAction = ClosedEnum<typeof VciJwksApiFormAction>;
 
+/**
+ * An object containing schema data
+ */
 export type VciJwksApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -72,19 +80,17 @@ export const VciJwksApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceVciJwks:
-    models.APILBraceserviceIdRBraceVciJwks$inboundSchema,
+  api_serviceId_vci_jwks: models.ApiServiceIdVciJwks$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceVciJwks": "apilBraceserviceIdRBraceVciJwks",
+    "api_serviceId_vci_jwks": "apiServiceIdVciJwks",
   });
 });
 
 /** @internal */
 export type VciJwksApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceVciJwks:
-    models.APILBraceserviceIdRBraceVciJwks$Outbound;
+  api_serviceId_vci_jwks: models.ApiServiceIdVciJwks$Outbound;
 };
 
 /** @internal */
@@ -94,11 +100,10 @@ export const VciJwksApiFormRequest$outboundSchema: z.ZodType<
   VciJwksApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceVciJwks:
-    models.APILBraceserviceIdRBraceVciJwks$outboundSchema,
+  apiServiceIdVciJwks: models.ApiServiceIdVciJwks$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceVciJwks: "APILBraceserviceIdRBraceVciJwks",
+    apiServiceIdVciJwks: "api_serviceId_vci_jwks",
   });
 });
 

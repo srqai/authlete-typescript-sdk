@@ -31,6 +31,9 @@ export type BackchannelAuthenticationCompleteApiResult = ClosedEnum<
   typeof BackchannelAuthenticationCompleteApiResult
 >;
 
+/**
+ * An object containing schema data
+ */
 export type BackchannelAuthenticationCompleteApiRequestBody = {
   /**
    * The ticket issued by Authlete's `/backchannel/authentication` API.
@@ -145,9 +148,14 @@ export type BackchannelAuthenticationCompleteApiRequest = {
  * @remarks
  */
 export const BackchannelAuthenticationCompleteApiAction = {
-  ServerError: "SERVER_ERROR",
-  NoAction: "NO_ACTION",
-  Notification: "NOTIFICATION",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -158,6 +166,9 @@ export type BackchannelAuthenticationCompleteApiAction = ClosedEnum<
   typeof BackchannelAuthenticationCompleteApiAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type BackchannelAuthenticationCompleteApiResponse = {
   /**
    * The code which represents the result of the API call.
@@ -208,6 +219,9 @@ export type BackchannelAuthenticationCompleteApiResponse = {
    * @remarks
    */
   clientName?: string | undefined;
+  /**
+   * A string value
+   */
   deliveryMode?: models.DeliveryMode | undefined;
   /**
    * The client notification endpoint to which a notification needs to be sent. This corresponds

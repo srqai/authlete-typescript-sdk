@@ -8,6 +8,9 @@ import { safeParse } from "../../lib/schemas.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
+/**
+ * An object containing schema data
+ */
 export type ClientExtensionRequestablesScopesUpdateApiRequestBody = {
   /**
    * The set of scopes that the client application is allowed to request.
@@ -39,7 +42,13 @@ export type ClientExtensionRequestablesScopesUpdateApiRequest = {
   requestBody: ClientExtensionRequestablesScopesUpdateApiRequestBody;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ClientExtensionRequestablesScopesUpdateApiResponse = {
+  /**
+   * An array of requestablescopes items
+   */
   requestableScopes?: Array<string> | undefined;
 };
 

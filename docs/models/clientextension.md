@@ -1,5 +1,7 @@
 # ClientExtension
 
+An object containing clientextension data
+
 ## Example Usage
 
 ```typescript

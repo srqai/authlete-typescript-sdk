@@ -98,9 +98,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## joseVerifyApiForm
@@ -179,7 +180,8 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

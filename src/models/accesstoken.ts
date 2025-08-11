@@ -18,6 +18,9 @@ import {
   Property$outboundSchema,
 } from "./property.js";
 
+/**
+ * An object containing accesstoken data
+ */
 export type AccessToken = {
   /**
    * The hash of the access token.

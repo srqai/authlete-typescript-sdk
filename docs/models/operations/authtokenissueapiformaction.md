@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { AuthTokenIssueApiFormAction } from "authlete-2/models/operations";
 
-let value: AuthTokenIssueApiFormAction = "INTERNAL_SERVER_ERROR";
+let value: AuthTokenIssueApiFormAction = "CREATED";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "OK"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

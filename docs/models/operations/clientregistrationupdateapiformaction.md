@@ -8,11 +8,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { ClientRegistrationUpdateApiFormAction } from "authlete-2/models/operations";
 
-let value: ClientRegistrationUpdateApiFormAction = "BAD_REQUEST";
+let value: ClientRegistrationUpdateApiFormAction = "UNAUTHORIZED";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "UPDATED" | "UNAUTHORIZED"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

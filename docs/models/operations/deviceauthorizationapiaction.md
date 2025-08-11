@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { DeviceAuthorizationApiAction } from "authlete-2/models/operations";
 
-let value: DeviceAuthorizationApiAction = "OK";
+let value: DeviceAuthorizationApiAction = "JWT";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "UNAUTHORIZED" | "OK"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

@@ -15,8 +15,8 @@ export type AuthIntrospectionStandardApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthIntrospectionStandard:
-    models.APILBraceserviceIdRBraceAuthIntrospectionStandard;
+  apiServiceIdAuthIntrospectionStandard:
+    models.ApiServiceIdAuthIntrospectionStandard;
 };
 
 /**
@@ -25,6 +25,11 @@ export type AuthIntrospectionStandardApiFormRequest = {
 export const AuthIntrospectionStandardApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -34,6 +39,9 @@ export type AuthIntrospectionStandardApiFormAction = ClosedEnum<
   typeof AuthIntrospectionStandardApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthIntrospectionStandardApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -63,20 +71,20 @@ export const AuthIntrospectionStandardApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthIntrospectionStandard:
-    models.APILBraceserviceIdRBraceAuthIntrospectionStandard$inboundSchema,
+  api_serviceId_auth_introspection_standard:
+    models.ApiServiceIdAuthIntrospectionStandard$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthIntrospectionStandard":
-      "apilBraceserviceIdRBraceAuthIntrospectionStandard",
+    "api_serviceId_auth_introspection_standard":
+      "apiServiceIdAuthIntrospectionStandard",
   });
 });
 
 /** @internal */
 export type AuthIntrospectionStandardApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthIntrospectionStandard:
-    models.APILBraceserviceIdRBraceAuthIntrospectionStandard$Outbound;
+  api_serviceId_auth_introspection_standard:
+    models.ApiServiceIdAuthIntrospectionStandard$Outbound;
 };
 
 /** @internal */
@@ -86,12 +94,12 @@ export const AuthIntrospectionStandardApiFormRequest$outboundSchema: z.ZodType<
   AuthIntrospectionStandardApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthIntrospectionStandard:
-    models.APILBraceserviceIdRBraceAuthIntrospectionStandard$outboundSchema,
+  apiServiceIdAuthIntrospectionStandard:
+    models.ApiServiceIdAuthIntrospectionStandard$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthIntrospectionStandard:
-      "APILBraceserviceIdRBraceAuthIntrospectionStandard",
+    apiServiceIdAuthIntrospectionStandard:
+      "api_serviceId_auth_introspection_standard",
   });
 });
 

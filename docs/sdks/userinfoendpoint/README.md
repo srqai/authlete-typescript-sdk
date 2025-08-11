@@ -234,9 +234,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authUserinfoApiForm
@@ -399,7 +400,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.userInfoEndpoint.authUserinfoApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthUserinfo: {},
+    apiServiceIdAuthUserinfo: {
+      token: "<value>",
+    },
   });
 
   console.log(result);
@@ -427,7 +430,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await userInfoEndpointAuthUserinfoApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthUserinfo: {},
+    apiServiceIdAuthUserinfo: {
+      token: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -457,9 +462,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authUserinfoIssueApi
@@ -692,9 +698,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authUserinfoIssueApiForm
@@ -865,7 +872,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.userInfoEndpoint.authUserinfoIssueApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthUserinfoIssue: {},
+    apiServiceIdAuthUserinfoIssue: {
+      token: "<value>",
+    },
   });
 
   console.log(result);
@@ -893,7 +902,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await userInfoEndpointAuthUserinfoIssueApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthUserinfoIssue: {},
+    apiServiceIdAuthUserinfoIssue: {
+      token: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -923,7 +934,8 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

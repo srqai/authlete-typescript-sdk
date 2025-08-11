@@ -18,9 +18,17 @@ export type ClientGrantedScopesGetApiRequest = {
    * @remarks
    */
   clientId: string;
+  /**
+   * Unique user ID of an end-user.
+   *
+   * @remarks
+   */
   subject: string;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ClientGrantedScopesGetApiResponse = {
   /**
    * The code which represents the result of the API call.

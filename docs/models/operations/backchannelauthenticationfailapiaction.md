@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { BackchannelAuthenticationFailApiAction } from "authlete-2/models/operations";
 
-let value: BackchannelAuthenticationFailApiAction = "FORBIDDEN";
+let value: BackchannelAuthenticationFailApiAction = "JWT";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "FORBIDDEN"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

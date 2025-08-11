@@ -1,12 +1,14 @@
 # ClientRegistrationDeleteApiRequestBody
 
+An object containing schema data
+
 ## Example Usage
 
 ```typescript
 import { ClientRegistrationDeleteApiRequestBody } from "authlete-2/models/operations";
 
 let value: ClientRegistrationDeleteApiRequestBody = {
-  clientId: "<id>",
+  clientId: 303257,
   token: "<value>",
 };
 ```
@@ -15,5 +17,5 @@ let value: ClientRegistrationDeleteApiRequestBody = {
 
 | Field                              | Type                               | Required                           | Description                        |
 | ---------------------------------- | ---------------------------------- | ---------------------------------- | ---------------------------------- |
-| `clientId`                         | *string*                           | :heavy_check_mark:                 | Client ID.<br/>                    |
+| `clientId`                         | *number*                           | :heavy_check_mark:                 | Client ID.<br/>                    |
 | `token`                            | *string*                           | :heavy_check_mark:                 | Client registration access token.<br/> |

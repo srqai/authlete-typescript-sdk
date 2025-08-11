@@ -7,13 +7,16 @@ import { AuthTokenIssueApiFormRequest } from "authlete-2/models/operations";
 
 let value: AuthTokenIssueApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceAuthTokenIssue: {},
+  apiServiceIdAuthTokenIssue: {
+    ticket: "<value>",
+    subject: "<value>",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                             | *string*                                                                                                | :heavy_check_mark:                                                                                      | A service ID.                                                                                           |
-| `apilBraceserviceIdRBraceAuthTokenIssue`                                                                | [models.APILBraceserviceIdRBraceAuthTokenIssue](../../models/apilbraceserviceidrbraceauthtokenissue.md) | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `serviceId`                                                                     | *string*                                                                        | :heavy_check_mark:                                                              | A service ID.                                                                   |
+| `apiServiceIdAuthTokenIssue`                                                    | [models.ApiServiceIdAuthTokenIssue](../../models/apiserviceidauthtokenissue.md) | :heavy_check_mark:                                                              | N/A                                                                             |

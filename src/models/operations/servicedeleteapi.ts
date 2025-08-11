@@ -14,6 +14,11 @@ export type ServiceDeleteApiRequest = {
   serviceId: string;
 };
 
+/**
+ * Response for 204
+ */
+export type ServiceDeleteApiResponse = {};
+
 /** @internal */
 export const ServiceDeleteApiRequest$inboundSchema: z.ZodType<
   ServiceDeleteApiRequest,
@@ -65,5 +70,53 @@ export function serviceDeleteApiRequestFromJSON(
     jsonString,
     (x) => ServiceDeleteApiRequest$inboundSchema.parse(JSON.parse(x)),
     `Failed to parse 'ServiceDeleteApiRequest' from JSON`,
+  );
+}
+
+/** @internal */
+export const ServiceDeleteApiResponse$inboundSchema: z.ZodType<
+  ServiceDeleteApiResponse,
+  z.ZodTypeDef,
+  unknown
+> = z.object({});
+
+/** @internal */
+export type ServiceDeleteApiResponse$Outbound = {};
+
+/** @internal */
+export const ServiceDeleteApiResponse$outboundSchema: z.ZodType<
+  ServiceDeleteApiResponse$Outbound,
+  z.ZodTypeDef,
+  ServiceDeleteApiResponse
+> = z.object({});
+
+/**
+ * @internal
+ * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
+ */
+export namespace ServiceDeleteApiResponse$ {
+  /** @deprecated use `ServiceDeleteApiResponse$inboundSchema` instead. */
+  export const inboundSchema = ServiceDeleteApiResponse$inboundSchema;
+  /** @deprecated use `ServiceDeleteApiResponse$outboundSchema` instead. */
+  export const outboundSchema = ServiceDeleteApiResponse$outboundSchema;
+  /** @deprecated use `ServiceDeleteApiResponse$Outbound` instead. */
+  export type Outbound = ServiceDeleteApiResponse$Outbound;
+}
+
+export function serviceDeleteApiResponseToJSON(
+  serviceDeleteApiResponse: ServiceDeleteApiResponse,
+): string {
+  return JSON.stringify(
+    ServiceDeleteApiResponse$outboundSchema.parse(serviceDeleteApiResponse),
+  );
+}
+
+export function serviceDeleteApiResponseFromJSON(
+  jsonString: string,
+): SafeParseResult<ServiceDeleteApiResponse, SDKValidationError> {
+  return safeParse(
+    jsonString,
+    (x) => ServiceDeleteApiResponse$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'ServiceDeleteApiResponse' from JSON`,
   );
 }

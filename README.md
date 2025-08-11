@@ -249,9 +249,8 @@ run();
 * [authAuthorizationFailApiForm](docs/sdks/authorizationendpoint/README.md#authauthorizationfailapiform) - Fail Authorization Request
 * [authAuthorizationIssueApi](docs/sdks/authorizationendpoint/README.md#authauthorizationissueapi) - Issue Authorization Response
 * [authAuthorizationIssueApiForm](docs/sdks/authorizationendpoint/README.md#authauthorizationissueapiform) - Issue Authorization Response
-* [getApiServiceIdAuthAuthorizationTicketInfo](docs/sdks/authorizationendpoint/README.md#getapiserviceidauthauthorizationticketinfo) - Get Ticket Information
-* [postApiServiceIdAuthAuthorizationTicketUpdate](docs/sdks/authorizationendpoint/README.md#postapiserviceidauthauthorizationticketupdate) - Update Ticket Information
-* [postApiServiceIdAuthAuthorizationTicketUpdateForm](docs/sdks/authorizationendpoint/README.md#postapiserviceidauthauthorizationticketupdateform) - Update Ticket Information
+* [postUpdateTicketInformation](docs/sdks/authorizationendpoint/README.md#postupdateticketinformation) - Update Ticket Information
+* [postUpdateTicketInformationForm](docs/sdks/authorizationendpoint/README.md#postupdateticketinformationform) - Update Ticket Information
 
 ### [ciba](docs/sdks/ciba/README.md)
 
@@ -437,9 +436,8 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`authorizationEndpointAuthAuthorizationFailApiForm`](docs/sdks/authorizationendpoint/README.md#authauthorizationfailapiform) - Fail Authorization Request
 - [`authorizationEndpointAuthAuthorizationIssueApi`](docs/sdks/authorizationendpoint/README.md#authauthorizationissueapi) - Issue Authorization Response
 - [`authorizationEndpointAuthAuthorizationIssueApiForm`](docs/sdks/authorizationendpoint/README.md#authauthorizationissueapiform) - Issue Authorization Response
-- [`authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo`](docs/sdks/authorizationendpoint/README.md#getapiserviceidauthauthorizationticketinfo) - Get Ticket Information
-- [`authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate`](docs/sdks/authorizationendpoint/README.md#postapiserviceidauthauthorizationticketupdate) - Update Ticket Information
-- [`authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm`](docs/sdks/authorizationendpoint/README.md#postapiserviceidauthauthorizationticketupdateform) - Update Ticket Information
+- [`authorizationEndpointPostUpdateTicketInformation`](docs/sdks/authorizationendpoint/README.md#postupdateticketinformation) - Update Ticket Information
+- [`authorizationEndpointPostUpdateTicketInformationForm`](docs/sdks/authorizationendpoint/README.md#postupdateticketinformationform) - Update Ticket Information
 - [`cibaBackchannelAuthenticationApi`](docs/sdks/ciba/README.md#backchannelauthenticationapi) - Process Backchannel Authentication Request
 - [`cibaBackchannelAuthenticationApiForm`](docs/sdks/ciba/README.md#backchannelauthenticationapiform) - Process Backchannel Authentication Request
 - [`cibaBackchannelAuthenticationCompleteApi`](docs/sdks/ciba/README.md#backchannelauthenticationcompleteapi) - Complete Backchannel Authentication
@@ -662,9 +660,9 @@ async function run() {
       console.log(error.headers);
 
       // Depending on the method different errors may be thrown
-      if (error instanceof errors.APIInfo400Error) {
-        console.log(error.data$.resultCode); // string
-        console.log(error.data$.resultMessage); // string
+      if (error instanceof errors.Error400) {
+        console.log(error.data$.error); // string
+        console.log(error.data$.errorDescription); // string
       }
     }
   }
@@ -677,10 +675,12 @@ run();
 ### Error Classes
 **Primary errors:**
 * [`AuthleteError`](./src/models/errors/authleteerror.ts): The base class for HTTP error responses.
-  * [`APIInfo4002Error`](./src/models/errors/apiinfo4002error.ts): . *
-  * [`APIInfo400Error`](./src/models/errors/apiinfo400error.ts): . Status code `400`. *
+  * [`Error400`](./src/models/errors/error400.ts): An object containing schema data. Status code `400`. *
+  * [`Error401`](./src/models/errors/error401.ts): An object containing schema data. Status code `401`. *
+  * [`Error403`](./src/models/errors/error403.ts): An object containing schema data. Status code `403`. *
+  * [`Error500`](./src/models/errors/error500.ts): An object containing schema data. Status code `500`. *
 
-<details><summary>Less common errors (7)</summary>
+<details><summary>Less common errors (10)</summary>
 
 <br />
 
@@ -693,7 +693,10 @@ run();
 
 
 **Inherit from [`AuthleteError`](./src/models/errors/authleteerror.ts)**:
-* [`BadRequestError`](./src/models/errors/badrequesterror.ts): . Status code `400`. Applicable to 1 of 115 methods.*
+* [`BadRequestError`](./src/models/errors/badrequesterror.ts): An object containing schema data. Status code `400`. Applicable to 1 of 114 methods.*
+* [`ApiInfoError`](./src/models/errors/apiinfoerror.ts): An object containing api_info data. Status code `401`. Applicable to 1 of 114 methods.*
+* [`ApiInfo1Error`](./src/models/errors/apiinfo1error.ts): An object containing api_info1 data. Status code `403`. Applicable to 1 of 114 methods.*
+* [`ApiInfo2Error`](./src/models/errors/apiinfo2error.ts): An object containing api_info2 data. Status code `500`. Applicable to 1 of 114 methods.*
 * [`ResponseValidationError`](./src/models/errors/responsevalidationerror.ts): Type mismatch between the data returned from the server and the structure expected by the SDK. See `error.rawValue` for the raw value and `error.pretty()` for a nicely formatted multi-line string.
 
 </details>

@@ -20,10 +20,13 @@ export type ClientSecretUpdateApiFormRequest = {
    * @remarks
    */
   clientIdentifier: string;
-  apilBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace:
-    models.APILBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace;
+  apiServiceIdClientSecretUpdateClientIdentifie:
+    models.ApiServiceIdClientSecretUpdateClientIdentifie;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ClientSecretUpdateApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -55,13 +58,12 @@ export const ClientSecretUpdateApiFormRequest$inboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientIdentifier: z.string(),
-  APILBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace:
-    models
-      .APILBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace$inboundSchema,
+  api_serviceId_client_secret_update_clientIdentifie:
+    models.ApiServiceIdClientSecretUpdateClientIdentifie$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace":
-      "apilBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace",
+    "api_serviceId_client_secret_update_clientIdentifie":
+      "apiServiceIdClientSecretUpdateClientIdentifie",
   });
 });
 
@@ -69,8 +71,8 @@ export const ClientSecretUpdateApiFormRequest$inboundSchema: z.ZodType<
 export type ClientSecretUpdateApiFormRequest$Outbound = {
   serviceId: string;
   clientIdentifier: string;
-  APILBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace:
-    models.APILBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace$Outbound;
+  api_serviceId_client_secret_update_clientIdentifie:
+    models.ApiServiceIdClientSecretUpdateClientIdentifie$Outbound;
 };
 
 /** @internal */
@@ -81,13 +83,12 @@ export const ClientSecretUpdateApiFormRequest$outboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientIdentifier: z.string(),
-  apilBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace:
-    models
-      .APILBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace$outboundSchema,
+  apiServiceIdClientSecretUpdateClientIdentifie:
+    models.ApiServiceIdClientSecretUpdateClientIdentifie$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace:
-      "APILBraceserviceIdRBraceClientSecretUpdateLBraceclientIdentifierRBrace",
+    apiServiceIdClientSecretUpdateClientIdentifie:
+      "api_serviceId_client_secret_update_clientIdentifie",
   });
 });
 

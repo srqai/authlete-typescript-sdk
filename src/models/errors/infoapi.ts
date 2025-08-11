@@ -5,6 +5,9 @@
 import * as z from "zod";
 import { AuthleteError } from "./authleteerror.js";
 
+/**
+ * An object containing schema data
+ */
 export type BadRequestErrorData = {
   /**
    * The code which represents the result of the API call.
@@ -16,6 +19,9 @@ export type BadRequestErrorData = {
   resultMessage?: string | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export class BadRequestError extends AuthleteError {
   /**
    * The code which represents the result of the API call.

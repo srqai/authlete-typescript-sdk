@@ -145,8 +145,10 @@ export function cibaBackchannelAuthenticationCompleteApi(
 ): APIPromise<
   Result<
     operations.BackchannelAuthenticationCompleteApiResponse,
-    | errors.APIInfo400Error
-    | errors.APIInfo4002Error
+    | errors.Error400
+    | errors.Error401
+    | errors.Error403
+    | errors.Error500
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -172,8 +174,10 @@ async function $do(
   [
     Result<
       operations.BackchannelAuthenticationCompleteApiResponse,
-      | errors.APIInfo400Error
-      | errors.APIInfo4002Error
+      | errors.Error400
+      | errors.Error401
+      | errors.Error403
+      | errors.Error500
       | AuthleteError
       | ResponseValidationError
       | ConnectionError
@@ -265,8 +269,10 @@ async function $do(
 
   const [result] = await M.match<
     operations.BackchannelAuthenticationCompleteApiResponse,
-    | errors.APIInfo400Error
-    | errors.APIInfo4002Error
+    | errors.Error400
+    | errors.Error401
+    | errors.Error403
+    | errors.Error500
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -280,9 +286,10 @@ async function $do(
       200,
       operations.BackchannelAuthenticationCompleteApiResponse$inboundSchema,
     ),
-    M.jsonErr(400, errors.APIInfo400Error$inboundSchema),
-    M.jsonErr([401, 403], errors.APIInfo4002Error$inboundSchema),
-    M.jsonErr(500, errors.APIInfo4002Error$inboundSchema),
+    M.jsonErr(400, errors.Error400$inboundSchema),
+    M.jsonErr(401, errors.Error401$inboundSchema),
+    M.jsonErr(403, errors.Error403$inboundSchema),
+    M.jsonErr(500, errors.Error500$inboundSchema),
     M.fail("4XX"),
     M.fail("5XX"),
   )(response, req, { extraFields: responseFields });

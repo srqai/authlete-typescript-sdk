@@ -15,19 +15,21 @@ export type VciDeferredParseApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceVciDeferredParse:
-    models.APILBraceserviceIdRBraceVciDeferredParse;
+  apiServiceIdVciDeferredParse: models.ApiServiceIdVciDeferredParse;
 };
 
 /**
  * The next action that the deferred credential endpoint should take.
  */
 export const VciDeferredParseApiFormAction = {
-  Ok: "OK",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  InternalServerError: "INTERNAL_SERVER_ERROR",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the deferred credential endpoint should take.
@@ -36,6 +38,9 @@ export type VciDeferredParseApiFormAction = ClosedEnum<
   typeof VciDeferredParseApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type VciDeferredParseApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -53,6 +58,9 @@ export type VciDeferredParseApiFormResponse = {
    * The content of the response to the request sender.
    */
   responseContent?: string | undefined;
+  /**
+   * An object containing credentialrequestinfo data
+   */
   info?: models.CredentialRequestInfo | undefined;
 };
 
@@ -63,20 +71,19 @@ export const VciDeferredParseApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceVciDeferredParse:
-    models.APILBraceserviceIdRBraceVciDeferredParse$inboundSchema,
+  api_serviceId_vci_deferred_parse:
+    models.ApiServiceIdVciDeferredParse$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceVciDeferredParse":
-      "apilBraceserviceIdRBraceVciDeferredParse",
+    "api_serviceId_vci_deferred_parse": "apiServiceIdVciDeferredParse",
   });
 });
 
 /** @internal */
 export type VciDeferredParseApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceVciDeferredParse:
-    models.APILBraceserviceIdRBraceVciDeferredParse$Outbound;
+  api_serviceId_vci_deferred_parse:
+    models.ApiServiceIdVciDeferredParse$Outbound;
 };
 
 /** @internal */
@@ -86,12 +93,11 @@ export const VciDeferredParseApiFormRequest$outboundSchema: z.ZodType<
   VciDeferredParseApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceVciDeferredParse:
-    models.APILBraceserviceIdRBraceVciDeferredParse$outboundSchema,
+  apiServiceIdVciDeferredParse:
+    models.ApiServiceIdVciDeferredParse$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceVciDeferredParse:
-      "APILBraceserviceIdRBraceVciDeferredParse",
+    apiServiceIdVciDeferredParse: "api_serviceId_vci_deferred_parse",
   });
 });
 

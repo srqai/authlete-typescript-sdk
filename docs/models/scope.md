@@ -1,5 +1,7 @@
 # Scope
 
+An object containing scope data
+
 ## Example Usage
 
 ```typescript

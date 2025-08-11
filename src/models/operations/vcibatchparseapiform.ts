@@ -15,19 +15,21 @@ export type VciBatchParseApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceVciBatchParse:
-    models.APILBraceserviceIdRBraceVciBatchParse;
+  apiServiceIdVciBatchParse: models.ApiServiceIdVciBatchParse;
 };
 
 /**
  * The next action that the batch credential endpoint should take.
  */
 export const VciBatchParseApiFormAction = {
-  Ok: "OK",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  InternalServerError: "INTERNAL_SERVER_ERROR",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the batch credential endpoint should take.
@@ -36,6 +38,9 @@ export type VciBatchParseApiFormAction = ClosedEnum<
   typeof VciBatchParseApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type VciBatchParseApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -69,20 +74,17 @@ export const VciBatchParseApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceVciBatchParse:
-    models.APILBraceserviceIdRBraceVciBatchParse$inboundSchema,
+  api_serviceId_vci_batch_parse: models.ApiServiceIdVciBatchParse$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceVciBatchParse":
-      "apilBraceserviceIdRBraceVciBatchParse",
+    "api_serviceId_vci_batch_parse": "apiServiceIdVciBatchParse",
   });
 });
 
 /** @internal */
 export type VciBatchParseApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceVciBatchParse:
-    models.APILBraceserviceIdRBraceVciBatchParse$Outbound;
+  api_serviceId_vci_batch_parse: models.ApiServiceIdVciBatchParse$Outbound;
 };
 
 /** @internal */
@@ -92,12 +94,10 @@ export const VciBatchParseApiFormRequest$outboundSchema: z.ZodType<
   VciBatchParseApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceVciBatchParse:
-    models.APILBraceserviceIdRBraceVciBatchParse$outboundSchema,
+  apiServiceIdVciBatchParse: models.ApiServiceIdVciBatchParse$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceVciBatchParse:
-      "APILBraceserviceIdRBraceVciBatchParse",
+    apiServiceIdVciBatchParse: "api_serviceId_vci_batch_parse",
   });
 });
 

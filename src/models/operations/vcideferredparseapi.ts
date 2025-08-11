@@ -10,6 +10,9 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
+/**
+ * An object containing schema data
+ */
 export type VciDeferredParseApiRequestBody = {
   /**
    * The access token that came along with the deferred credential request.
@@ -33,11 +36,14 @@ export type VciDeferredParseApiRequest = {
  * The next action that the deferred credential endpoint should take.
  */
 export const VciDeferredParseApiAction = {
-  Ok: "OK",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  InternalServerError: "INTERNAL_SERVER_ERROR",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the deferred credential endpoint should take.
@@ -46,6 +52,9 @@ export type VciDeferredParseApiAction = ClosedEnum<
   typeof VciDeferredParseApiAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type VciDeferredParseApiResponse = {
   /**
    * The code which represents the result of the API call.
@@ -63,6 +72,9 @@ export type VciDeferredParseApiResponse = {
    * The content of the response to the request sender.
    */
   responseContent?: string | undefined;
+  /**
+   * An object containing credentialrequestinfo data
+   */
   info?: models.CredentialRequestInfo | undefined;
 };
 

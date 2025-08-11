@@ -15,8 +15,8 @@ export type BackchannelAuthenticationFailApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceBackchannelAuthenticationFail:
-    models.APILBraceserviceIdRBraceBackchannelAuthenticationFail;
+  apiServiceIdBackchannelAuthenticationFail:
+    models.ApiServiceIdBackchannelAuthenticationFail;
 };
 
 /**
@@ -25,7 +25,12 @@ export type BackchannelAuthenticationFailApiFormRequest = {
 export const BackchannelAuthenticationFailApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -34,6 +39,9 @@ export type BackchannelAuthenticationFailApiFormAction = ClosedEnum<
   typeof BackchannelAuthenticationFailApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type BackchannelAuthenticationFailApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -64,21 +72,20 @@ export const BackchannelAuthenticationFailApiFormRequest$inboundSchema:
     unknown
   > = z.object({
     serviceId: z.string(),
-    APILBraceserviceIdRBraceBackchannelAuthenticationFail:
-      models
-        .APILBraceserviceIdRBraceBackchannelAuthenticationFail$inboundSchema,
+    api_serviceId_backchannel_authentication_fail:
+      models.ApiServiceIdBackchannelAuthenticationFail$inboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      "APILBraceserviceIdRBraceBackchannelAuthenticationFail":
-        "apilBraceserviceIdRBraceBackchannelAuthenticationFail",
+      "api_serviceId_backchannel_authentication_fail":
+        "apiServiceIdBackchannelAuthenticationFail",
     });
   });
 
 /** @internal */
 export type BackchannelAuthenticationFailApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceBackchannelAuthenticationFail:
-    models.APILBraceserviceIdRBraceBackchannelAuthenticationFail$Outbound;
+  api_serviceId_backchannel_authentication_fail:
+    models.ApiServiceIdBackchannelAuthenticationFail$Outbound;
 };
 
 /** @internal */
@@ -89,13 +96,12 @@ export const BackchannelAuthenticationFailApiFormRequest$outboundSchema:
     BackchannelAuthenticationFailApiFormRequest
   > = z.object({
     serviceId: z.string(),
-    apilBraceserviceIdRBraceBackchannelAuthenticationFail:
-      models
-        .APILBraceserviceIdRBraceBackchannelAuthenticationFail$outboundSchema,
+    apiServiceIdBackchannelAuthenticationFail:
+      models.ApiServiceIdBackchannelAuthenticationFail$outboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      apilBraceserviceIdRBraceBackchannelAuthenticationFail:
-        "APILBraceserviceIdRBraceBackchannelAuthenticationFail",
+      apiServiceIdBackchannelAuthenticationFail:
+        "api_serviceId_backchannel_authentication_fail",
     });
   });
 

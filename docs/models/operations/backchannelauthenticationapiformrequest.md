@@ -7,13 +7,15 @@ import { BackchannelAuthenticationApiFormRequest } from "authlete-2/models/opera
 
 let value: BackchannelAuthenticationApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceBackchannelAuthentication: {},
+  apiServiceIdBackchannelAuthentication: {
+    parameters: "<value>",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                                         | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                                                   | *string*                                                                                                                      | :heavy_check_mark:                                                                                                            | A service ID.                                                                                                                 |
-| `apilBraceserviceIdRBraceBackchannelAuthentication`                                                                           | [models.APILBraceserviceIdRBraceBackchannelAuthentication](../../models/apilbraceserviceidrbracebackchannelauthentication.md) | :heavy_check_mark:                                                                                                            | N/A                                                                                                                           |
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `serviceId`                                                                                           | *string*                                                                                              | :heavy_check_mark:                                                                                    | A service ID.                                                                                         |
+| `apiServiceIdBackchannelAuthentication`                                                               | [models.ApiServiceIdBackchannelAuthentication](../../models/apiserviceidbackchannelauthentication.md) | :heavy_check_mark:                                                                                    | N/A                                                                                                   |

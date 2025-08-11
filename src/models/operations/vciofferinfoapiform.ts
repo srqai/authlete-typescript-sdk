@@ -15,19 +15,21 @@ export type VciOfferInfoApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceVciOfferInfo:
-    models.APILBraceserviceIdRBraceVciOfferInfo;
+  apiServiceIdVciOfferInfo: models.ApiServiceIdVciOfferInfo;
 };
 
 /**
  * The result of the `/vci/offer/info` API call.
  */
 export const VciOfferInfoApiFormAction = {
-  Ok: "OK",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  NotFound: "NOT_FOUND",
-  CallerError: "CALLER_ERROR",
-  AuthleteError: "AUTHLETE_ERROR",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The result of the `/vci/offer/info` API call.
@@ -36,6 +38,9 @@ export type VciOfferInfoApiFormAction = ClosedEnum<
   typeof VciOfferInfoApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type VciOfferInfoApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -49,6 +54,9 @@ export type VciOfferInfoApiFormResponse = {
    * The result of the `/vci/offer/info` API call.
    */
   action?: VciOfferInfoApiFormAction | undefined;
+  /**
+   * An object containing credentialofferinfo data
+   */
   info?: models.CredentialOfferInfo | undefined;
 };
 
@@ -59,20 +67,17 @@ export const VciOfferInfoApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceVciOfferInfo:
-    models.APILBraceserviceIdRBraceVciOfferInfo$inboundSchema,
+  api_serviceId_vci_offer_info: models.ApiServiceIdVciOfferInfo$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceVciOfferInfo":
-      "apilBraceserviceIdRBraceVciOfferInfo",
+    "api_serviceId_vci_offer_info": "apiServiceIdVciOfferInfo",
   });
 });
 
 /** @internal */
 export type VciOfferInfoApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceVciOfferInfo:
-    models.APILBraceserviceIdRBraceVciOfferInfo$Outbound;
+  api_serviceId_vci_offer_info: models.ApiServiceIdVciOfferInfo$Outbound;
 };
 
 /** @internal */
@@ -82,12 +87,10 @@ export const VciOfferInfoApiFormRequest$outboundSchema: z.ZodType<
   VciOfferInfoApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceVciOfferInfo:
-    models.APILBraceserviceIdRBraceVciOfferInfo$outboundSchema,
+  apiServiceIdVciOfferInfo: models.ApiServiceIdVciOfferInfo$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceVciOfferInfo:
-      "APILBraceserviceIdRBraceVciOfferInfo",
+    apiServiceIdVciOfferInfo: "api_serviceId_vci_offer_info",
   });
 });
 

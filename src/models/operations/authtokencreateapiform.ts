@@ -15,8 +15,7 @@ export type AuthTokenCreateApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthTokenCreate:
-    models.APILBraceserviceIdRBraceAuthTokenCreate;
+  apiServiceIdAuthTokenCreate: models.ApiServiceIdAuthTokenCreate;
 };
 
 /**
@@ -25,7 +24,11 @@ export type AuthTokenCreateApiFormRequest = {
 export const AuthTokenCreateApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -35,6 +38,9 @@ export type AuthTokenCreateApiFormAction = ClosedEnum<
   typeof AuthTokenCreateApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthTokenCreateApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -151,20 +157,18 @@ export const AuthTokenCreateApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthTokenCreate:
-    models.APILBraceserviceIdRBraceAuthTokenCreate$inboundSchema,
+  api_serviceId_auth_token_create:
+    models.ApiServiceIdAuthTokenCreate$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthTokenCreate":
-      "apilBraceserviceIdRBraceAuthTokenCreate",
+    "api_serviceId_auth_token_create": "apiServiceIdAuthTokenCreate",
   });
 });
 
 /** @internal */
 export type AuthTokenCreateApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthTokenCreate:
-    models.APILBraceserviceIdRBraceAuthTokenCreate$Outbound;
+  api_serviceId_auth_token_create: models.ApiServiceIdAuthTokenCreate$Outbound;
 };
 
 /** @internal */
@@ -174,12 +178,11 @@ export const AuthTokenCreateApiFormRequest$outboundSchema: z.ZodType<
   AuthTokenCreateApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthTokenCreate:
-    models.APILBraceserviceIdRBraceAuthTokenCreate$outboundSchema,
+  apiServiceIdAuthTokenCreate:
+    models.ApiServiceIdAuthTokenCreate$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthTokenCreate:
-      "APILBraceserviceIdRBraceAuthTokenCreate",
+    apiServiceIdAuthTokenCreate: "api_serviceId_auth_token_create",
   });
 });
 

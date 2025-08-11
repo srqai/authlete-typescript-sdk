@@ -9,6 +9,9 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
+/**
+ * An object containing schema data
+ */
 export type VciMetadataApiRequestBody = {
   /**
    * The flag indicating whether the metadata is written in the pretty
@@ -36,9 +39,14 @@ export type VciMetadataApiRequest = {
  * `/vci/metadata` API.
  */
 export const VciMetadataApiAction = {
-  Ok: "OK",
-  NotFound: "NOT_FOUND",
   InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the implementation of the credential issuer
@@ -50,6 +58,9 @@ export const VciMetadataApiAction = {
  */
 export type VciMetadataApiAction = ClosedEnum<typeof VciMetadataApiAction>;
 
+/**
+ * An object containing schema data
+ */
 export type VciMetadataApiResponse = {
   /**
    * The code which represents the result of the API call.

@@ -13,6 +13,11 @@ export type ClientAuthorizationGetListApiRequest = {
    * A service ID.
    */
   serviceId: string;
+  /**
+   * Unique user ID of an end-user.
+   *
+   * @remarks
+   */
   subject: string;
   /**
    * Unique ID of a client developer.
@@ -32,6 +37,9 @@ export type ClientAuthorizationGetListApiRequest = {
   end?: number | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ClientAuthorizationGetListApiResponse = {
   /**
    * Start index of search results (inclusive).
@@ -69,7 +77,7 @@ export type ClientAuthorizationGetListApiResponse = {
    * @remarks
    */
   clients?:
-    | Array<models.APILBraceserviceIdRBraceAuthTokenList200PropertiesClient>
+    | Array<models.ApiServiceIdAuthTokenGetListpropertiesclient>
     | undefined;
 };
 
@@ -156,8 +164,7 @@ export const ClientAuthorizationGetListApiResponse$inboundSchema: z.ZodType<
   subject: z.string().optional(),
   totalCount: z.number().int().optional(),
   clients: z.array(
-    models
-      .APILBraceserviceIdRBraceAuthTokenList200PropertiesClient$inboundSchema,
+    models.ApiServiceIdAuthTokenGetListpropertiesclient$inboundSchema,
   ).optional(),
 });
 
@@ -169,9 +176,7 @@ export type ClientAuthorizationGetListApiResponse$Outbound = {
   subject?: string | undefined;
   totalCount?: number | undefined;
   clients?:
-    | Array<
-      models.APILBraceserviceIdRBraceAuthTokenList200PropertiesClient$Outbound
-    >
+    | Array<models.ApiServiceIdAuthTokenGetListpropertiesclient$Outbound>
     | undefined;
 };
 
@@ -187,8 +192,7 @@ export const ClientAuthorizationGetListApiResponse$outboundSchema: z.ZodType<
   subject: z.string().optional(),
   totalCount: z.number().int().optional(),
   clients: z.array(
-    models
-      .APILBraceserviceIdRBraceAuthTokenList200PropertiesClient$outboundSchema,
+    models.ApiServiceIdAuthTokenGetListpropertiesclient$outboundSchema,
   ).optional(),
 });
 

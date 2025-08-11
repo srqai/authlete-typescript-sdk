@@ -13,5 +13,5 @@ let value: AuthIntrospectionStandardApiFormAction = "INTERNAL_SERVER_ERROR";
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "OK"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

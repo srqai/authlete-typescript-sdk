@@ -20,7 +20,13 @@ export type ClientExtensionRequestablesScopesGetApiRequest = {
   clientId: string;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ClientExtensionRequestablesScopesGetApiResponse = {
+  /**
+   * An array of requestablescopes items
+   */
   requestableScopes?: Array<string> | undefined;
 };
 

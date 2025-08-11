@@ -8,9 +8,9 @@ import { ClientRegistrationUpdateApiRequest } from "authlete-2/models/operations
 let value: ClientRegistrationUpdateApiRequest = {
   serviceId: "<id>",
   requestBody: {
-    clientId: "<id>",
+    clientId: 189615,
     token: "<value>",
-    json: "{key: 1707899379638283, key1: null, key2: \"<value>\"}",
+    json: "{key: 4665757877634301, key1: null, key2: \"<value>\"}",
   },
 };
 ```

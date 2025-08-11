@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { FederationConfigurationApiAction } from "authlete-2/models/operations";
 
-let value: FederationConfigurationApiAction = "NOT_FOUND";
+let value: FederationConfigurationApiAction = "UNAUTHORIZED";
 ```
 
 ## Values
 
 ```typescript
-"OK" | "NOT_FOUND" | "INTERNAL_SERVER_ERROR"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

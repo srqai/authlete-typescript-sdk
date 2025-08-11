@@ -9,6 +9,9 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
+/**
+ * An object containing schema data
+ */
 export type IdtokenReissueApiRequestBody = {
   /**
    * <p>
@@ -118,9 +121,14 @@ export type IdtokenReissueApiRequest = {
  * The next action that the implementation of the token endpoint should take.
  */
 export const IdtokenReissueApiAction = {
-  Ok: "OK",
   InternalServerError: "INTERNAL_SERVER_ERROR",
-  CallerError: "CALLER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the implementation of the token endpoint should take.
@@ -129,6 +137,9 @@ export type IdtokenReissueApiAction = ClosedEnum<
   typeof IdtokenReissueApiAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type IdtokenReissueApiResponse = {
   /**
    * The code which represents the result of the API call.

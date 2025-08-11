@@ -10,6 +10,9 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
+/**
+ * An object containing schema data
+ */
 export type AuthTokenUpdateApiRequestBody = {
   /**
    * An access token.
@@ -125,8 +128,11 @@ export type AuthTokenUpdateApiRequest = {
 export const AuthTokenUpdateApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  NotFound: "NOT_FOUND",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -136,6 +142,9 @@ export type AuthTokenUpdateApiAction = ClosedEnum<
   typeof AuthTokenUpdateApiAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthTokenUpdateApiResponse = {
   /**
    * The code which represents the result of the API call.

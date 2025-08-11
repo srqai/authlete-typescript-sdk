@@ -15,8 +15,7 @@ export type VciMetadataApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceVciMetadata:
-    models.APILBraceserviceIdRBraceVciMetadata;
+  apiServiceIdVciMetadata: models.ApiServiceIdVciMetadata;
 };
 
 /**
@@ -28,9 +27,14 @@ export type VciMetadataApiFormRequest = {
  * `/vci/metadata` API.
  */
 export const VciMetadataApiFormAction = {
-  Ok: "OK",
-  NotFound: "NOT_FOUND",
   InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the implementation of the credential issuer
@@ -44,6 +48,9 @@ export type VciMetadataApiFormAction = ClosedEnum<
   typeof VciMetadataApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type VciMetadataApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -78,20 +85,17 @@ export const VciMetadataApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceVciMetadata:
-    models.APILBraceserviceIdRBraceVciMetadata$inboundSchema,
+  api_serviceId_vci_metadata: models.ApiServiceIdVciMetadata$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceVciMetadata":
-      "apilBraceserviceIdRBraceVciMetadata",
+    "api_serviceId_vci_metadata": "apiServiceIdVciMetadata",
   });
 });
 
 /** @internal */
 export type VciMetadataApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceVciMetadata:
-    models.APILBraceserviceIdRBraceVciMetadata$Outbound;
+  api_serviceId_vci_metadata: models.ApiServiceIdVciMetadata$Outbound;
 };
 
 /** @internal */
@@ -101,11 +105,10 @@ export const VciMetadataApiFormRequest$outboundSchema: z.ZodType<
   VciMetadataApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceVciMetadata:
-    models.APILBraceserviceIdRBraceVciMetadata$outboundSchema,
+  apiServiceIdVciMetadata: models.ApiServiceIdVciMetadata$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceVciMetadata: "APILBraceserviceIdRBraceVciMetadata",
+    apiServiceIdVciMetadata: "api_serviceId_vci_metadata",
   });
 });
 

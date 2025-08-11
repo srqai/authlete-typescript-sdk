@@ -7,6 +7,9 @@ import { safeParse } from "../lib/schemas.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import { SDKValidationError } from "./errors/sdkvalidationerror.js";
 
+/**
+ * An object containing credentialissuanceorder data
+ */
 export type CredentialIssuanceOrder = {
   /**
    * The identifier of a credential request.

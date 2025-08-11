@@ -14,8 +14,7 @@ export type ClientRegistrationGetApiRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceClientRegistration:
-    models.APILBraceserviceIdRBraceClientRegistration;
+  apiServiceIdClientRegistration1: models.ApiServiceIdClientRegistration1;
 };
 
 /** @internal */
@@ -25,20 +24,19 @@ export const ClientRegistrationGetApiRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceClientRegistration:
-    models.APILBraceserviceIdRBraceClientRegistration$inboundSchema,
+  api_serviceId_client_registration1:
+    models.ApiServiceIdClientRegistration1$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceClientRegistration":
-      "apilBraceserviceIdRBraceClientRegistration",
+    "api_serviceId_client_registration1": "apiServiceIdClientRegistration1",
   });
 });
 
 /** @internal */
 export type ClientRegistrationGetApiRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceClientRegistration:
-    models.APILBraceserviceIdRBraceClientRegistration$Outbound;
+  api_serviceId_client_registration1:
+    models.ApiServiceIdClientRegistration1$Outbound;
 };
 
 /** @internal */
@@ -48,12 +46,11 @@ export const ClientRegistrationGetApiRequest$outboundSchema: z.ZodType<
   ClientRegistrationGetApiRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceClientRegistration:
-    models.APILBraceserviceIdRBraceClientRegistration$outboundSchema,
+  apiServiceIdClientRegistration1:
+    models.ApiServiceIdClientRegistration1$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceClientRegistration:
-      "APILBraceserviceIdRBraceClientRegistration",
+    apiServiceIdClientRegistration1: "api_serviceId_client_registration1",
   });
 });
 

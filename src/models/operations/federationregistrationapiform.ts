@@ -15,18 +15,21 @@ export type FederationRegistrationApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceFederationRegistration:
-    models.APILBraceserviceIdRBraceFederationRegistration;
+  apiServiceIdFederationRegistration: models.ApiServiceIdFederationRegistration;
 };
 
 /**
  * The next action that the authorization server implementation should take.
  */
 export const FederationRegistrationApiFormAction = {
-  Ok: "OK",
-  BadRequest: "BAD_REQUEST",
-  NotFound: "NOT_FOUND",
   InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -35,6 +38,9 @@ export type FederationRegistrationApiFormAction = ClosedEnum<
   typeof FederationRegistrationApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type FederationRegistrationApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -55,6 +61,9 @@ export type FederationRegistrationApiFormResponse = {
    * header on errors.
    */
   responseContent?: string | undefined;
+  /**
+   * An object containing client data
+   */
   client?: models.Client | undefined;
 };
 
@@ -65,20 +74,20 @@ export const FederationRegistrationApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceFederationRegistration:
-    models.APILBraceserviceIdRBraceFederationRegistration$inboundSchema,
+  api_serviceId_federation_registration:
+    models.ApiServiceIdFederationRegistration$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceFederationRegistration":
-      "apilBraceserviceIdRBraceFederationRegistration",
+    "api_serviceId_federation_registration":
+      "apiServiceIdFederationRegistration",
   });
 });
 
 /** @internal */
 export type FederationRegistrationApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceFederationRegistration:
-    models.APILBraceserviceIdRBraceFederationRegistration$Outbound;
+  api_serviceId_federation_registration:
+    models.ApiServiceIdFederationRegistration$Outbound;
 };
 
 /** @internal */
@@ -88,12 +97,11 @@ export const FederationRegistrationApiFormRequest$outboundSchema: z.ZodType<
   FederationRegistrationApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceFederationRegistration:
-    models.APILBraceserviceIdRBraceFederationRegistration$outboundSchema,
+  apiServiceIdFederationRegistration:
+    models.ApiServiceIdFederationRegistration$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceFederationRegistration:
-      "APILBraceserviceIdRBraceFederationRegistration",
+    apiServiceIdFederationRegistration: "api_serviceId_federation_registration",
   });
 });
 

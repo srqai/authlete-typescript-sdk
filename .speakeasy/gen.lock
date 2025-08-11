@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: e17fc78f-822f-4688-9647-d39b4d15b69e
 management:
-  docChecksum: 351c360ef329c7219d4ad49edcd4e157
+  docChecksum: 4e2d68ef0df017a3300d14e3ec41f3c9
   docVersion: 3.0.0
-  speakeasyVersion: 1.600.2
-  generationVersion: 2.677.3
-  releaseVersion: 0.0.1
-  configChecksum: ac3bc4f261b1c345bc9a78b83db6146c
+  speakeasyVersion: 1.601.0
+  generationVersion: 2.680.0
+  releaseVersion: 0.0.3
+  configChecksum: 1c977e0dd6e86e25b9246cd4c0a1c3b2
   repoURL: https://github.com/srqai/authlete-typescript-sdk.git
   installationURL: https://github.com/srqai/authlete-typescript-sdk
   published: true
@@ -37,57 +37,74 @@ generatedFiles:
   - USAGE.md
   - docs/lib/utils/retryconfig.md
   - docs/models/accesstoken.md
-  - docs/models/apilbraceserviceidrbraceauthauthorization.md
-  - docs/models/apilbraceserviceidrbraceauthauthorization200propertiesgrant.md
-  - docs/models/apilbraceserviceidrbraceauthauthorizationfail.md
-  - docs/models/apilbraceserviceidrbraceauthauthorizationissue.md
-  - docs/models/apilbraceserviceidrbraceauthauthorizationticketupdate.md
-  - docs/models/apilbraceserviceidrbraceauthintrospection.md
-  - docs/models/apilbraceserviceidrbraceauthintrospectionstandard.md
-  - docs/models/apilbraceserviceidrbraceauthrevocation.md
-  - docs/models/apilbraceserviceidrbraceauthtoken.md
-  - docs/models/apilbraceserviceidrbraceauthtoken200propertiesactortokeninfo.md
-  - docs/models/apilbraceserviceidrbraceauthtoken200propertiesactortokentype.md
-  - docs/models/apilbraceserviceidrbraceauthtokencreate.md
-  - docs/models/apilbraceserviceidrbraceauthtokenfail.md
-  - docs/models/apilbraceserviceidrbraceauthtokenissue.md
-  - docs/models/apilbraceserviceidrbraceauthtokenlist200propertiesclient.md
-  - docs/models/apilbraceserviceidrbraceauthtokenrevoke.md
-  - docs/models/apilbraceserviceidrbraceauthtokenupdate.md
-  - docs/models/apilbraceserviceidrbraceauthuserinfo.md
-  - docs/models/apilbraceserviceidrbraceauthuserinfoissue.md
-  - docs/models/apilbraceserviceidrbracebackchannelauthentication.md
-  - docs/models/apilbraceserviceidrbracebackchannelauthenticationcomplete.md
-  - docs/models/apilbraceserviceidrbracebackchannelauthenticationfail.md
-  - docs/models/apilbraceserviceidrbracebackchannelauthenticationissue.md
-  - docs/models/apilbraceserviceidrbraceclientauthorizationupdatelbraceclientidrbrace.md
-  - docs/models/apilbraceserviceidrbraceclientgrantedscopeslbraceclientidrbrace200.md
-  - docs/models/apilbraceserviceidrbraceclientlockflagupdatelbraceclientidentifierrbrace.md
-  - docs/models/apilbraceserviceidrbraceclientregistration.md
-  - docs/models/apilbraceserviceidrbraceclientregistration2.md
-  - docs/models/apilbraceserviceidrbraceclientregistration200.md
-  - docs/models/apilbraceserviceidrbraceclientregistrationupdate.md
-  - docs/models/apilbraceserviceidrbraceclientsecretupdatelbraceclientidentifierrbrace.md
-  - docs/models/apilbraceserviceidrbracedeviceauthorization.md
-  - docs/models/apilbraceserviceidrbracedevicecomplete.md
-  - docs/models/apilbraceserviceidrbracedeviceverification.md
-  - docs/models/apilbraceserviceidrbracefederationregistration.md
-  - docs/models/apilbraceserviceidrbracegmpropertiesgmaction.md
-  - docs/models/apilbraceserviceidrbracehskcreate.md
-  - docs/models/apilbraceserviceidrbracejoseverify.md
-  - docs/models/apilbraceserviceidrbracepushedauthreq.md
-  - docs/models/apilbraceserviceidrbracevcibatchparse.md
-  - docs/models/apilbraceserviceidrbracevcideferredparse.md
-  - docs/models/apilbraceserviceidrbracevcijwks.md
-  - docs/models/apilbraceserviceidrbracevcijwtissuer.md
-  - docs/models/apilbraceserviceidrbracevcimetadata.md
-  - docs/models/apilbraceserviceidrbracevcioffercreate.md
-  - docs/models/apilbraceserviceidrbracevciofferinfo.md
-  - docs/models/apilbraceserviceidrbracevcisingleparse.md
+  - docs/models/action.md
+  - docs/models/apiserviceidauthauthorization.md
+  - docs/models/apiserviceidauthauthorizationfail.md
+  - docs/models/apiserviceidauthauthorizationfailreason.md
+  - docs/models/apiserviceidauthauthorizationissue.md
+  - docs/models/apiserviceidauthauthorizationpropertiesgrant.md
+  - docs/models/apiserviceidauthauthorizationpropertiesgrant1.md
+  - docs/models/apiserviceidauthauthorizationpropertiesgrant1scope.md
+  - docs/models/apiserviceidauthauthorizationpropertiesgrant2.md
+  - docs/models/apiserviceidauthauthorizationpropertiesgrant2scope.md
+  - docs/models/apiserviceidauthauthorizationpropertiesgrant3.md
+  - docs/models/apiserviceidauthauthorizationpropertiesgrant3scope.md
+  - docs/models/apiserviceidauthauthorizationpropertiesgrantscope.md
+  - docs/models/apiserviceidauthauthorizationticketupdate.md
+  - docs/models/apiserviceidauthintrospection.md
+  - docs/models/apiserviceidauthintrospectionstandard.md
+  - docs/models/apiserviceidauthrevocation.md
+  - docs/models/apiserviceidauthtoken.md
+  - docs/models/apiserviceidauthtokencreate.md
+  - docs/models/apiserviceidauthtokenfail.md
+  - docs/models/apiserviceidauthtokenfailreason.md
+  - docs/models/apiserviceidauthtokengetlistpropertiesclient.md
+  - docs/models/apiserviceidauthtokenissue.md
+  - docs/models/apiserviceidauthtokenpropertiesactortokeninfo.md
+  - docs/models/apiserviceidauthtokenpropertiesactortokentype.md
+  - docs/models/apiserviceidauthtokenpropertiesactortokentype1.md
+  - docs/models/apiserviceidauthtokenrevoke.md
+  - docs/models/apiserviceidauthtokenupdate.md
+  - docs/models/apiserviceidauthuserinfo.md
+  - docs/models/apiserviceidauthuserinfoissue.md
+  - docs/models/apiserviceidbackchannelauthentication.md
+  - docs/models/apiserviceidbackchannelauthenticationcomplete.md
+  - docs/models/apiserviceidbackchannelauthenticationcompleteresult.md
+  - docs/models/apiserviceidbackchannelauthenticationfail.md
+  - docs/models/apiserviceidbackchannelauthenticationfailreason.md
+  - docs/models/apiserviceidbackchannelauthenticationissue.md
+  - docs/models/apiserviceidclientauthorizationupdateclientid.md
+  - docs/models/apiserviceidclientgrantedscopesgetclientid.md
+  - docs/models/apiserviceidclientlockflagupdateclientidenti.md
+  - docs/models/apiserviceidclientregistration.md
+  - docs/models/apiserviceidclientregistration1.md
+  - docs/models/apiserviceidclientregistration3.md
+  - docs/models/apiserviceidclientregistrationdelete.md
+  - docs/models/apiserviceidclientregistrationupdate.md
+  - docs/models/apiserviceidclientsecretupdateclientidentifie.md
+  - docs/models/apiserviceiddeviceauthorization.md
+  - docs/models/apiserviceiddevicecomplete.md
+  - docs/models/apiserviceiddevicecompleteresult.md
+  - docs/models/apiserviceiddeviceverification.md
+  - docs/models/apiserviceidfederationregistration.md
+  - docs/models/apiserviceidgmpropertiesgmaction.md
+  - docs/models/apiserviceidgmpropertiesgmaction1.md
+  - docs/models/apiserviceidgmpropertiesgmaction2.md
+  - docs/models/apiserviceidgmpropertiesgmaction3.md
+  - docs/models/apiserviceidhskcreate.md
+  - docs/models/apiserviceidjoseverify.md
+  - docs/models/apiserviceidpushedauthreq.md
+  - docs/models/apiserviceidvcibatchparse.md
+  - docs/models/apiserviceidvcideferredparse.md
+  - docs/models/apiserviceidvcijwks.md
+  - docs/models/apiserviceidvcijwtissuer.md
+  - docs/models/apiserviceidvcimetadata.md
+  - docs/models/apiserviceidvcioffercreate.md
+  - docs/models/apiserviceidvciofferinfo.md
+  - docs/models/apiserviceidvcisingleparse.md
   - docs/models/applicationtype.md
   - docs/models/authorizationdetails.md
   - docs/models/authorizationdetailselement.md
-  - docs/models/claimtype.md
   - docs/models/client.md
   - docs/models/clientauthenticationmethod.md
   - docs/models/clientclienttype.md
@@ -96,24 +113,25 @@ generatedFiles:
   - docs/models/clientregistrationtype.md
   - docs/models/clienttypeproperties.md
   - docs/models/credentialissuanceorder.md
-  - docs/models/credentialissuermetadata.md
   - docs/models/credentialofferinfo.md
   - docs/models/credentialrequestinfo.md
   - docs/models/deliverymode.md
   - docs/models/display.md
   - docs/models/dynamicscope.md
-  - docs/models/errors/apiinfo4002error.md
-  - docs/models/errors/apiinfo400error.md
+  - docs/models/errors/apiinfo1error.md
+  - docs/models/errors/apiinfo2error.md
+  - docs/models/errors/apiinfoerror.md
   - docs/models/errors/badrequesterror.md
+  - docs/models/errors/error400.md
+  - docs/models/errors/error401.md
+  - docs/models/errors/error403.md
+  - docs/models/errors/error500.md
   - docs/models/fapimode.md
   - docs/models/granttype.md
   - docs/models/hsk.md
-  - docs/models/itemsclientregistrationtypes.md
-  - docs/models/itemsfapimodes.md
   - docs/models/jwealg.md
   - docs/models/jweenc.md
   - docs/models/jwsalg.md
-  - docs/models/nameduri.md
   - docs/models/operations/authauthorizationapiaction.md
   - docs/models/operations/authauthorizationapiclient.md
   - docs/models/operations/authauthorizationapiformaction.md
@@ -182,6 +200,7 @@ generatedFiles:
   - docs/models/operations/authtokencreateapirequestbody.md
   - docs/models/operations/authtokencreateapiresponse.md
   - docs/models/operations/authtokendeleteapirequest.md
+  - docs/models/operations/authtokendeleteapiresponse.md
   - docs/models/operations/authtokenfailapiaction.md
   - docs/models/operations/authtokenfailapiformaction.md
   - docs/models/operations/authtokenfailapiformrequest.md
@@ -266,7 +285,9 @@ generatedFiles:
   - docs/models/operations/clientauthorizationupdateapiresponse.md
   - docs/models/operations/clientcreateapirequest.md
   - docs/models/operations/clientdeleteapirequest.md
+  - docs/models/operations/clientdeleteapiresponse.md
   - docs/models/operations/clientextensionrequestablesscopesdeleteapirequest.md
+  - docs/models/operations/clientextensionrequestablesscopesdeleteapiresponse.md
   - docs/models/operations/clientextensionrequestablesscopesgetapirequest.md
   - docs/models/operations/clientextensionrequestablesscopesgetapiresponse.md
   - docs/models/operations/clientextensionrequestablesscopesupdateapirequest.md
@@ -347,9 +368,6 @@ generatedFiles:
   - docs/models/operations/federationregistrationapirequest.md
   - docs/models/operations/federationregistrationapirequestbody.md
   - docs/models/operations/federationregistrationapiresponse.md
-  - docs/models/operations/getapiserviceidauthauthorizationticketinfoaction.md
-  - docs/models/operations/getapiserviceidauthauthorizationticketinforequest.md
-  - docs/models/operations/getapiserviceidauthauthorizationticketinforesponse.md
   - docs/models/operations/gmaction.md
   - docs/models/operations/grantmapiaction.md
   - docs/models/operations/grantmapirequest.md
@@ -382,13 +400,14 @@ generatedFiles:
   - docs/models/operations/joseverifyapirequestbody.md
   - docs/models/operations/joseverifyapiresponse.md
   - docs/models/operations/key.md
-  - docs/models/operations/postapiserviceidauthauthorizationticketupdateaction.md
-  - docs/models/operations/postapiserviceidauthauthorizationticketupdateformaction.md
-  - docs/models/operations/postapiserviceidauthauthorizationticketupdateformrequest.md
-  - docs/models/operations/postapiserviceidauthauthorizationticketupdateformresponse.md
-  - docs/models/operations/postapiserviceidauthauthorizationticketupdaterequest.md
-  - docs/models/operations/postapiserviceidauthauthorizationticketupdaterequestbody.md
-  - docs/models/operations/postapiserviceidauthauthorizationticketupdateresponse.md
+  - docs/models/operations/miscechoapiresponse.md
+  - docs/models/operations/postupdateticketinformationaction.md
+  - docs/models/operations/postupdateticketinformationformaction.md
+  - docs/models/operations/postupdateticketinformationformrequest.md
+  - docs/models/operations/postupdateticketinformationformresponse.md
+  - docs/models/operations/postupdateticketinformationrequest.md
+  - docs/models/operations/postupdateticketinformationrequestbody.md
+  - docs/models/operations/postupdateticketinformationresponse.md
   - docs/models/operations/pushedauthreqapiaction.md
   - docs/models/operations/pushedauthreqapiclientauthmethod.md
   - docs/models/operations/pushedauthreqapiformaction.md
@@ -401,6 +420,7 @@ generatedFiles:
   - docs/models/operations/serviceconfigurationapirequest.md
   - docs/models/operations/serviceconfigurationapiresponse.md
   - docs/models/operations/servicedeleteapirequest.md
+  - docs/models/operations/servicedeleteapiresponse.md
   - docs/models/operations/servicegetapirequest.md
   - docs/models/operations/servicegetlistapirequest.md
   - docs/models/operations/servicegetlistapiresponse.md
@@ -483,14 +503,8 @@ generatedFiles:
   - docs/models/scope.md
   - docs/models/security.md
   - docs/models/service.md
-  - docs/models/serviceinput.md
-  - docs/models/serviceprofile.md
   - docs/models/subjecttype.md
-  - docs/models/supportedattachment.md
   - docs/models/taggedvalue.md
-  - docs/models/trustanchor.md
-  - docs/models/usercodecharset.md
-  - docs/models/verifiedclaimsvalidationschemaset.md
   - docs/sdks/authlete/README.md
   - docs/sdks/authorizationendpoint/README.md
   - docs/sdks/ciba/README.md
@@ -525,9 +539,8 @@ generatedFiles:
   - src/funcs/authorizationEndpointAuthAuthorizationFailApiForm.ts
   - src/funcs/authorizationEndpointAuthAuthorizationIssueApi.ts
   - src/funcs/authorizationEndpointAuthAuthorizationIssueApiForm.ts
-  - src/funcs/authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo.ts
-  - src/funcs/authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate.ts
-  - src/funcs/authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm.ts
+  - src/funcs/authorizationEndpointPostUpdateTicketInformation.ts
+  - src/funcs/authorizationEndpointPostUpdateTicketInformationForm.ts
   - src/funcs/cibaBackchannelAuthenticationApi.ts
   - src/funcs/cibaBackchannelAuthenticationApiForm.ts
   - src/funcs/cibaBackchannelAuthenticationCompleteApi.ts
@@ -655,72 +668,83 @@ generatedFiles:
   - src/lib/security.ts
   - src/lib/url.ts
   - src/models/accesstoken.ts
-  - src/models/apilbraceserviceidrbraceauthauthorization.ts
-  - src/models/apilbraceserviceidrbraceauthauthorization200propertiesgrant.ts
-  - src/models/apilbraceserviceidrbraceauthauthorizationfail.ts
-  - src/models/apilbraceserviceidrbraceauthauthorizationissue.ts
-  - src/models/apilbraceserviceidrbraceauthauthorizationticketupdate.ts
-  - src/models/apilbraceserviceidrbraceauthintrospection.ts
-  - src/models/apilbraceserviceidrbraceauthintrospectionstandard.ts
-  - src/models/apilbraceserviceidrbraceauthrevocation.ts
-  - src/models/apilbraceserviceidrbraceauthtoken.ts
-  - src/models/apilbraceserviceidrbraceauthtoken200propertiesactortokeninfo.ts
-  - src/models/apilbraceserviceidrbraceauthtoken200propertiesactortokentype.ts
-  - src/models/apilbraceserviceidrbraceauthtokencreate.ts
-  - src/models/apilbraceserviceidrbraceauthtokenfail.ts
-  - src/models/apilbraceserviceidrbraceauthtokenissue.ts
-  - src/models/apilbraceserviceidrbraceauthtokenlist200propertiesclient.ts
-  - src/models/apilbraceserviceidrbraceauthtokenrevoke.ts
-  - src/models/apilbraceserviceidrbraceauthtokenupdate.ts
-  - src/models/apilbraceserviceidrbraceauthuserinfo.ts
-  - src/models/apilbraceserviceidrbraceauthuserinfoissue.ts
-  - src/models/apilbraceserviceidrbracebackchannelauthentication.ts
-  - src/models/apilbraceserviceidrbracebackchannelauthenticationcomplete.ts
-  - src/models/apilbraceserviceidrbracebackchannelauthenticationfail.ts
-  - src/models/apilbraceserviceidrbracebackchannelauthenticationissue.ts
-  - src/models/apilbraceserviceidrbraceclientauthorizationupdatelbraceclientidrbrace.ts
-  - src/models/apilbraceserviceidrbraceclientgrantedscopeslbraceclientidrbrace200.ts
-  - src/models/apilbraceserviceidrbraceclientlockflagupdatelbraceclientidentifierrbrace.ts
-  - src/models/apilbraceserviceidrbraceclientregistration.ts
-  - src/models/apilbraceserviceidrbraceclientregistration2.ts
-  - src/models/apilbraceserviceidrbraceclientregistration200.ts
-  - src/models/apilbraceserviceidrbraceclientregistrationupdate.ts
-  - src/models/apilbraceserviceidrbraceclientsecretupdatelbraceclientidentifierrbrace.ts
-  - src/models/apilbraceserviceidrbracedeviceauthorization.ts
-  - src/models/apilbraceserviceidrbracedevicecomplete.ts
-  - src/models/apilbraceserviceidrbracedeviceverification.ts
-  - src/models/apilbraceserviceidrbracefederationregistration.ts
-  - src/models/apilbraceserviceidrbracegmpropertiesgmaction.ts
-  - src/models/apilbraceserviceidrbracehskcreate.ts
-  - src/models/apilbraceserviceidrbracejoseverify.ts
-  - src/models/apilbraceserviceidrbracepushedauthreq.ts
-  - src/models/apilbraceserviceidrbracevcibatchparse.ts
-  - src/models/apilbraceserviceidrbracevcideferredparse.ts
-  - src/models/apilbraceserviceidrbracevcijwks.ts
-  - src/models/apilbraceserviceidrbracevcijwtissuer.ts
-  - src/models/apilbraceserviceidrbracevcimetadata.ts
-  - src/models/apilbraceserviceidrbracevcioffercreate.ts
-  - src/models/apilbraceserviceidrbracevciofferinfo.ts
-  - src/models/apilbraceserviceidrbracevcisingleparse.ts
+  - src/models/apiserviceidauthauthorization.ts
+  - src/models/apiserviceidauthauthorizationfail.ts
+  - src/models/apiserviceidauthauthorizationissue.ts
+  - src/models/apiserviceidauthauthorizationpropertiesgrant.ts
+  - src/models/apiserviceidauthauthorizationpropertiesgrant1.ts
+  - src/models/apiserviceidauthauthorizationpropertiesgrant2.ts
+  - src/models/apiserviceidauthauthorizationpropertiesgrant3.ts
+  - src/models/apiserviceidauthauthorizationticketupdate.ts
+  - src/models/apiserviceidauthintrospection.ts
+  - src/models/apiserviceidauthintrospectionstandard.ts
+  - src/models/apiserviceidauthrevocation.ts
+  - src/models/apiserviceidauthtoken.ts
+  - src/models/apiserviceidauthtokencreate.ts
+  - src/models/apiserviceidauthtokenfail.ts
+  - src/models/apiserviceidauthtokengetlistpropertiesclient.ts
+  - src/models/apiserviceidauthtokenissue.ts
+  - src/models/apiserviceidauthtokenpropertiesactortokeninfo.ts
+  - src/models/apiserviceidauthtokenpropertiesactortokentype.ts
+  - src/models/apiserviceidauthtokenpropertiesactortokentype1.ts
+  - src/models/apiserviceidauthtokenrevoke.ts
+  - src/models/apiserviceidauthtokenupdate.ts
+  - src/models/apiserviceidauthuserinfo.ts
+  - src/models/apiserviceidauthuserinfoissue.ts
+  - src/models/apiserviceidbackchannelauthentication.ts
+  - src/models/apiserviceidbackchannelauthenticationcomplete.ts
+  - src/models/apiserviceidbackchannelauthenticationfail.ts
+  - src/models/apiserviceidbackchannelauthenticationissue.ts
+  - src/models/apiserviceidclientauthorizationupdateclientid.ts
+  - src/models/apiserviceidclientgrantedscopesgetclientid.ts
+  - src/models/apiserviceidclientlockflagupdateclientidenti.ts
+  - src/models/apiserviceidclientregistration.ts
+  - src/models/apiserviceidclientregistration1.ts
+  - src/models/apiserviceidclientregistration3.ts
+  - src/models/apiserviceidclientregistrationdelete.ts
+  - src/models/apiserviceidclientregistrationupdate.ts
+  - src/models/apiserviceidclientsecretupdateclientidentifie.ts
+  - src/models/apiserviceiddeviceauthorization.ts
+  - src/models/apiserviceiddevicecomplete.ts
+  - src/models/apiserviceiddeviceverification.ts
+  - src/models/apiserviceidfederationregistration.ts
+  - src/models/apiserviceidgmpropertiesgmaction.ts
+  - src/models/apiserviceidgmpropertiesgmaction1.ts
+  - src/models/apiserviceidgmpropertiesgmaction2.ts
+  - src/models/apiserviceidgmpropertiesgmaction3.ts
+  - src/models/apiserviceidhskcreate.ts
+  - src/models/apiserviceidjoseverify.ts
+  - src/models/apiserviceidpushedauthreq.ts
+  - src/models/apiserviceidvcibatchparse.ts
+  - src/models/apiserviceidvcideferredparse.ts
+  - src/models/apiserviceidvcijwks.ts
+  - src/models/apiserviceidvcijwtissuer.ts
+  - src/models/apiserviceidvcimetadata.ts
+  - src/models/apiserviceidvcioffercreate.ts
+  - src/models/apiserviceidvciofferinfo.ts
+  - src/models/apiserviceidvcisingleparse.ts
   - src/models/applicationtype.ts
   - src/models/authorizationdetails.ts
   - src/models/authorizationdetailselement.ts
-  - src/models/claimtype.ts
   - src/models/client.ts
   - src/models/clientauthenticationmethod.ts
   - src/models/clientextension.ts
   - src/models/clienttypeproperties.ts
   - src/models/credentialissuanceorder.ts
-  - src/models/credentialissuermetadata.ts
   - src/models/credentialofferinfo.ts
   - src/models/credentialrequestinfo.ts
   - src/models/deliverymode.ts
   - src/models/display.ts
   - src/models/dynamicscope.ts
-  - src/models/errors/apiinfo4002error.ts
-  - src/models/errors/apiinfo400error.ts
+  - src/models/errors/apiinfo1error.ts
+  - src/models/errors/apiinfo2error.ts
+  - src/models/errors/apiinfoerror.ts
   - src/models/errors/authletedefaulterror.ts
   - src/models/errors/authleteerror.ts
+  - src/models/errors/error400.ts
+  - src/models/errors/error401.ts
+  - src/models/errors/error403.ts
+  - src/models/errors/error500.ts
   - src/models/errors/httpclienterrors.ts
   - src/models/errors/index.ts
   - src/models/errors/infoapi.ts
@@ -729,12 +753,9 @@ generatedFiles:
   - src/models/granttype.ts
   - src/models/hsk.ts
   - src/models/index.ts
-  - src/models/itemsclientregistrationtypes.ts
-  - src/models/itemsfapimodes.ts
   - src/models/jwealg.ts
   - src/models/jweenc.ts
   - src/models/jwsalg.ts
-  - src/models/nameduri.ts
   - src/models/operations/authauthorizationapi.ts
   - src/models/operations/authauthorizationapiform.ts
   - src/models/operations/authauthorizationfailapi.ts
@@ -808,7 +829,6 @@ generatedFiles:
   - src/models/operations/federationconfigurationapi.ts
   - src/models/operations/federationregistrationapi.ts
   - src/models/operations/federationregistrationapiform.ts
-  - src/models/operations/getapiserviceidauthauthorizationticketinfo.ts
   - src/models/operations/grantmapi.ts
   - src/models/operations/hskcreateapi.ts
   - src/models/operations/hskcreateapiform.ts
@@ -820,8 +840,9 @@ generatedFiles:
   - src/models/operations/infoapi.ts
   - src/models/operations/joseverifyapi.ts
   - src/models/operations/joseverifyapiform.ts
-  - src/models/operations/postapiserviceidauthauthorizationticketupdate.ts
-  - src/models/operations/postapiserviceidauthauthorizationticketupdateform.ts
+  - src/models/operations/miscechoapi.ts
+  - src/models/operations/postupdateticketinformation.ts
+  - src/models/operations/postupdateticketinformationform.ts
   - src/models/operations/pushedauthreqapi.ts
   - src/models/operations/pushedauthreqapiform.ts
   - src/models/operations/serviceconfigurationapi.ts
@@ -856,10 +877,8 @@ generatedFiles:
   - src/models/scope.ts
   - src/models/security.ts
   - src/models/service.ts
-  - src/models/serviceprofile.ts
   - src/models/subjecttype.ts
   - src/models/taggedvalue.ts
-  - src/models/usercodecharset.ts
   - src/sdk/authorizationendpoint.ts
   - src/sdk/ciba.ts
   - src/sdk/clientmanagement.ts
@@ -899,14 +918,14 @@ examples:
           serviceId: "<id>"
       responses:
         "200":
-          application/json: {"number": 5041, "serviceName": "My service", "issuer": "https://my-service.example.com", "apiKey": 21653835348762, "clientIdAliasEnabled": true, "metadata": [{"key": "clientCount", "value": "1"}], "createdAt": 1639373421000, "modifiedAt": 1639373421000, "supportedGrantTypes": ["AUTHORIZATION_CODE", "REFRESH_TOKEN"], "supportedResponseTypes": ["CODE"], "errorDescriptionOmitted": false, "errorUriOmitted": false, "authorizationEndpoint": "https://my-service.example.com/authz", "directAuthorizationEndpointEnabled": false, "supportedDisplays": ["PAGE"], "pkceRequired": true, "pkceS256Required": false, "authorizationResponseDuration": 0, "tokenEndpoint": "https://my-service.example.com/token", "directTokenEndpointEnabled": false, "supportedTokenAuthMethods": ["CLIENT_SECRET_BASIC"], "missingClientIdAllowed": false, "revocationEndpoint": "https://my-service.example.com/revocation", "directRevocationEndpointEnabled": false, "supportedRevocationAuthMethods": ["CLIENT_SECRET_BASIC"], "introspectionEndpoint": "https://my-service.example.com/introspection", "directIntrospectionEndpointEnabled": false, "supportedIntrospectionAuthMethods": ["CLIENT_SECRET_BASIC"], "pushedAuthReqDuration": 0, "parRequired": false, "requestObjectRequired": false, "traditionalRequestObjectProcessingApplied": false, "mutualTlsValidatePkiCertChain": false, "accessTokenType": "Bearer", "tlsClientCertificateBoundAccessTokens": false, "accessTokenDuration": 3600, "singleAccessTokenPerSubject": false, "refreshTokenDuration": 3600, "refreshTokenDurationKept": false, "refreshTokenDurationReset": false, "refreshTokenKept": false, "supportedScopes": [{"name": "history.read", "defaultEntry": false, "description": "A permission to read your history."}, {"name": "timeline.read", "defaultEntry": false, "description": "A permission to read your timeline."}], "scopeRequired": false, "idTokenDuration": 0, "allowableClockSkew": 0, "supportedClaimTypes": ["NORMAL"], "claimShortcutRestrictive": false, "directJwksEndpointEnabled": false, "directUserInfoEndpointEnabled": false, "dynamicRegistrationSupported": false, "backchannelAuthReqIdDuration": 0, "backchannelPollingInterval": 0, "backchannelUserCodeParameterSupported": false, "backchannelBindingMessageRequiredInFapi": false, "deviceFlowCodeDuration": 0, "deviceFlowPollingInterval": 0, "userCodeLength": 0, "attributes": [{"key": "attribute1-key", "value": "attribute1-value"}, {"key": "attribute2-key", "value": "attribute2-value"}], "nbfOptional": false, "issSuppressed": false, "tokenExpirationLinked": false, "frontChannelRequestObjectEncryptionRequired": false, "requestObjectEncryptionAlgMatchRequired": false, "requestObjectEncryptionEncMatchRequired": false, "hsmEnabled": false, "grantManagementActionRequired": false, "unauthorizedOnClientConfigSupported": false, "dcrScopeUsedAsRequestable": false}
+          application/json: {"apiKey": "21653835348762"}
     limited:
       parameters:
         path:
           serviceId: "<id>"
       responses:
         "200":
-          application/json: {"number": 5041, "serviceName": "My service", "description": "This Service.", "apiKey": 21653835348762}
+          application/json: {"apiKey": "21653835348762"}
     speakeasy-default-service-get-api:
       parameters:
         path:
@@ -924,11 +943,11 @@ examples:
     full:
       responses:
         "200":
-          application/json: {"start": 0, "end": 5, "totalCount": 1, "services": [{"number": 5041, "serviceName": "My service", "issuer": "https://my-service.example.com", "apiKey": 21653835348762, "clientIdAliasEnabled": true, "metadata": [{"key": "clientCount", "value": "1"}], "createdAt": 1639373421000, "modifiedAt": 1639373421000, "supportedGrantTypes": ["AUTHORIZATION_CODE", "REFRESH_TOKEN"], "supportedResponseTypes": ["CODE"], "errorDescriptionOmitted": false, "errorUriOmitted": false, "authorizationEndpoint": "https://as.example.com/authz", "directAuthorizationEndpointEnabled": false, "supportedDisplays": ["PAGE"], "pkceRequired": true, "pkceS256Required": false, "authorizationResponseDuration": 0, "tokenEndpoint": "https://my-service.example.com/token", "directTokenEndpointEnabled": false, "supportedTokenAuthMethods": ["CLIENT_SECRET_BASIC"], "missingClientIdAllowed": false, "revocationEndpoint": "https://my-service.example.com/revocation", "directRevocationEndpointEnabled": false, "supportedRevocationAuthMethods": ["CLIENT_SECRET_BASIC"], "introspectionEndpoint": "https://my-service.example.com/introspection", "directIntrospectionEndpointEnabled": false, "supportedIntrospectionAuthMethods": ["CLIENT_SECRET_BASIC"], "pushedAuthReqDuration": 0, "parRequired": false, "requestObjectRequired": false, "traditionalRequestObjectProcessingApplied": false, "mutualTlsValidatePkiCertChain": false, "accessTokenType": "Bearer", "tlsClientCertificateBoundAccessTokens": false, "accessTokenDuration": 3600, "singleAccessTokenPerSubject": false, "refreshTokenDuration": 3600, "refreshTokenDurationKept": false, "refreshTokenDurationReset": false, "refreshTokenKept": false, "supportedScopes": [{"name": "history.read", "defaultEntry": false, "description": "A permission to read your history."}, {"name": "timeline.read", "defaultEntry": false, "description": "A permission to read your timeline."}], "scopeRequired": false, "idTokenDuration": 0, "allowableClockSkew": 0, "supportedClaimTypes": ["NORMAL"], "claimShortcutRestrictive": false, "directJwksEndpointEnabled": false, "directUserInfoEndpointEnabled": false, "dynamicRegistrationSupported": false, "backchannelAuthReqIdDuration": 0, "backchannelPollingInterval": 0, "backchannelUserCodeParameterSupported": false, "backchannelBindingMessageRequiredInFapi": false, "deviceFlowCodeDuration": 0, "deviceFlowPollingInterval": 0, "userCodeLength": 0, "attributes": [{"key": "attribute1-key", "value": "attribute1-value"}, {"key": "attribute2-key", "value": "attribute2-value"}], "nbfOptional": false, "issSuppressed": false, "tokenExpirationLinked": false, "frontChannelRequestObjectEncryptionRequired": false, "requestObjectEncryptionAlgMatchRequired": false, "requestObjectEncryptionEncMatchRequired": false, "hsmEnabled": false, "grantManagementActionRequired": false, "unauthorizedOnClientConfigSupported": false, "dcrScopeUsedAsRequestable": false}]}
+          application/json: {"start": 0, "end": 5, "totalCount": 1, "services": [{"apiKey": "21653835348762", "apiSecret": "uE4NgqeIpuSV_XejQ7Ds3jsgA1yXhjR1MXJ1LbPuyls"}]}
     limited:
       responses:
         "200":
-          application/json: {"start": 0, "end": 5, "totalCount": 1, "services": [{"number": 5041, "serviceName": "My service", "apiKey": 21653835348762, "clientIdAliasEnabled": true}]}
+          application/json: {"start": 0, "end": 5, "totalCount": 1, "services": [{"apiKey": "21653835348762"}]}
     speakeasy-default-service-get-list-api:
       responses:
         "200":
@@ -950,6 +969,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   service_update_api:
     speakeasy-default-service-update-api:
       parameters:
@@ -964,6 +985,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   service_delete_api:
     speakeasy-default-service-delete-api:
       parameters:
@@ -975,6 +998,10 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "204":
+          application/json: {}
+        "403":
           application/json: {}
   service_configuration_api:
     speakeasy-default-service-configuration-api:
@@ -990,6 +1017,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   client_get_api:
     speakeasy-default-client-get-api:
       parameters:
@@ -1004,6 +1033,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_get_list_api:
     full:
@@ -1047,6 +1078,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   client_update_api:
     speakeasy-default-client-update-api:
       parameters:
@@ -1062,6 +1095,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   client_delete_api:
     speakeasy-default-client-delete-api:
       parameters:
@@ -1074,6 +1109,10 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "204":
+          application/json: {}
+        "403":
           application/json: {}
   client_flag_update_api:
     speakeasy-default-client-flag-update-api:
@@ -1090,6 +1129,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-client-flag-update-api-form:
       parameters:
         path:
@@ -1103,6 +1144,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_secret_refresh_api:
     speakeasy-default-client-secret-refresh-api:
@@ -1118,6 +1161,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_secret_update_api:
     speakeasy-default-client-secret-update-api:
@@ -1136,13 +1181,15 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-client-secret-update-api-form:
       parameters:
         path:
           serviceId: "<id>"
           clientIdentifier: "<value>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"clientSecret": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1151,6 +1198,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_authorization_get_list_api:
     speakeasy-default-client-authorization-get-list-api:
@@ -1168,6 +1217,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   client_authorization_update_api:
     speakeasy-default-client-authorization-update-api:
       parameters:
@@ -1183,6 +1234,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-client-authorization-update-api-form:
       parameters:
         path:
@@ -1196,6 +1249,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_authorization_delete_api:
     speakeasy-default-client-authorization-delete-api:
@@ -1214,6 +1269,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   client_granted_scopes_get_api:
     speakeasy-default-client-granted-scopes-get-api:
       parameters:
@@ -1230,6 +1287,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_granted_scopes_delete_api:
     speakeasy-default-client-granted-scopes-delete-api:
@@ -1248,6 +1307,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   client_extension_requestables_scopes_get_api:
     speakeasy-default-client-extension-requestables-scopes-get-api:
       parameters:
@@ -1262,6 +1323,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_extension_requestables_scopes_update_api:
     speakeasy-default-client-extension-requestables-scopes-update-api:
@@ -1280,6 +1343,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   client_extension_requestables_scopes_delete_api:
     speakeasy-default-client-extension-requestables-scopes-delete-api:
       parameters:
@@ -1292,6 +1357,10 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "204":
+          application/json: {}
+        "403":
           application/json: {}
   auth_authorization_api:
     speakeasy-default-auth-authorization-api:
@@ -1309,12 +1378,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-authorization-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"parameters": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1323,6 +1394,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_authorization_fail_api:
     speakeasy-default-auth-authorization-fail-api:
@@ -1340,12 +1413,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-authorization-fail-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"ticket": "<value>", "reason": "NOT_AUTHENTICATED"}
       responses:
         "200":
           application/json: {}
@@ -1354,6 +1429,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_authorization_issue_api:
     speakeasy-default-auth-authorization-issue-api:
@@ -1371,12 +1448,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-authorization-issue-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"ticket": "<value>", "subject": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1385,6 +1464,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   get_/api/{serviceId}/auth/authorization/ticket/info:
     speakeasy-default-get-/api/{service-id}/auth/authorization/ticket/info:
@@ -1449,12 +1530,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-pushed-auth-req-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"parameters": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1463,6 +1546,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_token_api:
     speakeasy-default-auth-token-api:
@@ -1480,12 +1565,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-token-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"parameters": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1494,6 +1581,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_token_fail_api:
     speakeasy-default-auth-token-fail-api:
@@ -1511,12 +1600,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-token-fail-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"ticket": "<value>", "reason": "UNKNOWN"}
       responses:
         "200":
           application/json: {}
@@ -1525,6 +1616,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_token_issue_api:
     speakeasy-default-auth-token-issue-api:
@@ -1542,12 +1635,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-token-issue-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"ticket": "<value>", "subject": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1556,6 +1651,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   idtoken_reissue_api:
     speakeasy-default-idtoken-reissue-api:
@@ -1570,6 +1667,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_introspection_api:
     speakeasy-default-auth-introspection-api:
@@ -1587,12 +1686,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-introspection-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"token": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1601,6 +1702,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_introspection_standard_api:
     speakeasy-default-auth-introspection-standard-api:
@@ -1618,12 +1721,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-introspection-standard-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"parameters": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1632,6 +1737,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_revocation_api:
     speakeasy-default-auth-revocation-api:
@@ -1649,12 +1756,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-revocation-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"parameters": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1663,6 +1772,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_userinfo_api:
     speakeasy-default-auth-userinfo-api:
@@ -1680,12 +1791,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-userinfo-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"token": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1694,6 +1807,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_userinfo_issue_api:
     speakeasy-default-auth-userinfo-issue-api:
@@ -1711,12 +1826,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-userinfo-issue-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"token": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1725,6 +1842,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   grant_m_api:
     speakeasy-default-grant-m-api:
@@ -1742,6 +1861,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   service_jwks_get_api:
     speakeasy-default-service-jwks-get-api:
       parameters:
@@ -1755,6 +1876,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_registration_api:
     speakeasy-default-client-registration-api:
@@ -1772,12 +1895,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-client-registration-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"json": "{key: 6995014930124193, key1: null, key2: \"<value>\"}"}
       responses:
         "200":
           application/json: {}
@@ -1786,6 +1911,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_registration_get_api:
     speakeasy-default-client-registration-get-api:
@@ -1793,8 +1920,8 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/json: {}
-        application/x-www-form-urlencoded: {}
+        application/json: {"json": "{key: 8153909118751747, key1: null, key2: \"<value>\"}"}
+        application/x-www-form-urlencoded: {"json": "{key: 8153909118751747, key1: null, key2: \"<value>\"}"}
       responses:
         "200":
           application/json: {}
@@ -1803,6 +1930,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_registration_update_api:
     speakeasy-default-client-registration-update-api:
@@ -1810,7 +1939,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/json: {"clientId": "<id>", "token": "<value>", "json": "{key: 7278695057340839, key1: null, key2: \"<value>\"}"}
+        application/json: {"clientId": 808098, "token": "<value>", "json": "{key: 7278695057340839, key1: null, key2: \"<value>\"}"}
       responses:
         "200":
           application/json: {}
@@ -1819,13 +1948,15 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
     speakeasy-default-client-registration-update-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"clientId": 808098, "token": "<value>", "json": "{key: 8900968472366795, key1: null, key2: \"<value>\"}"}
       responses:
         "200":
           application/json: {}
@@ -1834,6 +1965,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   client_registration_delete_api:
     speakeasy-default-client-registration-delete-api:
@@ -1841,7 +1974,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/json: {"clientId": "<id>", "token": "<value>"}
+        application/json: {"clientId": 93091, "token": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1850,13 +1983,15 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
     speakeasy-default-client-registration-delete-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"clientId": 93091, "token": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1865,6 +2000,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   backchannel_authentication_api:
     speakeasy-default-backchannel-authentication-api:
@@ -1882,12 +2019,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-backchannel-authentication-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"parameters": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1896,6 +2035,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   backchannel_authentication_issue_api:
     speakeasy-default-backchannel-authentication-issue-api:
@@ -1913,12 +2054,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-backchannel-authentication-issue-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"ticket": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1927,6 +2070,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   backchannel_authentication_fail_api:
     speakeasy-default-backchannel-authentication-fail-api:
@@ -1944,12 +2089,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-backchannel-authentication-fail-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"ticket": "<value>", "reason": "MISSING_USER_CODE"}
       responses:
         "200":
           application/json: {}
@@ -1958,6 +2105,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   backchannel_authentication_complete_api:
     speakeasy-default-backchannel-authentication-complete-api:
@@ -1975,12 +2124,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-backchannel-authentication-complete-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"ticket": "<value>", "result": "TRANSACTION_FAILED", "subject": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1989,6 +2140,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   device_authorization_api:
     speakeasy-default-device-authorization-api:
@@ -2006,12 +2159,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-device-authorization-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"parameters": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -2020,6 +2175,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   device_verification_api:
     speakeasy-default-device-verification-api:
@@ -2037,12 +2194,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-device-verification-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"userCode": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -2051,6 +2210,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   device_complete_api:
     speakeasy-default-device-complete-api:
@@ -2068,12 +2229,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-device-complete-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"userCode": "<value>", "result": "AUTHORIZED", "subject": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -2082,6 +2245,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_token_get_list_api:
     speakeasy-default-auth-token-get-list-api:
@@ -2096,6 +2261,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_token_create_api:
     speakeasy-default-auth-token-create-api:
@@ -2113,12 +2280,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-token-create-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"grantType": "REFRESH_TOKEN", "clientId": 987169}
       responses:
         "200":
           application/json: {}
@@ -2127,6 +2296,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_token_update_api:
     speakeasy-default-auth-token-update-api:
@@ -2144,12 +2315,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-token-update-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"accessToken": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -2158,6 +2331,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   auth_token_delete_api:
     speakeasy-default-auth-token-delete-api:
@@ -2171,6 +2346,10 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "204":
+          application/json: {}
+        "403":
           application/json: {}
   auth_token_revoke_api:
     speakeasy-default-auth-token-revoke-api:
@@ -2188,6 +2367,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-auth-token-revoke-api-form:
       parameters:
         path:
@@ -2203,6 +2384,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   jose_verify_api:
     speakeasy-default-jose-verify-api:
       parameters:
@@ -2217,6 +2400,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-jose-verify-api-form:
       parameters:
         path:
@@ -2229,6 +2414,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   federation_configuration_api:
     speakeasy-default-federation-configuration-api:
@@ -2243,6 +2430,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   federation_registration_api:
     speakeasy-default-federation-registration-api:
@@ -2260,6 +2449,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-federation-registration-api-form:
       parameters:
         path:
@@ -2275,6 +2466,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   info_api:
     speakeasy-default-info-api:
       responses:
@@ -2286,7 +2479,13 @@ examples:
           application/json: {}
         "500":
           application/json: {}
-  misc_echo_api: {}
+        "403":
+          application/json: {}
+  misc_echo_api:
+    speakeasy-default-misc-echo-api:
+      responses:
+        "200":
+          application/json: {}
   hsk_create_api:
     speakeasy-default-hsk-create-api:
       parameters:
@@ -2303,6 +2502,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-hsk-create-api-form:
       parameters:
         path:
@@ -2317,6 +2518,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   hsk_delete_api:
     speakeasy-default-hsk-delete-api:
@@ -2333,6 +2536,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   hsk_get_api:
     speakeasy-default-hsk-get-api:
       parameters:
@@ -2348,6 +2553,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   hsk_get_list_api:
     speakeasy-default-hsk-get-list-api:
       parameters:
@@ -2361,6 +2568,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   vci_metadata_api:
     speakeasy-default-vci-metadata-api:
@@ -2378,12 +2587,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-vci-metadata-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"pretty": true}
       responses:
         "200":
           application/json: {}
@@ -2392,6 +2603,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   vci_jwtissuer_api:
     speakeasy-default-vci-jwtissuer-api:
@@ -2409,12 +2622,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-vci-jwtissuer-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"pretty": true}
       responses:
         "200":
           application/json: {}
@@ -2423,6 +2638,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   vci_jwks_api:
     speakeasy-default-vci-jwks-api:
@@ -2440,12 +2657,14 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-vci-jwks-api-form:
       parameters:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {}
+        application/x-www-form-urlencoded: {"pretty": false}
       responses:
         "200":
           application/json: {}
@@ -2454,6 +2673,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   vci_offer_create_api:
     speakeasy-default-vci-offer-create-api:
@@ -2471,6 +2692,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-vci-offer-create-api-form:
       parameters:
         path:
@@ -2485,6 +2708,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   vci_offer_info_api:
     speakeasy-default-vci-offer-info-api:
@@ -2502,6 +2727,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-vci-offer-info-api-form:
       parameters:
         path:
@@ -2516,6 +2743,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   vci_single_parse_api:
     speakeasy-default-vci-single-parse-api:
@@ -2533,6 +2762,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-vci-single-parse-api-form:
       parameters:
         path:
@@ -2547,6 +2778,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   vci_single_issue_api:
     speakeasy-default-vci-single-issue-api:
@@ -2564,6 +2797,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   vci_batch_parse_api:
     speakeasy-default-vci-batch-parse-api:
       parameters:
@@ -2580,6 +2815,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-vci-batch-parse-api-form:
       parameters:
         path:
@@ -2594,6 +2831,8 @@ examples:
         "401":
           application/json: {}
         "500":
+          application/json: {}
+        "403":
           application/json: {}
   vci_batch_issue_api:
     speakeasy-default-vci-batch-issue-api:
@@ -2611,6 +2850,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   vci_deferred_parse_api:
     speakeasy-default-vci-deferred-parse-api:
       parameters:
@@ -2627,6 +2868,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
     speakeasy-default-vci-deferred-parse-api-form:
       parameters:
         path:
@@ -2642,6 +2885,8 @@ examples:
           application/json: {}
         "500":
           application/json: {}
+        "403":
+          application/json: {}
   vci_deferred_issue_api:
     speakeasy-default-vci-deferred-issue-api:
       parameters:
@@ -2655,6 +2900,43 @@ examples:
         "400":
           application/json: {}
         "401":
+          application/json: {}
+        "500":
+          application/json: {}
+        "403":
+          application/json: {}
+  post_update_ticket_information:
+    speakeasy-default-post-update-ticket-information:
+      parameters:
+        path:
+          serviceId: "<id>"
+      requestBody:
+        application/json: {"ticket": "<value>", "info": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {}
+        "401":
+          application/json: {}
+        "403":
+          application/json: {}
+        "500":
+          application/json: {}
+    speakeasy-default-post-update-ticket-information-form:
+      parameters:
+        path:
+          serviceId: "<id>"
+      requestBody:
+        application/x-www-form-urlencoded: {"ticket": "<value>", "info": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {}
+        "401":
+          application/json: {}
+        "403":
           application/json: {}
         "500":
           application/json: {}

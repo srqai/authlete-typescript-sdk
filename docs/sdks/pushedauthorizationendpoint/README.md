@@ -32,7 +32,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "response_type=code%20id_token&client_id=5921531358155430&redirect_uri=https%3A%2F%2Fserver.example.com%2Fcb&state=SOME_VALUE_ABLE_TO_PREVENT_CSRF&scope=openid&nonce=SOME_VALUE_ABLE_TO_PREVENT_REPLAY_ATTACK&code_challenge=5ZWDQJiryK3eaLtSeFV8y1XySMCWtyITxICLaTwvK8g&code_challenge_method=S256",
-      clientId: "5921531358155430",
+      clientId: 5921531358155430,
       clientSecret: "P_FouxWlI7zcOep_9vBwR9qMAVJQiCiUiK1HrAP4GziOyezHQpqY0f5dHXK4JT4tnvI51OkbWVoEM9GnOyJViA",
     },
   });
@@ -64,7 +64,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "response_type=code%20id_token&client_id=5921531358155430&redirect_uri=https%3A%2F%2Fserver.example.com%2Fcb&state=SOME_VALUE_ABLE_TO_PREVENT_CSRF&scope=openid&nonce=SOME_VALUE_ABLE_TO_PREVENT_REPLAY_ATTACK&code_challenge=5ZWDQJiryK3eaLtSeFV8y1XySMCWtyITxICLaTwvK8g&code_challenge_method=S256",
-      clientId: "5921531358155430",
+      clientId: 5921531358155430,
       clientSecret: "P_FouxWlI7zcOep_9vBwR9qMAVJQiCiUiK1HrAP4GziOyezHQpqY0f5dHXK4JT4tnvI51OkbWVoEM9GnOyJViA",
     },
   });
@@ -96,9 +96,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## pushedAuthReqApiForm
@@ -121,7 +122,11 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.pushedAuthorizationEndpoint.pushedAuthReqApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBracePushedAuthReq: {},
+    apiServiceIdPushedAuthReq: {
+      parameters: "response_type=code%20id_token&client_id=5921531358155430&redirect_uri=https%3A%2F%2Fserver.example.com%2Fcb&state=SOME_VALUE_ABLE_TO_PREVENT_CSRF&scope=openid&nonce=SOME_VALUE_ABLE_TO_PREVENT_REPLAY_ATTACK&code_challenge=5ZWDQJiryK3eaLtSeFV8y1XySMCWtyITxICLaTwvK8g&code_challenge_method=S256",
+      clientId: 5921531358155430,
+      clientSecret: "P_FouxWlI7zcOep_9vBwR9qMAVJQiCiUiK1HrAP4GziOyezHQpqY0f5dHXK4JT4tnvI51OkbWVoEM9GnOyJViA",
+    },
   });
 
   console.log(result);
@@ -149,7 +154,11 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await pushedAuthorizationEndpointPushedAuthReqApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBracePushedAuthReq: {},
+    apiServiceIdPushedAuthReq: {
+      parameters: "response_type=code%20id_token&client_id=5921531358155430&redirect_uri=https%3A%2F%2Fserver.example.com%2Fcb&state=SOME_VALUE_ABLE_TO_PREVENT_CSRF&scope=openid&nonce=SOME_VALUE_ABLE_TO_PREVENT_REPLAY_ATTACK&code_challenge=5ZWDQJiryK3eaLtSeFV8y1XySMCWtyITxICLaTwvK8g&code_challenge_method=S256",
+      clientId: 5921531358155430,
+      clientSecret: "P_FouxWlI7zcOep_9vBwR9qMAVJQiCiUiK1HrAP4GziOyezHQpqY0f5dHXK4JT4tnvI51OkbWVoEM9GnOyJViA",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -179,7 +188,8 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

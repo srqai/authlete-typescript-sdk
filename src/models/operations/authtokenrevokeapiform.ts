@@ -14,10 +14,12 @@ export type AuthTokenRevokeApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthTokenRevoke:
-    models.APILBraceserviceIdRBraceAuthTokenRevoke;
+  apiServiceIdAuthTokenRevoke: models.ApiServiceIdAuthTokenRevoke;
 };
 
+/**
+ * An object containing schema data
+ */
 export type AuthTokenRevokeApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -40,20 +42,18 @@ export const AuthTokenRevokeApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthTokenRevoke:
-    models.APILBraceserviceIdRBraceAuthTokenRevoke$inboundSchema,
+  api_serviceId_auth_token_revoke:
+    models.ApiServiceIdAuthTokenRevoke$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthTokenRevoke":
-      "apilBraceserviceIdRBraceAuthTokenRevoke",
+    "api_serviceId_auth_token_revoke": "apiServiceIdAuthTokenRevoke",
   });
 });
 
 /** @internal */
 export type AuthTokenRevokeApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthTokenRevoke:
-    models.APILBraceserviceIdRBraceAuthTokenRevoke$Outbound;
+  api_serviceId_auth_token_revoke: models.ApiServiceIdAuthTokenRevoke$Outbound;
 };
 
 /** @internal */
@@ -63,12 +63,11 @@ export const AuthTokenRevokeApiFormRequest$outboundSchema: z.ZodType<
   AuthTokenRevokeApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthTokenRevoke:
-    models.APILBraceserviceIdRBraceAuthTokenRevoke$outboundSchema,
+  apiServiceIdAuthTokenRevoke:
+    models.ApiServiceIdAuthTokenRevoke$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthTokenRevoke:
-      "APILBraceserviceIdRBraceAuthTokenRevoke",
+    apiServiceIdAuthTokenRevoke: "api_serviceId_auth_token_revoke",
   });
 });
 

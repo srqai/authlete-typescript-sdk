@@ -7,13 +7,16 @@ import { ClientRegistrationDeleteApiFormRequest } from "authlete-2/models/operat
 
 let value: ClientRegistrationDeleteApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceClientRegistration2: {},
+  apiServiceIdClientRegistrationDelete: {
+    clientId: 755634,
+    token: "<value>",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                                       | *string*                                                                                                          | :heavy_check_mark:                                                                                                | A service ID.                                                                                                     |
-| `apilBraceserviceIdRBraceClientRegistration2`                                                                     | [models.APILBraceserviceIdRBraceClientRegistration2](../../models/apilbraceserviceidrbraceclientregistration2.md) | :heavy_check_mark:                                                                                                | N/A                                                                                                               |
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `serviceId`                                                                                         | *string*                                                                                            | :heavy_check_mark:                                                                                  | A service ID.                                                                                       |
+| `apiServiceIdClientRegistrationDelete`                                                              | [models.ApiServiceIdClientRegistrationDelete](../../models/apiserviceidclientregistrationdelete.md) | :heavy_check_mark:                                                                                  | N/A                                                                                                 |

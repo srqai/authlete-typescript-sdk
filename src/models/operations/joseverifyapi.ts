@@ -8,6 +8,9 @@ import { safeParse } from "../../lib/schemas.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
+/**
+ * An object containing schema data
+ */
 export type JoseVerifyApiRequestBody = {
   /**
    * A JOSE object.
@@ -51,6 +54,9 @@ export type JoseVerifyApiRequest = {
   requestBody?: JoseVerifyApiRequestBody | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type JoseVerifyApiResponse = {
   /**
    * The code which represents the result of the API call.

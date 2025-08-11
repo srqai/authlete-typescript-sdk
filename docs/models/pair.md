@@ -1,5 +1,7 @@
 # Pair
 
+An object containing pair data
+
 ## Example Usage
 
 ```typescript

@@ -15,8 +15,7 @@ export type AuthAuthorizationFailApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthAuthorizationFail:
-    models.APILBraceserviceIdRBraceAuthAuthorizationFail;
+  apiServiceIdAuthAuthorizationFail: models.ApiServiceIdAuthAuthorizationFail;
 };
 
 /**
@@ -25,8 +24,12 @@ export type AuthAuthorizationFailApiFormRequest = {
 export const AuthAuthorizationFailApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Location: "LOCATION",
-  Form: "FORM",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -35,6 +38,9 @@ export type AuthAuthorizationFailApiFormAction = ClosedEnum<
   typeof AuthAuthorizationFailApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthAuthorizationFailApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -64,20 +70,20 @@ export const AuthAuthorizationFailApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthAuthorizationFail:
-    models.APILBraceserviceIdRBraceAuthAuthorizationFail$inboundSchema,
+  api_serviceId_auth_authorization_fail:
+    models.ApiServiceIdAuthAuthorizationFail$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthAuthorizationFail":
-      "apilBraceserviceIdRBraceAuthAuthorizationFail",
+    "api_serviceId_auth_authorization_fail":
+      "apiServiceIdAuthAuthorizationFail",
   });
 });
 
 /** @internal */
 export type AuthAuthorizationFailApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthAuthorizationFail:
-    models.APILBraceserviceIdRBraceAuthAuthorizationFail$Outbound;
+  api_serviceId_auth_authorization_fail:
+    models.ApiServiceIdAuthAuthorizationFail$Outbound;
 };
 
 /** @internal */
@@ -87,12 +93,11 @@ export const AuthAuthorizationFailApiFormRequest$outboundSchema: z.ZodType<
   AuthAuthorizationFailApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthAuthorizationFail:
-    models.APILBraceserviceIdRBraceAuthAuthorizationFail$outboundSchema,
+  apiServiceIdAuthAuthorizationFail:
+    models.ApiServiceIdAuthAuthorizationFail$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthAuthorizationFail:
-      "APILBraceserviceIdRBraceAuthAuthorizationFail",
+    apiServiceIdAuthAuthorizationFail: "api_serviceId_auth_authorization_fail",
   });
 });
 

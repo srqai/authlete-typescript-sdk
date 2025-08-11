@@ -93,9 +93,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## serviceGetListApi
@@ -177,9 +178,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## serviceCreateApi
@@ -200,57 +202,7 @@ const authlete = new Authlete({
 });
 
 async function run() {
-  const result = await authlete.serviceManagement.serviceCreateApi({
-    serviceName: "My service",
-    issuer: "https://my-service.example.com",
-    clientIdAliasEnabled: true,
-    supportedGrantTypes: [
-      "AUTHORIZATION_CODE",
-      "REFRESH_TOKEN",
-    ],
-    supportedResponseTypes: [
-      "CODE",
-    ],
-    authorizationEndpoint: "https://my-service.example.com/authz",
-    pkceRequired: true,
-    tokenEndpoint: "https://my-service.example.com/token",
-    supportedTokenAuthMethods: [
-      "CLIENT_SECRET_BASIC",
-    ],
-    revocationEndpoint: "https://my-service.example.com/revocation",
-    supportedRevocationAuthMethods: [
-      "CLIENT_SECRET_BASIC",
-    ],
-    introspectionEndpoint: "https://my-service.example.com/introspection",
-    supportedIntrospectionAuthMethods: [
-      "CLIENT_SECRET_BASIC",
-    ],
-    accessTokenType: "Bearer",
-    accessTokenDuration: 3600,
-    refreshTokenDuration: 3600,
-    supportedScopes: [
-      {
-        name: "timeline.read",
-        defaultEntry: false,
-        description: "A permission to read your timeline.",
-      },
-      {
-        name: "history.read",
-        defaultEntry: false,
-        description: "A permission to read your history.",
-      },
-    ],
-    attributes: [
-      {
-        key: "attribute1-key",
-        value: "attribute1-value",
-      },
-      {
-        key: "attribute2-key",
-        value: "attribute2-value",
-      },
-    ],
-  });
+  const result = await authlete.serviceManagement.serviceCreateApi({});
 
   console.log(result);
 }
@@ -275,57 +227,7 @@ const authlete = new AuthleteCore({
 });
 
 async function run() {
-  const res = await serviceManagementServiceCreateApi(authlete, {
-    serviceName: "My service",
-    issuer: "https://my-service.example.com",
-    clientIdAliasEnabled: true,
-    supportedGrantTypes: [
-      "AUTHORIZATION_CODE",
-      "REFRESH_TOKEN",
-    ],
-    supportedResponseTypes: [
-      "CODE",
-    ],
-    authorizationEndpoint: "https://my-service.example.com/authz",
-    pkceRequired: true,
-    tokenEndpoint: "https://my-service.example.com/token",
-    supportedTokenAuthMethods: [
-      "CLIENT_SECRET_BASIC",
-    ],
-    revocationEndpoint: "https://my-service.example.com/revocation",
-    supportedRevocationAuthMethods: [
-      "CLIENT_SECRET_BASIC",
-    ],
-    introspectionEndpoint: "https://my-service.example.com/introspection",
-    supportedIntrospectionAuthMethods: [
-      "CLIENT_SECRET_BASIC",
-    ],
-    accessTokenType: "Bearer",
-    accessTokenDuration: 3600,
-    refreshTokenDuration: 3600,
-    supportedScopes: [
-      {
-        name: "timeline.read",
-        defaultEntry: false,
-        description: "A permission to read your timeline.",
-      },
-      {
-        name: "history.read",
-        defaultEntry: false,
-        description: "A permission to read your history.",
-      },
-    ],
-    attributes: [
-      {
-        key: "attribute1-key",
-        value: "attribute1-value",
-      },
-      {
-        key: "attribute2-key",
-        value: "attribute2-value",
-      },
-    ],
-  });
+  const res = await serviceManagementServiceCreateApi(authlete, {});
   if (res.ok) {
     const { value: result } = res;
     console.log(result);
@@ -341,7 +243,7 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [models.ServiceInput](../../models/serviceinput.md)                                                                                                                            | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [models.Service](../../models/service.md)                                                                                                                                      | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
@@ -354,9 +256,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## serviceUpdateApi
@@ -379,106 +282,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.serviceManagement.serviceUpdateApi({
     serviceId: "<id>",
-    service: {
-      serviceName: "My updated service",
-      issuer: "https://my-service.example.com",
-      clientIdAliasEnabled: true,
-      supportedGrantTypes: [
-        "AUTHORIZATION_CODE",
-        "REFRESH_TOKEN",
-      ],
-      supportedResponseTypes: [
-        "CODE",
-      ],
-      errorDescriptionOmitted: false,
-      errorUriOmitted: false,
-      authorizationEndpoint: "https://my-service.example.com/authz",
-      directAuthorizationEndpointEnabled: false,
-      supportedDisplays: [
-        "PAGE",
-      ],
-      pkceRequired: true,
-      pkceS256Required: false,
-      authorizationResponseDuration: 0,
-      tokenEndpoint: "https://my-service.example.com/token",
-      directTokenEndpointEnabled: false,
-      supportedTokenAuthMethods: [
-        "CLIENT_SECRET_BASIC",
-      ],
-      missingClientIdAllowed: false,
-      revocationEndpoint: "https://my-service.example.com/revocation",
-      directRevocationEndpointEnabled: false,
-      supportedRevocationAuthMethods: [
-        "CLIENT_SECRET_BASIC",
-      ],
-      introspectionEndpoint: "https://my-service.example.com/introspection",
-      directIntrospectionEndpointEnabled: false,
-      supportedIntrospectionAuthMethods: [
-        "CLIENT_SECRET_BASIC",
-      ],
-      pushedAuthReqDuration: 0,
-      parRequired: false,
-      requestObjectRequired: false,
-      traditionalRequestObjectProcessingApplied: false,
-      mutualTlsValidatePkiCertChain: false,
-      accessTokenType: "Bearer",
-      tlsClientCertificateBoundAccessTokens: false,
-      accessTokenDuration: 3600,
-      singleAccessTokenPerSubject: false,
-      refreshTokenDuration: 3600,
-      refreshTokenDurationKept: false,
-      refreshTokenDurationReset: false,
-      refreshTokenKept: false,
-      supportedScopes: [
-        {
-          name: "history.read",
-          defaultEntry: false,
-          description: "A permission to read your history.",
-        },
-        {
-          name: "timeline.read",
-          defaultEntry: false,
-          description: "A permission to read your timeline.",
-        },
-      ],
-      scopeRequired: false,
-      idTokenDuration: 0,
-      allowableClockSkew: 0,
-      supportedClaimTypes: [
-        "NORMAL",
-      ],
-      claimShortcutRestrictive: false,
-      directJwksEndpointEnabled: false,
-      directUserInfoEndpointEnabled: false,
-      dynamicRegistrationSupported: false,
-      backchannelAuthReqIdDuration: 0,
-      backchannelPollingInterval: 0,
-      backchannelUserCodeParameterSupported: false,
-      backchannelBindingMessageRequiredInFapi: false,
-      deviceFlowCodeDuration: 0,
-      deviceFlowPollingInterval: 0,
-      userCodeLength: 0,
-      attributes: [
-        {
-          key: "attribute1-key",
-          value: "attribute1-value",
-        },
-        {
-          key: "attribute2-key",
-          value: "attribute2-value",
-        },
-      ],
-      nbfOptional: false,
-      issSuppressed: false,
-      tokenExpirationLinked: false,
-      frontChannelRequestObjectEncryptionRequired: false,
-      requestObjectEncryptionAlgMatchRequired: false,
-      requestObjectEncryptionEncMatchRequired: false,
-      hsmEnabled: false,
-      grantManagementActionRequired: false,
-      unauthorizedOnClientConfigSupported: false,
-      dcrScopeUsedAsRequestable: false,
-    },
+    service: {},
   });
 
   console.log(result);
@@ -506,106 +310,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await serviceManagementServiceUpdateApi(authlete, {
     serviceId: "<id>",
-    service: {
-      serviceName: "My updated service",
-      issuer: "https://my-service.example.com",
-      clientIdAliasEnabled: true,
-      supportedGrantTypes: [
-        "AUTHORIZATION_CODE",
-        "REFRESH_TOKEN",
-      ],
-      supportedResponseTypes: [
-        "CODE",
-      ],
-      errorDescriptionOmitted: false,
-      errorUriOmitted: false,
-      authorizationEndpoint: "https://my-service.example.com/authz",
-      directAuthorizationEndpointEnabled: false,
-      supportedDisplays: [
-        "PAGE",
-      ],
-      pkceRequired: true,
-      pkceS256Required: false,
-      authorizationResponseDuration: 0,
-      tokenEndpoint: "https://my-service.example.com/token",
-      directTokenEndpointEnabled: false,
-      supportedTokenAuthMethods: [
-        "CLIENT_SECRET_BASIC",
-      ],
-      missingClientIdAllowed: false,
-      revocationEndpoint: "https://my-service.example.com/revocation",
-      directRevocationEndpointEnabled: false,
-      supportedRevocationAuthMethods: [
-        "CLIENT_SECRET_BASIC",
-      ],
-      introspectionEndpoint: "https://my-service.example.com/introspection",
-      directIntrospectionEndpointEnabled: false,
-      supportedIntrospectionAuthMethods: [
-        "CLIENT_SECRET_BASIC",
-      ],
-      pushedAuthReqDuration: 0,
-      parRequired: false,
-      requestObjectRequired: false,
-      traditionalRequestObjectProcessingApplied: false,
-      mutualTlsValidatePkiCertChain: false,
-      accessTokenType: "Bearer",
-      tlsClientCertificateBoundAccessTokens: false,
-      accessTokenDuration: 3600,
-      singleAccessTokenPerSubject: false,
-      refreshTokenDuration: 3600,
-      refreshTokenDurationKept: false,
-      refreshTokenDurationReset: false,
-      refreshTokenKept: false,
-      supportedScopes: [
-        {
-          name: "history.read",
-          defaultEntry: false,
-          description: "A permission to read your history.",
-        },
-        {
-          name: "timeline.read",
-          defaultEntry: false,
-          description: "A permission to read your timeline.",
-        },
-      ],
-      scopeRequired: false,
-      idTokenDuration: 0,
-      allowableClockSkew: 0,
-      supportedClaimTypes: [
-        "NORMAL",
-      ],
-      claimShortcutRestrictive: false,
-      directJwksEndpointEnabled: false,
-      directUserInfoEndpointEnabled: false,
-      dynamicRegistrationSupported: false,
-      backchannelAuthReqIdDuration: 0,
-      backchannelPollingInterval: 0,
-      backchannelUserCodeParameterSupported: false,
-      backchannelBindingMessageRequiredInFapi: false,
-      deviceFlowCodeDuration: 0,
-      deviceFlowPollingInterval: 0,
-      userCodeLength: 0,
-      attributes: [
-        {
-          key: "attribute1-key",
-          value: "attribute1-value",
-        },
-        {
-          key: "attribute2-key",
-          value: "attribute2-value",
-        },
-      ],
-      nbfOptional: false,
-      issSuppressed: false,
-      tokenExpirationLinked: false,
-      frontChannelRequestObjectEncryptionRequired: false,
-      requestObjectEncryptionAlgMatchRequired: false,
-      requestObjectEncryptionEncMatchRequired: false,
-      hsmEnabled: false,
-      grantManagementActionRequired: false,
-      unauthorizedOnClientConfigSupported: false,
-      dcrScopeUsedAsRequestable: false,
-    },
+    service: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -635,9 +340,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## serviceDeleteApi
@@ -658,11 +364,11 @@ const authlete = new Authlete({
 });
 
 async function run() {
-  await authlete.serviceManagement.serviceDeleteApi({
+  const result = await authlete.serviceManagement.serviceDeleteApi({
     serviceId: "<id>",
   });
 
-
+  console.log(result);
 }
 
 run();
@@ -690,7 +396,7 @@ async function run() {
   });
   if (res.ok) {
     const { value: result } = res;
-    
+    console.log(result);
   } else {
     console.log("serviceManagementServiceDeleteApi failed:", res.error);
   }
@@ -710,15 +416,16 @@ run();
 
 ### Response
 
-**Promise\<void\>**
+**Promise\<[operations.ServiceDeleteApiResponse](../../models/operations/servicedeleteapiresponse.md)\>**
 
 ### Errors
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## serviceConfigurationApi
@@ -809,7 +516,8 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

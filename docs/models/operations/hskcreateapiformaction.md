@@ -7,11 +7,11 @@ Result of the API call
 ```typescript
 import { HskCreateApiFormAction } from "authlete-2/models/operations";
 
-let value: HskCreateApiFormAction = "SUCCESS";
+let value: HskCreateApiFormAction = "INTERNAL_SERVER_ERROR";
 ```
 
 ## Values
 
 ```typescript
-"SUCCESS" | "INVALID_REQUEST" | "NOT_FOUND" | "SERVER_ERROR"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

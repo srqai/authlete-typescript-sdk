@@ -7,11 +7,11 @@ The next action that the deferred credential endpoint should take.
 ```typescript
 import { VciDeferredParseApiAction } from "authlete-2/models/operations";
 
-let value: VciDeferredParseApiAction = "INTERNAL_SERVER_ERROR";
+let value: VciDeferredParseApiAction = "JWT";
 ```
 
 ## Values
 
 ```typescript
-"OK" | "BAD_REQUEST" | "UNAUTHORIZED" | "FORBIDDEN" | "INTERNAL_SERVER_ERROR"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

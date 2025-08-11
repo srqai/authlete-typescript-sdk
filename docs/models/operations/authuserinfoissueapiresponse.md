@@ -1,5 +1,7 @@
 # AuthUserinfoIssueApiResponse
 
+HTTP 200 response
+
 ## Example Usage
 
 ```typescript

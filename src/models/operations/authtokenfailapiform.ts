@@ -15,8 +15,7 @@ export type AuthTokenFailApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthTokenFail:
-    models.APILBraceserviceIdRBraceAuthTokenFail;
+  apiServiceIdAuthTokenFail: models.ApiServiceIdAuthTokenFail;
 };
 
 /**
@@ -25,6 +24,12 @@ export type AuthTokenFailApiFormRequest = {
 export const AuthTokenFailApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -33,6 +38,9 @@ export type AuthTokenFailApiFormAction = ClosedEnum<
   typeof AuthTokenFailApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthTokenFailApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -62,20 +70,17 @@ export const AuthTokenFailApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthTokenFail:
-    models.APILBraceserviceIdRBraceAuthTokenFail$inboundSchema,
+  api_serviceId_auth_token_fail: models.ApiServiceIdAuthTokenFail$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthTokenFail":
-      "apilBraceserviceIdRBraceAuthTokenFail",
+    "api_serviceId_auth_token_fail": "apiServiceIdAuthTokenFail",
   });
 });
 
 /** @internal */
 export type AuthTokenFailApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthTokenFail:
-    models.APILBraceserviceIdRBraceAuthTokenFail$Outbound;
+  api_serviceId_auth_token_fail: models.ApiServiceIdAuthTokenFail$Outbound;
 };
 
 /** @internal */
@@ -85,12 +90,10 @@ export const AuthTokenFailApiFormRequest$outboundSchema: z.ZodType<
   AuthTokenFailApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthTokenFail:
-    models.APILBraceserviceIdRBraceAuthTokenFail$outboundSchema,
+  apiServiceIdAuthTokenFail: models.ApiServiceIdAuthTokenFail$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthTokenFail:
-      "APILBraceserviceIdRBraceAuthTokenFail",
+    apiServiceIdAuthTokenFail: "api_serviceId_auth_token_fail",
   });
 });
 

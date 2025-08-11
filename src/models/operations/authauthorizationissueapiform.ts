@@ -15,8 +15,7 @@ export type AuthAuthorizationIssueApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthAuthorizationIssue:
-    models.APILBraceserviceIdRBraceAuthAuthorizationIssue;
+  apiServiceIdAuthAuthorizationIssue: models.ApiServiceIdAuthAuthorizationIssue;
 };
 
 /**
@@ -25,8 +24,12 @@ export type AuthAuthorizationIssueApiFormRequest = {
 export const AuthAuthorizationIssueApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Location: "LOCATION",
-  Form: "FORM",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -35,6 +38,9 @@ export type AuthAuthorizationIssueApiFormAction = ClosedEnum<
   typeof AuthAuthorizationIssueApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthAuthorizationIssueApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -111,20 +117,20 @@ export const AuthAuthorizationIssueApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthAuthorizationIssue:
-    models.APILBraceserviceIdRBraceAuthAuthorizationIssue$inboundSchema,
+  api_serviceId_auth_authorization_issue:
+    models.ApiServiceIdAuthAuthorizationIssue$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthAuthorizationIssue":
-      "apilBraceserviceIdRBraceAuthAuthorizationIssue",
+    "api_serviceId_auth_authorization_issue":
+      "apiServiceIdAuthAuthorizationIssue",
   });
 });
 
 /** @internal */
 export type AuthAuthorizationIssueApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthAuthorizationIssue:
-    models.APILBraceserviceIdRBraceAuthAuthorizationIssue$Outbound;
+  api_serviceId_auth_authorization_issue:
+    models.ApiServiceIdAuthAuthorizationIssue$Outbound;
 };
 
 /** @internal */
@@ -134,12 +140,12 @@ export const AuthAuthorizationIssueApiFormRequest$outboundSchema: z.ZodType<
   AuthAuthorizationIssueApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthAuthorizationIssue:
-    models.APILBraceserviceIdRBraceAuthAuthorizationIssue$outboundSchema,
+  apiServiceIdAuthAuthorizationIssue:
+    models.ApiServiceIdAuthAuthorizationIssue$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthAuthorizationIssue:
-      "APILBraceserviceIdRBraceAuthAuthorizationIssue",
+    apiServiceIdAuthAuthorizationIssue:
+      "api_serviceId_auth_authorization_issue",
   });
 });
 

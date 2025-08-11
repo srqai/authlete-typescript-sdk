@@ -9,6 +9,9 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
+/**
+ * An object containing schema data
+ */
 export type AuthRevocationApiRequestBody = {
   /**
    * OAuth 2.0 token revocation request parameters which are the request parameters that the OAuth 2.0 token revocation endpoint
@@ -30,7 +33,7 @@ export type AuthRevocationApiRequestBody = {
    * as a means of client authentication, and the request from the client application contains its client ID in
    * `Authorization` header, the value should be extracted and set to this parameter.
    */
-  clientId?: string | undefined;
+  clientId?: number | undefined;
   /**
    * The client secret extracted from `Authorization` header of the revocation request from the client application.
    *
@@ -68,8 +71,12 @@ export type AuthRevocationApiRequest = {
  */
 export const AuthRevocationApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
-  InvalidClient: "INVALID_CLIENT",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -79,6 +86,9 @@ export type AuthRevocationApiAction = ClosedEnum<
   typeof AuthRevocationApiAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthRevocationApiResponse = {
   /**
    * The code which represents the result of the API call.
@@ -108,7 +118,7 @@ export const AuthRevocationApiRequestBody$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   parameters: z.string(),
-  clientId: z.string().optional(),
+  clientId: z.number().int().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),
@@ -117,7 +127,7 @@ export const AuthRevocationApiRequestBody$inboundSchema: z.ZodType<
 /** @internal */
 export type AuthRevocationApiRequestBody$Outbound = {
   parameters: string;
-  clientId?: string | undefined;
+  clientId?: number | undefined;
   clientSecret?: string | undefined;
   clientCertificate?: string | undefined;
   clientCertificatePath?: string | undefined;
@@ -130,7 +140,7 @@ export const AuthRevocationApiRequestBody$outboundSchema: z.ZodType<
   AuthRevocationApiRequestBody
 > = z.object({
   parameters: z.string(),
-  clientId: z.string().optional(),
+  clientId: z.number().int().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),

@@ -15,8 +15,7 @@ export type DeviceVerificationApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceDeviceVerification:
-    models.APILBraceserviceIdRBraceDeviceVerification;
+  apiServiceIdDeviceVerification: models.ApiServiceIdDeviceVerification;
 };
 
 /**
@@ -24,9 +23,13 @@ export type DeviceVerificationApiFormRequest = {
  */
 export const DeviceVerificationApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
-  NotExist: "NOT_EXIST",
-  Expired: "EXPIRED",
-  Valid: "VALID",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -35,6 +38,9 @@ export type DeviceVerificationApiFormAction = ClosedEnum<
   typeof DeviceVerificationApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type DeviceVerificationApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -142,7 +148,15 @@ export type DeviceVerificationApiFormResponse = {
    * @remarks
    */
   expiresAt?: number | undefined;
-  gmAction?: models.APILBraceserviceIdRBraceGmPropertiesGmAction | undefined;
+  /**
+   * The grant management action of the device authorization request.
+   *
+   * @remarks
+   *
+   * The `grant_management_action` request parameter is defined in
+   * [Grant Management for OAuth 2.0](https://openid.net/specs/fapi-grant-management.html).
+   */
+  gmAction?: models.ApiServiceIdGmpropertiesgmAction3 | undefined;
   /**
    * the value of the `grant_id` request parameter of the device authorization request.
    *
@@ -153,9 +167,10 @@ export type DeviceVerificationApiFormResponse = {
    * , which is supported by Authlete 2.3 and newer versions.
    */
   grantId?: string | undefined;
-  grant?:
-    | models.APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant
-    | undefined;
+  /**
+   * An object containing api_serviceid_auth_authorizationpropertiesgrant3 data
+   */
+  grant?: models.ApiServiceIdAuthAuthorizationpropertiesgrant3 | undefined;
   /**
    * The subject identifying the user who has given the grant identified
    *
@@ -202,20 +217,19 @@ export const DeviceVerificationApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceDeviceVerification:
-    models.APILBraceserviceIdRBraceDeviceVerification$inboundSchema,
+  api_serviceId_device_verification:
+    models.ApiServiceIdDeviceVerification$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceDeviceVerification":
-      "apilBraceserviceIdRBraceDeviceVerification",
+    "api_serviceId_device_verification": "apiServiceIdDeviceVerification",
   });
 });
 
 /** @internal */
 export type DeviceVerificationApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceDeviceVerification:
-    models.APILBraceserviceIdRBraceDeviceVerification$Outbound;
+  api_serviceId_device_verification:
+    models.ApiServiceIdDeviceVerification$Outbound;
 };
 
 /** @internal */
@@ -225,12 +239,11 @@ export const DeviceVerificationApiFormRequest$outboundSchema: z.ZodType<
   DeviceVerificationApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceDeviceVerification:
-    models.APILBraceserviceIdRBraceDeviceVerification$outboundSchema,
+  apiServiceIdDeviceVerification:
+    models.ApiServiceIdDeviceVerification$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceDeviceVerification:
-      "APILBraceserviceIdRBraceDeviceVerification",
+    apiServiceIdDeviceVerification: "api_serviceId_device_verification",
   });
 });
 
@@ -310,11 +323,9 @@ export const DeviceVerificationApiFormResponse$inboundSchema: z.ZodType<
   clientAttributes: z.array(models.Pair$inboundSchema).optional(),
   dynamicScopes: z.array(models.DynamicScope$inboundSchema).optional(),
   expiresAt: z.number().int().optional(),
-  gmAction: models.APILBraceserviceIdRBraceGmPropertiesGmAction$inboundSchema
-    .optional(),
+  gmAction: models.ApiServiceIdGmpropertiesgmAction3$inboundSchema.optional(),
   grantId: z.string().optional(),
-  grant: models
-    .APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant$inboundSchema
+  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant3$inboundSchema
     .optional(),
   grantSubject: z.string().optional(),
   clientEntityId: z.string().optional(),
@@ -339,12 +350,10 @@ export type DeviceVerificationApiFormResponse$Outbound = {
   clientAttributes?: Array<models.Pair$Outbound> | undefined;
   dynamicScopes?: Array<models.DynamicScope$Outbound> | undefined;
   expiresAt?: number | undefined;
-  gmAction?:
-    | models.APILBraceserviceIdRBraceGmPropertiesGmAction$Outbound
-    | undefined;
+  gmAction?: string | undefined;
   grantId?: string | undefined;
   grant?:
-    | models.APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant$Outbound
+    | models.ApiServiceIdAuthAuthorizationpropertiesgrant3$Outbound
     | undefined;
   grantSubject?: string | undefined;
   clientEntityId?: string | undefined;
@@ -373,11 +382,9 @@ export const DeviceVerificationApiFormResponse$outboundSchema: z.ZodType<
   clientAttributes: z.array(models.Pair$outboundSchema).optional(),
   dynamicScopes: z.array(models.DynamicScope$outboundSchema).optional(),
   expiresAt: z.number().int().optional(),
-  gmAction: models.APILBraceserviceIdRBraceGmPropertiesGmAction$outboundSchema
-    .optional(),
+  gmAction: models.ApiServiceIdGmpropertiesgmAction3$outboundSchema.optional(),
   grantId: z.string().optional(),
-  grant: models
-    .APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant$outboundSchema
+  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant3$outboundSchema
     .optional(),
   grantSubject: z.string().optional(),
   clientEntityId: z.string().optional(),

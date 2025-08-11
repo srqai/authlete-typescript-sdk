@@ -7,13 +7,15 @@ import { AuthUserinfoIssueApiFormRequest } from "authlete-2/models/operations";
 
 let value: AuthUserinfoIssueApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceAuthUserinfoIssue: {},
+  apiServiceIdAuthUserinfoIssue: {
+    token: "<value>",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                                   | *string*                                                                                                      | :heavy_check_mark:                                                                                            | A service ID.                                                                                                 |
-| `apilBraceserviceIdRBraceAuthUserinfoIssue`                                                                   | [models.APILBraceserviceIdRBraceAuthUserinfoIssue](../../models/apilbraceserviceidrbraceauthuserinfoissue.md) | :heavy_check_mark:                                                                                            | N/A                                                                                                           |
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `serviceId`                                                                           | *string*                                                                              | :heavy_check_mark:                                                                    | A service ID.                                                                         |
+| `apiServiceIdAuthUserinfoIssue`                                                       | [models.ApiServiceIdAuthUserinfoIssue](../../models/apiserviceidauthuserinfoissue.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |

@@ -19,6 +19,9 @@ import {
   TaggedValue$outboundSchema,
 } from "./taggedvalue.js";
 
+/**
+ * An object containing scope data
+ */
 export type Scope = {
   /**
    * The name of the scope.

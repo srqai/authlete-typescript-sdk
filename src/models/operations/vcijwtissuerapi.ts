@@ -9,6 +9,9 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
+/**
+ * An object containing schema data
+ */
 export type VciJwtissuerApiRequestBody = {
   /**
    * The flag indicating whether the metadata is written in the pretty
@@ -35,9 +38,14 @@ export type VciJwtissuerApiRequest = {
  * a response from Authlete's `/vci/jwtissuer` API.
  */
 export const VciJwtissuerApiAction = {
-  Ok: "OK",
-  NotFound: "NOT_FOUND",
   InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the implementation of the JWT issuer metadata
@@ -48,6 +56,9 @@ export const VciJwtissuerApiAction = {
  */
 export type VciJwtissuerApiAction = ClosedEnum<typeof VciJwtissuerApiAction>;
 
+/**
+ * An object containing schema data
+ */
 export type VciJwtissuerApiResponse = {
   /**
    * The code which represents the result of the API call.

@@ -20,11 +20,14 @@ export type ClientAuthorizationUpdateApiFormRequest = {
    * @remarks
    */
   clientId: string;
-  apilBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace?:
-    | models.APILBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace
+  apiServiceIdClientAuthorizationUpdateClientId?:
+    | models.ApiServiceIdClientAuthorizationUpdateClientId
     | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ClientAuthorizationUpdateApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -44,13 +47,12 @@ export const ClientAuthorizationUpdateApiFormRequest$inboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientId: z.string(),
-  APILBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace: models
-    .APILBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace$inboundSchema
-    .optional(),
+  api_serviceId_client_authorization_update_clientId: models
+    .ApiServiceIdClientAuthorizationUpdateClientId$inboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace":
-      "apilBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace",
+    "api_serviceId_client_authorization_update_clientId":
+      "apiServiceIdClientAuthorizationUpdateClientId",
   });
 });
 
@@ -58,8 +60,8 @@ export const ClientAuthorizationUpdateApiFormRequest$inboundSchema: z.ZodType<
 export type ClientAuthorizationUpdateApiFormRequest$Outbound = {
   serviceId: string;
   clientId: string;
-  APILBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace?:
-    | models.APILBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace$Outbound
+  api_serviceId_client_authorization_update_clientId?:
+    | models.ApiServiceIdClientAuthorizationUpdateClientId$Outbound
     | undefined;
 };
 
@@ -71,13 +73,12 @@ export const ClientAuthorizationUpdateApiFormRequest$outboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientId: z.string(),
-  apilBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace: models
-    .APILBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace$outboundSchema
-    .optional(),
+  apiServiceIdClientAuthorizationUpdateClientId: models
+    .ApiServiceIdClientAuthorizationUpdateClientId$outboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace:
-      "APILBraceserviceIdRBraceClientAuthorizationUpdateLBraceclientIdRBrace",
+    apiServiceIdClientAuthorizationUpdateClientId:
+      "api_serviceId_client_authorization_update_clientId",
   });
 });
 

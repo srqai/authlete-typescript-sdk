@@ -15,8 +15,7 @@ export type DeviceCompleteApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceDeviceComplete:
-    models.APILBraceserviceIdRBraceDeviceComplete;
+  apiServiceIdDeviceComplete: models.ApiServiceIdDeviceComplete;
 };
 
 /**
@@ -25,11 +24,14 @@ export type DeviceCompleteApiFormRequest = {
  * @remarks
  */
 export const DeviceCompleteApiFormAction = {
-  ServerError: "SERVER_ERROR",
-  UserCodeNotExist: "USER_CODE_NOT_EXIST",
-  UserCodeExpired: "USER_CODE_EXPIRED",
-  InvalidRequest: "INVALID_REQUEST",
-  Success: "SUCCESS",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -40,6 +42,9 @@ export type DeviceCompleteApiFormAction = ClosedEnum<
   typeof DeviceCompleteApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type DeviceCompleteApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -64,20 +69,18 @@ export const DeviceCompleteApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceDeviceComplete:
-    models.APILBraceserviceIdRBraceDeviceComplete$inboundSchema,
+  api_serviceId_device_complete:
+    models.ApiServiceIdDeviceComplete$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceDeviceComplete":
-      "apilBraceserviceIdRBraceDeviceComplete",
+    "api_serviceId_device_complete": "apiServiceIdDeviceComplete",
   });
 });
 
 /** @internal */
 export type DeviceCompleteApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceDeviceComplete:
-    models.APILBraceserviceIdRBraceDeviceComplete$Outbound;
+  api_serviceId_device_complete: models.ApiServiceIdDeviceComplete$Outbound;
 };
 
 /** @internal */
@@ -87,12 +90,10 @@ export const DeviceCompleteApiFormRequest$outboundSchema: z.ZodType<
   DeviceCompleteApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceDeviceComplete:
-    models.APILBraceserviceIdRBraceDeviceComplete$outboundSchema,
+  apiServiceIdDeviceComplete: models.ApiServiceIdDeviceComplete$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceDeviceComplete:
-      "APILBraceserviceIdRBraceDeviceComplete",
+    apiServiceIdDeviceComplete: "api_serviceId_device_complete",
   });
 });
 

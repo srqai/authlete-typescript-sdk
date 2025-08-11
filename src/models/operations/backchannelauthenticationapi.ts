@@ -10,6 +10,9 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
+/**
+ * An object containing schema data
+ */
 export type BackchannelAuthenticationApiRequestBody = {
   /**
    * Parameters of a backchannel authentication request which are the request parameters that the
@@ -32,7 +35,7 @@ export type BackchannelAuthenticationApiRequestBody = {
    * Authentication as a means of client authentication, and the request from the client application
    * contained its client ID in Authorization header, the value should be extracted and set to this parameter.
    */
-  clientId?: string | undefined;
+  clientId?: number | undefined;
   /**
    * The client secret extracted from Authorization header of the backchannel authentication request
    *
@@ -75,8 +78,12 @@ export type BackchannelAuthenticationApiRequest = {
 export const BackchannelAuthenticationApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
-  UserIdentification: "USER_IDENTIFICATION",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -85,6 +92,9 @@ export type BackchannelAuthenticationApiAction = ClosedEnum<
   typeof BackchannelAuthenticationApiAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type BackchannelAuthenticationApiResponse = {
   /**
    * The code which represents the result of the API call.
@@ -278,6 +288,9 @@ export type BackchannelAuthenticationApiResponse = {
    * @remarks
    */
   dynamicScopes?: Array<models.DynamicScope> | undefined;
+  /**
+   * A string value
+   */
   deliveryMode?: models.DeliveryMode | undefined;
   /**
    * The client authentication method that was performed.
@@ -285,7 +298,15 @@ export type BackchannelAuthenticationApiResponse = {
    * @remarks
    */
   clientAuthMethod?: string | undefined;
-  gmAction?: models.APILBraceserviceIdRBraceGmPropertiesGmAction | undefined;
+  /**
+   * The grant management action of the device authorization request.
+   *
+   * @remarks
+   *
+   * The `grant_management_action` request parameter is defined in
+   * [Grant Management for OAuth 2.0](https://openid.net/specs/fapi-grant-management.html).
+   */
+  gmAction?: models.ApiServiceIdGmpropertiesgmAction1 | undefined;
   /**
    * the value of the `grant_id` request parameter of the device authorization request.
    *
@@ -296,9 +317,10 @@ export type BackchannelAuthenticationApiResponse = {
    * , which is supported by Authlete 2.3 and newer versions.
    */
   grantId?: string | undefined;
-  grant?:
-    | models.APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant
-    | undefined;
+  /**
+   * An object containing api_serviceid_auth_authorizationpropertiesgrant1 data
+   */
+  grant?: models.ApiServiceIdAuthAuthorizationpropertiesgrant1 | undefined;
   /**
    * The subject identifying the user who has given the grant identified
    *
@@ -345,7 +367,7 @@ export const BackchannelAuthenticationApiRequestBody$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   parameters: z.string(),
-  clientId: z.string().optional(),
+  clientId: z.number().int().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),
@@ -354,7 +376,7 @@ export const BackchannelAuthenticationApiRequestBody$inboundSchema: z.ZodType<
 /** @internal */
 export type BackchannelAuthenticationApiRequestBody$Outbound = {
   parameters: string;
-  clientId?: string | undefined;
+  clientId?: number | undefined;
   clientSecret?: string | undefined;
   clientCertificate?: string | undefined;
   clientCertificatePath?: string | undefined;
@@ -367,7 +389,7 @@ export const BackchannelAuthenticationApiRequestBody$outboundSchema: z.ZodType<
   BackchannelAuthenticationApiRequestBody
 > = z.object({
   parameters: z.string(),
-  clientId: z.string().optional(),
+  clientId: z.number().int().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),
@@ -546,11 +568,9 @@ export const BackchannelAuthenticationApiResponse$inboundSchema: z.ZodType<
   dynamicScopes: z.array(models.DynamicScope$inboundSchema).optional(),
   deliveryMode: models.DeliveryMode$inboundSchema.optional(),
   clientAuthMethod: z.string().optional(),
-  gmAction: models.APILBraceserviceIdRBraceGmPropertiesGmAction$inboundSchema
-    .optional(),
+  gmAction: models.ApiServiceIdGmpropertiesgmAction1$inboundSchema.optional(),
   grantId: z.string().optional(),
-  grant: models
-    .APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant$inboundSchema
+  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant1$inboundSchema
     .optional(),
   grantSubject: z.string().optional(),
   clientEntityId: z.string().optional(),
@@ -588,12 +608,10 @@ export type BackchannelAuthenticationApiResponse$Outbound = {
   dynamicScopes?: Array<models.DynamicScope$Outbound> | undefined;
   deliveryMode?: string | undefined;
   clientAuthMethod?: string | undefined;
-  gmAction?:
-    | models.APILBraceserviceIdRBraceGmPropertiesGmAction$Outbound
-    | undefined;
+  gmAction?: string | undefined;
   grantId?: string | undefined;
   grant?:
-    | models.APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant$Outbound
+    | models.ApiServiceIdAuthAuthorizationpropertiesgrant1$Outbound
     | undefined;
   grantSubject?: string | undefined;
   clientEntityId?: string | undefined;
@@ -635,11 +653,9 @@ export const BackchannelAuthenticationApiResponse$outboundSchema: z.ZodType<
   dynamicScopes: z.array(models.DynamicScope$outboundSchema).optional(),
   deliveryMode: models.DeliveryMode$outboundSchema.optional(),
   clientAuthMethod: z.string().optional(),
-  gmAction: models.APILBraceserviceIdRBraceGmPropertiesGmAction$outboundSchema
-    .optional(),
+  gmAction: models.ApiServiceIdGmpropertiesgmAction1$outboundSchema.optional(),
   grantId: z.string().optional(),
-  grant: models
-    .APILBraceserviceIdRBraceAuthAuthorization200PropertiesGrant$outboundSchema
+  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant1$outboundSchema
     .optional(),
   grantSubject: z.string().optional(),
   clientEntityId: z.string().optional(),

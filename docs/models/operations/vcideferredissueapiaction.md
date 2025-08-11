@@ -9,11 +9,11 @@ endpoint should take.
 ```typescript
 import { VciDeferredIssueApiAction } from "authlete-2/models/operations";
 
-let value: VciDeferredIssueApiAction = "OK";
+let value: VciDeferredIssueApiAction = "INTERNAL_SERVER_ERROR";
 ```
 
 ## Values
 
 ```typescript
-"OK" | "FORBIDDEN" | "INTERNAL_SERVER_ERROR" | "CALLER_ERROR"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

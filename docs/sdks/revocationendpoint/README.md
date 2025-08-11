@@ -163,7 +163,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "VFGsNK-5sXiqterdaR7b5QbRX9VTwVCQB87jbr2_xAI&token_type_hint=access_token",
-      clientId: "26478243745571",
+      clientId: 26478243745571,
       clientSecret: "gXz97ISgLs4HuXwOZWch8GEmgL4YMvUJwu3er_kDVVGcA0UOhA9avLPbEmoeZdagi9yC_-tEiT2BdRyH9dbrQQ",
     },
   });
@@ -195,7 +195,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "VFGsNK-5sXiqterdaR7b5QbRX9VTwVCQB87jbr2_xAI&token_type_hint=access_token",
-      clientId: "26478243745571",
+      clientId: 26478243745571,
       clientSecret: "gXz97ISgLs4HuXwOZWch8GEmgL4YMvUJwu3er_kDVVGcA0UOhA9avLPbEmoeZdagi9yC_-tEiT2BdRyH9dbrQQ",
     },
   });
@@ -227,9 +227,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authRevocationApiForm
@@ -383,7 +384,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.revocationEndpoint.authRevocationApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthRevocation: {},
+    apiServiceIdAuthRevocation: {
+      parameters: "<value>",
+    },
   });
 
   console.log(result);
@@ -411,7 +414,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await revocationEndpointAuthRevocationApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceAuthRevocation: {},
+    apiServiceIdAuthRevocation: {
+      parameters: "<value>",
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -441,7 +446,8 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

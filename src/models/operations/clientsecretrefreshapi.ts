@@ -20,6 +20,9 @@ export type ClientSecretRefreshApiRequest = {
   clientIdentifier: string;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ClientSecretRefreshApiResponse = {
   /**
    * The code which represents the result of the API call.

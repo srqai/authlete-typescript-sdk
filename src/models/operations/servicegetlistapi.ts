@@ -19,6 +19,9 @@ export type ServiceGetListApiRequest = {
   end?: number | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ServiceGetListApiResponse = {
   /**
    * Start index (inclusive) of the result set. The default value is 0. Must not be a negative

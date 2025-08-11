@@ -15,8 +15,8 @@ export type ClientRegistrationUpdateApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceClientRegistrationUpdate:
-    models.APILBraceserviceIdRBraceClientRegistrationUpdate;
+  apiServiceIdClientRegistrationUpdate:
+    models.ApiServiceIdClientRegistrationUpdate;
 };
 
 /**
@@ -27,8 +27,12 @@ export type ClientRegistrationUpdateApiFormRequest = {
 export const ClientRegistrationUpdateApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Updated: "UPDATED",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -39,6 +43,9 @@ export type ClientRegistrationUpdateApiFormAction = ClosedEnum<
   typeof ClientRegistrationUpdateApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type ClientRegistrationUpdateApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -61,6 +68,9 @@ export type ClientRegistrationUpdateApiFormResponse = {
    * Its format varies depending on the value of `action` parameter.
    */
   responseContent?: string | undefined;
+  /**
+   * An object containing client data
+   */
   client?: models.Client | undefined;
 };
 
@@ -71,20 +81,20 @@ export const ClientRegistrationUpdateApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceClientRegistrationUpdate:
-    models.APILBraceserviceIdRBraceClientRegistrationUpdate$inboundSchema,
+  api_serviceId_client_registration_update:
+    models.ApiServiceIdClientRegistrationUpdate$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceClientRegistrationUpdate":
-      "apilBraceserviceIdRBraceClientRegistrationUpdate",
+    "api_serviceId_client_registration_update":
+      "apiServiceIdClientRegistrationUpdate",
   });
 });
 
 /** @internal */
 export type ClientRegistrationUpdateApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceClientRegistrationUpdate:
-    models.APILBraceserviceIdRBraceClientRegistrationUpdate$Outbound;
+  api_serviceId_client_registration_update:
+    models.ApiServiceIdClientRegistrationUpdate$Outbound;
 };
 
 /** @internal */
@@ -94,12 +104,12 @@ export const ClientRegistrationUpdateApiFormRequest$outboundSchema: z.ZodType<
   ClientRegistrationUpdateApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceClientRegistrationUpdate:
-    models.APILBraceserviceIdRBraceClientRegistrationUpdate$outboundSchema,
+  apiServiceIdClientRegistrationUpdate:
+    models.ApiServiceIdClientRegistrationUpdate$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceClientRegistrationUpdate:
-      "APILBraceserviceIdRBraceClientRegistrationUpdate",
+    apiServiceIdClientRegistrationUpdate:
+      "api_serviceId_client_registration_update",
   });
 });
 

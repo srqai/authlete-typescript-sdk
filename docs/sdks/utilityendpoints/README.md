@@ -82,8 +82,9 @@ run();
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
 | errors.BadRequestError      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.ApiInfoError         | 401                         | application/json            |
+| errors.ApiInfo1Error        | 403                         | application/json            |
+| errors.ApiInfo2Error        | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## miscEchoApi
@@ -104,9 +105,9 @@ const authlete = new Authlete({
 });
 
 async function run() {
-  await authlete.utilityEndpoints.miscEchoApi();
+  const result = await authlete.utilityEndpoints.miscEchoApi();
 
-
+  console.log(result);
 }
 
 run();
@@ -132,7 +133,7 @@ async function run() {
   const res = await utilityEndpointsMiscEchoApi(authlete);
   if (res.ok) {
     const { value: result } = res;
-    
+    console.log(result);
   } else {
     console.log("utilityEndpointsMiscEchoApi failed:", res.error);
   }
@@ -151,7 +152,7 @@ run();
 
 ### Response
 
-**Promise\<void\>**
+**Promise\<[operations.MiscEchoApiResponse](../../models/operations/miscechoapiresponse.md)\>**
 
 ### Errors
 

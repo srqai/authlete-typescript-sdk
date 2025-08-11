@@ -7,13 +7,13 @@ import { HskCreateApiFormRequest } from "authlete-2/models/operations";
 
 let value: HskCreateApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceHskCreate: {},
+  apiServiceIdHskCreate: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                   | *string*                                                                                      | :heavy_check_mark:                                                                            | A service ID.                                                                                 |
-| `apilBraceserviceIdRBraceHskCreate`                                                           | [models.APILBraceserviceIdRBraceHskCreate](../../models/apilbraceserviceidrbracehskcreate.md) | :heavy_check_mark:                                                                            | N/A                                                                                           |
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `serviceId`                                                           | *string*                                                              | :heavy_check_mark:                                                    | A service ID.                                                         |
+| `apiServiceIdHskCreate`                                               | [models.ApiServiceIdHskCreate](../../models/apiserviceidhskcreate.md) | :heavy_check_mark:                                                    | N/A                                                                   |

@@ -7,6 +7,9 @@ import { safeParse } from "../lib/schemas.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import { SDKValidationError } from "./errors/sdkvalidationerror.js";
 
+/**
+ * An object containing clientextension data
+ */
 export type ClientExtension = {
   /**
    * The set of scopes that the client application is allowed to request. This paramter will be one

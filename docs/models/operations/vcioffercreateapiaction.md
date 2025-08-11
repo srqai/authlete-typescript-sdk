@@ -7,11 +7,11 @@ The result of the `/vci/offer/create` API call.
 ```typescript
 import { VciOfferCreateApiAction } from "authlete-2/models/operations";
 
-let value: VciOfferCreateApiAction = "CALLER_ERROR";
+let value: VciOfferCreateApiAction = "FORBIDDEN";
 ```
 
 ## Values
 
 ```typescript
-"CREATED" | "FORBIDDEN" | "CALLER_ERROR" | "AUTHLETE_ERROR"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

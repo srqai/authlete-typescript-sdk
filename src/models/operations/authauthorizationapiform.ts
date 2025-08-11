@@ -15,8 +15,7 @@ export type AuthAuthorizationApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthAuthorization:
-    models.APILBraceserviceIdRBraceAuthAuthorization;
+  apiServiceIdAuthAuthorization: models.ApiServiceIdAuthAuthorization;
 };
 
 /**
@@ -25,10 +24,12 @@ export type AuthAuthorizationApiFormRequest = {
 export const AuthAuthorizationApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Location: "LOCATION",
-  Form: "FORM",
-  NoInteraction: "NO_INTERACTION",
-  Interaction: "INTERACTION",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -37,6 +38,9 @@ export type AuthAuthorizationApiFormAction = ClosedEnum<
   typeof AuthAuthorizationApiFormAction
 >;
 
+/**
+ * An object containing client data
+ */
 export type AuthAuthorizationApiFormClient = {
   /**
    * The sequential number of the client. The value of this property is assigned by Authlete.
@@ -143,6 +147,9 @@ export type AuthAuthorizationApiFormClient = {
   policyUris?: Array<models.TaggedValue> | undefined;
 };
 
+/**
+ * An object containing items data
+ */
 export type AuthAuthorizationApiFormScope = {
   /**
    * Space-delimited scopes.
@@ -158,7 +165,13 @@ export type AuthAuthorizationApiFormScope = {
   resource?: Array<string> | undefined;
 };
 
+/**
+ * An object containing grant data
+ */
 export type AuthAuthorizationApiFormGrant = {
+  /**
+   * An array of scopes items
+   */
   scopes?: Array<AuthAuthorizationApiFormScope> | undefined;
   /**
    * The claims associated with the Grant.
@@ -176,6 +189,9 @@ export type AuthAuthorizationApiFormGrant = {
   authorizationDetails?: models.AuthorizationDetails | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type AuthAuthorizationApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -189,6 +205,9 @@ export type AuthAuthorizationApiFormResponse = {
    * The next action that the authorization server implementation should take.
    */
   action?: AuthAuthorizationApiFormAction | undefined;
+  /**
+   * An object containing client data
+   */
   client?: AuthAuthorizationApiFormClient | undefined;
   /**
    * The display mode which the client application requests by `display` request parameter.
@@ -215,6 +234,9 @@ export type AuthAuthorizationApiFormResponse = {
    * for `defaultMaxAge` configuration parameter.
    */
   maxAge?: number | undefined;
+  /**
+   * An object containing service data
+   */
   service?: models.Service | undefined;
   /**
    * The scopes that the client application requests. This value comes from `scope` request parameter.
@@ -479,7 +501,15 @@ export type AuthAuthorizationApiFormResponse = {
    * @remarks
    */
   dynamicScopes?: Array<models.DynamicScope> | undefined;
-  gmAction?: models.APILBraceserviceIdRBraceGmPropertiesGmAction | undefined;
+  /**
+   * The grant management action of the device authorization request.
+   *
+   * @remarks
+   *
+   * The `grant_management_action` request parameter is defined in
+   * [Grant Management for OAuth 2.0](https://openid.net/specs/fapi-grant-management.html).
+   */
+  gmAction?: models.ApiServiceIdGmpropertiesgmAction | undefined;
   /**
    * the value of the `grant_id` request parameter of the device authorization request.
    *
@@ -490,6 +520,9 @@ export type AuthAuthorizationApiFormResponse = {
    * , which is supported by Authlete 2.3 and newer versions.
    */
   grantId?: string | undefined;
+  /**
+   * An object containing grant data
+   */
   grant?: AuthAuthorizationApiFormGrant | undefined;
   /**
    * The subject identifying the user who has given the grant identified
@@ -619,6 +652,9 @@ export type AuthAuthorizationApiFormResponse = {
    * request.
    */
   claimsAtUserInfo?: Array<string> | undefined;
+  /**
+   * An object containing credentialofferinfo data
+   */
   credentialOfferInfo?: models.CredentialOfferInfo | undefined;
   /**
    * Get the information about the <b>issuable credentials</b> that can
@@ -637,20 +673,19 @@ export const AuthAuthorizationApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthAuthorization:
-    models.APILBraceserviceIdRBraceAuthAuthorization$inboundSchema,
+  api_serviceId_auth_authorization:
+    models.ApiServiceIdAuthAuthorization$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthAuthorization":
-      "apilBraceserviceIdRBraceAuthAuthorization",
+    "api_serviceId_auth_authorization": "apiServiceIdAuthAuthorization",
   });
 });
 
 /** @internal */
 export type AuthAuthorizationApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthAuthorization:
-    models.APILBraceserviceIdRBraceAuthAuthorization$Outbound;
+  api_serviceId_auth_authorization:
+    models.ApiServiceIdAuthAuthorization$Outbound;
 };
 
 /** @internal */
@@ -660,12 +695,11 @@ export const AuthAuthorizationApiFormRequest$outboundSchema: z.ZodType<
   AuthAuthorizationApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthAuthorization:
-    models.APILBraceserviceIdRBraceAuthAuthorization$outboundSchema,
+  apiServiceIdAuthAuthorization:
+    models.ApiServiceIdAuthAuthorization$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthAuthorization:
-      "APILBraceserviceIdRBraceAuthAuthorization",
+    apiServiceIdAuthAuthorization: "api_serviceId_auth_authorization",
   });
 });
 
@@ -977,8 +1011,7 @@ export const AuthAuthorizationApiFormResponse$inboundSchema: z.ZodType<
   responseContent: z.string().optional(),
   ticket: z.string().optional(),
   dynamicScopes: z.array(models.DynamicScope$inboundSchema).optional(),
-  gmAction: models.APILBraceserviceIdRBraceGmPropertiesGmAction$inboundSchema
-    .optional(),
+  gmAction: models.ApiServiceIdGmpropertiesgmAction$inboundSchema.optional(),
   grantId: z.string().optional(),
   grant: z.lazy(() => AuthAuthorizationApiFormGrant$inboundSchema).optional(),
   grantSubject: z.string().optional(),
@@ -1020,9 +1053,7 @@ export type AuthAuthorizationApiFormResponse$Outbound = {
   responseContent?: string | undefined;
   ticket?: string | undefined;
   dynamicScopes?: Array<models.DynamicScope$Outbound> | undefined;
-  gmAction?:
-    | models.APILBraceserviceIdRBraceGmPropertiesGmAction$Outbound
-    | undefined;
+  gmAction?: string | undefined;
   grantId?: string | undefined;
   grant?: AuthAuthorizationApiFormGrant$Outbound | undefined;
   grantSubject?: string | undefined;
@@ -1069,8 +1100,7 @@ export const AuthAuthorizationApiFormResponse$outboundSchema: z.ZodType<
   responseContent: z.string().optional(),
   ticket: z.string().optional(),
   dynamicScopes: z.array(models.DynamicScope$outboundSchema).optional(),
-  gmAction: models.APILBraceserviceIdRBraceGmPropertiesGmAction$outboundSchema
-    .optional(),
+  gmAction: models.ApiServiceIdGmpropertiesgmAction$outboundSchema.optional(),
   grantId: z.string().optional(),
   grant: z.lazy(() => AuthAuthorizationApiFormGrant$outboundSchema).optional(),
   grantSubject: z.string().optional(),

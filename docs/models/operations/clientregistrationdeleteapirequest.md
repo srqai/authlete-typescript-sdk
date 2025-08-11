@@ -8,7 +8,7 @@ import { ClientRegistrationDeleteApiRequest } from "authlete-2/models/operations
 let value: ClientRegistrationDeleteApiRequest = {
   serviceId: "<id>",
   requestBody: {
-    clientId: "<id>",
+    clientId: 251281,
     token: "<value>",
   },
 };

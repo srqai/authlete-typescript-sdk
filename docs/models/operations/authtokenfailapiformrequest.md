@@ -7,13 +7,16 @@ import { AuthTokenFailApiFormRequest } from "authlete-2/models/operations";
 
 let value: AuthTokenFailApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceAuthTokenFail: {},
+  apiServiceIdAuthTokenFail: {
+    ticket: "<value>",
+    reason: "INVALID_TARGET",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                           | *string*                                                                                              | :heavy_check_mark:                                                                                    | A service ID.                                                                                         |
-| `apilBraceserviceIdRBraceAuthTokenFail`                                                               | [models.APILBraceserviceIdRBraceAuthTokenFail](../../models/apilbraceserviceidrbraceauthtokenfail.md) | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `serviceId`                                                                   | *string*                                                                      | :heavy_check_mark:                                                            | A service ID.                                                                 |
+| `apiServiceIdAuthTokenFail`                                                   | [models.ApiServiceIdAuthTokenFail](../../models/apiserviceidauthtokenfail.md) | :heavy_check_mark:                                                            | N/A                                                                           |

@@ -10,13 +10,16 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
+/**
+ * An object containing schema data
+ */
 export type ClientRegistrationUpdateApiRequestBody = {
   /**
    * Client ID.
    *
    * @remarks
    */
-  clientId: string;
+  clientId: number;
   /**
    * Client registration access token.
    *
@@ -48,8 +51,12 @@ export type ClientRegistrationUpdateApiRequest = {
 export const ClientRegistrationUpdateApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Updated: "UPDATED",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -60,6 +67,9 @@ export type ClientRegistrationUpdateApiAction = ClosedEnum<
   typeof ClientRegistrationUpdateApiAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type ClientRegistrationUpdateApiResponse = {
   /**
    * The code which represents the result of the API call.
@@ -82,6 +92,9 @@ export type ClientRegistrationUpdateApiResponse = {
    * Its format varies depending on the value of `action` parameter.
    */
   responseContent?: string | undefined;
+  /**
+   * An object containing client data
+   */
   client?: models.Client | undefined;
 };
 
@@ -91,14 +104,14 @@ export const ClientRegistrationUpdateApiRequestBody$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  clientId: z.string(),
+  clientId: z.number().int(),
   token: z.string(),
   json: z.string(),
 });
 
 /** @internal */
 export type ClientRegistrationUpdateApiRequestBody$Outbound = {
-  clientId: string;
+  clientId: number;
   token: string;
   json: string;
 };
@@ -109,7 +122,7 @@ export const ClientRegistrationUpdateApiRequestBody$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   ClientRegistrationUpdateApiRequestBody
 > = z.object({
-  clientId: z.string(),
+  clientId: z.number().int(),
   token: z.string(),
   json: z.string(),
 });

@@ -15,8 +15,7 @@ export type AuthRevocationApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthRevocation:
-    models.APILBraceserviceIdRBraceAuthRevocation;
+  apiServiceIdAuthRevocation: models.ApiServiceIdAuthRevocation;
 };
 
 /**
@@ -24,8 +23,12 @@ export type AuthRevocationApiFormRequest = {
  */
 export const AuthRevocationApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
-  InvalidClient: "INVALID_CLIENT",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -35,6 +38,9 @@ export type AuthRevocationApiFormAction = ClosedEnum<
   typeof AuthRevocationApiFormAction
 >;
 
+/**
+ * An object containing schema data
+ */
 export type AuthRevocationApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -64,20 +70,18 @@ export const AuthRevocationApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthRevocation:
-    models.APILBraceserviceIdRBraceAuthRevocation$inboundSchema,
+  api_serviceId_auth_revocation:
+    models.ApiServiceIdAuthRevocation$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthRevocation":
-      "apilBraceserviceIdRBraceAuthRevocation",
+    "api_serviceId_auth_revocation": "apiServiceIdAuthRevocation",
   });
 });
 
 /** @internal */
 export type AuthRevocationApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthRevocation:
-    models.APILBraceserviceIdRBraceAuthRevocation$Outbound;
+  api_serviceId_auth_revocation: models.ApiServiceIdAuthRevocation$Outbound;
 };
 
 /** @internal */
@@ -87,12 +91,10 @@ export const AuthRevocationApiFormRequest$outboundSchema: z.ZodType<
   AuthRevocationApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthRevocation:
-    models.APILBraceserviceIdRBraceAuthRevocation$outboundSchema,
+  apiServiceIdAuthRevocation: models.ApiServiceIdAuthRevocation$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthRevocation:
-      "APILBraceserviceIdRBraceAuthRevocation",
+    apiServiceIdAuthRevocation: "api_serviceId_auth_revocation",
   });
 });
 

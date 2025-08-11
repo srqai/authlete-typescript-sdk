@@ -15,8 +15,7 @@ export type AuthUserinfoIssueApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceAuthUserinfoIssue:
-    models.APILBraceserviceIdRBraceAuthUserinfoIssue;
+  apiServiceIdAuthUserinfoIssue: models.ApiServiceIdAuthUserinfoIssue;
 };
 
 /**
@@ -25,9 +24,11 @@ export type AuthUserinfoIssueApiFormRequest = {
 export const AuthUserinfoIssueApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
   Json: "JSON",
+  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -37,6 +38,9 @@ export type AuthUserinfoIssueApiFormAction = ClosedEnum<
   typeof AuthUserinfoIssueApiFormAction
 >;
 
+/**
+ * HTTP 200 response
+ */
 export type AuthUserinfoIssueApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -84,20 +88,19 @@ export const AuthUserinfoIssueApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceAuthUserinfoIssue:
-    models.APILBraceserviceIdRBraceAuthUserinfoIssue$inboundSchema,
+  api_serviceId_auth_userinfo_issue:
+    models.ApiServiceIdAuthUserinfoIssue$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceAuthUserinfoIssue":
-      "apilBraceserviceIdRBraceAuthUserinfoIssue",
+    "api_serviceId_auth_userinfo_issue": "apiServiceIdAuthUserinfoIssue",
   });
 });
 
 /** @internal */
 export type AuthUserinfoIssueApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceAuthUserinfoIssue:
-    models.APILBraceserviceIdRBraceAuthUserinfoIssue$Outbound;
+  api_serviceId_auth_userinfo_issue:
+    models.ApiServiceIdAuthUserinfoIssue$Outbound;
 };
 
 /** @internal */
@@ -107,12 +110,11 @@ export const AuthUserinfoIssueApiFormRequest$outboundSchema: z.ZodType<
   AuthUserinfoIssueApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceAuthUserinfoIssue:
-    models.APILBraceserviceIdRBraceAuthUserinfoIssue$outboundSchema,
+  apiServiceIdAuthUserinfoIssue:
+    models.ApiServiceIdAuthUserinfoIssue$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceAuthUserinfoIssue:
-      "APILBraceserviceIdRBraceAuthUserinfoIssue",
+    apiServiceIdAuthUserinfoIssue: "api_serviceId_auth_userinfo_issue",
   });
 });
 

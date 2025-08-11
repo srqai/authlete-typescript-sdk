@@ -7,11 +7,11 @@ The next action that the credential endpoint should take.
 ```typescript
 import { VciSingleParseApiAction } from "authlete-2/models/operations";
 
-let value: VciSingleParseApiAction = "OK";
+let value: VciSingleParseApiAction = "INTERNAL_SERVER_ERROR";
 ```
 
 ## Values
 
 ```typescript
-"OK" | "BAD_REQUEST" | "UNAUTHORIZED" | "FORBIDDEN" | "INTERNAL_SERVER_ERROR"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
 ```

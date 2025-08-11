@@ -5,6 +5,9 @@
 import * as z from "zod";
 import { ClosedEnum } from "../types/enums.js";
 
+/**
+ * A string value
+ */
 export const ResponseType = {
   None: "NONE",
   Code: "CODE",
@@ -15,6 +18,9 @@ export const ResponseType = {
   IdTokenToken: "ID_TOKEN_TOKEN",
   CodeIdTokenToken: "CODE_ID_TOKEN_TOKEN",
 } as const;
+/**
+ * A string value
+ */
 export type ResponseType = ClosedEnum<typeof ResponseType>;
 
 /** @internal */

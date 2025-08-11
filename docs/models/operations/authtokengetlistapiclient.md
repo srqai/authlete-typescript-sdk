@@ -1,5 +1,7 @@
 # AuthTokenGetListApiClient
 
+An object containing client data
+
 ## Example Usage
 
 ```typescript

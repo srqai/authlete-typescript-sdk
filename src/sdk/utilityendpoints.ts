@@ -32,7 +32,7 @@ export class UtilityEndpoints extends ClientSDK {
    */
   async miscEchoApi(
     options?: RequestOptions,
-  ): Promise<void> {
+  ): Promise<operations.MiscEchoApiResponse> {
     return unwrapAsync(utilityEndpointsMiscEchoApi(
       this,
       options,

@@ -7,13 +7,13 @@ import { AuthTokenRevokeApiFormRequest } from "authlete-2/models/operations";
 
 let value: AuthTokenRevokeApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceAuthTokenRevoke: {},
+  apiServiceIdAuthTokenRevoke: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                               | *string*                                                                                                  | :heavy_check_mark:                                                                                        | A service ID.                                                                                             |
-| `apilBraceserviceIdRBraceAuthTokenRevoke`                                                                 | [models.APILBraceserviceIdRBraceAuthTokenRevoke](../../models/apilbraceserviceidrbraceauthtokenrevoke.md) | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `serviceId`                                                                       | *string*                                                                          | :heavy_check_mark:                                                                | A service ID.                                                                     |
+| `apiServiceIdAuthTokenRevoke`                                                     | [models.ApiServiceIdAuthTokenRevoke](../../models/apiserviceidauthtokenrevoke.md) | :heavy_check_mark:                                                                | N/A                                                                               |

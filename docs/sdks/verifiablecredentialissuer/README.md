@@ -108,9 +108,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciMetadataApiForm
@@ -132,7 +133,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciMetadataApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciMetadata: {},
+    apiServiceIdVciMetadata: {
+      pretty: true,
+    },
   });
 
   console.log(result);
@@ -160,7 +163,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciMetadataApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciMetadata: {},
+    apiServiceIdVciMetadata: {
+      pretty: true,
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -190,9 +195,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciJwtissuerApi
@@ -276,9 +282,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciJwtissuerApiForm
@@ -300,7 +307,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciJwtissuerApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciJwtissuer: {},
+    apiServiceIdVciJwtissuer: {
+      pretty: true,
+    },
   });
 
   console.log(result);
@@ -328,7 +337,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciJwtissuerApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciJwtissuer: {},
+    apiServiceIdVciJwtissuer: {
+      pretty: true,
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -358,9 +369,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciJwksApi
@@ -444,9 +456,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciJwksApiForm
@@ -468,7 +481,9 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciJwksApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciJwks: {},
+    apiServiceIdVciJwks: {
+      pretty: false,
+    },
   });
 
   console.log(result);
@@ -496,7 +511,9 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciJwksApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciJwks: {},
+    apiServiceIdVciJwks: {
+      pretty: false,
+    },
   });
   if (res.ok) {
     const { value: result } = res;
@@ -526,9 +543,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciOfferCreateApi
@@ -608,9 +626,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciOfferCreateApiForm
@@ -632,7 +651,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciOfferCreateApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciOfferCreate: {},
+    apiServiceIdVciOfferCreate: {},
   });
 
   console.log(result);
@@ -660,7 +679,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciOfferCreateApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciOfferCreate: {},
+    apiServiceIdVciOfferCreate: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -690,9 +709,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciOfferInfoApi
@@ -772,9 +792,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciOfferInfoApiForm
@@ -796,7 +817,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciOfferInfoApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciOfferInfo: {},
+    apiServiceIdVciOfferInfo: {},
   });
 
   console.log(result);
@@ -824,7 +845,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciOfferInfoApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciOfferInfo: {},
+    apiServiceIdVciOfferInfo: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -854,9 +875,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciSingleParseApi
@@ -936,9 +958,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciSingleParseApiForm
@@ -960,7 +983,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciSingleParseApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciSingleParse: {},
+    apiServiceIdVciSingleParse: {},
   });
 
   console.log(result);
@@ -988,7 +1011,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciSingleParseApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciSingleParse: {},
+    apiServiceIdVciSingleParse: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1018,9 +1041,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciSingleIssueApi
@@ -1100,9 +1124,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciBatchParseApi
@@ -1182,9 +1207,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciBatchParseApiForm
@@ -1206,7 +1232,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciBatchParseApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciBatchParse: {},
+    apiServiceIdVciBatchParse: {},
   });
 
   console.log(result);
@@ -1234,7 +1260,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciBatchParseApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciBatchParse: {},
+    apiServiceIdVciBatchParse: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1264,9 +1290,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciBatchIssueApi
@@ -1346,9 +1373,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciDeferredParseApi
@@ -1428,9 +1456,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciDeferredParseApiForm
@@ -1452,7 +1481,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciDeferredParseApiForm({
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciDeferredParse: {},
+    apiServiceIdVciDeferredParse: {},
   });
 
   console.log(result);
@@ -1480,7 +1509,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciDeferredParseApiForm(authlete, {
     serviceId: "<id>",
-    apilBraceserviceIdRBraceVciDeferredParse: {},
+    apiServiceIdVciDeferredParse: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1510,9 +1539,10 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciDeferredIssueApi
@@ -1592,7 +1622,8 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.APIInfo400Error      | 400                         | application/json            |
-| errors.APIInfo4002Error     | 401, 403                    | application/json            |
-| errors.APIInfo4002Error     | 500                         | application/json            |
+| errors.Error400             | 400                         | application/json            |
+| errors.Error401             | 401                         | application/json            |
+| errors.Error403             | 403                         | application/json            |
+| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

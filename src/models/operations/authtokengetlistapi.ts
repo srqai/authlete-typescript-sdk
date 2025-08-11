@@ -37,6 +37,9 @@ export type AuthTokenGetListApiRequest = {
   end?: number | undefined;
 };
 
+/**
+ * An object containing client data
+ */
 export type AuthTokenGetListApiClient = {
   /**
    * The sequential number of the client. The value of this property is assigned by Authlete.
@@ -93,6 +96,9 @@ export type AuthTokenGetListApiClient = {
   clientType?: models.ClientTypeProperties | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type AuthTokenGetListApiResponse = {
   /**
    * Start index of search results (inclusive).
@@ -112,6 +118,9 @@ export type AuthTokenGetListApiResponse = {
    * @remarks
    */
   totalCount?: number | undefined;
+  /**
+   * An object containing client data
+   */
   client?: AuthTokenGetListApiClient | undefined;
   /**
    * Unique user ID of an end-user.

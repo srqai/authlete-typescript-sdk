@@ -31,6 +31,9 @@ export type ClientGetListApiRequest = {
   end?: number | undefined;
 };
 
+/**
+ * An object containing schema data
+ */
 export type ClientGetListApiResponse = {
   /**
    * Start index (inclusive) of the result set of the query.

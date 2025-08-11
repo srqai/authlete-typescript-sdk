@@ -15,23 +15,30 @@ export type HskCreateApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apilBraceserviceIdRBraceHskCreate: models.APILBraceserviceIdRBraceHskCreate;
+  apiServiceIdHskCreate: models.ApiServiceIdHskCreate;
 };
 
 /**
  * Result of the API call
  */
 export const HskCreateApiFormAction = {
-  Success: "SUCCESS",
-  InvalidRequest: "INVALID_REQUEST",
-  NotFound: "NOT_FOUND",
-  ServerError: "SERVER_ERROR",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
+  BadRequest: "BAD_REQUEST",
+  Created: "CREATED",
+  Unauthorized: "UNAUTHORIZED",
+  Forbidden: "FORBIDDEN",
+  Json: "JSON",
+  Jwt: "JWT",
+  Ok: "OK",
 } as const;
 /**
  * Result of the API call
  */
 export type HskCreateApiFormAction = ClosedEnum<typeof HskCreateApiFormAction>;
 
+/**
+ * An object containing schema data
+ */
 export type HskCreateApiFormResponse = {
   /**
    * The code which represents the result of the API call.
@@ -60,19 +67,17 @@ export const HskCreateApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  APILBraceserviceIdRBraceHskCreate:
-    models.APILBraceserviceIdRBraceHskCreate$inboundSchema,
+  api_serviceId_hsk_create: models.ApiServiceIdHskCreate$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "APILBraceserviceIdRBraceHskCreate": "apilBraceserviceIdRBraceHskCreate",
+    "api_serviceId_hsk_create": "apiServiceIdHskCreate",
   });
 });
 
 /** @internal */
 export type HskCreateApiFormRequest$Outbound = {
   serviceId: string;
-  APILBraceserviceIdRBraceHskCreate:
-    models.APILBraceserviceIdRBraceHskCreate$Outbound;
+  api_serviceId_hsk_create: models.ApiServiceIdHskCreate$Outbound;
 };
 
 /** @internal */
@@ -82,11 +87,10 @@ export const HskCreateApiFormRequest$outboundSchema: z.ZodType<
   HskCreateApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apilBraceserviceIdRBraceHskCreate:
-    models.APILBraceserviceIdRBraceHskCreate$outboundSchema,
+  apiServiceIdHskCreate: models.ApiServiceIdHskCreate$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apilBraceserviceIdRBraceHskCreate: "APILBraceserviceIdRBraceHskCreate",
+    apiServiceIdHskCreate: "api_serviceId_hsk_create",
   });
 });
 

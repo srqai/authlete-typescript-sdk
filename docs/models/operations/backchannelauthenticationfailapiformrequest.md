@@ -7,13 +7,16 @@ import { BackchannelAuthenticationFailApiFormRequest } from "authlete-2/models/o
 
 let value: BackchannelAuthenticationFailApiFormRequest = {
   serviceId: "<id>",
-  apilBraceserviceIdRBraceBackchannelAuthenticationFail: {},
+  apiServiceIdBackchannelAuthenticationFail: {
+    ticket: "<value>",
+    reason: "UNAUTHORIZED_CLIENT",
+  },
 };
 ```
 
 ## Fields
 
-| Field                                                                                                                                 | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                                                           | *string*                                                                                                                              | :heavy_check_mark:                                                                                                                    | A service ID.                                                                                                                         |
-| `apilBraceserviceIdRBraceBackchannelAuthenticationFail`                                                                               | [models.APILBraceserviceIdRBraceBackchannelAuthenticationFail](../../models/apilbraceserviceidrbracebackchannelauthenticationfail.md) | :heavy_check_mark:                                                                                                                    | N/A                                                                                                                                   |
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `serviceId`                                                                                                   | *string*                                                                                                      | :heavy_check_mark:                                                                                            | A service ID.                                                                                                 |
+| `apiServiceIdBackchannelAuthenticationFail`                                                                   | [models.ApiServiceIdBackchannelAuthenticationFail](../../models/apiserviceidbackchannelauthenticationfail.md) | :heavy_check_mark:                                                                                            | N/A                                                                                                           |

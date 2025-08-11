@@ -1,5 +1,7 @@
 # AuthTokenIssueApiFormResponse
 
+An object containing schema data
+
 ## Example Usage
 
 ```typescript
