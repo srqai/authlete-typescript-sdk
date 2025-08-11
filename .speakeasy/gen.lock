@@ -3,10 +3,10 @@ id: e17fc78f-822f-4688-9647-d39b4d15b69e
 management:
   docChecksum: 351c360ef329c7219d4ad49edcd4e157
   docVersion: 3.0.0
-  speakeasyVersion: 1.600.2
-  generationVersion: 2.677.3
-  releaseVersion: 0.0.1
-  configChecksum: ac3bc4f261b1c345bc9a78b83db6146c
+  speakeasyVersion: 1.601.0
+  generationVersion: 2.680.0
+  releaseVersion: 0.0.2
+  configChecksum: acc83fcdd7ad4af185e7c27f2adef7e7
   repoURL: https://github.com/srqai/authlete-typescript-sdk.git
   installationURL: https://github.com/srqai/authlete-typescript-sdk
   published: true
