@@ -5,7 +5,7 @@ An object containing api_serviceid_device_authorization data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdDeviceAuthorization } from "authlete-2/models";
+import { ApiServiceIdDeviceAuthorization } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdDeviceAuthorization = {
   parameters: "<value>",

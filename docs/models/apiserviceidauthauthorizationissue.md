@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_authorization_issue data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthAuthorizationIssue } from "authlete-2/models";
+import { ApiServiceIdAuthAuthorizationIssue } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthAuthorizationIssue = {
   ticket: "<value>",

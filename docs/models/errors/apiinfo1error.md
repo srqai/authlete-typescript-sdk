@@ -5,7 +5,7 @@ An object containing api_info1 data
 ## Example Usage
 
 ```typescript
-import { ApiInfo1Error } from "authlete-2/models/errors";
+import { ApiInfo1Error } from "authlete-typescript-sdk/models/errors";
 
 // No examples available for this model
 ```

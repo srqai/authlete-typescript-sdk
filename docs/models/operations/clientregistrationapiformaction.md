@@ -6,7 +6,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { ClientRegistrationApiFormAction } from "authlete-2/models/operations";
+import { ClientRegistrationApiFormAction } from "authlete-typescript-sdk/models/operations";
 
 let value: ClientRegistrationApiFormAction = "CREATED";
 ```

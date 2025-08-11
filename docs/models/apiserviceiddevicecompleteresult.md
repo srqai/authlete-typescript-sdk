@@ -7,7 +7,7 @@ described in the description.
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdDeviceCompleteResult } from "authlete-2/models";
+import { ApiServiceIdDeviceCompleteResult } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdDeviceCompleteResult = "TRANSACTION_FAILED";
 ```

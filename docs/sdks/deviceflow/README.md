@@ -118,7 +118,7 @@ and return to the client application.
 
 <!-- UsageSnippet language="typescript" operationID="device_authorization_api" method="post" path="/api/{serviceId}/device/authorization" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -147,8 +147,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { deviceFlowDeviceAuthorizationApi } from "authlete-2/funcs/deviceFlowDeviceAuthorizationApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { deviceFlowDeviceAuthorizationApi } from "authlete-typescript-sdk/funcs/deviceFlowDeviceAuthorizationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -305,7 +305,7 @@ and return to the client application.
 
 <!-- UsageSnippet language="typescript" operationID="device_authorization_api_form" method="post" path="/api/{serviceId}/device/authorization" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -332,8 +332,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { deviceFlowDeviceAuthorizationApiForm } from "authlete-2/funcs/deviceFlowDeviceAuthorizationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { deviceFlowDeviceAuthorizationApiForm } from "authlete-typescript-sdk/funcs/deviceFlowDeviceAuthorizationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -433,7 +433,7 @@ to ask whether she approves or rejects the authorization request from the device
 
 <!-- UsageSnippet language="typescript" operationID="device_verification_api" method="post" path="/api/{serviceId}/device/verification" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -460,8 +460,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { deviceFlowDeviceVerificationApi } from "authlete-2/funcs/deviceFlowDeviceVerificationApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { deviceFlowDeviceVerificationApi } from "authlete-typescript-sdk/funcs/deviceFlowDeviceVerificationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -561,7 +561,7 @@ to ask whether she approves or rejects the authorization request from the device
 
 <!-- UsageSnippet language="typescript" operationID="device_verification_api_form" method="post" path="/api/{serviceId}/device/verification" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -588,8 +588,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { deviceFlowDeviceVerificationApiForm } from "authlete-2/funcs/deviceFlowDeviceVerificationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { deviceFlowDeviceVerificationApiForm } from "authlete-typescript-sdk/funcs/deviceFlowDeviceVerificationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -718,7 +718,7 @@ using.
 
 <!-- UsageSnippet language="typescript" operationID="device_complete_api" method="post" path="/api/{serviceId}/device/complete" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -747,8 +747,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { deviceFlowDeviceCompleteApi } from "authlete-2/funcs/deviceFlowDeviceCompleteApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { deviceFlowDeviceCompleteApi } from "authlete-typescript-sdk/funcs/deviceFlowDeviceCompleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -879,7 +879,7 @@ using.
 
 <!-- UsageSnippet language="typescript" operationID="device_complete_api_form" method="post" path="/api/{serviceId}/device/complete" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -908,8 +908,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { deviceFlowDeviceCompleteApiForm } from "authlete-2/funcs/deviceFlowDeviceCompleteApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { deviceFlowDeviceCompleteApiForm } from "authlete-typescript-sdk/funcs/deviceFlowDeviceCompleteApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

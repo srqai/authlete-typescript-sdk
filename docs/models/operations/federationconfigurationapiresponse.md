@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { FederationConfigurationApiResponse } from "authlete-2/models/operations";
+import { FederationConfigurationApiResponse } from "authlete-typescript-sdk/models/operations";
 
 let value: FederationConfigurationApiResponse = {};
 ```

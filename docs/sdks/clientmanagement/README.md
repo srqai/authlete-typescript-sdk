@@ -36,7 +36,7 @@ Get a client.
 
 <!-- UsageSnippet language="typescript" operationID="client_get_api" method="get" path="/api/{serviceId}/client/get/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -61,8 +61,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientGetApi } from "authlete-2/funcs/clientManagementClientGetApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientGetApi } from "authlete-typescript-sdk/funcs/clientManagementClientGetApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -125,7 +125,7 @@ service are returned.
 
 <!-- UsageSnippet language="typescript" operationID="client_get_list_api" method="get" path="/api/{serviceId}/client/get/list" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -149,8 +149,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientGetListApi } from "authlete-2/funcs/clientManagementClientGetListApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientGetListApi } from "authlete-typescript-sdk/funcs/clientManagementClientGetListApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -207,7 +207,7 @@ Create a new client.
 
 <!-- UsageSnippet language="typescript" operationID="client_create_api" method="post" path="/api/{serviceId}/client/create" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -261,8 +261,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientCreateApi } from "authlete-2/funcs/clientManagementClientCreateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientCreateApi } from "authlete-typescript-sdk/funcs/clientManagementClientCreateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -349,7 +349,7 @@ Update a client.
 
 <!-- UsageSnippet language="typescript" operationID="client_update_api" method="post" path="/api/{serviceId}/client/update/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -415,8 +415,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientUpdateApi } from "authlete-2/funcs/clientManagementClientUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -515,7 +515,7 @@ Delete a client.
 
 <!-- UsageSnippet language="typescript" operationID="client_delete_api" method="delete" path="/api/{serviceId}/client/delete/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -540,8 +540,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientDeleteApi } from "authlete-2/funcs/clientManagementClientDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientDeleteApi } from "authlete-typescript-sdk/funcs/clientManagementClientDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -599,7 +599,7 @@ Lock and unlock a client
 
 <!-- UsageSnippet language="typescript" operationID="client_flag_update_api" method="post" path="/api/{serviceId}/client/lock_flag/update/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -627,8 +627,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientFlagUpdateApi } from "authlete-2/funcs/clientManagementClientFlagUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientFlagUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientFlagUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -689,7 +689,7 @@ Lock and unlock a client
 
 <!-- UsageSnippet language="typescript" operationID="client_flag_update_api_form" method="post" path="/api/{serviceId}/client/lock_flag/update/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -714,8 +714,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientFlagUpdateApiForm } from "authlete-2/funcs/clientManagementClientFlagUpdateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientFlagUpdateApiForm } from "authlete-typescript-sdk/funcs/clientManagementClientFlagUpdateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -776,7 +776,7 @@ If you want to specify a new value, use `/api/client/secret/update` API.
 
 <!-- UsageSnippet language="typescript" operationID="client_secret_refresh_api" method="get" path="/api/{serviceId}/client/secret/refresh/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -801,8 +801,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientSecretRefreshApi } from "authlete-2/funcs/clientManagementClientSecretRefreshApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientSecretRefreshApi } from "authlete-typescript-sdk/funcs/clientManagementClientSecretRefreshApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -863,7 +863,7 @@ API.
 
 <!-- UsageSnippet language="typescript" operationID="client_secret_update_api" method="post" path="/api/{serviceId}/client/secret/update/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -891,8 +891,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientSecretUpdateApi } from "authlete-2/funcs/clientManagementClientSecretUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientSecretUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientSecretUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -956,7 +956,7 @@ API.
 
 <!-- UsageSnippet language="typescript" operationID="client_secret_update_api_form" method="post" path="/api/{serviceId}/client/secret/update/{clientIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -984,8 +984,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientSecretUpdateApiForm } from "authlete-2/funcs/clientManagementClientSecretUpdateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientSecretUpdateApiForm } from "authlete-typescript-sdk/funcs/clientManagementClientSecretUpdateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1048,7 +1048,7 @@ The subject parameter is required and can be provided either in the path or as a
 
 <!-- UsageSnippet language="typescript" operationID="client_authorization_get_list_api" method="get" path="/api/{serviceId}/client/authorization/get/list" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1073,8 +1073,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientAuthorizationGetListApi } from "authlete-2/funcs/clientManagementClientAuthorizationGetListApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientAuthorizationGetListApi } from "authlete-typescript-sdk/funcs/clientManagementClientAuthorizationGetListApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1132,7 +1132,7 @@ Update attributes of all existing access tokens given to a client application.
 
 <!-- UsageSnippet language="typescript" operationID="client_authorization_update_api" method="post" path="/api/{serviceId}/client/authorization/update/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1163,8 +1163,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientAuthorizationUpdateApi } from "authlete-2/funcs/clientManagementClientAuthorizationUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientAuthorizationUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientAuthorizationUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1228,7 +1228,7 @@ Update attributes of all existing access tokens given to a client application.
 
 <!-- UsageSnippet language="typescript" operationID="client_authorization_update_api_form" method="post" path="/api/{serviceId}/client/authorization/update/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1253,8 +1253,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientAuthorizationUpdateApiForm } from "authlete-2/funcs/clientManagementClientAuthorizationUpdateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientAuthorizationUpdateApiForm } from "authlete-typescript-sdk/funcs/clientManagementClientAuthorizationUpdateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1314,7 +1314,7 @@ The subject parameter is required and can be provided either in the path or as a
 
 <!-- UsageSnippet language="typescript" operationID="client_authorization_delete_api" method="delete" path="/api/{serviceId}/client/authorization/delete/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1340,8 +1340,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientAuthorizationDeleteApi } from "authlete-2/funcs/clientManagementClientAuthorizationDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientAuthorizationDeleteApi } from "authlete-typescript-sdk/funcs/clientManagementClientAuthorizationDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1425,7 +1425,7 @@ The subject parameter is required and can be provided either in the path or as a
 
 <!-- UsageSnippet language="typescript" operationID="client_granted_scopes_get_api" method="get" path="/api/{serviceId}/client/granted_scopes/get/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1451,8 +1451,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientGrantedScopesGetApi } from "authlete-2/funcs/clientManagementClientGrantedScopesGetApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientGrantedScopesGetApi } from "authlete-typescript-sdk/funcs/clientManagementClientGrantedScopesGetApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1521,7 +1521,7 @@ The subject parameter is required and can be provided either in the path or as a
 
 <!-- UsageSnippet language="typescript" operationID="client_granted_scopes_delete_api" method="delete" path="/api/{serviceId}/client/granted_scopes/delete/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1547,8 +1547,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientGrantedScopesDeleteApi } from "authlete-2/funcs/clientManagementClientGrantedScopesDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientGrantedScopesDeleteApi } from "authlete-typescript-sdk/funcs/clientManagementClientGrantedScopesDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1607,7 +1607,7 @@ Get the requestable scopes per client
 
 <!-- UsageSnippet language="typescript" operationID="client_extension_requestables_scopes_get_api" method="get" path="/api/{serviceId}/client/extension/requestable_scopes/get/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1632,8 +1632,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientExtensionRequestablesScopesGetApi } from "authlete-2/funcs/clientManagementClientExtensionRequestablesScopesGetApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientExtensionRequestablesScopesGetApi } from "authlete-typescript-sdk/funcs/clientManagementClientExtensionRequestablesScopesGetApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1691,7 +1691,7 @@ Update requestable scopes of a client
 
 <!-- UsageSnippet language="typescript" operationID="client_extension_requestables_scopes_update_api" method="put" path="/api/{serviceId}/client/extension/requestable_scopes/update/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1717,8 +1717,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientExtensionRequestablesScopesUpdateApi } from "authlete-2/funcs/clientManagementClientExtensionRequestablesScopesUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientExtensionRequestablesScopesUpdateApi } from "authlete-typescript-sdk/funcs/clientManagementClientExtensionRequestablesScopesUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1777,7 +1777,7 @@ Delete requestable scopes of a client
 
 <!-- UsageSnippet language="typescript" operationID="client_extension_requestables_scopes_delete_api" method="delete" path="/api/{serviceId}/client/extension/requestable_scopes/delete/{clientId}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1802,8 +1802,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { clientManagementClientExtensionRequestablesScopesDeleteApi } from "authlete-2/funcs/clientManagementClientExtensionRequestablesScopesDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { clientManagementClientExtensionRequestablesScopesDeleteApi } from "authlete-typescript-sdk/funcs/clientManagementClientExtensionRequestablesScopesDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

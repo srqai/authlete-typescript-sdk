@@ -5,7 +5,7 @@ An object containing accesstoken data
 ## Example Usage
 
 ```typescript
-import { AccessToken } from "authlete-2/models";
+import { AccessToken } from "authlete-typescript-sdk/models";
 
 let value: AccessToken = {};
 ```

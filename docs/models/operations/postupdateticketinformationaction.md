@@ -5,7 +5,7 @@ The result of the /auth/authorization/ticket/info API call.
 ## Example Usage
 
 ```typescript
-import { PostUpdateTicketInformationAction } from "authlete-2/models/operations";
+import { PostUpdateTicketInformationAction } from "authlete-typescript-sdk/models/operations";
 
 let value: PostUpdateTicketInformationAction = "FORBIDDEN";
 ```

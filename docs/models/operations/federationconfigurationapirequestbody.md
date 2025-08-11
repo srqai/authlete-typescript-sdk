@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { FederationConfigurationApiRequestBody } from "authlete-2/models/operations";
+import { FederationConfigurationApiRequestBody } from "authlete-typescript-sdk/models/operations";
 
 let value: FederationConfigurationApiRequestBody = {};
 ```

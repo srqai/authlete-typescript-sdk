@@ -5,7 +5,7 @@ An object containing taggedvalue data
 ## Example Usage
 
 ```typescript
-import { TaggedValue } from "authlete-2/models";
+import { TaggedValue } from "authlete-typescript-sdk/models";
 
 let value: TaggedValue = {};
 ```

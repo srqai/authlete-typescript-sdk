@@ -8,7 +8,7 @@ response from Authlete's `/vci/jwks` API.
 ## Example Usage
 
 ```typescript
-import { VciJwksApiAction } from "authlete-2/models/operations";
+import { VciJwksApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: VciJwksApiAction = "CREATED";
 ```

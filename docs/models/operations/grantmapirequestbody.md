@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { GrantMApiRequestBody } from "authlete-2/models/operations";
+import { GrantMApiRequestBody } from "authlete-typescript-sdk/models/operations";
 
 let value: GrantMApiRequestBody = {};
 ```

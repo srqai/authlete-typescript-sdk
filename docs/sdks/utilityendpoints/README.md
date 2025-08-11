@@ -19,7 +19,7 @@ get the server version and enabled features
 
 <!-- UsageSnippet language="typescript" operationID="info_api" method="get" path="/api/info" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -41,8 +41,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { utilityEndpointsInfoApi } from "authlete-2/funcs/utilityEndpointsInfoApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { utilityEndpointsInfoApi } from "authlete-typescript-sdk/funcs/utilityEndpointsInfoApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -96,7 +96,7 @@ Echo test endpoint. Will return all path parameters in the request
 
 <!-- UsageSnippet language="typescript" operationID="misc_echo_api" method="get" path="/api/misc/echo" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -118,8 +118,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { utilityEndpointsMiscEchoApi } from "authlete-2/funcs/utilityEndpointsMiscEchoApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { utilityEndpointsMiscEchoApi } from "authlete-typescript-sdk/funcs/utilityEndpointsMiscEchoApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -5,7 +5,7 @@ An object containing api_serviceid_client_lock_flag_update_clientidenti data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdClientLockFlagUpdateClientIdenti } from "authlete-2/models";
+import { ApiServiceIdClientLockFlagUpdateClientIdenti } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdClientLockFlagUpdateClientIdenti = {
   clientLocked: false,

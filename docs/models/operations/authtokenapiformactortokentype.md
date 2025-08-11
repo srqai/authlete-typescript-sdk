@@ -6,7 +6,7 @@ The grant type of the access token when the access token was created.
 ## Example Usage
 
 ```typescript
-import { AuthTokenApiFormActorTokenType } from "authlete-2/models/operations";
+import { AuthTokenApiFormActorTokenType } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthTokenApiFormActorTokenType =
   "urn:ietf:params:oauth:token-type:refresh_token";

@@ -6,7 +6,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { ClientRegistrationDeleteApiFormAction } from "authlete-2/models/operations";
+import { ClientRegistrationDeleteApiFormAction } from "authlete-typescript-sdk/models/operations";
 
 let value: ClientRegistrationDeleteApiFormAction = "FORBIDDEN";
 ```

@@ -5,7 +5,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { FederationRegistrationApiAction } from "authlete-2/models/operations";
+import { FederationRegistrationApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: FederationRegistrationApiAction = "FORBIDDEN";
 ```

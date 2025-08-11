@@ -5,7 +5,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { AuthAuthorizationApiAction } from "authlete-2/models/operations";
+import { AuthAuthorizationApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthAuthorizationApiAction = "JWT";
 ```

@@ -10,7 +10,7 @@ mkdir samples
 npm install
 npm install -g ts-node
 npm link
-npm link authlete-2
+npm link authlete-typescript-sdk
 TS_CONFIG_CONTENT=$(cat <<EOL
 {
   "compilerOptions": {

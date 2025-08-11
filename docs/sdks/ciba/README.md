@@ -334,7 +334,7 @@ not have to be changed to support CIBA.
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_api" method="post" path="/api/{serviceId}/backchannel/authentication" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -363,8 +363,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { cibaBackchannelAuthenticationApi } from "authlete-2/funcs/cibaBackchannelAuthenticationApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { cibaBackchannelAuthenticationApi } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -735,7 +735,7 @@ not have to be changed to support CIBA.
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_api_form" method="post" path="/api/{serviceId}/backchannel/authentication" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -762,8 +762,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { cibaBackchannelAuthenticationApiForm } from "authlete-2/funcs/cibaBackchannelAuthenticationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { cibaBackchannelAuthenticationApiForm } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -911,7 +911,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_issue_api" method="post" path="/api/{serviceId}/backchannel/authentication/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -938,8 +938,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { cibaBackchannelAuthenticationIssueApi } from "authlete-2/funcs/cibaBackchannelAuthenticationIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { cibaBackchannelAuthenticationIssueApi } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1087,7 +1087,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_issue_api_form" method="post" path="/api/{serviceId}/backchannel/authentication/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1114,8 +1114,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { cibaBackchannelAuthenticationIssueApiForm } from "authlete-2/funcs/cibaBackchannelAuthenticationIssueApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { cibaBackchannelAuthenticationIssueApiForm } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationIssueApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1210,7 +1210,7 @@ server implementation should return a "403 Forbidden" response to the client app
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_fail_api" method="post" path="/api/{serviceId}/backchannel/authentication/fail" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1238,8 +1238,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { cibaBackchannelAuthenticationFailApi } from "authlete-2/funcs/cibaBackchannelAuthenticationFailApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { cibaBackchannelAuthenticationFailApi } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationFailApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1335,7 +1335,7 @@ server implementation should return a "403 Forbidden" response to the client app
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_fail_api_form" method="post" path="/api/{serviceId}/backchannel/authentication/fail" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1363,8 +1363,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { cibaBackchannelAuthenticationFailApiForm } from "authlete-2/funcs/cibaBackchannelAuthenticationFailApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { cibaBackchannelAuthenticationFailApiForm } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationFailApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1532,7 +1532,7 @@ Content-Type: application/json
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_complete_api" method="post" path="/api/{serviceId}/backchannel/authentication/complete" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1561,8 +1561,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { cibaBackchannelAuthenticationCompleteApi } from "authlete-2/funcs/cibaBackchannelAuthenticationCompleteApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { cibaBackchannelAuthenticationCompleteApi } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationCompleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1731,7 +1731,7 @@ Content-Type: application/json
 
 <!-- UsageSnippet language="typescript" operationID="backchannel_authentication_complete_api_form" method="post" path="/api/{serviceId}/backchannel/authentication/complete" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1760,8 +1760,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { cibaBackchannelAuthenticationCompleteApiForm } from "authlete-2/funcs/cibaBackchannelAuthenticationCompleteApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { cibaBackchannelAuthenticationCompleteApiForm } from "authlete-typescript-sdk/funcs/cibaBackchannelAuthenticationCompleteApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

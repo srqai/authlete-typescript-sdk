@@ -5,7 +5,7 @@ An object containing api_serviceid_hsk_create data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdHskCreate } from "authlete-2/models";
+import { ApiServiceIdHskCreate } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdHskCreate = {};
 ```

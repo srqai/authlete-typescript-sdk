@@ -5,7 +5,7 @@ An object containing api_serviceid_vci_deferred_parse data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdVciDeferredParse } from "authlete-2/models";
+import { ApiServiceIdVciDeferredParse } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdVciDeferredParse = {};
 ```

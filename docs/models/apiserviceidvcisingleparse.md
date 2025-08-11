@@ -5,7 +5,7 @@ An object containing api_serviceid_vci_single_parse data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdVciSingleParse } from "authlete-2/models";
+import { ApiServiceIdVciSingleParse } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdVciSingleParse = {};
 ```

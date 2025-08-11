@@ -5,7 +5,7 @@ An object containing items data
 ## Example Usage
 
 ```typescript
-import { AuthAuthorizationApiScope } from "authlete-2/models/operations";
+import { AuthAuthorizationApiScope } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthAuthorizationApiScope = {};
 ```

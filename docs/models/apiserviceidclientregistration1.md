@@ -5,7 +5,7 @@ An object containing api_serviceid_client_registration1 data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdClientRegistration1 } from "authlete-2/models";
+import { ApiServiceIdClientRegistration1 } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdClientRegistration1 = {
   json: "{key: 7682544558645711, key1: null, key2: \"<value>\"}",

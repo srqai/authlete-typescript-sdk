@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_token_fail data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthTokenFail } from "authlete-2/models";
+import { ApiServiceIdAuthTokenFail } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthTokenFail = {
   ticket: "<value>",

@@ -5,7 +5,7 @@ An object containing api_serviceid_vci_batch_parse data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdVciBatchParse } from "authlete-2/models";
+import { ApiServiceIdVciBatchParse } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdVciBatchParse = {};
 ```

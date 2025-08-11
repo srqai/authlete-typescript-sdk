@@ -557,7 +557,7 @@ above in the description for the case of `action=NO_INTERACTION`.
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_api" method="post" path="/api/{serviceId}/auth/authorization" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -584,8 +584,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { authorizationEndpointAuthAuthorizationApi } from "authlete-2/funcs/authorizationEndpointAuthAuthorizationApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { authorizationEndpointAuthAuthorizationApi } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1177,7 +1177,7 @@ above in the description for the case of `action=NO_INTERACTION`.
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_api_form" method="post" path="/api/{serviceId}/auth/authorization" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1204,8 +1204,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { authorizationEndpointAuthAuthorizationApiForm } from "authlete-2/funcs/authorizationEndpointAuthAuthorizationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { authorizationEndpointAuthAuthorizationApiForm } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1374,7 +1374,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_fail_api" method="post" path="/api/{serviceId}/auth/authorization/fail" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1402,8 +1402,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { authorizationEndpointAuthAuthorizationFailApi } from "authlete-2/funcs/authorizationEndpointAuthAuthorizationFailApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { authorizationEndpointAuthAuthorizationFailApi } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationFailApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1573,7 +1573,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_fail_api_form" method="post" path="/api/{serviceId}/auth/authorization/fail" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1601,8 +1601,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { authorizationEndpointAuthAuthorizationFailApiForm } from "authlete-2/funcs/authorizationEndpointAuthAuthorizationFailApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { authorizationEndpointAuthAuthorizationFailApiForm } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationFailApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1775,7 +1775,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_issue_api" method="post" path="/api/{serviceId}/auth/authorization/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1803,8 +1803,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { authorizationEndpointAuthAuthorizationIssueApi } from "authlete-2/funcs/authorizationEndpointAuthAuthorizationIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { authorizationEndpointAuthAuthorizationIssueApi } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1977,7 +1977,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_authorization_issue_api_form" method="post" path="/api/{serviceId}/auth/authorization/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -2005,8 +2005,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { authorizationEndpointAuthAuthorizationIssueApiForm } from "authlete-2/funcs/authorizationEndpointAuthAuthorizationIssueApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { authorizationEndpointAuthAuthorizationIssueApiForm } from "authlete-typescript-sdk/funcs/authorizationEndpointAuthAuthorizationIssueApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2066,7 +2066,7 @@ Update Ticket Information
 
 <!-- UsageSnippet language="typescript" operationID="post_update_ticket_information" method="post" path="/api/{serviceId}/auth/authorization/ticket/update" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -2094,8 +2094,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { authorizationEndpointPostUpdateTicketInformation } from "authlete-2/funcs/authorizationEndpointPostUpdateTicketInformation.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { authorizationEndpointPostUpdateTicketInformation } from "authlete-typescript-sdk/funcs/authorizationEndpointPostUpdateTicketInformation.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -2155,7 +2155,7 @@ Update Ticket Information
 
 <!-- UsageSnippet language="typescript" operationID="post_update_ticket_information_form" method="post" path="/api/{serviceId}/auth/authorization/ticket/update" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -2183,8 +2183,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { authorizationEndpointPostUpdateTicketInformationForm } from "authlete-2/funcs/authorizationEndpointPostUpdateTicketInformationForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { authorizationEndpointPostUpdateTicketInformationForm } from "authlete-typescript-sdk/funcs/authorizationEndpointPostUpdateTicketInformationForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

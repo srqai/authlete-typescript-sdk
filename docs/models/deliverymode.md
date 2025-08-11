@@ -5,7 +5,7 @@ A string value
 ## Example Usage
 
 ```typescript
-import { DeliveryMode } from "authlete-2/models";
+import { DeliveryMode } from "authlete-typescript-sdk/models";
 
 let value: DeliveryMode = "PING";
 ```

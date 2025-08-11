@@ -5,7 +5,7 @@ An object containing credentialrequestinfo data
 ## Example Usage
 
 ```typescript
-import { CredentialRequestInfo } from "authlete-2/models";
+import { CredentialRequestInfo } from "authlete-typescript-sdk/models";
 
 let value: CredentialRequestInfo = {};
 ```

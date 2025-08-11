@@ -6,7 +6,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { ClientRegistrationDeleteApiAction } from "authlete-2/models/operations";
+import { ClientRegistrationDeleteApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: ClientRegistrationDeleteApiAction = "CREATED";
 ```

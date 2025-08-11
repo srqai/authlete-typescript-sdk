@@ -101,7 +101,7 @@ Content-Type: application/entity-statement+jwt
 
 <!-- UsageSnippet language="typescript" operationID="federation_configuration_api" method="post" path="/api/{serviceId}/federation/configuration" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -125,8 +125,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { federationEndpointFederationConfigurationApi } from "authlete-2/funcs/federationEndpointFederationConfigurationApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { federationEndpointFederationConfigurationApi } from "authlete-typescript-sdk/funcs/federationEndpointFederationConfigurationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -218,7 +218,7 @@ federation registration endpoint should call Authlete's
 
 <!-- UsageSnippet language="typescript" operationID="federation_registration_api" method="post" path="/api/{serviceId}/federation/registration" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -243,8 +243,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { federationEndpointFederationRegistrationApi } from "authlete-2/funcs/federationEndpointFederationRegistrationApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { federationEndpointFederationRegistrationApi } from "authlete-typescript-sdk/funcs/federationEndpointFederationRegistrationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -337,7 +337,7 @@ federation registration endpoint should call Authlete's
 
 <!-- UsageSnippet language="typescript" operationID="federation_registration_api_form" method="post" path="/api/{serviceId}/federation/registration" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -362,8 +362,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { federationEndpointFederationRegistrationApiForm } from "authlete-2/funcs/federationEndpointFederationRegistrationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { federationEndpointFederationRegistrationApiForm } from "authlete-typescript-sdk/funcs/federationEndpointFederationRegistrationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

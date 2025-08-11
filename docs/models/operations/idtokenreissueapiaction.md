@@ -5,7 +5,7 @@ The next action that the implementation of the token endpoint should take.
 ## Example Usage
 
 ```typescript
-import { IdtokenReissueApiAction } from "authlete-2/models/operations";
+import { IdtokenReissueApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: IdtokenReissueApiAction = "JSON";
 ```

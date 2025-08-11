@@ -6,7 +6,7 @@ The reason of the failure of the token request.
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthTokenFailReason } from "authlete-2/models";
+import { ApiServiceIdAuthTokenFailReason } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthTokenFailReason =
   "INVALID_RESOURCE_OWNER_CREDENTIALS";

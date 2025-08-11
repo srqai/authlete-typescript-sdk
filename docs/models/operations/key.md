@@ -6,7 +6,7 @@ An object representing JWK. See [RFC 7517](https://datatracker.ietf.org/doc/html
 ## Example Usage
 
 ```typescript
-import { Key } from "authlete-2/models/operations";
+import { Key } from "authlete-typescript-sdk/models/operations";
 
 let value: Key = {};
 ```

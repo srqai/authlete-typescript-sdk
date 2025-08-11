@@ -5,7 +5,7 @@ An object containing api_serviceid_backchannel_authentication_fail data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdBackchannelAuthenticationFail } from "authlete-2/models";
+import { ApiServiceIdBackchannelAuthenticationFail } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdBackchannelAuthenticationFail = {
   ticket: "<value>",

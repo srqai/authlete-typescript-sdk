@@ -161,7 +161,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_userinfo_api" method="post" path="/api/{serviceId}/auth/userinfo" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -188,8 +188,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { userInfoEndpointAuthUserinfoApi } from "authlete-2/funcs/userInfoEndpointAuthUserinfoApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { userInfoEndpointAuthUserinfoApi } from "authlete-typescript-sdk/funcs/userInfoEndpointAuthUserinfoApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -389,7 +389,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_userinfo_api_form" method="post" path="/api/{serviceId}/auth/userinfo" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -416,8 +416,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { userInfoEndpointAuthUserinfoApiForm } from "authlete-2/funcs/userInfoEndpointAuthUserinfoApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { userInfoEndpointAuthUserinfoApiForm } from "authlete-typescript-sdk/funcs/userInfoEndpointAuthUserinfoApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -625,7 +625,7 @@ Content-Type: application/jwt
 
 <!-- UsageSnippet language="typescript" operationID="auth_userinfo_issue_api" method="post" path="/api/{serviceId}/auth/userinfo/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -652,8 +652,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { userInfoEndpointAuthUserinfoIssueApi } from "authlete-2/funcs/userInfoEndpointAuthUserinfoIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { userInfoEndpointAuthUserinfoIssueApi } from "authlete-typescript-sdk/funcs/userInfoEndpointAuthUserinfoIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -861,7 +861,7 @@ Content-Type: application/jwt
 
 <!-- UsageSnippet language="typescript" operationID="auth_userinfo_issue_api_form" method="post" path="/api/{serviceId}/auth/userinfo/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -888,8 +888,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { userInfoEndpointAuthUserinfoIssueApiForm } from "authlete-2/funcs/userInfoEndpointAuthUserinfoIssueApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { userInfoEndpointAuthUserinfoIssueApiForm } from "authlete-typescript-sdk/funcs/userInfoEndpointAuthUserinfoIssueApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

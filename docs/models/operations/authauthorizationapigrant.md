@@ -5,7 +5,7 @@ An object containing grant data
 ## Example Usage
 
 ```typescript
-import { AuthAuthorizationApiGrant } from "authlete-2/models/operations";
+import { AuthAuthorizationApiGrant } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthAuthorizationApiGrant = {};
 ```

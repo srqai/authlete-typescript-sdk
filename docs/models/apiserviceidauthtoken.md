@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_token data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthToken } from "authlete-2/models";
+import { ApiServiceIdAuthToken } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthToken = {
   parameters: "<value>",

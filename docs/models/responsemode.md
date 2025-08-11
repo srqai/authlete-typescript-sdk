@@ -5,7 +5,7 @@ A string value
 ## Example Usage
 
 ```typescript
-import { ResponseMode } from "authlete-2/models";
+import { ResponseMode } from "authlete-typescript-sdk/models";
 
 let value: ResponseMode = "QUERY_JWT";
 ```

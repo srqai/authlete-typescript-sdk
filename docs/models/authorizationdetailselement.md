@@ -5,7 +5,7 @@ An object containing authorizationdetailselement data
 ## Example Usage
 
 ```typescript
-import { AuthorizationDetailsElement } from "authlete-2/models";
+import { AuthorizationDetailsElement } from "authlete-typescript-sdk/models";
 
 let value: AuthorizationDetailsElement = {
   type: "<value>",

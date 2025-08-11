@@ -5,7 +5,7 @@ An object containing api_serviceid_federation_registration data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdFederationRegistration } from "authlete-2/models";
+import { ApiServiceIdFederationRegistration } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdFederationRegistration = {};
 ```

@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_authorizationpropertiesgrant data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthAuthorizationpropertiesgrant } from "authlete-2/models";
+import { ApiServiceIdAuthAuthorizationpropertiesgrant } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthAuthorizationpropertiesgrant = {};
 ```

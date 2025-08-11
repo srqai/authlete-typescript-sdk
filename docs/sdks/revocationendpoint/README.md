@@ -150,7 +150,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_revocation_api" method="post" path="/api/{serviceId}/auth/revocation" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -179,8 +179,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { revocationEndpointAuthRevocationApi } from "authlete-2/funcs/revocationEndpointAuthRevocationApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { revocationEndpointAuthRevocationApi } from "authlete-typescript-sdk/funcs/revocationEndpointAuthRevocationApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -373,7 +373,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_revocation_api_form" method="post" path="/api/{serviceId}/auth/revocation" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -400,8 +400,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { revocationEndpointAuthRevocationApiForm } from "authlete-2/funcs/revocationEndpointAuthRevocationApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { revocationEndpointAuthRevocationApiForm } from "authlete-typescript-sdk/funcs/revocationEndpointAuthRevocationApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

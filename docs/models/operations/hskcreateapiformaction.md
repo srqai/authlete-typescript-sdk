@@ -5,7 +5,7 @@ Result of the API call
 ## Example Usage
 
 ```typescript
-import { HskCreateApiFormAction } from "authlete-2/models/operations";
+import { HskCreateApiFormAction } from "authlete-typescript-sdk/models/operations";
 
 let value: HskCreateApiFormAction = "INTERNAL_SERVER_ERROR";
 ```

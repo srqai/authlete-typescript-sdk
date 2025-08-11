@@ -5,7 +5,7 @@ An object containing actortokeninfo data
 ## Example Usage
 
 ```typescript
-import { AuthTokenApiFormActorTokenInfo } from "authlete-2/models/operations";
+import { AuthTokenApiFormActorTokenInfo } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthTokenApiFormActorTokenInfo = {};
 ```

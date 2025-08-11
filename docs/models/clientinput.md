@@ -5,7 +5,7 @@ An object containing client data
 ## Example Usage
 
 ```typescript
-import { ClientInput } from "authlete-2/models";
+import { ClientInput } from "authlete-typescript-sdk/models";
 
 let value: ClientInput = {};
 ```

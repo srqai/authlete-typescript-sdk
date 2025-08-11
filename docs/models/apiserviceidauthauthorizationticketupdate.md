@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_authorization_ticket_update data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthAuthorizationTicketUpdate } from "authlete-2/models";
+import { ApiServiceIdAuthAuthorizationTicketUpdate } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthAuthorizationTicketUpdate = {
   ticket: "<value>",

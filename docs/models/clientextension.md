@@ -5,7 +5,7 @@ An object containing clientextension data
 ## Example Usage
 
 ```typescript
-import { ClientExtension } from "authlete-2/models";
+import { ClientExtension } from "authlete-typescript-sdk/models";
 
 let value: ClientExtension = {};
 ```

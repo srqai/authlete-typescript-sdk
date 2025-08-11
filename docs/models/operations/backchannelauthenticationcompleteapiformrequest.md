@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BackchannelAuthenticationCompleteApiFormRequest } from "authlete-2/models/operations";
+import { BackchannelAuthenticationCompleteApiFormRequest } from "authlete-typescript-sdk/models/operations";
 
 let value: BackchannelAuthenticationCompleteApiFormRequest = {
   serviceId: "<id>",

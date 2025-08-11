@@ -5,7 +5,7 @@ An object containing property data
 ## Example Usage
 
 ```typescript
-import { Property } from "authlete-2/models";
+import { Property } from "authlete-typescript-sdk/models";
 
 let value: Property = {};
 ```

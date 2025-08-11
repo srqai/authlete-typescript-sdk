@@ -5,7 +5,7 @@ An object containing api_serviceid_vci_metadata data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdVciMetadata } from "authlete-2/models";
+import { ApiServiceIdVciMetadata } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdVciMetadata = {
   pretty: false,

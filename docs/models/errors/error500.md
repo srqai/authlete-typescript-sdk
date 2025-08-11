@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { Error500 } from "authlete-2/models/errors";
+import { Error500 } from "authlete-typescript-sdk/models/errors";
 
 // No examples available for this model
 ```

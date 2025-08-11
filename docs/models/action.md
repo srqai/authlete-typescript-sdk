@@ -6,7 +6,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { Action } from "authlete-2/models";
+import { Action } from "authlete-typescript-sdk/models";
 
 let value: Action = "OK";
 ```

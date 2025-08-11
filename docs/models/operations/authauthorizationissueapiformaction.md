@@ -5,7 +5,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { AuthAuthorizationIssueApiFormAction } from "authlete-2/models/operations";
+import { AuthAuthorizationIssueApiFormAction } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthAuthorizationIssueApiFormAction = "OK";
 ```

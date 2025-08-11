@@ -5,7 +5,7 @@ HTTP 200 response
 ## Example Usage
 
 ```typescript
-import { AuthUserinfoIssueApiFormResponse } from "authlete-2/models/operations";
+import { AuthUserinfoIssueApiFormResponse } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthUserinfoIssueApiFormResponse = {};
 ```

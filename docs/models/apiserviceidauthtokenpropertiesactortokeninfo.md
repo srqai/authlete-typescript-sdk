@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_tokenpropertiesactortokeninfo data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthTokenpropertiesactorTokenInfo } from "authlete-2/models";
+import { ApiServiceIdAuthTokenpropertiesactorTokenInfo } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthTokenpropertiesactorTokenInfo = {};
 ```

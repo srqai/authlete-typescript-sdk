@@ -5,7 +5,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { AuthIntrospectionStandardApiAction } from "authlete-2/models/operations";
+import { AuthIntrospectionStandardApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthIntrospectionStandardApiAction = "JSON";
 ```

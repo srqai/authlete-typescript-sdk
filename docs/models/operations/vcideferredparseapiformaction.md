@@ -5,7 +5,7 @@ The next action that the deferred credential endpoint should take.
 ## Example Usage
 
 ```typescript
-import { VciDeferredParseApiFormAction } from "authlete-2/models/operations";
+import { VciDeferredParseApiFormAction } from "authlete-typescript-sdk/models/operations";
 
 let value: VciDeferredParseApiFormAction = "OK";
 ```

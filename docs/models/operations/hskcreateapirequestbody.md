@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { HskCreateApiRequestBody } from "authlete-2/models/operations";
+import { HskCreateApiRequestBody } from "authlete-typescript-sdk/models/operations";
 
 let value: HskCreateApiRequestBody = {};
 ```

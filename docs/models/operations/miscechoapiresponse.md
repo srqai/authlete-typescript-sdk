@@ -5,7 +5,7 @@ Response for 200
 ## Example Usage
 
 ```typescript
-import { MiscEchoApiResponse } from "authlete-2/models/operations";
+import { MiscEchoApiResponse } from "authlete-typescript-sdk/models/operations";
 
 let value: MiscEchoApiResponse = {};
 ```

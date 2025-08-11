@@ -5,7 +5,7 @@ An object containing pair data
 ## Example Usage
 
 ```typescript
-import { Pair } from "authlete-2/models";
+import { Pair } from "authlete-typescript-sdk/models";
 
 let value: Pair = {};
 ```

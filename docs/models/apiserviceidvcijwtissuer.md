@@ -5,7 +5,7 @@ An object containing api_serviceid_vci_jwtissuer data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdVciJwtissuer } from "authlete-2/models";
+import { ApiServiceIdVciJwtissuer } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdVciJwtissuer = {
   pretty: true,
