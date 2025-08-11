@@ -5,7 +5,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { DeviceAuthorizationApiAction } from "authlete-2/models/operations";
+import { DeviceAuthorizationApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: DeviceAuthorizationApiAction = "JWT";
 ```

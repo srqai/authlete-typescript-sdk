@@ -19,7 +19,7 @@ This API verifies a JOSE object.
 
 <!-- UsageSnippet language="typescript" operationID="jose_verify_api" method="post" path="/api/{serviceId}/jose/verify" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -49,8 +49,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { joseObjectJoseVerifyApi } from "authlete-2/funcs/joseObjectJoseVerifyApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { joseObjectJoseVerifyApi } from "authlete-typescript-sdk/funcs/joseObjectJoseVerifyApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -113,7 +113,7 @@ This API verifies a JOSE object.
 
 <!-- UsageSnippet language="typescript" operationID="jose_verify_api_form" method="post" path="/api/{serviceId}/jose/verify" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -137,8 +137,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { joseObjectJoseVerifyApiForm } from "authlete-2/funcs/joseObjectJoseVerifyApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { joseObjectJoseVerifyApiForm } from "authlete-typescript-sdk/funcs/joseObjectJoseVerifyApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

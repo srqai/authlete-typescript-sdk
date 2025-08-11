@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { Error401 } from "authlete-2/models/errors";
+import { Error401 } from "authlete-typescript-sdk/models/errors";
 
 // No examples available for this model
 ```

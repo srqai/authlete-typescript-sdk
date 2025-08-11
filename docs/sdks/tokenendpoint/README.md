@@ -466,7 +466,7 @@ Cache-Control: no-cache, no-store
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_api" method="post" path="/api/{serviceId}/auth/token" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -495,8 +495,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenEndpointAuthTokenApi } from "authlete-2/funcs/tokenEndpointAuthTokenApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenEndpointAuthTokenApi } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1000,7 +1000,7 @@ Cache-Control: no-cache, no-store
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_api_form" method="post" path="/api/{serviceId}/auth/token" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1027,8 +1027,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenEndpointAuthTokenApiForm } from "authlete-2/funcs/tokenEndpointAuthTokenApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenEndpointAuthTokenApiForm } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1156,7 +1156,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_fail_api" method="post" path="/api/{serviceId}/auth/token/fail" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1184,8 +1184,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenEndpointAuthTokenFailApi } from "authlete-2/funcs/tokenEndpointAuthTokenFailApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenEndpointAuthTokenFailApi } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenFailApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1314,7 +1314,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_fail_api_form" method="post" path="/api/{serviceId}/auth/token/fail" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1342,8 +1342,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenEndpointAuthTokenFailApiForm } from "authlete-2/funcs/tokenEndpointAuthTokenFailApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenEndpointAuthTokenFailApiForm } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenFailApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1472,7 +1472,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_issue_api" method="post" path="/api/{serviceId}/auth/token/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1500,8 +1500,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenEndpointAuthTokenIssueApi } from "authlete-2/funcs/tokenEndpointAuthTokenIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenEndpointAuthTokenIssueApi } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1630,7 +1630,7 @@ Pragma: no-cache
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_issue_api_form" method="post" path="/api/{serviceId}/auth/token/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1658,8 +1658,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenEndpointAuthTokenIssueApiForm } from "authlete-2/funcs/tokenEndpointAuthTokenIssueApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenEndpointAuthTokenIssueApiForm } from "authlete-typescript-sdk/funcs/tokenEndpointAuthTokenIssueApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1724,7 +1724,7 @@ token.
 
 <!-- UsageSnippet language="typescript" operationID="idtoken_reissue_api" method="post" path="/api/{serviceId}/idtoken/reissue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1748,8 +1748,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenEndpointIdtokenReissueApi } from "authlete-2/funcs/tokenEndpointIdtokenReissueApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenEndpointIdtokenReissueApi } from "authlete-typescript-sdk/funcs/tokenEndpointIdtokenReissueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

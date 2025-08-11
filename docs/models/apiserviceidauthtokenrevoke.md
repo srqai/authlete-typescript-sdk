@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_token_revoke data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthTokenRevoke } from "authlete-2/models";
+import { ApiServiceIdAuthTokenRevoke } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthTokenRevoke = {};
 ```

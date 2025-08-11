@@ -5,7 +5,7 @@ An object containing credentialissuanceorder data
 ## Example Usage
 
 ```typescript
-import { CredentialIssuanceOrder } from "authlete-2/models";
+import { CredentialIssuanceOrder } from "authlete-typescript-sdk/models";
 
 let value: CredentialIssuanceOrder = {};
 ```

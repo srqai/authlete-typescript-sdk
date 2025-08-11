@@ -5,7 +5,7 @@ An object containing api_serviceid_client_registration_delete data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdClientRegistrationDelete } from "authlete-2/models";
+import { ApiServiceIdClientRegistrationDelete } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdClientRegistrationDelete = {
   clientId: 579979,

@@ -5,7 +5,7 @@ An object containing api_serviceid_client_granted_scopes_get_clientid data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdClientGrantedScopesGetClientId } from "authlete-2/models";
+import { ApiServiceIdClientGrantedScopesGetClientId } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdClientGrantedScopesGetClientId = {};
 ```

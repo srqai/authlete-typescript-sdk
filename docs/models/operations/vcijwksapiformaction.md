@@ -8,7 +8,7 @@ response from Authlete's `/vci/jwks` API.
 ## Example Usage
 
 ```typescript
-import { VciJwksApiFormAction } from "authlete-2/models/operations";
+import { VciJwksApiFormAction } from "authlete-typescript-sdk/models/operations";
 
 let value: VciJwksApiFormAction = "INTERNAL_SERVER_ERROR";
 ```

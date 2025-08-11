@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { VciDeferredParseApiResponse } from "authlete-2/models/operations";
+import { VciDeferredParseApiResponse } from "authlete-typescript-sdk/models/operations";
 
 let value: VciDeferredParseApiResponse = {};
 ```

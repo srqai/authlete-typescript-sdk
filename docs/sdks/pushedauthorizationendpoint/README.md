@@ -19,7 +19,7 @@ This API creates a pushed request authorization. It authenticates the client and
 
 <!-- UsageSnippet language="typescript" operationID="pushed_auth_req_api" method="post" path="/api/{serviceId}/pushed_auth_req" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -48,8 +48,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { pushedAuthorizationEndpointPushedAuthReqApi } from "authlete-2/funcs/pushedAuthorizationEndpointPushedAuthReqApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { pushedAuthorizationEndpointPushedAuthReqApi } from "authlete-typescript-sdk/funcs/pushedAuthorizationEndpointPushedAuthReqApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -111,7 +111,7 @@ This API creates a pushed request authorization. It authenticates the client and
 
 <!-- UsageSnippet language="typescript" operationID="pushed_auth_req_api_form" method="post" path="/api/{serviceId}/pushed_auth_req" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -140,8 +140,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { pushedAuthorizationEndpointPushedAuthReqApiForm } from "authlete-2/funcs/pushedAuthorizationEndpointPushedAuthReqApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { pushedAuthorizationEndpointPushedAuthReqApiForm } from "authlete-typescript-sdk/funcs/pushedAuthorizationEndpointPushedAuthReqApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

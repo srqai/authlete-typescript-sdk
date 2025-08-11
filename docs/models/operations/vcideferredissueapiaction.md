@@ -7,7 +7,7 @@ endpoint should take.
 ## Example Usage
 
 ```typescript
-import { VciDeferredIssueApiAction } from "authlete-2/models/operations";
+import { VciDeferredIssueApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: VciDeferredIssueApiAction = "INTERNAL_SERVER_ERROR";
 ```

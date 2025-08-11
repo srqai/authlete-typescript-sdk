@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_introspection data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthIntrospection } from "authlete-2/models";
+import { ApiServiceIdAuthIntrospection } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthIntrospection = {
   token: "<value>",

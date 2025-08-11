@@ -5,7 +5,7 @@ An object containing api_serviceid_client_authorization_update_clientid data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdClientAuthorizationUpdateClientId } from "authlete-2/models";
+import { ApiServiceIdClientAuthorizationUpdateClientId } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdClientAuthorizationUpdateClientId = {
   subject: "<value>",

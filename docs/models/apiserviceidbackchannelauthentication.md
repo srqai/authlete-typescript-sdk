@@ -5,7 +5,7 @@ An object containing api_serviceid_backchannel_authentication data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdBackchannelAuthentication } from "authlete-2/models";
+import { ApiServiceIdBackchannelAuthentication } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdBackchannelAuthentication = {
   parameters: "<value>",

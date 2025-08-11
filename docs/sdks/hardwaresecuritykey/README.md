@@ -21,7 +21,7 @@ Create Security Key
 
 <!-- UsageSnippet language="typescript" operationID="hsk_create_api" method="post" path="/api/{serviceId}/hsk/create" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -46,8 +46,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { hardwareSecurityKeyHskCreateApi } from "authlete-2/funcs/hardwareSecurityKeyHskCreateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { hardwareSecurityKeyHskCreateApi } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskCreateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -104,7 +104,7 @@ Create Security Key
 
 <!-- UsageSnippet language="typescript" operationID="hsk_create_api_form" method="post" path="/api/{serviceId}/hsk/create" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -129,8 +129,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { hardwareSecurityKeyHskCreateApiForm } from "authlete-2/funcs/hardwareSecurityKeyHskCreateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { hardwareSecurityKeyHskCreateApiForm } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskCreateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -187,7 +187,7 @@ Delete Security Key
 
 <!-- UsageSnippet language="typescript" operationID="hsk_delete_api" method="delete" path="/api/{serviceId}/hsk/delete/{handle}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -212,8 +212,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { hardwareSecurityKeyHskDeleteApi } from "authlete-2/funcs/hardwareSecurityKeyHskDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { hardwareSecurityKeyHskDeleteApi } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -270,7 +270,7 @@ Get Security Key
 
 <!-- UsageSnippet language="typescript" operationID="hsk_get_api" method="get" path="/api/{serviceId}/hsk/get/{handle}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -295,8 +295,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { hardwareSecurityKeyHskGetApi } from "authlete-2/funcs/hardwareSecurityKeyHskGetApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { hardwareSecurityKeyHskGetApi } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskGetApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -353,7 +353,7 @@ List Security Keys
 
 <!-- UsageSnippet language="typescript" operationID="hsk_get_list_api" method="get" path="/api/{serviceId}/hsk/get/list" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -377,8 +377,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { hardwareSecurityKeyHskGetListApi } from "authlete-2/funcs/hardwareSecurityKeyHskGetListApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { hardwareSecurityKeyHskGetListApi } from "authlete-typescript-sdk/funcs/hardwareSecurityKeyHskGetListApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

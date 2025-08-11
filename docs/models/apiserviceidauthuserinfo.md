@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_userinfo data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthUserinfo } from "authlete-2/models";
+import { ApiServiceIdAuthUserinfo } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthUserinfo = {
   token: "<value>",

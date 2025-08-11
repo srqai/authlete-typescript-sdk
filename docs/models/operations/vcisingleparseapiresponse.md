@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { VciSingleParseApiResponse } from "authlete-2/models/operations";
+import { VciSingleParseApiResponse } from "authlete-typescript-sdk/models/operations";
 
 let value: VciSingleParseApiResponse = {};
 ```

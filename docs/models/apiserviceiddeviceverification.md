@@ -5,7 +5,7 @@ An object containing api_serviceid_device_verification data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdDeviceVerification } from "authlete-2/models";
+import { ApiServiceIdDeviceVerification } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdDeviceVerification = {
   userCode: "<value>",

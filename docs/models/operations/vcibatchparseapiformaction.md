@@ -5,7 +5,7 @@ The next action that the batch credential endpoint should take.
 ## Example Usage
 
 ```typescript
-import { VciBatchParseApiFormAction } from "authlete-2/models/operations";
+import { VciBatchParseApiFormAction } from "authlete-typescript-sdk/models/operations";
 
 let value: VciBatchParseApiFormAction = "OK";
 ```

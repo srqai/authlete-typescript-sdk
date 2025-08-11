@@ -5,7 +5,7 @@ An object containing client data
 ## Example Usage
 
 ```typescript
-import { AuthTokenGetListApiClient } from "authlete-2/models/operations";
+import { AuthTokenGetListApiClient } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthTokenGetListApiClient = {};
 ```

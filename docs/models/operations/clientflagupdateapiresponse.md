@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { ClientFlagUpdateApiResponse } from "authlete-2/models/operations";
+import { ClientFlagUpdateApiResponse } from "authlete-typescript-sdk/models/operations";
 
 let value: ClientFlagUpdateApiResponse = {
   resultCode: "<value>",

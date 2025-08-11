@@ -5,7 +5,7 @@ An object containing service data
 ## Example Usage
 
 ```typescript
-import { Service } from "authlete-2/models";
+import { Service } from "authlete-typescript-sdk/models";
 
 let value: Service = {};
 ```

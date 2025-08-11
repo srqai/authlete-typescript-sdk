@@ -5,7 +5,7 @@ An object containing api_serviceid_backchannel_authentication_complete data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdBackchannelAuthenticationComplete } from "authlete-2/models";
+import { ApiServiceIdBackchannelAuthenticationComplete } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdBackchannelAuthenticationComplete = {
   ticket: "<value>",

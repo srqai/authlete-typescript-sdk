@@ -5,7 +5,7 @@ An object containing api_serviceid_jose_verify data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdJoseVerify } from "authlete-2/models";
+import { ApiServiceIdJoseVerify } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdJoseVerify = {
   jose: "<value>",

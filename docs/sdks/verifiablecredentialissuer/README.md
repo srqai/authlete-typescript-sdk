@@ -35,7 +35,7 @@ API endpoints for implementing and running a Verifiable Credential Issuer (VCI).
 
 <!-- UsageSnippet language="typescript" operationID="vci_metadata_api" method="post" path="/api/{serviceId}/vci/metadata" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -62,8 +62,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciMetadataApi } from "authlete-2/funcs/verifiableCredentialIssuerVciMetadataApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciMetadataApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciMetadataApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -122,7 +122,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_metadata_api_form" method="post" path="/api/{serviceId}/vci/metadata" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -149,8 +149,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciMetadataApiForm } from "authlete-2/funcs/verifiableCredentialIssuerVciMetadataApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciMetadataApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciMetadataApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -209,7 +209,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_jwtissuer_api" method="post" path="/api/{serviceId}/vci/jwtissuer" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -236,8 +236,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciJwtissuerApi } from "authlete-2/funcs/verifiableCredentialIssuerVciJwtissuerApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciJwtissuerApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciJwtissuerApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -296,7 +296,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_jwtissuer_api_form" method="post" path="/api/{serviceId}/vci/jwtissuer" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -323,8 +323,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciJwtissuerApiForm } from "authlete-2/funcs/verifiableCredentialIssuerVciJwtissuerApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciJwtissuerApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciJwtissuerApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -383,7 +383,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_jwks_api" method="post" path="/api/{serviceId}/vci/jwks" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -410,8 +410,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciJwksApi } from "authlete-2/funcs/verifiableCredentialIssuerVciJwksApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciJwksApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciJwksApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -470,7 +470,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_jwks_api_form" method="post" path="/api/{serviceId}/vci/jwks" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -497,8 +497,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciJwksApiForm } from "authlete-2/funcs/verifiableCredentialIssuerVciJwksApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciJwksApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciJwksApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -557,7 +557,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_offer_create_api" method="post" path="/api/{serviceId}/vci/offer/create" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -582,8 +582,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciOfferCreateApi } from "authlete-2/funcs/verifiableCredentialIssuerVciOfferCreateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciOfferCreateApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciOfferCreateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -640,7 +640,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_offer_create_api_form" method="post" path="/api/{serviceId}/vci/offer/create" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -665,8 +665,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciOfferCreateApiForm } from "authlete-2/funcs/verifiableCredentialIssuerVciOfferCreateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciOfferCreateApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciOfferCreateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -723,7 +723,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_offer_info_api" method="post" path="/api/{serviceId}/vci/offer/info" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -748,8 +748,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciOfferInfoApi } from "authlete-2/funcs/verifiableCredentialIssuerVciOfferInfoApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciOfferInfoApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciOfferInfoApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -806,7 +806,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_offer_info_api_form" method="post" path="/api/{serviceId}/vci/offer/info" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -831,8 +831,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciOfferInfoApiForm } from "authlete-2/funcs/verifiableCredentialIssuerVciOfferInfoApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciOfferInfoApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciOfferInfoApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -889,7 +889,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_single_parse_api" method="post" path="/api/{serviceId}/vci/single/parse" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -914,8 +914,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciSingleParseApi } from "authlete-2/funcs/verifiableCredentialIssuerVciSingleParseApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciSingleParseApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciSingleParseApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -972,7 +972,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_single_parse_api_form" method="post" path="/api/{serviceId}/vci/single/parse" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -997,8 +997,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciSingleParseApiForm } from "authlete-2/funcs/verifiableCredentialIssuerVciSingleParseApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciSingleParseApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciSingleParseApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1055,7 +1055,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_single_issue_api" method="post" path="/api/{serviceId}/vci/single/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1080,8 +1080,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciSingleIssueApi } from "authlete-2/funcs/verifiableCredentialIssuerVciSingleIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciSingleIssueApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciSingleIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1138,7 +1138,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_batch_parse_api" method="post" path="/api/{serviceId}/vci/batch/parse" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1163,8 +1163,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciBatchParseApi } from "authlete-2/funcs/verifiableCredentialIssuerVciBatchParseApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciBatchParseApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciBatchParseApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1221,7 +1221,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_batch_parse_api_form" method="post" path="/api/{serviceId}/vci/batch/parse" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1246,8 +1246,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciBatchParseApiForm } from "authlete-2/funcs/verifiableCredentialIssuerVciBatchParseApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciBatchParseApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciBatchParseApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1304,7 +1304,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_batch_issue_api" method="post" path="/api/{serviceId}/vci/batch/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1329,8 +1329,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciBatchIssueApi } from "authlete-2/funcs/verifiableCredentialIssuerVciBatchIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciBatchIssueApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciBatchIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1387,7 +1387,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_deferred_parse_api" method="post" path="/api/{serviceId}/vci/deferred/parse" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1412,8 +1412,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciDeferredParseApi } from "authlete-2/funcs/verifiableCredentialIssuerVciDeferredParseApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciDeferredParseApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciDeferredParseApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1470,7 +1470,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_deferred_parse_api_form" method="post" path="/api/{serviceId}/vci/deferred/parse" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1495,8 +1495,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciDeferredParseApiForm } from "authlete-2/funcs/verifiableCredentialIssuerVciDeferredParseApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciDeferredParseApiForm } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciDeferredParseApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1553,7 +1553,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="vci_deferred_issue_api" method="post" path="/api/{serviceId}/vci/deferred/issue" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -1578,8 +1578,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { verifiableCredentialIssuerVciDeferredIssueApi } from "authlete-2/funcs/verifiableCredentialIssuerVciDeferredIssueApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { verifiableCredentialIssuerVciDeferredIssueApi } from "authlete-typescript-sdk/funcs/verifiableCredentialIssuerVciDeferredIssueApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

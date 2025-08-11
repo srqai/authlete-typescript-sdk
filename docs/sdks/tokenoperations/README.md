@@ -25,7 +25,7 @@ Get the list of access tokens that are associated with the service.
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_get_list_api" method="get" path="/api/{serviceId}/auth/token/get/list" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -49,8 +49,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenOperationsAuthTokenGetListApi } from "authlete-2/funcs/tokenOperationsAuthTokenGetListApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenOperationsAuthTokenGetListApi } from "authlete-typescript-sdk/funcs/tokenOperationsAuthTokenGetListApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -107,7 +107,7 @@ Create an access token.
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_create_api" method="post" path="/api/{serviceId}/auth/token/create" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -140,8 +140,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenOperationsAuthTokenCreateApi } from "authlete-2/funcs/tokenOperationsAuthTokenCreateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenOperationsAuthTokenCreateApi } from "authlete-typescript-sdk/funcs/tokenOperationsAuthTokenCreateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -207,7 +207,7 @@ Create an access token.
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_create_api_form" method="post" path="/api/{serviceId}/auth/token/create" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -235,8 +235,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenOperationsAuthTokenCreateApiForm } from "authlete-2/funcs/tokenOperationsAuthTokenCreateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenOperationsAuthTokenCreateApiForm } from "authlete-typescript-sdk/funcs/tokenOperationsAuthTokenCreateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -297,7 +297,7 @@ Update an access token.
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_update_api" method="post" path="/api/{serviceId}/auth/token/update" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -327,8 +327,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenOperationsAuthTokenUpdateApi } from "authlete-2/funcs/tokenOperationsAuthTokenUpdateApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenOperationsAuthTokenUpdateApi } from "authlete-typescript-sdk/funcs/tokenOperationsAuthTokenUpdateApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -391,7 +391,7 @@ Update an access token.
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_update_api_form" method="post" path="/api/{serviceId}/auth/token/update" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -418,8 +418,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenOperationsAuthTokenUpdateApiForm } from "authlete-2/funcs/tokenOperationsAuthTokenUpdateApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenOperationsAuthTokenUpdateApiForm } from "authlete-typescript-sdk/funcs/tokenOperationsAuthTokenUpdateApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -479,7 +479,7 @@ Delete an access token.
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_delete_api" method="delete" path="/api/{serviceId}/auth/token/delete/{accessTokenIdentifier}" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -504,8 +504,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenOperationsAuthTokenDeleteApi } from "authlete-2/funcs/tokenOperationsAuthTokenDeleteApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenOperationsAuthTokenDeleteApi } from "authlete-typescript-sdk/funcs/tokenOperationsAuthTokenDeleteApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -563,7 +563,7 @@ Revoke an access token.
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_revoke_api" method="post" path="/api/{serviceId}/auth/token/revoke" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -590,8 +590,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenOperationsAuthTokenRevokeApi } from "authlete-2/funcs/tokenOperationsAuthTokenRevokeApi.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenOperationsAuthTokenRevokeApi } from "authlete-typescript-sdk/funcs/tokenOperationsAuthTokenRevokeApi.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -651,7 +651,7 @@ Revoke an access token.
 
 <!-- UsageSnippet language="typescript" operationID="auth_token_revoke_api_form" method="post" path="/api/{serviceId}/auth/token/revoke" -->
 ```typescript
-import { Authlete } from "authlete-2";
+import { Authlete } from "authlete-typescript-sdk";
 
 const authlete = new Authlete({
   security: {
@@ -676,8 +676,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { AuthleteCore } from "authlete-2/core.js";
-import { tokenOperationsAuthTokenRevokeApiForm } from "authlete-2/funcs/tokenOperationsAuthTokenRevokeApiForm.js";
+import { AuthleteCore } from "authlete-typescript-sdk/core.js";
+import { tokenOperationsAuthTokenRevokeApiForm } from "authlete-typescript-sdk/funcs/tokenOperationsAuthTokenRevokeApiForm.js";
 
 // Use `AuthleteCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -5,7 +5,7 @@ A string value
 ## Example Usage
 
 ```typescript
-import { ResponseType } from "authlete-2/models";
+import { ResponseType } from "authlete-typescript-sdk/models";
 
 let value: ResponseType = "CODE_ID_TOKEN_TOKEN";
 ```

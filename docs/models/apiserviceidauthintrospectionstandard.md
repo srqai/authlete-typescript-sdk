@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_introspection_standard data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthIntrospectionStandard } from "authlete-2/models";
+import { ApiServiceIdAuthIntrospectionStandard } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthIntrospectionStandard = {
   parameters: "<value>",

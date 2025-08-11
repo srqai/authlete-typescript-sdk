@@ -8,7 +8,7 @@ Client Registration 1.0, 2. Client Metadata](https://openid.net/specs/openid-con
 ## Example Usage
 
 ```typescript
-import { PushedAuthReqApiClientAuthMethod } from "authlete-2/models/operations";
+import { PushedAuthReqApiClientAuthMethod } from "authlete-typescript-sdk/models/operations";
 
 let value: PushedAuthReqApiClientAuthMethod = "NONE";
 ```

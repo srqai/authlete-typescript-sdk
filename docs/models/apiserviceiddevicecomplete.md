@@ -5,7 +5,7 @@ An object containing api_serviceid_device_complete data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdDeviceComplete } from "authlete-2/models";
+import { ApiServiceIdDeviceComplete } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdDeviceComplete = {
   userCode: "<value>",

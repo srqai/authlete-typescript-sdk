@@ -7,7 +7,7 @@ described in the description.
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdBackchannelAuthenticationCompleteResult } from "authlete-2/models";
+import { ApiServiceIdBackchannelAuthenticationCompleteResult } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdBackchannelAuthenticationCompleteResult =
   "ACCESS_DENIED";

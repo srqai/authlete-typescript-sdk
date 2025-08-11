@@ -5,7 +5,7 @@ The next action that the authorization server implementation should take. Any ot
 ## Example Usage
 
 ```typescript
-import { PushedAuthReqApiFormAction } from "authlete-2/models/operations";
+import { PushedAuthReqApiFormAction } from "authlete-typescript-sdk/models/operations";
 
 let value: PushedAuthReqApiFormAction = "UNAUTHORIZED";
 ```

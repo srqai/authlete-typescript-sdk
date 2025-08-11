@@ -9,7 +9,7 @@ The `grant_management_action` request parameter is defined in
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdGmpropertiesgmAction1 } from "authlete-2/models";
+import { ApiServiceIdGmpropertiesgmAction1 } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdGmpropertiesgmAction1 = "CREATE";
 ```

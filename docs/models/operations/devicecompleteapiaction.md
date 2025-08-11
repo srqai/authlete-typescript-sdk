@@ -6,7 +6,7 @@ The next action that the authorization server implementation should take.
 ## Example Usage
 
 ```typescript
-import { DeviceCompleteApiAction } from "authlete-2/models/operations";
+import { DeviceCompleteApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: DeviceCompleteApiAction = "CREATED";
 ```

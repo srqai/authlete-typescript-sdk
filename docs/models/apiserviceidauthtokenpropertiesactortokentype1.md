@@ -6,7 +6,7 @@ The grant type of the access token when the access token was created.
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthTokenpropertiesactorTokenType1 } from "authlete-2/models";
+import { ApiServiceIdAuthTokenpropertiesactorTokenType1 } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthTokenpropertiesactorTokenType1 = "TOKEN_EXCHANGE";
 ```

@@ -5,7 +5,7 @@ An object containing dynamicscope data
 ## Example Usage
 
 ```typescript
-import { DynamicScope } from "authlete-2/models";
+import { DynamicScope } from "authlete-typescript-sdk/models";
 
 let value: DynamicScope = {};
 ```

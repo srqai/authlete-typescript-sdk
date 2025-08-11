@@ -5,7 +5,7 @@ An object containing scope data
 ## Example Usage
 
 ```typescript
-import { Scope } from "authlete-2/models";
+import { Scope } from "authlete-typescript-sdk/models";
 
 let value: Scope = {};
 ```

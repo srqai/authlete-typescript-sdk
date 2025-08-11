@@ -5,7 +5,7 @@ An object containing schema data
 ## Example Usage
 
 ```typescript
-import { AuthUserinfoIssueApiRequestBody } from "authlete-2/models/operations";
+import { AuthUserinfoIssueApiRequestBody } from "authlete-typescript-sdk/models/operations";
 
 let value: AuthUserinfoIssueApiRequestBody = {
   token: "<value>",

@@ -5,7 +5,7 @@ An object containing api_serviceid_client_registration_update data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdClientRegistrationUpdate } from "authlete-2/models";
+import { ApiServiceIdClientRegistrationUpdate } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdClientRegistrationUpdate = {
   clientId: 904520,

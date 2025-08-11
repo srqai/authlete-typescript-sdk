@@ -5,7 +5,7 @@ An object containing api_serviceid_pushed_auth_req data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdPushedAuthReq } from "authlete-2/models";
+import { ApiServiceIdPushedAuthReq } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdPushedAuthReq = {
   parameters: "<value>",

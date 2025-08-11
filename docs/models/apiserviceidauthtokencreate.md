@@ -5,7 +5,7 @@ An object containing api_serviceid_auth_token_create data
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthTokenCreate } from "authlete-2/models";
+import { ApiServiceIdAuthTokenCreate } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthTokenCreate = {
   grantType: "TOKEN_EXCHANGE",

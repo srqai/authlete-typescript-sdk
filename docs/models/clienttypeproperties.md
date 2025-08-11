@@ -7,7 +7,7 @@ for details.
 ## Example Usage
 
 ```typescript
-import { ClientTypeProperties } from "authlete-2/models";
+import { ClientTypeProperties } from "authlete-typescript-sdk/models";
 
 let value: ClientTypeProperties = "PUBLIC";
 ```

@@ -7,7 +7,7 @@ For more details, see [NO_INTERACTION] in the description of `/auth/authorizatio
 ## Example Usage
 
 ```typescript
-import { ApiServiceIdAuthAuthorizationFailReason } from "authlete-2/models";
+import { ApiServiceIdAuthAuthorizationFailReason } from "authlete-typescript-sdk/models";
 
 let value: ApiServiceIdAuthAuthorizationFailReason = "UNKNOWN";
 ```

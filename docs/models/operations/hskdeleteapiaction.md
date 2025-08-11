@@ -5,7 +5,7 @@ Result of the API call
 ## Example Usage
 
 ```typescript
-import { HskDeleteApiAction } from "authlete-2/models/operations";
+import { HskDeleteApiAction } from "authlete-typescript-sdk/models/operations";
 
 let value: HskDeleteApiAction = "INTERNAL_SERVER_ERROR";
 ```
