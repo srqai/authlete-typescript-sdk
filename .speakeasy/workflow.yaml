@@ -11,6 +11,9 @@ targets:
     authlete:
         target: typescript
         source: authlete-OAS
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/v0/1/authlete-oas-typescript-code-samples
