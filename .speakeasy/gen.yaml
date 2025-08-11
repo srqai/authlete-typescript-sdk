@@ -58,7 +58,7 @@ typescript:
   methodArguments: infer-optional-args
   moduleFormat: dual
   outputModelSuffix: output
-  packageName: authlete-2
+  packageName: authlete-typescript-sdk
   responseFormat: flat
   templateVersion: v2
   useIndexModules: true
