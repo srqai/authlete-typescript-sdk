@@ -1,7 +1,5 @@
 # CredentialOfferInfo
 
-An object containing credentialofferinfo data
-
 ## Example Usage
 
 ```typescript

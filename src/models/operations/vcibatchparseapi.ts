@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type VciBatchParseApiRequestBody = {
   /**
    * The access token that came along with the credential request.
@@ -36,14 +33,11 @@ export type VciBatchParseApiRequest = {
  * The next action that the batch credential endpoint should take.
  */
 export const VciBatchParseApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
+  Ok: "OK",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the batch credential endpoint should take.
@@ -51,7 +45,7 @@ export const VciBatchParseApiAction = {
 export type VciBatchParseApiAction = ClosedEnum<typeof VciBatchParseApiAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciBatchParseApiResponse = {
   /**

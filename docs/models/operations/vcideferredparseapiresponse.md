@@ -1,6 +1,6 @@
 # VciDeferredParseApiResponse
 
-An object containing schema data
+Successful operation
 
 ## Example Usage
 
@@ -18,4 +18,4 @@ let value: VciDeferredParseApiResponse = {};
 | `resultMessage`                                                                              | *string*                                                                                     | :heavy_minus_sign:                                                                           | A short message which explains the result of the API call.                                   |
 | `action`                                                                                     | [operations.VciDeferredParseApiAction](../../models/operations/vcideferredparseapiaction.md) | :heavy_minus_sign:                                                                           | The next action that the deferred credential endpoint should take.                           |
 | `responseContent`                                                                            | *string*                                                                                     | :heavy_minus_sign:                                                                           | The content of the response to the request sender.                                           |
-| `info`                                                                                       | [models.CredentialRequestInfo](../../models/credentialrequestinfo.md)                        | :heavy_minus_sign:                                                                           | An object containing credentialrequestinfo data                                              |
+| `info`                                                                                       | [models.CredentialRequestInfo](../../models/credentialrequestinfo.md)                        | :heavy_minus_sign:                                                                           | N/A                                                                                          |

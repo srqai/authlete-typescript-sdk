@@ -15,21 +15,17 @@ export type HskCreateApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdHskCreate: models.ApiServiceIdHskCreate;
+  hskCreateRequest: models.HskCreateRequest;
 };
 
 /**
  * Result of the API call
  */
 export const HskCreateApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Success: "SUCCESS",
+  InvalidRequest: "INVALID_REQUEST",
+  NotFound: "NOT_FOUND",
+  ServerError: "SERVER_ERROR",
 } as const;
 /**
  * Result of the API call
@@ -37,7 +33,7 @@ export const HskCreateApiFormAction = {
 export type HskCreateApiFormAction = ClosedEnum<typeof HskCreateApiFormAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type HskCreateApiFormResponse = {
   /**
@@ -67,17 +63,17 @@ export const HskCreateApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_hsk_create: models.ApiServiceIdHskCreate$inboundSchema,
+  HskCreateRequest: models.HskCreateRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_hsk_create": "apiServiceIdHskCreate",
+    "HskCreateRequest": "hskCreateRequest",
   });
 });
 
 /** @internal */
 export type HskCreateApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_hsk_create: models.ApiServiceIdHskCreate$Outbound;
+  HskCreateRequest: models.HskCreateRequest$Outbound;
 };
 
 /** @internal */
@@ -87,10 +83,10 @@ export const HskCreateApiFormRequest$outboundSchema: z.ZodType<
   HskCreateApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdHskCreate: models.ApiServiceIdHskCreate$outboundSchema,
+  hskCreateRequest: models.HskCreateRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdHskCreate: "api_serviceId_hsk_create",
+    hskCreateRequest: "HskCreateRequest",
   });
 });
 

@@ -8,9 +8,9 @@ import { ClientRegistrationUpdateApiRequest } from "authlete-typescript-sdk/mode
 let value: ClientRegistrationUpdateApiRequest = {
   serviceId: "<id>",
   requestBody: {
-    clientId: 189615,
+    clientId: "<id>",
     token: "<value>",
-    json: "{key: 4665757877634301, key1: null, key2: \"<value>\"}",
+    json: "{key: 1707899379638283, key1: null, key2: \"<value>\"}",
   },
 };
 ```

@@ -92,10 +92,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenCreateApi
@@ -192,10 +188,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenCreateApiForm
@@ -218,10 +210,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.tokenOperations.authTokenCreateApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthTokenCreate: {
-      grantType: "REFRESH_TOKEN",
-      clientId: 987169,
-    },
+    tokenCreateRequest: {},
   });
 
   console.log(result);
@@ -249,10 +238,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await tokenOperationsAuthTokenCreateApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthTokenCreate: {
-      grantType: "REFRESH_TOKEN",
-      clientId: 987169,
-    },
+    tokenCreateRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -282,10 +268,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenUpdateApi
@@ -376,10 +358,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenUpdateApiForm
@@ -402,9 +380,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.tokenOperations.authTokenUpdateApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthTokenUpdate: {
-      accessToken: "<value>",
-    },
+    tokenUpdateRequest: {},
   });
 
   console.log(result);
@@ -432,9 +408,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await tokenOperationsAuthTokenUpdateApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthTokenUpdate: {
-      accessToken: "<value>",
-    },
+    tokenUpdateRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -464,10 +438,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenDeleteApi
@@ -488,12 +458,12 @@ const authlete = new Authlete({
 });
 
 async function run() {
-  const result = await authlete.tokenOperations.authTokenDeleteApi({
+  await authlete.tokenOperations.authTokenDeleteApi({
     serviceId: "<id>",
     accessTokenIdentifier: "<value>",
   });
 
-  console.log(result);
+
 }
 
 run();
@@ -522,7 +492,7 @@ async function run() {
   });
   if (res.ok) {
     const { value: result } = res;
-    console.log(result);
+    
   } else {
     console.log("tokenOperationsAuthTokenDeleteApi failed:", res.error);
   }
@@ -542,16 +512,12 @@ run();
 
 ### Response
 
-**Promise\<[operations.AuthTokenDeleteApiResponse](../../models/operations/authtokendeleteapiresponse.md)\>**
+**Promise\<void\>**
 
 ### Errors
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenRevokeApi
@@ -636,10 +602,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenRevokeApiForm
@@ -662,7 +624,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.tokenOperations.authTokenRevokeApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthTokenRevoke: {},
+    tokenRevokeRequest: {},
   });
 
   console.log(result);
@@ -690,7 +652,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await tokenOperationsAuthTokenRevokeApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthTokenRevoke: {},
+    tokenRevokeRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -720,8 +682,4 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

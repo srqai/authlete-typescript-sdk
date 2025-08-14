@@ -14,9 +14,6 @@ export type HskGetApiRequest = {
    * A service ID.
    */
   serviceId: string;
-  /**
-   * The handle path parameter
-   */
   handle: string;
 };
 
@@ -24,14 +21,10 @@ export type HskGetApiRequest = {
  * Result of the API call
  */
 export const HskGetApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Success: "SUCCESS",
+  InvalidRequest: "INVALID_REQUEST",
+  NotFound: "NOT_FOUND",
+  ServerError: "SERVER_ERROR",
 } as const;
 /**
  * Result of the API call
@@ -39,7 +32,7 @@ export const HskGetApiAction = {
 export type HskGetApiAction = ClosedEnum<typeof HskGetApiAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type HskGetApiResponse = {
   /**

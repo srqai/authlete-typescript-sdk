@@ -179,10 +179,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## clientRegistrationApiForm
@@ -287,9 +283,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationApiForm({
     serviceId: "<id>",
-    apiServiceIdClientRegistration: {
-      json: "{key: 6995014930124193, key1: null, key2: \"<value>\"}",
-    },
+    clientRegistrationRequest: {},
   });
 
   console.log(result);
@@ -317,9 +311,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await dynamicClientRegistrationClientRegistrationApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdClientRegistration: {
-      json: "{key: 6995014930124193, key1: null, key2: \"<value>\"}",
-    },
+    clientRegistrationRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -349,10 +341,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## clientRegistrationGetApi
@@ -484,11 +472,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationGetApi({
     serviceId: "<id>",
-    apiServiceIdClientRegistration1: {
-      json: "{key: 8153909118751747, key1: null, key2: \"<value>\"}",
-      token: "qs4Tu5TV7qqDYT93bFs6ISyhTByMF9o-54GY4JU5vTA",
-      clientId: 26837717140341,
-    },
+    clientRegistrationRequest: {},
   });
 
   console.log(result);
@@ -516,11 +500,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await dynamicClientRegistrationClientRegistrationGetApi(authlete, {
     serviceId: "<id>",
-    apiServiceIdClientRegistration1: {
-      json: "{key: 7540933955061001, key1: null, key2: \"<value>\"}",
-      token: "qs4Tu5TV7qqDYT93bFs6ISyhTByMF9o-54GY4JU5vTA",
-      clientId: 26837717140341,
-    },
+    clientRegistrationRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -544,16 +524,12 @@ run();
 
 ### Response
 
-**Promise\<[models.ApiServiceIdClientRegistration3](../../models/apiserviceidclientregistration3.md)\>**
+**Promise\<[models.ClientRegistrationResponse](../../models/clientregistrationresponse.md)\>**
 
 ### Errors
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## clientRegistrationUpdateApi
@@ -686,7 +662,7 @@ async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationUpdateApi({
     serviceId: "<id>",
     requestBody: {
-      clientId: 26837717140341,
+      clientId: "26837717140341",
       token: "qs4Tu5TV7qqDYT93bFs6ISyhTByMF9o-54GY4JU5vTA",
       json: "{\"client_name\":\"My Updated Dynamic Client\",\"default_max_age\":0,\"registration_client_uri\":\"https://my-service.example.com/dcr/register/26837717140341\",\"client_id\":\"26837717140341\",\"token_endpoint_auth_method\":\"client_secret_basic\",\"require_pushed_authorization_requests\":false,\"backchannel_user_code_parameter\":false,\"client_secret\":\"bMsjvZm2FE1_mqJgxhmYj_Wr8rA0Pia_A_j-V076qQm6-P1edKB055W579GBe7MSbOdxZ3dJKsKinCtdIFwxpw\",\"tls_client_certificate_bound_access_tokens\":false,\"id_token_signed_response_alg\":\"RS256\",\"subject_type\":\"public\",\"require_signed_request_object\":false}",
     },
@@ -718,7 +694,7 @@ async function run() {
   const res = await dynamicClientRegistrationClientRegistrationUpdateApi(authlete, {
     serviceId: "<id>",
     requestBody: {
-      clientId: 26837717140341,
+      clientId: "26837717140341",
       token: "qs4Tu5TV7qqDYT93bFs6ISyhTByMF9o-54GY4JU5vTA",
       json: "{\"client_name\":\"My Updated Dynamic Client\",\"default_max_age\":0,\"registration_client_uri\":\"https://my-service.example.com/dcr/register/26837717140341\",\"client_id\":\"26837717140341\",\"token_endpoint_auth_method\":\"client_secret_basic\",\"require_pushed_authorization_requests\":false,\"backchannel_user_code_parameter\":false,\"client_secret\":\"bMsjvZm2FE1_mqJgxhmYj_Wr8rA0Pia_A_j-V076qQm6-P1edKB055W579GBe7MSbOdxZ3dJKsKinCtdIFwxpw\",\"tls_client_certificate_bound_access_tokens\":false,\"id_token_signed_response_alg\":\"RS256\",\"subject_type\":\"public\",\"require_signed_request_object\":false}",
     },
@@ -751,10 +727,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## clientRegistrationUpdateApiForm
@@ -886,11 +858,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationUpdateApiForm({
     serviceId: "<id>",
-    apiServiceIdClientRegistrationUpdate: {
-      clientId: 808098,
-      token: "<value>",
-      json: "{key: 7278695057340839, key1: null, key2: \"<value>\"}",
-    },
+    clientRegistrationUpdateRequest: {},
   });
 
   console.log(result);
@@ -918,11 +886,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await dynamicClientRegistrationClientRegistrationUpdateApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdClientRegistrationUpdate: {
-      clientId: 808098,
-      token: "<value>",
-      json: "{key: 7278695057340839, key1: null, key2: \"<value>\"}",
-    },
+    clientRegistrationUpdateRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -952,10 +916,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## clientRegistrationDeleteApi
@@ -1083,7 +1043,7 @@ async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationDeleteApi({
     serviceId: "<id>",
     requestBody: {
-      clientId: 26837717140341,
+      clientId: "26837717140341",
       token: "qs4Tu5TV7qqDYT93bFs6ISyhTByMF9o-54GY4JU5vTA",
     },
   });
@@ -1114,7 +1074,7 @@ async function run() {
   const res = await dynamicClientRegistrationClientRegistrationDeleteApi(authlete, {
     serviceId: "<id>",
     requestBody: {
-      clientId: 26837717140341,
+      clientId: "26837717140341",
       token: "qs4Tu5TV7qqDYT93bFs6ISyhTByMF9o-54GY4JU5vTA",
     },
   });
@@ -1146,10 +1106,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## clientRegistrationDeleteApiForm
@@ -1276,10 +1232,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.dynamicClientRegistration.clientRegistrationDeleteApiForm({
     serviceId: "<id>",
-    apiServiceIdClientRegistrationDelete: {
-      clientId: 93091,
-      token: "<value>",
-    },
+    clientRegistration2Request: {},
   });
 
   console.log(result);
@@ -1307,10 +1260,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await dynamicClientRegistrationClientRegistrationDeleteApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdClientRegistrationDelete: {
-      clientId: 93091,
-      token: "<value>",
-    },
+    clientRegistration2Request: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1340,8 +1290,4 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

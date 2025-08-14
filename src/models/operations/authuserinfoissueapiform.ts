@@ -15,7 +15,7 @@ export type AuthUserinfoIssueApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthUserinfoIssue: models.ApiServiceIdAuthUserinfoIssue;
+  userinfoIssueRequest: models.UserinfoIssueRequest;
 };
 
 /**
@@ -24,11 +24,9 @@ export type AuthUserinfoIssueApiFormRequest = {
 export const AuthUserinfoIssueApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
   Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -39,7 +37,7 @@ export type AuthUserinfoIssueApiFormAction = ClosedEnum<
 >;
 
 /**
- * HTTP 200 response
+ * Successful operation
  */
 export type AuthUserinfoIssueApiFormResponse = {
   /**
@@ -88,19 +86,17 @@ export const AuthUserinfoIssueApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_userinfo_issue:
-    models.ApiServiceIdAuthUserinfoIssue$inboundSchema,
+  UserinfoIssueRequest: models.UserinfoIssueRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_userinfo_issue": "apiServiceIdAuthUserinfoIssue",
+    "UserinfoIssueRequest": "userinfoIssueRequest",
   });
 });
 
 /** @internal */
 export type AuthUserinfoIssueApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_userinfo_issue:
-    models.ApiServiceIdAuthUserinfoIssue$Outbound;
+  UserinfoIssueRequest: models.UserinfoIssueRequest$Outbound;
 };
 
 /** @internal */
@@ -110,11 +106,10 @@ export const AuthUserinfoIssueApiFormRequest$outboundSchema: z.ZodType<
   AuthUserinfoIssueApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthUserinfoIssue:
-    models.ApiServiceIdAuthUserinfoIssue$outboundSchema,
+  userinfoIssueRequest: models.UserinfoIssueRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthUserinfoIssue: "api_serviceId_auth_userinfo_issue",
+    userinfoIssueRequest: "UserinfoIssueRequest",
   });
 });
 

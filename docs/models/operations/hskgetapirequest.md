@@ -13,7 +13,7 @@ let value: HskGetApiRequest = {
 
 ## Fields
 
-| Field                     | Type                      | Required                  | Description               |
-| ------------------------- | ------------------------- | ------------------------- | ------------------------- |
-| `serviceId`               | *string*                  | :heavy_check_mark:        | A service ID.             |
-| `handle`                  | *string*                  | :heavy_check_mark:        | The handle path parameter |
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `serviceId`        | *string*           | :heavy_check_mark: | A service ID.      |
+| `handle`           | *string*           | :heavy_check_mark: | N/A                |

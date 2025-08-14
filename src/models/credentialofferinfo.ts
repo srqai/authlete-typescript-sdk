@@ -13,9 +13,6 @@ import {
   Property$outboundSchema,
 } from "./property.js";
 
-/**
- * An object containing credentialofferinfo data
- */
 export type CredentialOfferInfo = {
   /**
    * The identifier of the credential offer.

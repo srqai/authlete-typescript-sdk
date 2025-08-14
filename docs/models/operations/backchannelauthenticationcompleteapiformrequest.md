@@ -7,17 +7,13 @@ import { BackchannelAuthenticationCompleteApiFormRequest } from "authlete-typesc
 
 let value: BackchannelAuthenticationCompleteApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdBackchannelAuthenticationComplete: {
-    ticket: "<value>",
-    result: "TRANSACTION_FAILED",
-    subject: "<value>",
-  },
+  backchannelAuthenticationCompleteRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                                                 | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                                           | *string*                                                                                                              | :heavy_check_mark:                                                                                                    | A service ID.                                                                                                         |
-| `apiServiceIdBackchannelAuthenticationComplete`                                                                       | [models.ApiServiceIdBackchannelAuthenticationComplete](../../models/apiserviceidbackchannelauthenticationcomplete.md) | :heavy_check_mark:                                                                                                    | N/A                                                                                                                   |
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `serviceId`                                                                                                 | *string*                                                                                                    | :heavy_check_mark:                                                                                          | A service ID.                                                                                               |
+| `backchannelAuthenticationCompleteRequest`                                                                  | [models.BackchannelAuthenticationCompleteRequest](../../models/backchannelauthenticationcompleterequest.md) | :heavy_check_mark:                                                                                          | N/A                                                                                                         |

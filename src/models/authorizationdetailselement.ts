@@ -7,9 +7,6 @@ import { safeParse } from "../lib/schemas.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import { SDKValidationError } from "./errors/sdkvalidationerror.js";
 
-/**
- * An object containing authorizationdetailselement data
- */
 export type AuthorizationDetailsElement = {
   /**
    * The type of this element.

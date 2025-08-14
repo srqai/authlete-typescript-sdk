@@ -8,11 +8,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { BackchannelAuthenticationCompleteApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: BackchannelAuthenticationCompleteApiAction = "INTERNAL_SERVER_ERROR";
+let value: BackchannelAuthenticationCompleteApiAction = "SERVER_ERROR";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"SERVER_ERROR" | "NO_ACTION" | "NOTIFICATION"
 ```

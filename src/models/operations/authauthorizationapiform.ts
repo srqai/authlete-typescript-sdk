@@ -15,7 +15,7 @@ export type AuthAuthorizationApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthAuthorization: models.ApiServiceIdAuthAuthorization;
+  authorizationRequestForm: models.AuthorizationRequestForm;
 };
 
 /**
@@ -24,12 +24,10 @@ export type AuthAuthorizationApiFormRequest = {
 export const AuthAuthorizationApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Location: "LOCATION",
+  Form: "FORM",
+  NoInteraction: "NO_INTERACTION",
+  Interaction: "INTERACTION",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -38,9 +36,6 @@ export type AuthAuthorizationApiFormAction = ClosedEnum<
   typeof AuthAuthorizationApiFormAction
 >;
 
-/**
- * An object containing client data
- */
 export type AuthAuthorizationApiFormClient = {
   /**
    * The sequential number of the client. The value of this property is assigned by Authlete.
@@ -147,9 +142,6 @@ export type AuthAuthorizationApiFormClient = {
   policyUris?: Array<models.TaggedValue> | undefined;
 };
 
-/**
- * An object containing items data
- */
 export type AuthAuthorizationApiFormScope = {
   /**
    * Space-delimited scopes.
@@ -165,13 +157,7 @@ export type AuthAuthorizationApiFormScope = {
   resource?: Array<string> | undefined;
 };
 
-/**
- * An object containing grant data
- */
 export type AuthAuthorizationApiFormGrant = {
-  /**
-   * An array of scopes items
-   */
   scopes?: Array<AuthAuthorizationApiFormScope> | undefined;
   /**
    * The claims associated with the Grant.
@@ -190,7 +176,7 @@ export type AuthAuthorizationApiFormGrant = {
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthAuthorizationApiFormResponse = {
   /**
@@ -205,9 +191,6 @@ export type AuthAuthorizationApiFormResponse = {
    * The next action that the authorization server implementation should take.
    */
   action?: AuthAuthorizationApiFormAction | undefined;
-  /**
-   * An object containing client data
-   */
   client?: AuthAuthorizationApiFormClient | undefined;
   /**
    * The display mode which the client application requests by `display` request parameter.
@@ -234,9 +217,6 @@ export type AuthAuthorizationApiFormResponse = {
    * for `defaultMaxAge` configuration parameter.
    */
   maxAge?: number | undefined;
-  /**
-   * An object containing service data
-   */
   service?: models.Service | undefined;
   /**
    * The scopes that the client application requests. This value comes from `scope` request parameter.
@@ -501,15 +481,7 @@ export type AuthAuthorizationApiFormResponse = {
    * @remarks
    */
   dynamicScopes?: Array<models.DynamicScope> | undefined;
-  /**
-   * The grant management action of the device authorization request.
-   *
-   * @remarks
-   *
-   * The `grant_management_action` request parameter is defined in
-   * [Grant Management for OAuth 2.0](https://openid.net/specs/fapi-grant-management.html).
-   */
-  gmAction?: models.ApiServiceIdGmpropertiesgmAction | undefined;
+  gmAction?: models.GmAction | undefined;
   /**
    * the value of the `grant_id` request parameter of the device authorization request.
    *
@@ -520,9 +492,6 @@ export type AuthAuthorizationApiFormResponse = {
    * , which is supported by Authlete 2.3 and newer versions.
    */
   grantId?: string | undefined;
-  /**
-   * An object containing grant data
-   */
   grant?: AuthAuthorizationApiFormGrant | undefined;
   /**
    * The subject identifying the user who has given the grant identified
@@ -652,9 +621,6 @@ export type AuthAuthorizationApiFormResponse = {
    * request.
    */
   claimsAtUserInfo?: Array<string> | undefined;
-  /**
-   * An object containing credentialofferinfo data
-   */
   credentialOfferInfo?: models.CredentialOfferInfo | undefined;
   /**
    * Get the information about the <b>issuable credentials</b> that can
@@ -673,19 +639,17 @@ export const AuthAuthorizationApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_authorization:
-    models.ApiServiceIdAuthAuthorization$inboundSchema,
+  AuthorizationRequestForm: models.AuthorizationRequestForm$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_authorization": "apiServiceIdAuthAuthorization",
+    "AuthorizationRequestForm": "authorizationRequestForm",
   });
 });
 
 /** @internal */
 export type AuthAuthorizationApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_authorization:
-    models.ApiServiceIdAuthAuthorization$Outbound;
+  AuthorizationRequestForm: models.AuthorizationRequestForm$Outbound;
 };
 
 /** @internal */
@@ -695,11 +659,10 @@ export const AuthAuthorizationApiFormRequest$outboundSchema: z.ZodType<
   AuthAuthorizationApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthAuthorization:
-    models.ApiServiceIdAuthAuthorization$outboundSchema,
+  authorizationRequestForm: models.AuthorizationRequestForm$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthAuthorization: "api_serviceId_auth_authorization",
+    authorizationRequestForm: "AuthorizationRequestForm",
   });
 });
 
@@ -1011,7 +974,7 @@ export const AuthAuthorizationApiFormResponse$inboundSchema: z.ZodType<
   responseContent: z.string().optional(),
   ticket: z.string().optional(),
   dynamicScopes: z.array(models.DynamicScope$inboundSchema).optional(),
-  gmAction: models.ApiServiceIdGmpropertiesgmAction$inboundSchema.optional(),
+  gmAction: models.GmAction$inboundSchema.optional(),
   grantId: z.string().optional(),
   grant: z.lazy(() => AuthAuthorizationApiFormGrant$inboundSchema).optional(),
   grantSubject: z.string().optional(),
@@ -1100,7 +1063,7 @@ export const AuthAuthorizationApiFormResponse$outboundSchema: z.ZodType<
   responseContent: z.string().optional(),
   ticket: z.string().optional(),
   dynamicScopes: z.array(models.DynamicScope$outboundSchema).optional(),
-  gmAction: models.ApiServiceIdGmpropertiesgmAction$outboundSchema.optional(),
+  gmAction: models.GmAction$outboundSchema.optional(),
   grantId: z.string().optional(),
   grant: z.lazy(() => AuthAuthorizationApiFormGrant$outboundSchema).optional(),
   grantSubject: z.string().optional(),

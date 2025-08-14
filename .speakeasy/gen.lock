@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: e17fc78f-822f-4688-9647-d39b4d15b69e
 management:
-  docChecksum: 4e2d68ef0df017a3300d14e3ec41f3c9
+  docChecksum: 64c12f7941e0700e32a593de37d51852
   docVersion: 3.0.0
-  speakeasyVersion: 1.601.0
-  generationVersion: 2.680.0
-  releaseVersion: 0.0.6
-  configChecksum: c8120a57a0b298a69653e756cc8ec749
+  speakeasyVersion: 1.603.2
+  generationVersion: 2.681.8
+  releaseVersion: 0.0.7
+  configChecksum: becd5f7b04ce79b16606728d0f1a078c
   repoURL: https://github.com/srqai/authlete-typescript-sdk.git
   installationURL: https://github.com/srqai/authlete-typescript-sdk
   published: true
@@ -37,101 +37,61 @@ generatedFiles:
   - USAGE.md
   - docs/lib/utils/retryconfig.md
   - docs/models/accesstoken.md
-  - docs/models/action.md
-  - docs/models/apiserviceidauthauthorization.md
-  - docs/models/apiserviceidauthauthorizationfail.md
-  - docs/models/apiserviceidauthauthorizationfailreason.md
-  - docs/models/apiserviceidauthauthorizationissue.md
-  - docs/models/apiserviceidauthauthorizationpropertiesgrant.md
-  - docs/models/apiserviceidauthauthorizationpropertiesgrant1.md
-  - docs/models/apiserviceidauthauthorizationpropertiesgrant1scope.md
-  - docs/models/apiserviceidauthauthorizationpropertiesgrant2.md
-  - docs/models/apiserviceidauthauthorizationpropertiesgrant2scope.md
-  - docs/models/apiserviceidauthauthorizationpropertiesgrant3.md
-  - docs/models/apiserviceidauthauthorizationpropertiesgrant3scope.md
-  - docs/models/apiserviceidauthauthorizationpropertiesgrantscope.md
-  - docs/models/apiserviceidauthauthorizationticketupdate.md
-  - docs/models/apiserviceidauthintrospection.md
-  - docs/models/apiserviceidauthintrospectionstandard.md
-  - docs/models/apiserviceidauthrevocation.md
-  - docs/models/apiserviceidauthtoken.md
-  - docs/models/apiserviceidauthtokencreate.md
-  - docs/models/apiserviceidauthtokenfail.md
-  - docs/models/apiserviceidauthtokenfailreason.md
-  - docs/models/apiserviceidauthtokengetlistpropertiesclient.md
-  - docs/models/apiserviceidauthtokenissue.md
-  - docs/models/apiserviceidauthtokenpropertiesactortokeninfo.md
-  - docs/models/apiserviceidauthtokenpropertiesactortokentype.md
-  - docs/models/apiserviceidauthtokenpropertiesactortokentype1.md
-  - docs/models/apiserviceidauthtokenrevoke.md
-  - docs/models/apiserviceidauthtokenupdate.md
-  - docs/models/apiserviceidauthuserinfo.md
-  - docs/models/apiserviceidauthuserinfoissue.md
-  - docs/models/apiserviceidbackchannelauthentication.md
-  - docs/models/apiserviceidbackchannelauthenticationcomplete.md
-  - docs/models/apiserviceidbackchannelauthenticationcompleteresult.md
-  - docs/models/apiserviceidbackchannelauthenticationfail.md
-  - docs/models/apiserviceidbackchannelauthenticationfailreason.md
-  - docs/models/apiserviceidbackchannelauthenticationissue.md
-  - docs/models/apiserviceidclientauthorizationupdateclientid.md
-  - docs/models/apiserviceidclientgrantedscopesgetclientid.md
-  - docs/models/apiserviceidclientlockflagupdateclientidenti.md
-  - docs/models/apiserviceidclientregistration.md
-  - docs/models/apiserviceidclientregistration1.md
-  - docs/models/apiserviceidclientregistration3.md
-  - docs/models/apiserviceidclientregistrationdelete.md
-  - docs/models/apiserviceidclientregistrationupdate.md
-  - docs/models/apiserviceidclientsecretupdateclientidentifie.md
-  - docs/models/apiserviceiddeviceauthorization.md
-  - docs/models/apiserviceiddevicecomplete.md
-  - docs/models/apiserviceiddevicecompleteresult.md
-  - docs/models/apiserviceiddeviceverification.md
-  - docs/models/apiserviceidfederationregistration.md
-  - docs/models/apiserviceidgmpropertiesgmaction.md
-  - docs/models/apiserviceidgmpropertiesgmaction1.md
-  - docs/models/apiserviceidgmpropertiesgmaction2.md
-  - docs/models/apiserviceidgmpropertiesgmaction3.md
-  - docs/models/apiserviceidhskcreate.md
-  - docs/models/apiserviceidjoseverify.md
-  - docs/models/apiserviceidpushedauthreq.md
-  - docs/models/apiserviceidvcibatchparse.md
-  - docs/models/apiserviceidvcideferredparse.md
-  - docs/models/apiserviceidvcijwks.md
-  - docs/models/apiserviceidvcijwtissuer.md
-  - docs/models/apiserviceidvcimetadata.md
-  - docs/models/apiserviceidvcioffercreate.md
-  - docs/models/apiserviceidvciofferinfo.md
-  - docs/models/apiserviceidvcisingleparse.md
   - docs/models/applicationtype.md
   - docs/models/authorizationdetails.md
   - docs/models/authorizationdetailselement.md
+  - docs/models/authorizationfailrequest.md
+  - docs/models/authorizationgrant.md
+  - docs/models/authorizationissuerequest.md
+  - docs/models/authorizationrequestform.md
+  - docs/models/authorizationticketupdate.md
+  - docs/models/backchannelauthenticationcompleterequest.md
+  - docs/models/backchannelauthenticationfailrequest.md
+  - docs/models/backchannelauthenticationissuerequest.md
+  - docs/models/backchannelauthenticationrequest.md
+  - docs/models/claimtype.md
   - docs/models/client.md
   - docs/models/clientauthenticationmethod.md
+  - docs/models/clientauthorizationupdaterequest.md
   - docs/models/clientclienttype.md
   - docs/models/clientextension.md
+  - docs/models/clientgrantedscopesresponse.md
   - docs/models/clientinput.md
+  - docs/models/clientlockflagupdaterequest.md
+  - docs/models/clientregistration2request.md
+  - docs/models/clientregistrationrequest.md
+  - docs/models/clientregistrationresponse.md
   - docs/models/clientregistrationtype.md
+  - docs/models/clientregistrationupdaterequest.md
+  - docs/models/clientsecretupdaterequest.md
   - docs/models/clienttypeproperties.md
   - docs/models/credentialissuanceorder.md
+  - docs/models/credentialissuermetadata.md
   - docs/models/credentialofferinfo.md
   - docs/models/credentialrequestinfo.md
   - docs/models/deliverymode.md
+  - docs/models/deviceauthorizationrequest.md
+  - docs/models/devicecompleterequest.md
+  - docs/models/deviceverification.md
   - docs/models/display.md
   - docs/models/dynamicscope.md
-  - docs/models/errors/apiinfo1error.md
-  - docs/models/errors/apiinfo2error.md
-  - docs/models/errors/apiinfoerror.md
+  - docs/models/errors/apiinfo4002error.md
   - docs/models/errors/badrequesterror.md
-  - docs/models/errors/error400.md
-  - docs/models/errors/error401.md
-  - docs/models/errors/error403.md
-  - docs/models/errors/error500.md
   - docs/models/fapimode.md
+  - docs/models/federationregistrationrequest.md
+  - docs/models/gmaction.md
   - docs/models/granttype.md
   - docs/models/hsk.md
+  - docs/models/hskcreaterequest.md
+  - docs/models/introspectionrequest.md
+  - docs/models/introspectionstandardrequest.md
+  - docs/models/itemsclientregistrationtypes.md
+  - docs/models/itemsfapimodes.md
+  - docs/models/joseverifyrequest.md
   - docs/models/jwealg.md
   - docs/models/jweenc.md
   - docs/models/jwsalg.md
+  - docs/models/nameduri.md
   - docs/models/operations/authauthorizationapiaction.md
   - docs/models/operations/authauthorizationapiclient.md
   - docs/models/operations/authauthorizationapiformaction.md
@@ -200,7 +160,6 @@ generatedFiles:
   - docs/models/operations/authtokencreateapirequestbody.md
   - docs/models/operations/authtokencreateapiresponse.md
   - docs/models/operations/authtokendeleteapirequest.md
-  - docs/models/operations/authtokendeleteapiresponse.md
   - docs/models/operations/authtokenfailapiaction.md
   - docs/models/operations/authtokenfailapiformaction.md
   - docs/models/operations/authtokenfailapiformrequest.md
@@ -285,9 +244,7 @@ generatedFiles:
   - docs/models/operations/clientauthorizationupdateapiresponse.md
   - docs/models/operations/clientcreateapirequest.md
   - docs/models/operations/clientdeleteapirequest.md
-  - docs/models/operations/clientdeleteapiresponse.md
   - docs/models/operations/clientextensionrequestablesscopesdeleteapirequest.md
-  - docs/models/operations/clientextensionrequestablesscopesdeleteapiresponse.md
   - docs/models/operations/clientextensionrequestablesscopesgetapirequest.md
   - docs/models/operations/clientextensionrequestablesscopesgetapiresponse.md
   - docs/models/operations/clientextensionrequestablesscopesupdateapirequest.md
@@ -368,6 +325,9 @@ generatedFiles:
   - docs/models/operations/federationregistrationapirequest.md
   - docs/models/operations/federationregistrationapirequestbody.md
   - docs/models/operations/federationregistrationapiresponse.md
+  - docs/models/operations/getapiserviceidauthauthorizationticketinfoaction.md
+  - docs/models/operations/getapiserviceidauthauthorizationticketinforequest.md
+  - docs/models/operations/getapiserviceidauthauthorizationticketinforesponse.md
   - docs/models/operations/gmaction.md
   - docs/models/operations/grantmapiaction.md
   - docs/models/operations/grantmapirequest.md
@@ -400,14 +360,13 @@ generatedFiles:
   - docs/models/operations/joseverifyapirequestbody.md
   - docs/models/operations/joseverifyapiresponse.md
   - docs/models/operations/key.md
-  - docs/models/operations/miscechoapiresponse.md
-  - docs/models/operations/postupdateticketinformationaction.md
-  - docs/models/operations/postupdateticketinformationformaction.md
-  - docs/models/operations/postupdateticketinformationformrequest.md
-  - docs/models/operations/postupdateticketinformationformresponse.md
-  - docs/models/operations/postupdateticketinformationrequest.md
-  - docs/models/operations/postupdateticketinformationrequestbody.md
-  - docs/models/operations/postupdateticketinformationresponse.md
+  - docs/models/operations/postapiserviceidauthauthorizationticketupdateaction.md
+  - docs/models/operations/postapiserviceidauthauthorizationticketupdateformaction.md
+  - docs/models/operations/postapiserviceidauthauthorizationticketupdateformrequest.md
+  - docs/models/operations/postapiserviceidauthauthorizationticketupdateformresponse.md
+  - docs/models/operations/postapiserviceidauthauthorizationticketupdaterequest.md
+  - docs/models/operations/postapiserviceidauthauthorizationticketupdaterequestbody.md
+  - docs/models/operations/postapiserviceidauthauthorizationticketupdateresponse.md
   - docs/models/operations/pushedauthreqapiaction.md
   - docs/models/operations/pushedauthreqapiclientauthmethod.md
   - docs/models/operations/pushedauthreqapiformaction.md
@@ -420,7 +379,6 @@ generatedFiles:
   - docs/models/operations/serviceconfigurationapirequest.md
   - docs/models/operations/serviceconfigurationapiresponse.md
   - docs/models/operations/servicedeleteapirequest.md
-  - docs/models/operations/servicedeleteapiresponse.md
   - docs/models/operations/servicegetapirequest.md
   - docs/models/operations/servicegetlistapirequest.md
   - docs/models/operations/servicegetlistapiresponse.md
@@ -498,13 +456,39 @@ generatedFiles:
   - docs/models/pair.md
   - docs/models/prompt.md
   - docs/models/property.md
+  - docs/models/pushedauthrequest.md
   - docs/models/responsemode.md
   - docs/models/responsetype.md
+  - docs/models/revocationrequest.md
   - docs/models/scope.md
   - docs/models/security.md
   - docs/models/service.md
+  - docs/models/serviceinput.md
+  - docs/models/serviceprofile.md
   - docs/models/subjecttype.md
+  - docs/models/supportedattachment.md
   - docs/models/taggedvalue.md
+  - docs/models/tokencreaterequest.md
+  - docs/models/tokenfailrequest.md
+  - docs/models/tokenissuerequest.md
+  - docs/models/tokenlistclient.md
+  - docs/models/tokenrequest.md
+  - docs/models/tokenresponse.md
+  - docs/models/tokenrevokerequest.md
+  - docs/models/tokenupdaterequest.md
+  - docs/models/trustanchor.md
+  - docs/models/usercodecharset.md
+  - docs/models/userinfoissuerequest.md
+  - docs/models/userinforequest.md
+  - docs/models/vcibatchparserequest.md
+  - docs/models/vcideferredparserequest.md
+  - docs/models/vcijwksrequest.md
+  - docs/models/vcijwtissuerrequest.md
+  - docs/models/vcimetadatarequest.md
+  - docs/models/vcioffercreaterequest.md
+  - docs/models/vciofferinforequest.md
+  - docs/models/vcisingleparserequest.md
+  - docs/models/verifiedclaimsvalidationschemaset.md
   - docs/sdks/authlete/README.md
   - docs/sdks/authorizationendpoint/README.md
   - docs/sdks/ciba/README.md
@@ -539,8 +523,9 @@ generatedFiles:
   - src/funcs/authorizationEndpointAuthAuthorizationFailApiForm.ts
   - src/funcs/authorizationEndpointAuthAuthorizationIssueApi.ts
   - src/funcs/authorizationEndpointAuthAuthorizationIssueApiForm.ts
-  - src/funcs/authorizationEndpointPostUpdateTicketInformation.ts
-  - src/funcs/authorizationEndpointPostUpdateTicketInformationForm.ts
+  - src/funcs/authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo.ts
+  - src/funcs/authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate.ts
+  - src/funcs/authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm.ts
   - src/funcs/cibaBackchannelAuthenticationApi.ts
   - src/funcs/cibaBackchannelAuthenticationApiForm.ts
   - src/funcs/cibaBackchannelAuthenticationCompleteApi.ts
@@ -668,94 +653,64 @@ generatedFiles:
   - src/lib/security.ts
   - src/lib/url.ts
   - src/models/accesstoken.ts
-  - src/models/apiserviceidauthauthorization.ts
-  - src/models/apiserviceidauthauthorizationfail.ts
-  - src/models/apiserviceidauthauthorizationissue.ts
-  - src/models/apiserviceidauthauthorizationpropertiesgrant.ts
-  - src/models/apiserviceidauthauthorizationpropertiesgrant1.ts
-  - src/models/apiserviceidauthauthorizationpropertiesgrant2.ts
-  - src/models/apiserviceidauthauthorizationpropertiesgrant3.ts
-  - src/models/apiserviceidauthauthorizationticketupdate.ts
-  - src/models/apiserviceidauthintrospection.ts
-  - src/models/apiserviceidauthintrospectionstandard.ts
-  - src/models/apiserviceidauthrevocation.ts
-  - src/models/apiserviceidauthtoken.ts
-  - src/models/apiserviceidauthtokencreate.ts
-  - src/models/apiserviceidauthtokenfail.ts
-  - src/models/apiserviceidauthtokengetlistpropertiesclient.ts
-  - src/models/apiserviceidauthtokenissue.ts
-  - src/models/apiserviceidauthtokenpropertiesactortokeninfo.ts
-  - src/models/apiserviceidauthtokenpropertiesactortokentype.ts
-  - src/models/apiserviceidauthtokenpropertiesactortokentype1.ts
-  - src/models/apiserviceidauthtokenrevoke.ts
-  - src/models/apiserviceidauthtokenupdate.ts
-  - src/models/apiserviceidauthuserinfo.ts
-  - src/models/apiserviceidauthuserinfoissue.ts
-  - src/models/apiserviceidbackchannelauthentication.ts
-  - src/models/apiserviceidbackchannelauthenticationcomplete.ts
-  - src/models/apiserviceidbackchannelauthenticationfail.ts
-  - src/models/apiserviceidbackchannelauthenticationissue.ts
-  - src/models/apiserviceidclientauthorizationupdateclientid.ts
-  - src/models/apiserviceidclientgrantedscopesgetclientid.ts
-  - src/models/apiserviceidclientlockflagupdateclientidenti.ts
-  - src/models/apiserviceidclientregistration.ts
-  - src/models/apiserviceidclientregistration1.ts
-  - src/models/apiserviceidclientregistration3.ts
-  - src/models/apiserviceidclientregistrationdelete.ts
-  - src/models/apiserviceidclientregistrationupdate.ts
-  - src/models/apiserviceidclientsecretupdateclientidentifie.ts
-  - src/models/apiserviceiddeviceauthorization.ts
-  - src/models/apiserviceiddevicecomplete.ts
-  - src/models/apiserviceiddeviceverification.ts
-  - src/models/apiserviceidfederationregistration.ts
-  - src/models/apiserviceidgmpropertiesgmaction.ts
-  - src/models/apiserviceidgmpropertiesgmaction1.ts
-  - src/models/apiserviceidgmpropertiesgmaction2.ts
-  - src/models/apiserviceidgmpropertiesgmaction3.ts
-  - src/models/apiserviceidhskcreate.ts
-  - src/models/apiserviceidjoseverify.ts
-  - src/models/apiserviceidpushedauthreq.ts
-  - src/models/apiserviceidvcibatchparse.ts
-  - src/models/apiserviceidvcideferredparse.ts
-  - src/models/apiserviceidvcijwks.ts
-  - src/models/apiserviceidvcijwtissuer.ts
-  - src/models/apiserviceidvcimetadata.ts
-  - src/models/apiserviceidvcioffercreate.ts
-  - src/models/apiserviceidvciofferinfo.ts
-  - src/models/apiserviceidvcisingleparse.ts
   - src/models/applicationtype.ts
   - src/models/authorizationdetails.ts
   - src/models/authorizationdetailselement.ts
+  - src/models/authorizationfailrequest.ts
+  - src/models/authorizationgrant.ts
+  - src/models/authorizationissuerequest.ts
+  - src/models/authorizationrequestform.ts
+  - src/models/authorizationticketupdate.ts
+  - src/models/backchannelauthenticationcompleterequest.ts
+  - src/models/backchannelauthenticationfailrequest.ts
+  - src/models/backchannelauthenticationissuerequest.ts
+  - src/models/backchannelauthenticationrequest.ts
+  - src/models/claimtype.ts
   - src/models/client.ts
   - src/models/clientauthenticationmethod.ts
+  - src/models/clientauthorizationupdaterequest.ts
   - src/models/clientextension.ts
+  - src/models/clientgrantedscopesresponse.ts
+  - src/models/clientlockflagupdaterequest.ts
+  - src/models/clientregistration2request.ts
+  - src/models/clientregistrationrequest.ts
+  - src/models/clientregistrationresponse.ts
+  - src/models/clientregistrationupdaterequest.ts
+  - src/models/clientsecretupdaterequest.ts
   - src/models/clienttypeproperties.ts
   - src/models/credentialissuanceorder.ts
+  - src/models/credentialissuermetadata.ts
   - src/models/credentialofferinfo.ts
   - src/models/credentialrequestinfo.ts
   - src/models/deliverymode.ts
+  - src/models/deviceauthorizationrequest.ts
+  - src/models/devicecompleterequest.ts
+  - src/models/deviceverification.ts
   - src/models/display.ts
   - src/models/dynamicscope.ts
-  - src/models/errors/apiinfo1error.ts
-  - src/models/errors/apiinfo2error.ts
-  - src/models/errors/apiinfoerror.ts
+  - src/models/errors/apiinfo4002error.ts
   - src/models/errors/authletedefaulterror.ts
   - src/models/errors/authleteerror.ts
-  - src/models/errors/error400.ts
-  - src/models/errors/error401.ts
-  - src/models/errors/error403.ts
-  - src/models/errors/error500.ts
   - src/models/errors/httpclienterrors.ts
   - src/models/errors/index.ts
   - src/models/errors/infoapi.ts
   - src/models/errors/responsevalidationerror.ts
   - src/models/errors/sdkvalidationerror.ts
+  - src/models/federationregistrationrequest.ts
+  - src/models/gmaction.ts
   - src/models/granttype.ts
   - src/models/hsk.ts
+  - src/models/hskcreaterequest.ts
   - src/models/index.ts
+  - src/models/introspectionrequest.ts
+  - src/models/introspectionstandardrequest.ts
+  - src/models/itemsclientregistrationtypes.ts
+  - src/models/itemsfapimodes.ts
+  - src/models/joseverifyrequest.ts
   - src/models/jwealg.ts
   - src/models/jweenc.ts
   - src/models/jwsalg.ts
+  - src/models/nameduri.ts
   - src/models/operations/authauthorizationapi.ts
   - src/models/operations/authauthorizationapiform.ts
   - src/models/operations/authauthorizationfailapi.ts
@@ -829,6 +784,7 @@ generatedFiles:
   - src/models/operations/federationconfigurationapi.ts
   - src/models/operations/federationregistrationapi.ts
   - src/models/operations/federationregistrationapiform.ts
+  - src/models/operations/getapiserviceidauthauthorizationticketinfo.ts
   - src/models/operations/grantmapi.ts
   - src/models/operations/hskcreateapi.ts
   - src/models/operations/hskcreateapiform.ts
@@ -840,9 +796,8 @@ generatedFiles:
   - src/models/operations/infoapi.ts
   - src/models/operations/joseverifyapi.ts
   - src/models/operations/joseverifyapiform.ts
-  - src/models/operations/miscechoapi.ts
-  - src/models/operations/postupdateticketinformation.ts
-  - src/models/operations/postupdateticketinformationform.ts
+  - src/models/operations/postapiserviceidauthauthorizationticketupdate.ts
+  - src/models/operations/postapiserviceidauthauthorizationticketupdateform.ts
   - src/models/operations/pushedauthreqapi.ts
   - src/models/operations/pushedauthreqapiform.ts
   - src/models/operations/serviceconfigurationapi.ts
@@ -873,12 +828,34 @@ generatedFiles:
   - src/models/pair.ts
   - src/models/prompt.ts
   - src/models/property.ts
+  - src/models/pushedauthrequest.ts
   - src/models/responsetype.ts
+  - src/models/revocationrequest.ts
   - src/models/scope.ts
   - src/models/security.ts
   - src/models/service.ts
+  - src/models/serviceprofile.ts
   - src/models/subjecttype.ts
   - src/models/taggedvalue.ts
+  - src/models/tokencreaterequest.ts
+  - src/models/tokenfailrequest.ts
+  - src/models/tokenissuerequest.ts
+  - src/models/tokenlistclient.ts
+  - src/models/tokenrequest.ts
+  - src/models/tokenresponse.ts
+  - src/models/tokenrevokerequest.ts
+  - src/models/tokenupdaterequest.ts
+  - src/models/usercodecharset.ts
+  - src/models/userinfoissuerequest.ts
+  - src/models/userinforequest.ts
+  - src/models/vcibatchparserequest.ts
+  - src/models/vcideferredparserequest.ts
+  - src/models/vcijwksrequest.ts
+  - src/models/vcijwtissuerrequest.ts
+  - src/models/vcimetadatarequest.ts
+  - src/models/vcioffercreaterequest.ts
+  - src/models/vciofferinforequest.ts
+  - src/models/vcisingleparserequest.ts
   - src/sdk/authorizationendpoint.ts
   - src/sdk/ciba.ts
   - src/sdk/clientmanagement.ts
@@ -918,14 +895,14 @@ examples:
           serviceId: "<id>"
       responses:
         "200":
-          application/json: {"apiKey": "21653835348762"}
+          application/json: {"number": 5041, "serviceName": "My service", "issuer": "https://my-service.example.com", "apiKey": 21653835348762, "clientIdAliasEnabled": true, "metadata": [{"key": "clientCount", "value": "1"}], "createdAt": 1639373421000, "modifiedAt": 1639373421000, "supportedGrantTypes": ["AUTHORIZATION_CODE", "REFRESH_TOKEN"], "supportedResponseTypes": ["CODE"], "errorDescriptionOmitted": false, "errorUriOmitted": false, "authorizationEndpoint": "https://my-service.example.com/authz", "directAuthorizationEndpointEnabled": false, "supportedDisplays": ["PAGE"], "pkceRequired": true, "pkceS256Required": false, "authorizationResponseDuration": 0, "tokenEndpoint": "https://my-service.example.com/token", "directTokenEndpointEnabled": false, "supportedTokenAuthMethods": ["CLIENT_SECRET_BASIC"], "missingClientIdAllowed": false, "revocationEndpoint": "https://my-service.example.com/revocation", "directRevocationEndpointEnabled": false, "supportedRevocationAuthMethods": ["CLIENT_SECRET_BASIC"], "introspectionEndpoint": "https://my-service.example.com/introspection", "directIntrospectionEndpointEnabled": false, "supportedIntrospectionAuthMethods": ["CLIENT_SECRET_BASIC"], "pushedAuthReqDuration": 0, "parRequired": false, "requestObjectRequired": false, "traditionalRequestObjectProcessingApplied": false, "mutualTlsValidatePkiCertChain": false, "accessTokenType": "Bearer", "tlsClientCertificateBoundAccessTokens": false, "accessTokenDuration": 3600, "singleAccessTokenPerSubject": false, "refreshTokenDuration": 3600, "refreshTokenDurationKept": false, "refreshTokenDurationReset": false, "refreshTokenKept": false, "supportedScopes": [{"name": "history.read", "defaultEntry": false, "description": "A permission to read your history."}, {"name": "timeline.read", "defaultEntry": false, "description": "A permission to read your timeline."}], "scopeRequired": false, "idTokenDuration": 0, "allowableClockSkew": 0, "supportedClaimTypes": ["NORMAL"], "claimShortcutRestrictive": false, "directJwksEndpointEnabled": false, "directUserInfoEndpointEnabled": false, "dynamicRegistrationSupported": false, "backchannelAuthReqIdDuration": 0, "backchannelPollingInterval": 0, "backchannelUserCodeParameterSupported": false, "backchannelBindingMessageRequiredInFapi": false, "deviceFlowCodeDuration": 0, "deviceFlowPollingInterval": 0, "userCodeLength": 0, "attributes": [{"key": "attribute1-key", "value": "attribute1-value"}, {"key": "attribute2-key", "value": "attribute2-value"}], "nbfOptional": false, "issSuppressed": false, "tokenExpirationLinked": false, "frontChannelRequestObjectEncryptionRequired": false, "requestObjectEncryptionAlgMatchRequired": false, "requestObjectEncryptionEncMatchRequired": false, "hsmEnabled": false, "grantManagementActionRequired": false, "unauthorizedOnClientConfigSupported": false, "dcrScopeUsedAsRequestable": false}
     limited:
       parameters:
         path:
           serviceId: "<id>"
       responses:
         "200":
-          application/json: {"apiKey": "21653835348762"}
+          application/json: {"number": 5041, "serviceName": "My service", "description": "This Service.", "apiKey": 21653835348762}
     speakeasy-default-service-get-api:
       parameters:
         path:
@@ -943,11 +920,11 @@ examples:
     full:
       responses:
         "200":
-          application/json: {"start": 0, "end": 5, "totalCount": 1, "services": [{"apiKey": "21653835348762", "apiSecret": "uE4NgqeIpuSV_XejQ7Ds3jsgA1yXhjR1MXJ1LbPuyls"}]}
+          application/json: {"start": 0, "end": 5, "totalCount": 1, "services": [{"number": 5041, "serviceName": "My service", "issuer": "https://my-service.example.com", "apiKey": 21653835348762, "clientIdAliasEnabled": true, "metadata": [{"key": "clientCount", "value": "1"}], "createdAt": 1639373421000, "modifiedAt": 1639373421000, "supportedGrantTypes": ["AUTHORIZATION_CODE", "REFRESH_TOKEN"], "supportedResponseTypes": ["CODE"], "errorDescriptionOmitted": false, "errorUriOmitted": false, "authorizationEndpoint": "https://as.example.com/authz", "directAuthorizationEndpointEnabled": false, "supportedDisplays": ["PAGE"], "pkceRequired": true, "pkceS256Required": false, "authorizationResponseDuration": 0, "tokenEndpoint": "https://my-service.example.com/token", "directTokenEndpointEnabled": false, "supportedTokenAuthMethods": ["CLIENT_SECRET_BASIC"], "missingClientIdAllowed": false, "revocationEndpoint": "https://my-service.example.com/revocation", "directRevocationEndpointEnabled": false, "supportedRevocationAuthMethods": ["CLIENT_SECRET_BASIC"], "introspectionEndpoint": "https://my-service.example.com/introspection", "directIntrospectionEndpointEnabled": false, "supportedIntrospectionAuthMethods": ["CLIENT_SECRET_BASIC"], "pushedAuthReqDuration": 0, "parRequired": false, "requestObjectRequired": false, "traditionalRequestObjectProcessingApplied": false, "mutualTlsValidatePkiCertChain": false, "accessTokenType": "Bearer", "tlsClientCertificateBoundAccessTokens": false, "accessTokenDuration": 3600, "singleAccessTokenPerSubject": false, "refreshTokenDuration": 3600, "refreshTokenDurationKept": false, "refreshTokenDurationReset": false, "refreshTokenKept": false, "supportedScopes": [{"name": "history.read", "defaultEntry": false, "description": "A permission to read your history."}, {"name": "timeline.read", "defaultEntry": false, "description": "A permission to read your timeline."}], "scopeRequired": false, "idTokenDuration": 0, "allowableClockSkew": 0, "supportedClaimTypes": ["NORMAL"], "claimShortcutRestrictive": false, "directJwksEndpointEnabled": false, "directUserInfoEndpointEnabled": false, "dynamicRegistrationSupported": false, "backchannelAuthReqIdDuration": 0, "backchannelPollingInterval": 0, "backchannelUserCodeParameterSupported": false, "backchannelBindingMessageRequiredInFapi": false, "deviceFlowCodeDuration": 0, "deviceFlowPollingInterval": 0, "userCodeLength": 0, "attributes": [{"key": "attribute1-key", "value": "attribute1-value"}, {"key": "attribute2-key", "value": "attribute2-value"}], "nbfOptional": false, "issSuppressed": false, "tokenExpirationLinked": false, "frontChannelRequestObjectEncryptionRequired": false, "requestObjectEncryptionAlgMatchRequired": false, "requestObjectEncryptionEncMatchRequired": false, "hsmEnabled": false, "grantManagementActionRequired": false, "unauthorizedOnClientConfigSupported": false, "dcrScopeUsedAsRequestable": false}]}
     limited:
       responses:
         "200":
-          application/json: {"start": 0, "end": 5, "totalCount": 1, "services": [{"apiKey": "21653835348762"}]}
+          application/json: {"start": 0, "end": 5, "totalCount": 1, "services": [{"number": 5041, "serviceName": "My service", "apiKey": 21653835348762, "clientIdAliasEnabled": true}]}
     speakeasy-default-service-get-list-api:
       responses:
         "200":
@@ -1189,7 +1166,7 @@ examples:
           serviceId: "<id>"
           clientIdentifier: "<value>"
       requestBody:
-        application/x-www-form-urlencoded: {"clientSecret": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1385,7 +1362,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"parameters": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1420,7 +1397,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"ticket": "<value>", "reason": "NOT_AUTHENTICATED"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1455,7 +1432,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"ticket": "<value>", "subject": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1537,7 +1514,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"parameters": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1572,7 +1549,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"parameters": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1607,7 +1584,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"ticket": "<value>", "reason": "UNKNOWN"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1642,7 +1619,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"ticket": "<value>", "subject": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1693,7 +1670,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"token": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1728,7 +1705,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"parameters": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1763,7 +1740,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"parameters": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1798,7 +1775,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"token": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1833,7 +1810,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"token": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1902,7 +1879,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"json": "{key: 6995014930124193, key1: null, key2: \"<value>\"}"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1920,8 +1897,8 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/json: {"json": "{key: 8153909118751747, key1: null, key2: \"<value>\"}"}
-        application/x-www-form-urlencoded: {"json": "{key: 8153909118751747, key1: null, key2: \"<value>\"}"}
+        application/json: {}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1939,7 +1916,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/json: {"clientId": 808098, "token": "<value>", "json": "{key: 7278695057340839, key1: null, key2: \"<value>\"}"}
+        application/json: {"clientId": "808098", "token": "<value>", "json": "{key: 7278695057340839, key1: null, key2: \"<value>\"}"}
       responses:
         "200":
           application/json: {}
@@ -1956,7 +1933,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"clientId": 808098, "token": "<value>", "json": "{key: 8900968472366795, key1: null, key2: \"<value>\"}"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -1974,7 +1951,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/json: {"clientId": 93091, "token": "<value>"}
+        application/json: {"clientId": "93091", "token": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1991,7 +1968,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"clientId": 93091, "token": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2026,7 +2003,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"parameters": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2061,7 +2038,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"ticket": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2096,7 +2073,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"ticket": "<value>", "reason": "MISSING_USER_CODE"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2131,7 +2108,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"ticket": "<value>", "result": "TRANSACTION_FAILED", "subject": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2166,7 +2143,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"parameters": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2201,7 +2178,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"userCode": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2236,7 +2213,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"userCode": "<value>", "result": "AUTHORIZED", "subject": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2287,7 +2264,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"grantType": "REFRESH_TOKEN", "clientId": 987169}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2322,7 +2299,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"accessToken": "<value>"}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2594,7 +2571,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"pretty": true}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2629,7 +2606,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"pretty": true}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}
@@ -2664,7 +2641,7 @@ examples:
         path:
           serviceId: "<id>"
       requestBody:
-        application/x-www-form-urlencoded: {"pretty": false}
+        application/x-www-form-urlencoded: {}
       responses:
         "200":
           application/json: {}

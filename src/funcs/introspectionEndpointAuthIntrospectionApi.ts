@@ -18,7 +18,6 @@ import {
   RequestTimeoutError,
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
-import * as errors from "../models/errors/index.js";
 import { ResponseValidationError } from "../models/errors/responsevalidationerror.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
@@ -201,10 +200,6 @@ export function introspectionEndpointAuthIntrospectionApi(
 ): APIPromise<
   Result<
     operations.AuthIntrospectionApiResponse,
-    | errors.Error400
-    | errors.Error401
-    | errors.Error403
-    | errors.Error500
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -230,10 +225,6 @@ async function $do(
   [
     Result<
       operations.AuthIntrospectionApiResponse,
-      | errors.Error400
-      | errors.Error401
-      | errors.Error403
-      | errors.Error500
       | AuthleteError
       | ResponseValidationError
       | ConnectionError
@@ -316,16 +307,8 @@ async function $do(
   }
   const response = doResult.value;
 
-  const responseFields = {
-    HttpMeta: { Response: response, Request: req },
-  };
-
   const [result] = await M.match<
     operations.AuthIntrospectionApiResponse,
-    | errors.Error400
-    | errors.Error401
-    | errors.Error403
-    | errors.Error500
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -336,13 +319,9 @@ async function $do(
     | SDKValidationError
   >(
     M.json(200, operations.AuthIntrospectionApiResponse$inboundSchema),
-    M.jsonErr(400, errors.Error400$inboundSchema),
-    M.jsonErr(401, errors.Error401$inboundSchema),
-    M.jsonErr(403, errors.Error403$inboundSchema),
-    M.jsonErr(500, errors.Error500$inboundSchema),
-    M.fail("4XX"),
-    M.fail("5XX"),
-  )(response, req, { extraFields: responseFields });
+    M.fail([400, 401, 403, "4XX"]),
+    M.fail([500, "5XX"]),
+  )(response, req);
   if (!result.ok) {
     return [result, { status: "complete", request: req, response }];
   }

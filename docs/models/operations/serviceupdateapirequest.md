@@ -12,7 +12,7 @@ let value: ServiceUpdateApiRequest = {
 
 ## Fields
 
-| Field                                     | Type                                      | Required                                  | Description                               |
-| ----------------------------------------- | ----------------------------------------- | ----------------------------------------- | ----------------------------------------- |
-| `serviceId`                               | *string*                                  | :heavy_check_mark:                        | A service ID.                             |
-| `service`                                 | [models.Service](../../models/service.md) | :heavy_minus_sign:                        | N/A                                       |
+| Field                                               | Type                                                | Required                                            | Description                                         |
+| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
+| `serviceId`                                         | *string*                                            | :heavy_check_mark:                                  | A service ID.                                       |
+| `service`                                           | [models.ServiceInput](../../models/serviceinput.md) | :heavy_minus_sign:                                  | N/A                                                 |

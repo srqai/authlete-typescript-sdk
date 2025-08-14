@@ -28,6 +28,9 @@ import { unwrapAsync } from "../types/fp.js";
 export class VerifiableCredentialIssuer extends ClientSDK {
   /**
    * /api/{serviceId}/vci/metadata API
+   *
+   * @remarks
+   * null
    */
   async vciMetadataApi(
     request: operations.VciMetadataApiRequest,
@@ -42,6 +45,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/metadata API
+   *
+   * @remarks
+   * null
    */
   async vciMetadataApiForm(
     request: operations.VciMetadataApiFormRequest,
@@ -56,6 +62,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/jwtissuer API
+   *
+   * @remarks
+   * null
    */
   async vciJwtissuerApi(
     request: operations.VciJwtissuerApiRequest,
@@ -70,6 +79,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/jwtissuer API
+   *
+   * @remarks
+   * null
    */
   async vciJwtissuerApiForm(
     request: operations.VciJwtissuerApiFormRequest,
@@ -84,6 +96,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/jwks API
+   *
+   * @remarks
+   * null
    */
   async vciJwksApi(
     request: operations.VciJwksApiRequest,
@@ -98,6 +113,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/jwks API
+   *
+   * @remarks
+   * null
    */
   async vciJwksApiForm(
     request: operations.VciJwksApiFormRequest,
@@ -112,6 +130,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/offer/create API
+   *
+   * @remarks
+   * null
    */
   async vciOfferCreateApi(
     request: operations.VciOfferCreateApiRequest,
@@ -126,6 +147,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/offer/create API
+   *
+   * @remarks
+   * null
    */
   async vciOfferCreateApiForm(
     request: operations.VciOfferCreateApiFormRequest,
@@ -140,6 +164,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/offer/info API
+   *
+   * @remarks
+   * null
    */
   async vciOfferInfoApi(
     request: operations.VciOfferInfoApiRequest,
@@ -154,6 +181,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/offer/info API
+   *
+   * @remarks
+   * null
    */
   async vciOfferInfoApiForm(
     request: operations.VciOfferInfoApiFormRequest,
@@ -168,6 +198,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/single/parse API
+   *
+   * @remarks
+   * null
    */
   async vciSingleParseApi(
     request: operations.VciSingleParseApiRequest,
@@ -182,6 +215,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/single/parse API
+   *
+   * @remarks
+   * null
    */
   async vciSingleParseApiForm(
     request: operations.VciSingleParseApiFormRequest,
@@ -196,6 +232,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/single/issue API
+   *
+   * @remarks
+   * null
    */
   async vciSingleIssueApi(
     request: operations.VciSingleIssueApiRequest,
@@ -210,6 +249,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/batch/parse API
+   *
+   * @remarks
+   * null
    */
   async vciBatchParseApi(
     request: operations.VciBatchParseApiRequest,
@@ -224,6 +266,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/batch/parse API
+   *
+   * @remarks
+   * null
    */
   async vciBatchParseApiForm(
     request: operations.VciBatchParseApiFormRequest,
@@ -238,6 +283,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/batch/issue API
+   *
+   * @remarks
+   * null
    */
   async vciBatchIssueApi(
     request: operations.VciBatchIssueApiRequest,
@@ -252,6 +300,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/deferred/parse API
+   *
+   * @remarks
+   * null
    */
   async vciDeferredParseApi(
     request: operations.VciDeferredParseApiRequest,
@@ -266,6 +317,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/deferred/parse API
+   *
+   * @remarks
+   * null
    */
   async vciDeferredParseApiForm(
     request: operations.VciDeferredParseApiFormRequest,
@@ -280,6 +334,9 @@ export class VerifiableCredentialIssuer extends ClientSDK {
 
   /**
    * /api/{serviceId}/vci/deferred/issue API
+   *
+   * @remarks
+   * null
    */
   async vciDeferredIssueApi(
     request: operations.VciDeferredIssueApiRequest,

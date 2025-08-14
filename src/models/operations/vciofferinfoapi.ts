@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type VciOfferInfoApiRequestBody = {
   /**
    * The identifier of the credential offer.
@@ -32,14 +29,11 @@ export type VciOfferInfoApiRequest = {
  * The result of the `/vci/offer/info` API call.
  */
 export const VciOfferInfoApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
+  Forbidden: "FORBIDDEN",
+  NotFound: "NOT_FOUND",
+  CallerError: "CALLER_ERROR",
+  AuthleteError: "AUTHLETE_ERROR",
 } as const;
 /**
  * The result of the `/vci/offer/info` API call.
@@ -47,7 +41,7 @@ export const VciOfferInfoApiAction = {
 export type VciOfferInfoApiAction = ClosedEnum<typeof VciOfferInfoApiAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciOfferInfoApiResponse = {
   /**
@@ -62,9 +56,6 @@ export type VciOfferInfoApiResponse = {
    * The result of the `/vci/offer/info` API call.
    */
   action?: VciOfferInfoApiAction | undefined;
-  /**
-   * An object containing credentialofferinfo data
-   */
   info?: models.CredentialOfferInfo | undefined;
 };
 

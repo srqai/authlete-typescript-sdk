@@ -8,11 +8,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { DeviceCompleteApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: DeviceCompleteApiAction = "CREATED";
+let value: DeviceCompleteApiAction = "USER_CODE_NOT_EXIST";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"SERVER_ERROR" | "USER_CODE_NOT_EXIST" | "USER_CODE_EXPIRED" | "INVALID_REQUEST" | "SUCCESS"
 ```

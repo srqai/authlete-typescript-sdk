@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { AuthRevocationApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: AuthRevocationApiAction = "BAD_REQUEST";
+let value: AuthRevocationApiAction = "INTERNAL_SERVER_ERROR";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"INTERNAL_SERVER_ERROR" | "INVALID_CLIENT" | "BAD_REQUEST" | "OK"
 ```

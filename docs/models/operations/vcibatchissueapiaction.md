@@ -15,5 +15,5 @@ let value: VciBatchIssueApiAction = "UNAUTHORIZED";
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"OK" | "UNAUTHORIZED" | "FORBIDDEN" | "INTERNAL_SERVER_ERROR" | "CALLER_ERROR"
 ```

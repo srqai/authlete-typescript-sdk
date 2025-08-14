@@ -7,13 +7,13 @@ import { VciSingleParseApiFormRequest } from "authlete-typescript-sdk/models/ope
 
 let value: VciSingleParseApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdVciSingleParse: {},
+  vciSingleParseRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `serviceId`                                                                     | *string*                                                                        | :heavy_check_mark:                                                              | A service ID.                                                                   |
-| `apiServiceIdVciSingleParse`                                                    | [models.ApiServiceIdVciSingleParse](../../models/apiserviceidvcisingleparse.md) | :heavy_check_mark:                                                              | N/A                                                                             |
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `serviceId`                                                           | *string*                                                              | :heavy_check_mark:                                                    | A service ID.                                                         |
+| `vciSingleParseRequest`                                               | [models.VciSingleParseRequest](../../models/vcisingleparserequest.md) | :heavy_check_mark:                                                    | N/A                                                                   |

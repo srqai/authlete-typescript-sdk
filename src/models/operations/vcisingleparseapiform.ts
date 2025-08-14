@@ -15,21 +15,18 @@ export type VciSingleParseApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdVciSingleParse: models.ApiServiceIdVciSingleParse;
+  vciSingleParseRequest: models.VciSingleParseRequest;
 };
 
 /**
  * The next action that the credential endpoint should take.
  */
 export const VciSingleParseApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
+  Ok: "OK",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the credential endpoint should take.
@@ -39,7 +36,7 @@ export type VciSingleParseApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciSingleParseApiFormResponse = {
   /**
@@ -58,9 +55,6 @@ export type VciSingleParseApiFormResponse = {
    * The content of the response to the request sender.
    */
   responseContent?: string | undefined;
-  /**
-   * An object containing credentialrequestinfo data
-   */
   info?: models.CredentialRequestInfo | undefined;
 };
 
@@ -71,18 +65,17 @@ export const VciSingleParseApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_vci_single_parse:
-    models.ApiServiceIdVciSingleParse$inboundSchema,
+  VciSingleParseRequest: models.VciSingleParseRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_vci_single_parse": "apiServiceIdVciSingleParse",
+    "VciSingleParseRequest": "vciSingleParseRequest",
   });
 });
 
 /** @internal */
 export type VciSingleParseApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_vci_single_parse: models.ApiServiceIdVciSingleParse$Outbound;
+  VciSingleParseRequest: models.VciSingleParseRequest$Outbound;
 };
 
 /** @internal */
@@ -92,10 +85,10 @@ export const VciSingleParseApiFormRequest$outboundSchema: z.ZodType<
   VciSingleParseApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdVciSingleParse: models.ApiServiceIdVciSingleParse$outboundSchema,
+  vciSingleParseRequest: models.VciSingleParseRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdVciSingleParse: "api_serviceId_vci_single_parse",
+    vciSingleParseRequest: "VciSingleParseRequest",
   });
 });
 

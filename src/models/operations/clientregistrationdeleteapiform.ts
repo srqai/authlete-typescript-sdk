@@ -15,8 +15,7 @@ export type ClientRegistrationDeleteApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdClientRegistrationDelete:
-    models.ApiServiceIdClientRegistrationDelete;
+  clientRegistration2Request: models.ClientRegistration2Request;
 };
 
 /**
@@ -27,12 +26,8 @@ export type ClientRegistrationDeleteApiFormRequest = {
 export const ClientRegistrationDeleteApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
+  Deleted: "DELETED",
   Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -44,7 +39,7 @@ export type ClientRegistrationDeleteApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientRegistrationDeleteApiFormResponse = {
   /**
@@ -68,9 +63,6 @@ export type ClientRegistrationDeleteApiFormResponse = {
    * Its format varies depending on the value of `action` parameter.
    */
   responseContent?: string | undefined;
-  /**
-   * An object containing client data
-   */
   client?: models.Client | undefined;
 };
 
@@ -81,20 +73,17 @@ export const ClientRegistrationDeleteApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_client_registration_delete:
-    models.ApiServiceIdClientRegistrationDelete$inboundSchema,
+  ClientRegistration2Request: models.ClientRegistration2Request$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_client_registration_delete":
-      "apiServiceIdClientRegistrationDelete",
+    "ClientRegistration2Request": "clientRegistration2Request",
   });
 });
 
 /** @internal */
 export type ClientRegistrationDeleteApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_client_registration_delete:
-    models.ApiServiceIdClientRegistrationDelete$Outbound;
+  ClientRegistration2Request: models.ClientRegistration2Request$Outbound;
 };
 
 /** @internal */
@@ -104,12 +93,10 @@ export const ClientRegistrationDeleteApiFormRequest$outboundSchema: z.ZodType<
   ClientRegistrationDeleteApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdClientRegistrationDelete:
-    models.ApiServiceIdClientRegistrationDelete$outboundSchema,
+  clientRegistration2Request: models.ClientRegistration2Request$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdClientRegistrationDelete:
-      "api_serviceId_client_registration_delete",
+    clientRegistration2Request: "ClientRegistration2Request",
   });
 });
 

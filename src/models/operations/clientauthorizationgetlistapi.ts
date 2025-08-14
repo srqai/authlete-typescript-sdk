@@ -14,12 +14,6 @@ export type ClientAuthorizationGetListApiRequest = {
    */
   serviceId: string;
   /**
-   * Unique user ID of an end-user.
-   *
-   * @remarks
-   */
-  subject: string;
-  /**
    * Unique ID of a client developer.
    *
    * @remarks
@@ -35,10 +29,11 @@ export type ClientAuthorizationGetListApiRequest = {
    * @remarks
    */
   end?: number | undefined;
+  subject: string;
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientAuthorizationGetListApiResponse = {
   /**
@@ -76,9 +71,7 @@ export type ClientAuthorizationGetListApiResponse = {
    *
    * @remarks
    */
-  clients?:
-    | Array<models.ApiServiceIdAuthTokenGetListpropertiesclient>
-    | undefined;
+  clients?: Array<models.TokenListClient> | undefined;
 };
 
 /** @internal */
@@ -88,19 +81,19 @@ export const ClientAuthorizationGetListApiRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  subject: z.string(),
   developer: z.string().optional(),
   start: z.number().int().optional(),
   end: z.number().int().optional(),
+  subject: z.string(),
 });
 
 /** @internal */
 export type ClientAuthorizationGetListApiRequest$Outbound = {
   serviceId: string;
-  subject: string;
   developer?: string | undefined;
   start?: number | undefined;
   end?: number | undefined;
+  subject: string;
 };
 
 /** @internal */
@@ -110,10 +103,10 @@ export const ClientAuthorizationGetListApiRequest$outboundSchema: z.ZodType<
   ClientAuthorizationGetListApiRequest
 > = z.object({
   serviceId: z.string(),
-  subject: z.string(),
   developer: z.string().optional(),
   start: z.number().int().optional(),
   end: z.number().int().optional(),
+  subject: z.string(),
 });
 
 /**
@@ -163,9 +156,7 @@ export const ClientAuthorizationGetListApiResponse$inboundSchema: z.ZodType<
   developer: z.string().optional(),
   subject: z.string().optional(),
   totalCount: z.number().int().optional(),
-  clients: z.array(
-    models.ApiServiceIdAuthTokenGetListpropertiesclient$inboundSchema,
-  ).optional(),
+  clients: z.array(models.TokenListClient$inboundSchema).optional(),
 });
 
 /** @internal */
@@ -175,9 +166,7 @@ export type ClientAuthorizationGetListApiResponse$Outbound = {
   developer?: string | undefined;
   subject?: string | undefined;
   totalCount?: number | undefined;
-  clients?:
-    | Array<models.ApiServiceIdAuthTokenGetListpropertiesclient$Outbound>
-    | undefined;
+  clients?: Array<models.TokenListClient$Outbound> | undefined;
 };
 
 /** @internal */
@@ -191,9 +180,7 @@ export const ClientAuthorizationGetListApiResponse$outboundSchema: z.ZodType<
   developer: z.string().optional(),
   subject: z.string().optional(),
   totalCount: z.number().int().optional(),
-  clients: z.array(
-    models.ApiServiceIdAuthTokenGetListpropertiesclient$outboundSchema,
-  ).optional(),
+  clients: z.array(models.TokenListClient$outboundSchema).optional(),
 });
 
 /**

@@ -1,7 +1,5 @@
 # ResponseType
 
-A string value
-
 ## Example Usage
 
 ```typescript

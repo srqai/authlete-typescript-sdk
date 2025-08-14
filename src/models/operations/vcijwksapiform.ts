@@ -15,7 +15,7 @@ export type VciJwksApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdVciJwks: models.ApiServiceIdVciJwks;
+  vciJwksRequest: models.VciJwksRequest;
 };
 
 /**
@@ -26,14 +26,9 @@ export type VciJwksApiFormRequest = {
  * response from Authlete's `/vci/jwks` API.
  */
 export const VciJwksApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
+  NotFound: "NOT_FOUND",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the implementation of the JWK Set document
@@ -45,7 +40,7 @@ export const VciJwksApiFormAction = {
 export type VciJwksApiFormAction = ClosedEnum<typeof VciJwksApiFormAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciJwksApiFormResponse = {
   /**
@@ -80,17 +75,17 @@ export const VciJwksApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_vci_jwks: models.ApiServiceIdVciJwks$inboundSchema,
+  VciJwksRequest: models.VciJwksRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_vci_jwks": "apiServiceIdVciJwks",
+    "VciJwksRequest": "vciJwksRequest",
   });
 });
 
 /** @internal */
 export type VciJwksApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_vci_jwks: models.ApiServiceIdVciJwks$Outbound;
+  VciJwksRequest: models.VciJwksRequest$Outbound;
 };
 
 /** @internal */
@@ -100,10 +95,10 @@ export const VciJwksApiFormRequest$outboundSchema: z.ZodType<
   VciJwksApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdVciJwks: models.ApiServiceIdVciJwks$outboundSchema,
+  vciJwksRequest: models.VciJwksRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdVciJwks: "api_serviceId_vci_jwks",
+    vciJwksRequest: "VciJwksRequest",
   });
 });
 

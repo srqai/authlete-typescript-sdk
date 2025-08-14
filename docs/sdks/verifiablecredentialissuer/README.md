@@ -29,7 +29,7 @@ API endpoints for implementing and running a Verifiable Credential Issuer (VCI).
 
 ## vciMetadataApi
 
-/api/{serviceId}/vci/metadata API
+null
 
 ### Example Usage
 
@@ -108,15 +108,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciMetadataApiForm
 
-/api/{serviceId}/vci/metadata API
+null
 
 ### Example Usage
 
@@ -133,9 +129,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciMetadataApiForm({
     serviceId: "<id>",
-    apiServiceIdVciMetadata: {
-      pretty: true,
-    },
+    vciMetadataRequest: {},
   });
 
   console.log(result);
@@ -163,9 +157,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciMetadataApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdVciMetadata: {
-      pretty: true,
-    },
+    vciMetadataRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -195,15 +187,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciJwtissuerApi
 
-/api/{serviceId}/vci/jwtissuer API
+null
 
 ### Example Usage
 
@@ -282,15 +270,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciJwtissuerApiForm
 
-/api/{serviceId}/vci/jwtissuer API
+null
 
 ### Example Usage
 
@@ -307,9 +291,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciJwtissuerApiForm({
     serviceId: "<id>",
-    apiServiceIdVciJwtissuer: {
-      pretty: true,
-    },
+    vciJwtIssuerRequest: {},
   });
 
   console.log(result);
@@ -337,9 +319,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciJwtissuerApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdVciJwtissuer: {
-      pretty: true,
-    },
+    vciJwtIssuerRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -369,15 +349,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciJwksApi
 
-/api/{serviceId}/vci/jwks API
+null
 
 ### Example Usage
 
@@ -456,15 +432,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciJwksApiForm
 
-/api/{serviceId}/vci/jwks API
+null
 
 ### Example Usage
 
@@ -481,9 +453,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciJwksApiForm({
     serviceId: "<id>",
-    apiServiceIdVciJwks: {
-      pretty: false,
-    },
+    vciJwksRequest: {},
   });
 
   console.log(result);
@@ -511,9 +481,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciJwksApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdVciJwks: {
-      pretty: false,
-    },
+    vciJwksRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -543,15 +511,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciOfferCreateApi
 
-/api/{serviceId}/vci/offer/create API
+null
 
 ### Example Usage
 
@@ -626,15 +590,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciOfferCreateApiForm
 
-/api/{serviceId}/vci/offer/create API
+null
 
 ### Example Usage
 
@@ -651,7 +611,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciOfferCreateApiForm({
     serviceId: "<id>",
-    apiServiceIdVciOfferCreate: {},
+    vciOfferCreateRequest: {},
   });
 
   console.log(result);
@@ -679,7 +639,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciOfferCreateApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdVciOfferCreate: {},
+    vciOfferCreateRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -709,15 +669,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciOfferInfoApi
 
-/api/{serviceId}/vci/offer/info API
+null
 
 ### Example Usage
 
@@ -792,15 +748,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciOfferInfoApiForm
 
-/api/{serviceId}/vci/offer/info API
+null
 
 ### Example Usage
 
@@ -817,7 +769,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciOfferInfoApiForm({
     serviceId: "<id>",
-    apiServiceIdVciOfferInfo: {},
+    vciOfferInfoRequest: {},
   });
 
   console.log(result);
@@ -845,7 +797,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciOfferInfoApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdVciOfferInfo: {},
+    vciOfferInfoRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -875,15 +827,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciSingleParseApi
 
-/api/{serviceId}/vci/single/parse API
+null
 
 ### Example Usage
 
@@ -958,15 +906,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciSingleParseApiForm
 
-/api/{serviceId}/vci/single/parse API
+null
 
 ### Example Usage
 
@@ -983,7 +927,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciSingleParseApiForm({
     serviceId: "<id>",
-    apiServiceIdVciSingleParse: {},
+    vciSingleParseRequest: {},
   });
 
   console.log(result);
@@ -1011,7 +955,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciSingleParseApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdVciSingleParse: {},
+    vciSingleParseRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1041,15 +985,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciSingleIssueApi
 
-/api/{serviceId}/vci/single/issue API
+null
 
 ### Example Usage
 
@@ -1124,15 +1064,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciBatchParseApi
 
-/api/{serviceId}/vci/batch/parse API
+null
 
 ### Example Usage
 
@@ -1207,15 +1143,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciBatchParseApiForm
 
-/api/{serviceId}/vci/batch/parse API
+null
 
 ### Example Usage
 
@@ -1232,7 +1164,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciBatchParseApiForm({
     serviceId: "<id>",
-    apiServiceIdVciBatchParse: {},
+    vciBatchParseRequest: {},
   });
 
   console.log(result);
@@ -1260,7 +1192,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciBatchParseApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdVciBatchParse: {},
+    vciBatchParseRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1290,15 +1222,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciBatchIssueApi
 
-/api/{serviceId}/vci/batch/issue API
+null
 
 ### Example Usage
 
@@ -1373,15 +1301,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciDeferredParseApi
 
-/api/{serviceId}/vci/deferred/parse API
+null
 
 ### Example Usage
 
@@ -1456,15 +1380,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciDeferredParseApiForm
 
-/api/{serviceId}/vci/deferred/parse API
+null
 
 ### Example Usage
 
@@ -1481,7 +1401,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.verifiableCredentialIssuer.vciDeferredParseApiForm({
     serviceId: "<id>",
-    apiServiceIdVciDeferredParse: {},
+    vciDeferredParseRequest: {},
   });
 
   console.log(result);
@@ -1509,7 +1429,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await verifiableCredentialIssuerVciDeferredParseApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdVciDeferredParse: {},
+    vciDeferredParseRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1539,15 +1459,11 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## vciDeferredIssueApi
 
-/api/{serviceId}/vci/deferred/issue API
+null
 
 ### Example Usage
 
@@ -1622,8 +1538,4 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

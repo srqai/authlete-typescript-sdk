@@ -7,16 +7,13 @@ import { AuthAuthorizationFailApiFormRequest } from "authlete-typescript-sdk/mod
 
 let value: AuthAuthorizationFailApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdAuthAuthorizationFail: {
-    ticket: "<value>",
-    reason: "SERVER_ERROR",
-  },
+  authorizationFailRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                   | *string*                                                                                      | :heavy_check_mark:                                                                            | A service ID.                                                                                 |
-| `apiServiceIdAuthAuthorizationFail`                                                           | [models.ApiServiceIdAuthAuthorizationFail](../../models/apiserviceidauthauthorizationfail.md) | :heavy_check_mark:                                                                            | N/A                                                                                           |
+| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `serviceId`                                                                 | *string*                                                                    | :heavy_check_mark:                                                          | A service ID.                                                               |
+| `authorizationFailRequest`                                                  | [models.AuthorizationFailRequest](../../models/authorizationfailrequest.md) | :heavy_check_mark:                                                          | N/A                                                                         |

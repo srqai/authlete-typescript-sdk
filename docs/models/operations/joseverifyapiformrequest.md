@@ -12,7 +12,7 @@ let value: JoseVerifyApiFormRequest = {
 
 ## Fields
 
-| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `serviceId`                                                             | *string*                                                                | :heavy_check_mark:                                                      | A service ID.                                                           |
-| `apiServiceIdJoseVerify`                                                | [models.ApiServiceIdJoseVerify](../../models/apiserviceidjoseverify.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `serviceId`                                                   | *string*                                                      | :heavy_check_mark:                                            | A service ID.                                                 |
+| `joseVerifyRequest`                                           | [models.JoseVerifyRequest](../../models/joseverifyrequest.md) | :heavy_minus_sign:                                            | N/A                                                           |

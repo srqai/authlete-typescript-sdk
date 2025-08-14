@@ -1,7 +1,5 @@
 # TaggedValue
 
-An object containing taggedvalue data
-
 ## Example Usage
 
 ```typescript

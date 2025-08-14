@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type AuthUserinfoIssueApiRequestBody = {
   /**
    * The access token that has been passed to the userinfo endpoint by the client application. In other words,
@@ -69,11 +66,9 @@ export type AuthUserinfoIssueApiRequest = {
 export const AuthUserinfoIssueApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
   Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -84,7 +79,7 @@ export type AuthUserinfoIssueApiAction = ClosedEnum<
 >;
 
 /**
- * HTTP 200 response
+ * Successful operation
  */
 export type AuthUserinfoIssueApiResponse = {
   /**

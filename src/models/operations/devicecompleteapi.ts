@@ -31,9 +31,6 @@ export type DeviceCompleteApiResult = ClosedEnum<
   typeof DeviceCompleteApiResult
 >;
 
-/**
- * An object containing schema data
- */
 export type DeviceCompleteApiRequestBody = {
   /**
    * A user code.
@@ -142,14 +139,11 @@ export type DeviceCompleteApiRequest = {
  * @remarks
  */
 export const DeviceCompleteApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  ServerError: "SERVER_ERROR",
+  UserCodeNotExist: "USER_CODE_NOT_EXIST",
+  UserCodeExpired: "USER_CODE_EXPIRED",
+  InvalidRequest: "INVALID_REQUEST",
+  Success: "SUCCESS",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -161,7 +155,7 @@ export type DeviceCompleteApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type DeviceCompleteApiResponse = {
   /**

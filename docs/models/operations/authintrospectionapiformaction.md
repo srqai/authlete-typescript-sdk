@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { AuthIntrospectionApiFormAction } from "authlete-typescript-sdk/models/operations";
 
-let value: AuthIntrospectionApiFormAction = "JWT";
+let value: AuthIntrospectionApiFormAction = "OK";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "UNAUTHORIZED" | "FORBIDDEN" | "OK"
 ```

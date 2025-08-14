@@ -10,16 +10,13 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type ClientRegistrationUpdateApiRequestBody = {
   /**
    * Client ID.
    *
    * @remarks
    */
-  clientId: number;
+  clientId: string;
   /**
    * Client registration access token.
    *
@@ -51,12 +48,8 @@ export type ClientRegistrationUpdateApiRequest = {
 export const ClientRegistrationUpdateApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
+  Updated: "UPDATED",
   Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -68,7 +61,7 @@ export type ClientRegistrationUpdateApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientRegistrationUpdateApiResponse = {
   /**
@@ -92,9 +85,6 @@ export type ClientRegistrationUpdateApiResponse = {
    * Its format varies depending on the value of `action` parameter.
    */
   responseContent?: string | undefined;
-  /**
-   * An object containing client data
-   */
   client?: models.Client | undefined;
 };
 
@@ -104,14 +94,14 @@ export const ClientRegistrationUpdateApiRequestBody$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  clientId: z.number().int(),
+  clientId: z.string(),
   token: z.string(),
   json: z.string(),
 });
 
 /** @internal */
 export type ClientRegistrationUpdateApiRequestBody$Outbound = {
-  clientId: number;
+  clientId: string;
   token: string;
   json: string;
 };
@@ -122,7 +112,7 @@ export const ClientRegistrationUpdateApiRequestBody$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   ClientRegistrationUpdateApiRequestBody
 > = z.object({
-  clientId: z.number().int(),
+  clientId: z.string(),
   token: z.string(),
   json: z.string(),
 });

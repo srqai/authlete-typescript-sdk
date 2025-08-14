@@ -6,7 +6,7 @@ import * as z from "zod";
 import { AuthleteError } from "./authleteerror.js";
 
 /**
- * An object containing schema data
+ * Bad request - Invalid input
  */
 export type BadRequestErrorData = {
   /**
@@ -20,7 +20,7 @@ export type BadRequestErrorData = {
 };
 
 /**
- * An object containing schema data
+ * Bad request - Invalid input
  */
 export class BadRequestError extends AuthleteError {
   /**

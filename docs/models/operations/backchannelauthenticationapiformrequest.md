@@ -7,15 +7,13 @@ import { BackchannelAuthenticationApiFormRequest } from "authlete-typescript-sdk
 
 let value: BackchannelAuthenticationApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdBackchannelAuthentication: {
-    parameters: "<value>",
-  },
+  backchannelAuthenticationRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                           | *string*                                                                                              | :heavy_check_mark:                                                                                    | A service ID.                                                                                         |
-| `apiServiceIdBackchannelAuthentication`                                                               | [models.ApiServiceIdBackchannelAuthentication](../../models/apiserviceidbackchannelauthentication.md) | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `serviceId`                                                                                 | *string*                                                                                    | :heavy_check_mark:                                                                          | A service ID.                                                                               |
+| `backchannelAuthenticationRequest`                                                          | [models.BackchannelAuthenticationRequest](../../models/backchannelauthenticationrequest.md) | :heavy_check_mark:                                                                          | N/A                                                                                         |

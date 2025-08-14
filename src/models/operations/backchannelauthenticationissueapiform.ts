@@ -15,8 +15,8 @@ export type BackchannelAuthenticationIssueApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdBackchannelAuthenticationIssue:
-    models.ApiServiceIdBackchannelAuthenticationIssue;
+  backchannelAuthenticationIssueRequest:
+    models.BackchannelAuthenticationIssueRequest;
 };
 
 /**
@@ -24,12 +24,7 @@ export type BackchannelAuthenticationIssueApiFormRequest = {
  */
 export const BackchannelAuthenticationIssueApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
+  InvalidTicket: "INVALID_TICKET",
   Ok: "OK",
 } as const;
 /**
@@ -40,7 +35,7 @@ export type BackchannelAuthenticationIssueApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type BackchannelAuthenticationIssueApiFormResponse = {
   /**
@@ -91,20 +86,20 @@ export const BackchannelAuthenticationIssueApiFormRequest$inboundSchema:
     unknown
   > = z.object({
     serviceId: z.string(),
-    api_serviceId_backchannel_authentication_issue:
-      models.ApiServiceIdBackchannelAuthenticationIssue$inboundSchema,
+    BackchannelAuthenticationIssueRequest:
+      models.BackchannelAuthenticationIssueRequest$inboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      "api_serviceId_backchannel_authentication_issue":
-        "apiServiceIdBackchannelAuthenticationIssue",
+      "BackchannelAuthenticationIssueRequest":
+        "backchannelAuthenticationIssueRequest",
     });
   });
 
 /** @internal */
 export type BackchannelAuthenticationIssueApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_backchannel_authentication_issue:
-    models.ApiServiceIdBackchannelAuthenticationIssue$Outbound;
+  BackchannelAuthenticationIssueRequest:
+    models.BackchannelAuthenticationIssueRequest$Outbound;
 };
 
 /** @internal */
@@ -115,12 +110,12 @@ export const BackchannelAuthenticationIssueApiFormRequest$outboundSchema:
     BackchannelAuthenticationIssueApiFormRequest
   > = z.object({
     serviceId: z.string(),
-    apiServiceIdBackchannelAuthenticationIssue:
-      models.ApiServiceIdBackchannelAuthenticationIssue$outboundSchema,
+    backchannelAuthenticationIssueRequest:
+      models.BackchannelAuthenticationIssueRequest$outboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      apiServiceIdBackchannelAuthenticationIssue:
-        "api_serviceId_backchannel_authentication_issue",
+      backchannelAuthenticationIssueRequest:
+        "BackchannelAuthenticationIssueRequest",
     });
   });
 

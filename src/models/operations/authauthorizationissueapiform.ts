@@ -15,7 +15,7 @@ export type AuthAuthorizationIssueApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthAuthorizationIssue: models.ApiServiceIdAuthAuthorizationIssue;
+  authorizationIssueRequest: models.AuthorizationIssueRequest;
 };
 
 /**
@@ -24,12 +24,8 @@ export type AuthAuthorizationIssueApiFormRequest = {
 export const AuthAuthorizationIssueApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Location: "LOCATION",
+  Form: "FORM",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -39,7 +35,7 @@ export type AuthAuthorizationIssueApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthAuthorizationIssueApiFormResponse = {
   /**
@@ -117,20 +113,17 @@ export const AuthAuthorizationIssueApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_authorization_issue:
-    models.ApiServiceIdAuthAuthorizationIssue$inboundSchema,
+  AuthorizationIssueRequest: models.AuthorizationIssueRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_authorization_issue":
-      "apiServiceIdAuthAuthorizationIssue",
+    "AuthorizationIssueRequest": "authorizationIssueRequest",
   });
 });
 
 /** @internal */
 export type AuthAuthorizationIssueApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_authorization_issue:
-    models.ApiServiceIdAuthAuthorizationIssue$Outbound;
+  AuthorizationIssueRequest: models.AuthorizationIssueRequest$Outbound;
 };
 
 /** @internal */
@@ -140,12 +133,10 @@ export const AuthAuthorizationIssueApiFormRequest$outboundSchema: z.ZodType<
   AuthAuthorizationIssueApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthAuthorizationIssue:
-    models.ApiServiceIdAuthAuthorizationIssue$outboundSchema,
+  authorizationIssueRequest: models.AuthorizationIssueRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthAuthorizationIssue:
-      "api_serviceId_auth_authorization_issue",
+    authorizationIssueRequest: "AuthorizationIssueRequest",
   });
 });
 

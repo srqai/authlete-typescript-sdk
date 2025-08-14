@@ -1,7 +1,5 @@
 # AccessToken
 
-An object containing accesstoken data
-
 ## Example Usage
 
 ```typescript

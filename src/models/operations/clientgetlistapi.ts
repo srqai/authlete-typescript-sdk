@@ -32,7 +32,7 @@ export type ClientGetListApiRequest = {
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientGetListApiResponse = {
   /**

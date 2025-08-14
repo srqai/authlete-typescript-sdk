@@ -7,15 +7,13 @@ import { AuthUserinfoApiFormRequest } from "authlete-typescript-sdk/models/opera
 
 let value: AuthUserinfoApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdAuthUserinfo: {
-    token: "<value>",
-  },
+  userinfoRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `serviceId`                                                                 | *string*                                                                    | :heavy_check_mark:                                                          | A service ID.                                                               |
-| `apiServiceIdAuthUserinfo`                                                  | [models.ApiServiceIdAuthUserinfo](../../models/apiserviceidauthuserinfo.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| Field                                                     | Type                                                      | Required                                                  | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| `serviceId`                                               | *string*                                                  | :heavy_check_mark:                                        | A service ID.                                             |
+| `userinfoRequest`                                         | [models.UserinfoRequest](../../models/userinforequest.md) | :heavy_check_mark:                                        | N/A                                                       |

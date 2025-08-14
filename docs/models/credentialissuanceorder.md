@@ -1,7 +1,5 @@
 # CredentialIssuanceOrder
 
-An object containing credentialissuanceorder data
-
 ## Example Usage
 
 ```typescript

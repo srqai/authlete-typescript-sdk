@@ -268,10 +268,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authIntrospectionApiForm
@@ -458,9 +454,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.introspectionEndpoint.authIntrospectionApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthIntrospection: {
-      token: "<value>",
-    },
+    introspectionRequest: {},
   });
 
   console.log(result);
@@ -488,9 +482,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await introspectionEndpointAuthIntrospectionApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthIntrospection: {
-      token: "<value>",
-    },
+    introspectionRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -520,10 +512,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authIntrospectionStandardApi
@@ -702,10 +690,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authIntrospectionStandardApiForm
@@ -822,9 +806,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.introspectionEndpoint.authIntrospectionStandardApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthIntrospectionStandard: {
-      parameters: "<value>",
-    },
+    introspectionStandardRequest: {},
   });
 
   console.log(result);
@@ -852,9 +834,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await introspectionEndpointAuthIntrospectionStandardApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthIntrospectionStandard: {
-      parameters: "<value>",
-    },
+    introspectionStandardRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -884,8 +864,4 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

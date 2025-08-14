@@ -7,13 +7,13 @@ import { FederationRegistrationApiFormRequest } from "authlete-typescript-sdk/mo
 
 let value: FederationRegistrationApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdFederationRegistration: {},
+  federationRegistrationRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                     | *string*                                                                                        | :heavy_check_mark:                                                                              | A service ID.                                                                                   |
-| `apiServiceIdFederationRegistration`                                                            | [models.ApiServiceIdFederationRegistration](../../models/apiserviceidfederationregistration.md) | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `serviceId`                                                                           | *string*                                                                              | :heavy_check_mark:                                                                    | A service ID.                                                                         |
+| `federationRegistrationRequest`                                                       | [models.FederationRegistrationRequest](../../models/federationregistrationrequest.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |

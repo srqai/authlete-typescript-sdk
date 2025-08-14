@@ -15,7 +15,7 @@ export type DeviceCompleteApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdDeviceComplete: models.ApiServiceIdDeviceComplete;
+  deviceCompleteRequest: models.DeviceCompleteRequest;
 };
 
 /**
@@ -24,14 +24,11 @@ export type DeviceCompleteApiFormRequest = {
  * @remarks
  */
 export const DeviceCompleteApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  ServerError: "SERVER_ERROR",
+  UserCodeNotExist: "USER_CODE_NOT_EXIST",
+  UserCodeExpired: "USER_CODE_EXPIRED",
+  InvalidRequest: "INVALID_REQUEST",
+  Success: "SUCCESS",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -43,7 +40,7 @@ export type DeviceCompleteApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type DeviceCompleteApiFormResponse = {
   /**
@@ -69,18 +66,17 @@ export const DeviceCompleteApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_device_complete:
-    models.ApiServiceIdDeviceComplete$inboundSchema,
+  DeviceCompleteRequest: models.DeviceCompleteRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_device_complete": "apiServiceIdDeviceComplete",
+    "DeviceCompleteRequest": "deviceCompleteRequest",
   });
 });
 
 /** @internal */
 export type DeviceCompleteApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_device_complete: models.ApiServiceIdDeviceComplete$Outbound;
+  DeviceCompleteRequest: models.DeviceCompleteRequest$Outbound;
 };
 
 /** @internal */
@@ -90,10 +86,10 @@ export const DeviceCompleteApiFormRequest$outboundSchema: z.ZodType<
   DeviceCompleteApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdDeviceComplete: models.ApiServiceIdDeviceComplete$outboundSchema,
+  deviceCompleteRequest: models.DeviceCompleteRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdDeviceComplete: "api_serviceId_device_complete",
+    deviceCompleteRequest: "DeviceCompleteRequest",
   });
 });
 

@@ -15,7 +15,7 @@ export type ClientRegistrationApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdClientRegistration: models.ApiServiceIdClientRegistration;
+  clientRegistrationRequest: models.ClientRegistrationRequest;
 };
 
 /**
@@ -27,11 +27,6 @@ export const ClientRegistrationApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
   Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -43,7 +38,7 @@ export type ClientRegistrationApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientRegistrationApiFormResponse = {
   /**
@@ -67,9 +62,6 @@ export type ClientRegistrationApiFormResponse = {
    * Its format varies depending on the value of `action` parameter.
    */
   responseContent?: string | undefined;
-  /**
-   * An object containing client data
-   */
   client?: models.Client | undefined;
 };
 
@@ -80,19 +72,17 @@ export const ClientRegistrationApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_client_registration:
-    models.ApiServiceIdClientRegistration$inboundSchema,
+  ClientRegistrationRequest: models.ClientRegistrationRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_client_registration": "apiServiceIdClientRegistration",
+    "ClientRegistrationRequest": "clientRegistrationRequest",
   });
 });
 
 /** @internal */
 export type ClientRegistrationApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_client_registration:
-    models.ApiServiceIdClientRegistration$Outbound;
+  ClientRegistrationRequest: models.ClientRegistrationRequest$Outbound;
 };
 
 /** @internal */
@@ -102,11 +92,10 @@ export const ClientRegistrationApiFormRequest$outboundSchema: z.ZodType<
   ClientRegistrationApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdClientRegistration:
-    models.ApiServiceIdClientRegistration$outboundSchema,
+  clientRegistrationRequest: models.ClientRegistrationRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdClientRegistration: "api_serviceId_client_registration",
+    clientRegistrationRequest: "ClientRegistrationRequest",
   });
 });
 

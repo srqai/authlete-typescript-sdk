@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type AuthUserinfoApiRequestBody = {
   /**
    * An access token.
@@ -92,11 +89,8 @@ export type AuthUserinfoApiRequest = {
 export const AuthUserinfoApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -105,7 +99,7 @@ export const AuthUserinfoApiAction = {
 export type AuthUserinfoApiAction = ClosedEnum<typeof AuthUserinfoApiAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthUserinfoApiResponse = {
   /**

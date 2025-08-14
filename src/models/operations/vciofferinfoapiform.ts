@@ -15,21 +15,18 @@ export type VciOfferInfoApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdVciOfferInfo: models.ApiServiceIdVciOfferInfo;
+  vciOfferInfoRequest: models.VciOfferInfoRequest;
 };
 
 /**
  * The result of the `/vci/offer/info` API call.
  */
 export const VciOfferInfoApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
+  Forbidden: "FORBIDDEN",
+  NotFound: "NOT_FOUND",
+  CallerError: "CALLER_ERROR",
+  AuthleteError: "AUTHLETE_ERROR",
 } as const;
 /**
  * The result of the `/vci/offer/info` API call.
@@ -39,7 +36,7 @@ export type VciOfferInfoApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciOfferInfoApiFormResponse = {
   /**
@@ -54,9 +51,6 @@ export type VciOfferInfoApiFormResponse = {
    * The result of the `/vci/offer/info` API call.
    */
   action?: VciOfferInfoApiFormAction | undefined;
-  /**
-   * An object containing credentialofferinfo data
-   */
   info?: models.CredentialOfferInfo | undefined;
 };
 
@@ -67,17 +61,17 @@ export const VciOfferInfoApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_vci_offer_info: models.ApiServiceIdVciOfferInfo$inboundSchema,
+  VciOfferInfoRequest: models.VciOfferInfoRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_vci_offer_info": "apiServiceIdVciOfferInfo",
+    "VciOfferInfoRequest": "vciOfferInfoRequest",
   });
 });
 
 /** @internal */
 export type VciOfferInfoApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_vci_offer_info: models.ApiServiceIdVciOfferInfo$Outbound;
+  VciOfferInfoRequest: models.VciOfferInfoRequest$Outbound;
 };
 
 /** @internal */
@@ -87,10 +81,10 @@ export const VciOfferInfoApiFormRequest$outboundSchema: z.ZodType<
   VciOfferInfoApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdVciOfferInfo: models.ApiServiceIdVciOfferInfo$outboundSchema,
+  vciOfferInfoRequest: models.VciOfferInfoRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdVciOfferInfo: "api_serviceId_vci_offer_info",
+    vciOfferInfoRequest: "VciOfferInfoRequest",
   });
 });
 

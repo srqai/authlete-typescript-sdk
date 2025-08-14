@@ -7,16 +7,13 @@ import { AuthTokenCreateApiFormRequest } from "authlete-typescript-sdk/models/op
 
 let value: AuthTokenCreateApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdAuthTokenCreate: {
-    grantType: "IMPLICIT",
-    clientId: 62300,
-  },
+  tokenCreateRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `serviceId`                                                                       | *string*                                                                          | :heavy_check_mark:                                                                | A service ID.                                                                     |
-| `apiServiceIdAuthTokenCreate`                                                     | [models.ApiServiceIdAuthTokenCreate](../../models/apiserviceidauthtokencreate.md) | :heavy_check_mark:                                                                | N/A                                                                               |
+| Field                                                           | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `serviceId`                                                     | *string*                                                        | :heavy_check_mark:                                              | A service ID.                                                   |
+| `tokenCreateRequest`                                            | [models.TokenCreateRequest](../../models/tokencreaterequest.md) | :heavy_check_mark:                                              | N/A                                                             |

@@ -7,13 +7,13 @@ import { VciDeferredParseApiFormRequest } from "authlete-typescript-sdk/models/o
 
 let value: VciDeferredParseApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdVciDeferredParse: {},
+  vciDeferredParseRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
-| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `serviceId`                                                                         | *string*                                                                            | :heavy_check_mark:                                                                  | A service ID.                                                                       |
-| `apiServiceIdVciDeferredParse`                                                      | [models.ApiServiceIdVciDeferredParse](../../models/apiserviceidvcideferredparse.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `serviceId`                                                               | *string*                                                                  | :heavy_check_mark:                                                        | A service ID.                                                             |
+| `vciDeferredParseRequest`                                                 | [models.VciDeferredParseRequest](../../models/vcideferredparserequest.md) | :heavy_check_mark:                                                        | N/A                                                                       |

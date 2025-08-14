@@ -20,7 +20,7 @@ export type ServiceGetListApiRequest = {
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ServiceGetListApiResponse = {
   /**

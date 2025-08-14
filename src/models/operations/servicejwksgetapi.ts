@@ -30,7 +30,7 @@ export type ServiceJwksGetApiRequest = {
 export type Key = {};
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ServiceJwksGetApiResponse = {
   /**

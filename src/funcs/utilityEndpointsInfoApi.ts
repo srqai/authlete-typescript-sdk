@@ -36,9 +36,7 @@ export function utilityEndpointsInfoApi(
   Result<
     operations.InfoApiResponse,
     | errors.BadRequestError
-    | errors.ApiInfoError
-    | errors.ApiInfo1Error
-    | errors.ApiInfo2Error
+    | errors.APIInfo4002Error
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -63,9 +61,7 @@ async function $do(
     Result<
       operations.InfoApiResponse,
       | errors.BadRequestError
-      | errors.ApiInfoError
-      | errors.ApiInfo1Error
-      | errors.ApiInfo2Error
+      | errors.APIInfo4002Error
       | AuthleteError
       | ResponseValidationError
       | ConnectionError
@@ -134,9 +130,7 @@ async function $do(
   const [result] = await M.match<
     operations.InfoApiResponse,
     | errors.BadRequestError
-    | errors.ApiInfoError
-    | errors.ApiInfo1Error
-    | errors.ApiInfo2Error
+    | errors.APIInfo4002Error
     | AuthleteError
     | ResponseValidationError
     | ConnectionError
@@ -148,9 +142,8 @@ async function $do(
   >(
     M.json(200, operations.InfoApiResponse$inboundSchema),
     M.jsonErr(400, errors.BadRequestError$inboundSchema),
-    M.jsonErr(401, errors.ApiInfoError$inboundSchema),
-    M.jsonErr(403, errors.ApiInfo1Error$inboundSchema),
-    M.jsonErr(500, errors.ApiInfo2Error$inboundSchema),
+    M.jsonErr([401, 403], errors.APIInfo4002Error$inboundSchema),
+    M.jsonErr(500, errors.APIInfo4002Error$inboundSchema),
     M.fail("4XX"),
     M.fail("5XX"),
   )(response, req, { extraFields: responseFields });

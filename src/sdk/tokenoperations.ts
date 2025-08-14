@@ -109,7 +109,7 @@ export class TokenOperations extends ClientSDK {
   async authTokenDeleteApi(
     request: operations.AuthTokenDeleteApiRequest,
     options?: RequestOptions,
-  ): Promise<operations.AuthTokenDeleteApiResponse> {
+  ): Promise<void> {
     return unwrapAsync(tokenOperationsAuthTokenDeleteApi(
       this,
       request,

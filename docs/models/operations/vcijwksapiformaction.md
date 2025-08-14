@@ -10,11 +10,11 @@ response from Authlete's `/vci/jwks` API.
 ```typescript
 import { VciJwksApiFormAction } from "authlete-typescript-sdk/models/operations";
 
-let value: VciJwksApiFormAction = "INTERNAL_SERVER_ERROR";
+let value: VciJwksApiFormAction = "OK";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"OK" | "NOT_FOUND" | "INTERNAL_SERVER_ERROR"
 ```

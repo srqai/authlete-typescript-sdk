@@ -11,11 +11,11 @@ should take after getting a response from Authlete's
 ```typescript
 import { VciMetadataApiFormAction } from "authlete-typescript-sdk/models/operations";
 
-let value: VciMetadataApiFormAction = "JWT";
+let value: VciMetadataApiFormAction = "INTERNAL_SERVER_ERROR";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"OK" | "NOT_FOUND" | "INTERNAL_SERVER_ERROR"
 ```

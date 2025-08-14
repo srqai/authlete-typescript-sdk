@@ -1,7 +1,5 @@
 # AuthorizationDetailsElement
 
-An object containing authorizationdetailselement data
-
 ## Example Usage
 
 ```typescript

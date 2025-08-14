@@ -15,8 +15,7 @@ export type ClientRegistrationUpdateApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdClientRegistrationUpdate:
-    models.ApiServiceIdClientRegistrationUpdate;
+  clientRegistrationUpdateRequest: models.ClientRegistrationUpdateRequest;
 };
 
 /**
@@ -27,12 +26,8 @@ export type ClientRegistrationUpdateApiFormRequest = {
 export const ClientRegistrationUpdateApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
+  Updated: "UPDATED",
   Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -44,7 +39,7 @@ export type ClientRegistrationUpdateApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientRegistrationUpdateApiFormResponse = {
   /**
@@ -68,9 +63,6 @@ export type ClientRegistrationUpdateApiFormResponse = {
    * Its format varies depending on the value of `action` parameter.
    */
   responseContent?: string | undefined;
-  /**
-   * An object containing client data
-   */
   client?: models.Client | undefined;
 };
 
@@ -81,20 +73,19 @@ export const ClientRegistrationUpdateApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_client_registration_update:
-    models.ApiServiceIdClientRegistrationUpdate$inboundSchema,
+  ClientRegistrationUpdateRequest:
+    models.ClientRegistrationUpdateRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_client_registration_update":
-      "apiServiceIdClientRegistrationUpdate",
+    "ClientRegistrationUpdateRequest": "clientRegistrationUpdateRequest",
   });
 });
 
 /** @internal */
 export type ClientRegistrationUpdateApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_client_registration_update:
-    models.ApiServiceIdClientRegistrationUpdate$Outbound;
+  ClientRegistrationUpdateRequest:
+    models.ClientRegistrationUpdateRequest$Outbound;
 };
 
 /** @internal */
@@ -104,12 +95,11 @@ export const ClientRegistrationUpdateApiFormRequest$outboundSchema: z.ZodType<
   ClientRegistrationUpdateApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdClientRegistrationUpdate:
-    models.ApiServiceIdClientRegistrationUpdate$outboundSchema,
+  clientRegistrationUpdateRequest:
+    models.ClientRegistrationUpdateRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdClientRegistrationUpdate:
-      "api_serviceId_client_registration_update",
+    clientRegistrationUpdateRequest: "ClientRegistrationUpdateRequest",
   });
 });
 

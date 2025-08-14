@@ -9,9 +9,6 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
-/**
- * An object containing schema data
- */
 export type VciJwksApiRequestBody = {
   /**
    * The flag indicating whether the metadata is written in the pretty
@@ -38,14 +35,9 @@ export type VciJwksApiRequest = {
  * response from Authlete's `/vci/jwks` API.
  */
 export const VciJwksApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
+  NotFound: "NOT_FOUND",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the implementation of the JWK Set document
@@ -57,7 +49,7 @@ export const VciJwksApiAction = {
 export type VciJwksApiAction = ClosedEnum<typeof VciJwksApiAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciJwksApiResponse = {
   /**

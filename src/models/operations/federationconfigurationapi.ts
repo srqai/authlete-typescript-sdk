@@ -9,9 +9,6 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
-/**
- * An object containing schema data
- */
 export type FederationConfigurationApiRequestBody = {};
 
 export type FederationConfigurationApiRequest = {
@@ -26,14 +23,9 @@ export type FederationConfigurationApiRequest = {
  * The next action that the authorization server implementation should take.
  */
 export const FederationConfigurationApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
+  NotFound: "NOT_FOUND",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -43,7 +35,7 @@ export type FederationConfigurationApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type FederationConfigurationApiResponse = {
   /**

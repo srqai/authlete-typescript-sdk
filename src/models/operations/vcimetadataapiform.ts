@@ -15,7 +15,7 @@ export type VciMetadataApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdVciMetadata: models.ApiServiceIdVciMetadata;
+  vciMetadataRequest: models.VciMetadataRequest;
 };
 
 /**
@@ -27,14 +27,9 @@ export type VciMetadataApiFormRequest = {
  * `/vci/metadata` API.
  */
 export const VciMetadataApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
+  NotFound: "NOT_FOUND",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the implementation of the credential issuer
@@ -49,7 +44,7 @@ export type VciMetadataApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciMetadataApiFormResponse = {
   /**
@@ -85,17 +80,17 @@ export const VciMetadataApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_vci_metadata: models.ApiServiceIdVciMetadata$inboundSchema,
+  VciMetadataRequest: models.VciMetadataRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_vci_metadata": "apiServiceIdVciMetadata",
+    "VciMetadataRequest": "vciMetadataRequest",
   });
 });
 
 /** @internal */
 export type VciMetadataApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_vci_metadata: models.ApiServiceIdVciMetadata$Outbound;
+  VciMetadataRequest: models.VciMetadataRequest$Outbound;
 };
 
 /** @internal */
@@ -105,10 +100,10 @@ export const VciMetadataApiFormRequest$outboundSchema: z.ZodType<
   VciMetadataApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdVciMetadata: models.ApiServiceIdVciMetadata$outboundSchema,
+  vciMetadataRequest: models.VciMetadataRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdVciMetadata: "api_serviceId_vci_metadata",
+    vciMetadataRequest: "VciMetadataRequest",
   });
 });
 

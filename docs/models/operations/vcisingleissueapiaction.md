@@ -9,11 +9,11 @@ should take.
 ```typescript
 import { VciSingleIssueApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: VciSingleIssueApiAction = "CREATED";
+let value: VciSingleIssueApiAction = "ACCEPTED";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"OK" | "ACCEPTED" | "UNAUTHORIZED" | "FORBIDDEN" | "INTERNAL_SERVER_ERROR" | "CALLER_ERROR"
 ```

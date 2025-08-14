@@ -168,10 +168,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## federationRegistrationApi
@@ -287,10 +283,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## federationRegistrationApiForm
@@ -348,7 +340,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.federationEndpoint.federationRegistrationApiForm({
     serviceId: "<id>",
-    apiServiceIdFederationRegistration: {},
+    federationRegistrationRequest: {},
   });
 
   console.log(result);
@@ -376,7 +368,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await federationEndpointFederationRegistrationApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdFederationRegistration: {},
+    federationRegistrationRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -406,8 +398,4 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

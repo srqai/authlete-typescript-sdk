@@ -21,7 +21,7 @@ export type ClientSecretRefreshApiRequest = {
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientSecretRefreshApiResponse = {
   /**

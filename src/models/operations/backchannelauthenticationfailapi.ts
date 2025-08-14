@@ -38,9 +38,6 @@ export type BackchannelAuthenticationFailApiReason = ClosedEnum<
   typeof BackchannelAuthenticationFailApiReason
 >;
 
-/**
- * An object containing schema data
- */
 export type BackchannelAuthenticationFailApiRequestBody = {
   /**
    * The ticket which should be deleted on a call of Authlete's `/backchannel/authentication/fail` API.
@@ -89,12 +86,7 @@ export type BackchannelAuthenticationFailApiRequest = {
 export const BackchannelAuthenticationFailApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -104,7 +96,7 @@ export type BackchannelAuthenticationFailApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type BackchannelAuthenticationFailApiResponse = {
   /**

@@ -15,7 +15,7 @@ export type AuthTokenFailApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthTokenFail: models.ApiServiceIdAuthTokenFail;
+  tokenFailRequest: models.TokenFailRequest;
 };
 
 /**
@@ -24,12 +24,6 @@ export type AuthTokenFailApiFormRequest = {
 export const AuthTokenFailApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -39,7 +33,7 @@ export type AuthTokenFailApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthTokenFailApiFormResponse = {
   /**
@@ -70,17 +64,17 @@ export const AuthTokenFailApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_token_fail: models.ApiServiceIdAuthTokenFail$inboundSchema,
+  TokenFailRequest: models.TokenFailRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_token_fail": "apiServiceIdAuthTokenFail",
+    "TokenFailRequest": "tokenFailRequest",
   });
 });
 
 /** @internal */
 export type AuthTokenFailApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_token_fail: models.ApiServiceIdAuthTokenFail$Outbound;
+  TokenFailRequest: models.TokenFailRequest$Outbound;
 };
 
 /** @internal */
@@ -90,10 +84,10 @@ export const AuthTokenFailApiFormRequest$outboundSchema: z.ZodType<
   AuthTokenFailApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthTokenFail: models.ApiServiceIdAuthTokenFail$outboundSchema,
+  tokenFailRequest: models.TokenFailRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthTokenFail: "api_serviceId_auth_token_fail",
+    tokenFailRequest: "TokenFailRequest",
   });
 });
 

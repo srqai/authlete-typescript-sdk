@@ -10,16 +10,13 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type ClientRegistrationDeleteApiRequestBody = {
   /**
    * Client ID.
    *
    * @remarks
    */
-  clientId: number;
+  clientId: string;
   /**
    * Client registration access token.
    *
@@ -44,12 +41,8 @@ export type ClientRegistrationDeleteApiRequest = {
 export const ClientRegistrationDeleteApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
+  Deleted: "DELETED",
   Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -61,7 +54,7 @@ export type ClientRegistrationDeleteApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientRegistrationDeleteApiResponse = {
   /**
@@ -85,9 +78,6 @@ export type ClientRegistrationDeleteApiResponse = {
    * Its format varies depending on the value of `action` parameter.
    */
   responseContent?: string | undefined;
-  /**
-   * An object containing client data
-   */
   client?: models.Client | undefined;
 };
 
@@ -97,13 +87,13 @@ export const ClientRegistrationDeleteApiRequestBody$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  clientId: z.number().int(),
+  clientId: z.string(),
   token: z.string(),
 });
 
 /** @internal */
 export type ClientRegistrationDeleteApiRequestBody$Outbound = {
-  clientId: number;
+  clientId: string;
   token: string;
 };
 
@@ -113,7 +103,7 @@ export const ClientRegistrationDeleteApiRequestBody$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   ClientRegistrationDeleteApiRequestBody
 > = z.object({
-  clientId: z.number().int(),
+  clientId: z.string(),
   token: z.string(),
 });
 

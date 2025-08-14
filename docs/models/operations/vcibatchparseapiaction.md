@@ -7,11 +7,11 @@ The next action that the batch credential endpoint should take.
 ```typescript
 import { VciBatchParseApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: VciBatchParseApiAction = "OK";
+let value: VciBatchParseApiAction = "INTERNAL_SERVER_ERROR";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"OK" | "BAD_REQUEST" | "UNAUTHORIZED" | "FORBIDDEN" | "INTERNAL_SERVER_ERROR"
 ```

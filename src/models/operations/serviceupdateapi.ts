@@ -14,7 +14,7 @@ export type ServiceUpdateApiRequest = {
    * A service ID.
    */
   serviceId: string;
-  service?: models.Service | undefined;
+  service?: models.ServiceInput | undefined;
 };
 
 /** @internal */
@@ -24,7 +24,7 @@ export const ServiceUpdateApiRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  Service: models.Service$inboundSchema.optional(),
+  Service: models.ServiceInput$inboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
     "Service": "service",
@@ -34,7 +34,7 @@ export const ServiceUpdateApiRequest$inboundSchema: z.ZodType<
 /** @internal */
 export type ServiceUpdateApiRequest$Outbound = {
   serviceId: string;
-  Service?: models.Service$Outbound | undefined;
+  Service?: models.ServiceInput$Outbound | undefined;
 };
 
 /** @internal */
@@ -44,7 +44,7 @@ export const ServiceUpdateApiRequest$outboundSchema: z.ZodType<
   ServiceUpdateApiRequest
 > = z.object({
   serviceId: z.string(),
-  service: models.Service$outboundSchema.optional(),
+  service: models.ServiceInput$outboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
     service: "Service",

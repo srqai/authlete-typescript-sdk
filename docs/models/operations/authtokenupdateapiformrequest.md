@@ -7,15 +7,13 @@ import { AuthTokenUpdateApiFormRequest } from "authlete-typescript-sdk/models/op
 
 let value: AuthTokenUpdateApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdAuthTokenUpdate: {
-    accessToken: "<value>",
-  },
+  tokenUpdateRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `serviceId`                                                                       | *string*                                                                          | :heavy_check_mark:                                                                | A service ID.                                                                     |
-| `apiServiceIdAuthTokenUpdate`                                                     | [models.ApiServiceIdAuthTokenUpdate](../../models/apiserviceidauthtokenupdate.md) | :heavy_check_mark:                                                                | N/A                                                                               |
+| Field                                                           | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `serviceId`                                                     | *string*                                                        | :heavy_check_mark:                                              | A service ID.                                                   |
+| `tokenUpdateRequest`                                            | [models.TokenUpdateRequest](../../models/tokenupdaterequest.md) | :heavy_check_mark:                                              | N/A                                                             |

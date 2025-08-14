@@ -15,8 +15,8 @@ export type BackchannelAuthenticationCompleteApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdBackchannelAuthenticationComplete:
-    models.ApiServiceIdBackchannelAuthenticationComplete;
+  backchannelAuthenticationCompleteRequest:
+    models.BackchannelAuthenticationCompleteRequest;
 };
 
 /**
@@ -25,14 +25,9 @@ export type BackchannelAuthenticationCompleteApiFormRequest = {
  * @remarks
  */
 export const BackchannelAuthenticationCompleteApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  ServerError: "SERVER_ERROR",
+  NoAction: "NO_ACTION",
+  Notification: "NOTIFICATION",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -44,7 +39,7 @@ export type BackchannelAuthenticationCompleteApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type BackchannelAuthenticationCompleteApiFormResponse = {
   /**
@@ -96,9 +91,6 @@ export type BackchannelAuthenticationCompleteApiFormResponse = {
    * @remarks
    */
   clientName?: string | undefined;
-  /**
-   * A string value
-   */
   deliveryMode?: models.DeliveryMode | undefined;
   /**
    * The client notification endpoint to which a notification needs to be sent. This corresponds
@@ -223,20 +215,20 @@ export const BackchannelAuthenticationCompleteApiFormRequest$inboundSchema:
     unknown
   > = z.object({
     serviceId: z.string(),
-    api_serviceId_backchannel_authentication_complete:
-      models.ApiServiceIdBackchannelAuthenticationComplete$inboundSchema,
+    BackchannelAuthenticationCompleteRequest:
+      models.BackchannelAuthenticationCompleteRequest$inboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      "api_serviceId_backchannel_authentication_complete":
-        "apiServiceIdBackchannelAuthenticationComplete",
+      "BackchannelAuthenticationCompleteRequest":
+        "backchannelAuthenticationCompleteRequest",
     });
   });
 
 /** @internal */
 export type BackchannelAuthenticationCompleteApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_backchannel_authentication_complete:
-    models.ApiServiceIdBackchannelAuthenticationComplete$Outbound;
+  BackchannelAuthenticationCompleteRequest:
+    models.BackchannelAuthenticationCompleteRequest$Outbound;
 };
 
 /** @internal */
@@ -247,12 +239,12 @@ export const BackchannelAuthenticationCompleteApiFormRequest$outboundSchema:
     BackchannelAuthenticationCompleteApiFormRequest
   > = z.object({
     serviceId: z.string(),
-    apiServiceIdBackchannelAuthenticationComplete:
-      models.ApiServiceIdBackchannelAuthenticationComplete$outboundSchema,
+    backchannelAuthenticationCompleteRequest:
+      models.BackchannelAuthenticationCompleteRequest$outboundSchema,
   }).transform((v) => {
     return remap$(v, {
-      apiServiceIdBackchannelAuthenticationComplete:
-        "api_serviceId_backchannel_authentication_complete",
+      backchannelAuthenticationCompleteRequest:
+        "BackchannelAuthenticationCompleteRequest",
     });
   });
 

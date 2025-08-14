@@ -15,21 +15,19 @@ export type PushedAuthReqApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdPushedAuthReq: models.ApiServiceIdPushedAuthReq;
+  pushedAuthRequest: models.PushedAuthRequest;
 };
 
 /**
  * The next action that the authorization server implementation should take. Any other value other than "CREATED" should be handled as unsuccessful result.
  */
 export const PushedAuthReqApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
   Created: "CREATED",
+  BadRequest: "BAD_REQUEST",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  PayloadTooLarge: "PAYLOAD_TOO_LARGE",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the authorization server implementation should take. Any other value other than "CREATED" should be handled as unsuccessful result.
@@ -66,7 +64,7 @@ export type PushedAuthReqApiFormClientAuthMethod = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type PushedAuthReqApiFormResponse = {
   /**
@@ -118,17 +116,17 @@ export const PushedAuthReqApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_pushed_auth_req: models.ApiServiceIdPushedAuthReq$inboundSchema,
+  PushedAuthRequest: models.PushedAuthRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_pushed_auth_req": "apiServiceIdPushedAuthReq",
+    "PushedAuthRequest": "pushedAuthRequest",
   });
 });
 
 /** @internal */
 export type PushedAuthReqApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_pushed_auth_req: models.ApiServiceIdPushedAuthReq$Outbound;
+  PushedAuthRequest: models.PushedAuthRequest$Outbound;
 };
 
 /** @internal */
@@ -138,10 +136,10 @@ export const PushedAuthReqApiFormRequest$outboundSchema: z.ZodType<
   PushedAuthReqApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdPushedAuthReq: models.ApiServiceIdPushedAuthReq$outboundSchema,
+  pushedAuthRequest: models.PushedAuthRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdPushedAuthReq: "api_serviceId_pushed_auth_req",
+    pushedAuthRequest: "PushedAuthRequest",
   });
 });
 

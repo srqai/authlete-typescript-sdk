@@ -8,9 +8,6 @@ import { safeParse } from "../../lib/schemas.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
-/**
- * An object containing schema data
- */
 export type ClientFlagUpdateApiRequestBody = {
   /**
    * The flag value to be set
@@ -33,7 +30,7 @@ export type ClientFlagUpdateApiRequest = {
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientFlagUpdateApiResponse = {
   /**

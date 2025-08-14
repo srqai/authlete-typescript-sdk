@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type HskCreateApiRequestBody = {
   /**
    * The key type (EC or RSA)
@@ -68,14 +65,10 @@ export type HskCreateApiRequest = {
  * Result of the API call
  */
 export const HskCreateApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Success: "SUCCESS",
+  InvalidRequest: "INVALID_REQUEST",
+  NotFound: "NOT_FOUND",
+  ServerError: "SERVER_ERROR",
 } as const;
 /**
  * Result of the API call
@@ -83,7 +76,7 @@ export const HskCreateApiAction = {
 export type HskCreateApiAction = ClosedEnum<typeof HskCreateApiAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type HskCreateApiResponse = {
   /**

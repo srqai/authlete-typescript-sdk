@@ -8,9 +8,6 @@ import { safeParse } from "../../lib/schemas.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
-/**
- * An object containing schema data
- */
 export type AuthTokenRevokeApiRequestBody = {
   /**
    * The identifier of an access token to revoke
@@ -54,7 +51,7 @@ export type AuthTokenRevokeApiRequest = {
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthTokenRevokeApiResponse = {
   /**
