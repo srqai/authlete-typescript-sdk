@@ -10,20 +10,20 @@ sources:
             - 3.0.0
     authlete-OAS:
         sourceNamespace: authlete-oas
-        sourceRevisionDigest: sha256:62069ac263234f349b079da53ae759ef585a55bd91775d67148beb87bec29c78
-        sourceBlobDigest: sha256:dbe37c93a1bceccd12d81576fd8840e7e16db4ea638b0f7aadba022e7097a280
+        sourceRevisionDigest: sha256:4473f2c8f1cb77ba4b939e837b85137c753870f4f952dc0b267e05f1dbb9782d
+        sourceBlobDigest: sha256:83a392156904152495b10a91102592ab97744b65ba7e1a63efadd4b09fb0c58c
         tags:
             - latest
-            - speakeasy-sdk-regen-1755187183
+            - speakeasy-sdk-regen-1755188872
             - 3.0.0
 targets:
     authlete:
         source: authlete-OAS
         sourceNamespace: authlete-oas
-        sourceRevisionDigest: sha256:62069ac263234f349b079da53ae759ef585a55bd91775d67148beb87bec29c78
-        sourceBlobDigest: sha256:dbe37c93a1bceccd12d81576fd8840e7e16db4ea638b0f7aadba022e7097a280
+        sourceRevisionDigest: sha256:4473f2c8f1cb77ba4b939e837b85137c753870f4f952dc0b267e05f1dbb9782d
+        sourceBlobDigest: sha256:83a392156904152495b10a91102592ab97744b65ba7e1a63efadd4b09fb0c58c
         codeSamplesNamespace: authlete-oas-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:155c0068fc183d1cf909839b26bdad3b20719e0eb1397965492ad994ab72e823
+        codeSamplesRevisionDigest: sha256:da7aec02311adf7fb6e92fba9202d696f0146c4cdda7ccd147a19a6795f77162
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
