@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: e17fc78f-822f-4688-9647-d39b4d15b69e
 management:
-  docChecksum: 64c12f7941e0700e32a593de37d51852
+  docChecksum: a1b95b563753c5ede97735f52e65ec13
   docVersion: 3.0.0
   speakeasyVersion: 1.603.2
   generationVersion: 2.681.8
-  releaseVersion: 0.0.7
-  configChecksum: becd5f7b04ce79b16606728d0f1a078c
+  releaseVersion: 0.0.8
+  configChecksum: 331d7d4cf55ef17a1f713a9e4511491e
   repoURL: https://github.com/srqai/authlete-typescript-sdk.git
   installationURL: https://github.com/srqai/authlete-typescript-sdk
   published: true
