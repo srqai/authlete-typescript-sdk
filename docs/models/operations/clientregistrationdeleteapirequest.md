@@ -8,7 +8,7 @@ import { ClientRegistrationDeleteApiRequest } from "authlete-typescript-sdk/mode
 let value: ClientRegistrationDeleteApiRequest = {
   serviceId: "<id>",
   requestBody: {
-    clientId: 251281,
+    clientId: "<id>",
     token: "<value>",
   },
 };

@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type AuthAuthorizationIssueApiRequestBody = {
   /**
    * The ticket issued from Authlete `/auth/authorization` API.
@@ -117,12 +114,8 @@ export type AuthAuthorizationIssueApiRequest = {
 export const AuthAuthorizationIssueApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Location: "LOCATION",
+  Form: "FORM",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -132,7 +125,7 @@ export type AuthAuthorizationIssueApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthAuthorizationIssueApiResponse = {
   /**

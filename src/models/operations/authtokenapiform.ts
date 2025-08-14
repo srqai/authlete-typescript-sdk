@@ -15,7 +15,7 @@ export type AuthTokenApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthToken: models.ApiServiceIdAuthToken;
+  tokenRequest: models.TokenRequest;
 };
 
 /**
@@ -23,13 +23,12 @@ export type AuthTokenApiFormRequest = {
  */
 export const AuthTokenApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
+  InvalidClient: "INVALID_CLIENT",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
+  Password: "PASSWORD",
   Ok: "OK",
+  TokenExchange: "TOKEN_EXCHANGE",
+  JwtBearer: "JWT_BEARER",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -64,9 +63,6 @@ export type AuthTokenApiFormActorTokenType = ClosedEnum<
   typeof AuthTokenApiFormActorTokenType
 >;
 
-/**
- * An object containing actortokeninfo data
- */
 export type AuthTokenApiFormActorTokenInfo = {
   /**
    * The client id.
@@ -100,9 +96,6 @@ export type AuthTokenApiFormActorTokenInfo = {
    * The array of the resources of the token.
    */
   resources?: Array<string> | undefined;
-  /**
-   * An object containing authorizationdetailselement data
-   */
   authorizationDetails?: models.AuthorizationDetailsElement | undefined;
   /**
    * The entity ID of the client.
@@ -119,7 +112,7 @@ export type AuthTokenApiFormActorTokenInfo = {
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthTokenApiFormResponse = {
   /**
@@ -312,35 +305,10 @@ export type AuthTokenApiFormResponse = {
    * @remarks
    */
   audiences?: Array<string> | undefined;
-  /**
-   * The grant type of the access token when the access token was created.
-   *
-   * @remarks
-   */
-  requestedTokenType?:
-    | models.ApiServiceIdAuthTokenpropertiesactorTokenType
-    | undefined;
-  /**
-   * A string value
-   */
+  requestedTokenType?: models.TokenResponse | undefined;
   subjectToken?: string | undefined;
-  /**
-   * The grant type of the access token when the access token was created.
-   *
-   * @remarks
-   */
-  subjectTokenType?:
-    | models.ApiServiceIdAuthTokenpropertiesactorTokenType1
-    | undefined;
-  /**
-   * An object containing api_serviceid_auth_tokenpropertiesactortokeninfo data
-   */
-  subjectTokenInfo?:
-    | models.ApiServiceIdAuthTokenpropertiesactorTokenInfo
-    | undefined;
-  /**
-   * A string value
-   */
+  subjectTokenType?: models.TokenResponse | undefined;
+  subjectTokenInfo?: models.TokenResponse | undefined;
   actorToken?: string | undefined;
   /**
    * The grant type of the access token when the access token was created.
@@ -348,9 +316,6 @@ export type AuthTokenApiFormResponse = {
    * @remarks
    */
   actorTokenType?: AuthTokenApiFormActorTokenType | undefined;
-  /**
-   * An object containing actortokeninfo data
-   */
   actorTokenInfo?: AuthTokenApiFormActorTokenInfo | undefined;
   /**
    * For RFC 7523 JSON Web Token (JWT) Profile for OAuth 2.0 Client Authentication and Authorization Grants
@@ -424,17 +389,17 @@ export const AuthTokenApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_token: models.ApiServiceIdAuthToken$inboundSchema,
+  TokenRequest: models.TokenRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_token": "apiServiceIdAuthToken",
+    "TokenRequest": "tokenRequest",
   });
 });
 
 /** @internal */
 export type AuthTokenApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_token: models.ApiServiceIdAuthToken$Outbound;
+  TokenRequest: models.TokenRequest$Outbound;
 };
 
 /** @internal */
@@ -444,10 +409,10 @@ export const AuthTokenApiFormRequest$outboundSchema: z.ZodType<
   AuthTokenApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthToken: models.ApiServiceIdAuthToken$outboundSchema,
+  tokenRequest: models.TokenRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthToken: "api_serviceId_auth_token",
+    tokenRequest: "TokenRequest",
   });
 });
 
@@ -650,13 +615,10 @@ export const AuthTokenApiFormResponse$inboundSchema: z.ZodType<
   clientAuthMethod: z.string().optional(),
   grantId: z.string().optional(),
   audiences: z.array(z.string()).optional(),
-  requestedTokenType: models
-    .ApiServiceIdAuthTokenpropertiesactorTokenType$inboundSchema.optional(),
+  requestedTokenType: models.TokenResponse$inboundSchema.optional(),
   subjectToken: z.string().optional(),
-  subjectTokenType: models
-    .ApiServiceIdAuthTokenpropertiesactorTokenType1$inboundSchema.optional(),
-  subjectTokenInfo: models
-    .ApiServiceIdAuthTokenpropertiesactorTokenInfo$inboundSchema.optional(),
+  subjectTokenType: models.TokenResponse$inboundSchema.optional(),
+  subjectTokenInfo: models.TokenResponse$inboundSchema.optional(),
   actorToken: z.string().optional(),
   actorTokenType: AuthTokenApiFormActorTokenType$inboundSchema.optional(),
   actorTokenInfo: z.lazy(() => AuthTokenApiFormActorTokenInfo$inboundSchema)
@@ -705,12 +667,10 @@ export type AuthTokenApiFormResponse$Outbound = {
   clientAuthMethod?: string | undefined;
   grantId?: string | undefined;
   audiences?: Array<string> | undefined;
-  requestedTokenType?: string | undefined;
+  requestedTokenType?: models.TokenResponse$Outbound | undefined;
   subjectToken?: string | undefined;
-  subjectTokenType?: string | undefined;
-  subjectTokenInfo?:
-    | models.ApiServiceIdAuthTokenpropertiesactorTokenInfo$Outbound
-    | undefined;
+  subjectTokenType?: models.TokenResponse$Outbound | undefined;
+  subjectTokenInfo?: models.TokenResponse$Outbound | undefined;
   actorToken?: string | undefined;
   actorTokenType?: string | undefined;
   actorTokenInfo?: AuthTokenApiFormActorTokenInfo$Outbound | undefined;
@@ -762,13 +722,10 @@ export const AuthTokenApiFormResponse$outboundSchema: z.ZodType<
   clientAuthMethod: z.string().optional(),
   grantId: z.string().optional(),
   audiences: z.array(z.string()).optional(),
-  requestedTokenType: models
-    .ApiServiceIdAuthTokenpropertiesactorTokenType$outboundSchema.optional(),
+  requestedTokenType: models.TokenResponse$outboundSchema.optional(),
   subjectToken: z.string().optional(),
-  subjectTokenType: models
-    .ApiServiceIdAuthTokenpropertiesactorTokenType1$outboundSchema.optional(),
-  subjectTokenInfo: models
-    .ApiServiceIdAuthTokenpropertiesactorTokenInfo$outboundSchema.optional(),
+  subjectTokenType: models.TokenResponse$outboundSchema.optional(),
+  subjectTokenInfo: models.TokenResponse$outboundSchema.optional(),
   actorToken: z.string().optional(),
   actorTokenType: AuthTokenApiFormActorTokenType$outboundSchema.optional(),
   actorTokenInfo: z.lazy(() => AuthTokenApiFormActorTokenInfo$outboundSchema)

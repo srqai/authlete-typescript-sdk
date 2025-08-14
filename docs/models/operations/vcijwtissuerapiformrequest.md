@@ -7,15 +7,13 @@ import { VciJwtissuerApiFormRequest } from "authlete-typescript-sdk/models/opera
 
 let value: VciJwtissuerApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdVciJwtissuer: {
-    pretty: false,
-  },
+  vciJwtIssuerRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `serviceId`                                                                 | *string*                                                                    | :heavy_check_mark:                                                          | A service ID.                                                               |
-| `apiServiceIdVciJwtissuer`                                                  | [models.ApiServiceIdVciJwtissuer](../../models/apiserviceidvcijwtissuer.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `serviceId`                                                       | *string*                                                          | :heavy_check_mark:                                                | A service ID.                                                     |
+| `vciJwtIssuerRequest`                                             | [models.VciJwtIssuerRequest](../../models/vcijwtissuerrequest.md) | :heavy_check_mark:                                                | N/A                                                               |

@@ -15,8 +15,7 @@ export type AuthIntrospectionStandardApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthIntrospectionStandard:
-    models.ApiServiceIdAuthIntrospectionStandard;
+  introspectionStandardRequest: models.IntrospectionStandardRequest;
 };
 
 /**
@@ -25,11 +24,6 @@ export type AuthIntrospectionStandardApiFormRequest = {
 export const AuthIntrospectionStandardApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -40,7 +34,7 @@ export type AuthIntrospectionStandardApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthIntrospectionStandardApiFormResponse = {
   /**
@@ -71,20 +65,18 @@ export const AuthIntrospectionStandardApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_introspection_standard:
-    models.ApiServiceIdAuthIntrospectionStandard$inboundSchema,
+  IntrospectionStandardRequest:
+    models.IntrospectionStandardRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_introspection_standard":
-      "apiServiceIdAuthIntrospectionStandard",
+    "IntrospectionStandardRequest": "introspectionStandardRequest",
   });
 });
 
 /** @internal */
 export type AuthIntrospectionStandardApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_introspection_standard:
-    models.ApiServiceIdAuthIntrospectionStandard$Outbound;
+  IntrospectionStandardRequest: models.IntrospectionStandardRequest$Outbound;
 };
 
 /** @internal */
@@ -94,12 +86,11 @@ export const AuthIntrospectionStandardApiFormRequest$outboundSchema: z.ZodType<
   AuthIntrospectionStandardApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthIntrospectionStandard:
-    models.ApiServiceIdAuthIntrospectionStandard$outboundSchema,
+  introspectionStandardRequest:
+    models.IntrospectionStandardRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthIntrospectionStandard:
-      "api_serviceId_auth_introspection_standard",
+    introspectionStandardRequest: "IntrospectionStandardRequest",
   });
 });
 

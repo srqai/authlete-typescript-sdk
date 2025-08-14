@@ -14,11 +14,11 @@ export type JoseVerifyApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdJoseVerify?: models.ApiServiceIdJoseVerify | undefined;
+  joseVerifyRequest?: models.JoseVerifyRequest | undefined;
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type JoseVerifyApiFormResponse = {
   /**
@@ -68,20 +68,17 @@ export const JoseVerifyApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_jose_verify: models.ApiServiceIdJoseVerify$inboundSchema
-    .optional(),
+  JoseVerifyRequest: models.JoseVerifyRequest$inboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_jose_verify": "apiServiceIdJoseVerify",
+    "JoseVerifyRequest": "joseVerifyRequest",
   });
 });
 
 /** @internal */
 export type JoseVerifyApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_jose_verify?:
-    | models.ApiServiceIdJoseVerify$Outbound
-    | undefined;
+  JoseVerifyRequest?: models.JoseVerifyRequest$Outbound | undefined;
 };
 
 /** @internal */
@@ -91,11 +88,10 @@ export const JoseVerifyApiFormRequest$outboundSchema: z.ZodType<
   JoseVerifyApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdJoseVerify: models.ApiServiceIdJoseVerify$outboundSchema
-    .optional(),
+  joseVerifyRequest: models.JoseVerifyRequest$outboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdJoseVerify: "api_serviceId_jose_verify",
+    joseVerifyRequest: "JoseVerifyRequest",
   });
 });
 

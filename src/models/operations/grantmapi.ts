@@ -34,9 +34,6 @@ export const GmAction = {
  */
 export type GmAction = ClosedEnum<typeof GmAction>;
 
-/**
- * An object containing schema data
- */
 export type GrantMApiRequestBody = {
   /**
    * An access token to introspect.
@@ -138,14 +135,13 @@ export type GrantMApiRequest = {
  * The next action that the authorization server implementation should take.
  */
 export const GrantMApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
+  Ok: "OK",
+  NoContent: "NO_CONTENT",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  NotFound: "NOT_FOUND",
+  CallerError: "CALLER_ERROR",
+  AuthleteError: "AUTHLETE_ERROR",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -153,7 +149,7 @@ export const GrantMApiAction = {
 export type GrantMApiAction = ClosedEnum<typeof GrantMApiAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type GrantMApiResponse = {
   /**

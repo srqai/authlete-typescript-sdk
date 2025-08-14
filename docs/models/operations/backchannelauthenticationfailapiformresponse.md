@@ -1,6 +1,6 @@
 # BackchannelAuthenticationFailApiFormResponse
 
-An object containing schema data
+Successful operation
 
 ## Example Usage
 

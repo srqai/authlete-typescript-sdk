@@ -8,9 +8,6 @@ import { safeParse } from "../../lib/schemas.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
-/**
- * An object containing schema data
- */
 export type ClientAuthorizationUpdateApiRequestBody = {
   /**
    * The subject (= unique identifier) of the end-user who has granted authorization to the client
@@ -45,7 +42,7 @@ export type ClientAuthorizationUpdateApiRequest = {
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientAuthorizationUpdateApiResponse = {
   /**

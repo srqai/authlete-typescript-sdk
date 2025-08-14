@@ -40,9 +40,6 @@ export type AuthAuthorizationFailApiReason = ClosedEnum<
   typeof AuthAuthorizationFailApiReason
 >;
 
-/**
- * An object containing schema data
- */
 export type AuthAuthorizationFailApiRequestBody = {
   /**
    * The ticket issued from Authlete `/auth/authorization` API.
@@ -79,12 +76,8 @@ export type AuthAuthorizationFailApiRequest = {
 export const AuthAuthorizationFailApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Location: "LOCATION",
+  Form: "FORM",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -94,7 +87,7 @@ export type AuthAuthorizationFailApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthAuthorizationFailApiResponse = {
   /**

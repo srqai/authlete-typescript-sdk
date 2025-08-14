@@ -1,7 +1,5 @@
 # VciDeferredIssueApiRequestBody
 
-An object containing schema data
-
 ## Example Usage
 
 ```typescript
@@ -14,4 +12,4 @@ let value: VciDeferredIssueApiRequestBody = {};
 
 | Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| `order`                                                                   | [models.CredentialIssuanceOrder](../../models/credentialissuanceorder.md) | :heavy_minus_sign:                                                        | An object containing credentialissuanceorder data                         |
+| `order`                                                                   | [models.CredentialIssuanceOrder](../../models/credentialissuanceorder.md) | :heavy_minus_sign:                                                        | N/A                                                                       |

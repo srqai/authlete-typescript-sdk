@@ -7,15 +7,13 @@ import { DeviceVerificationApiFormRequest } from "authlete-typescript-sdk/models
 
 let value: DeviceVerificationApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdDeviceVerification: {
-    userCode: "<value>",
-  },
+  deviceVerification: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `serviceId`                                                                             | *string*                                                                                | :heavy_check_mark:                                                                      | A service ID.                                                                           |
-| `apiServiceIdDeviceVerification`                                                        | [models.ApiServiceIdDeviceVerification](../../models/apiserviceiddeviceverification.md) | :heavy_check_mark:                                                                      | N/A                                                                                     |
+| Field                                                           | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `serviceId`                                                     | *string*                                                        | :heavy_check_mark:                                              | A service ID.                                                   |
+| `deviceVerification`                                            | [models.DeviceVerification](../../models/deviceverification.md) | :heavy_check_mark:                                              | N/A                                                             |

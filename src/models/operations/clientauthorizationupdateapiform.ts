@@ -20,13 +20,13 @@ export type ClientAuthorizationUpdateApiFormRequest = {
    * @remarks
    */
   clientId: string;
-  apiServiceIdClientAuthorizationUpdateClientId?:
-    | models.ApiServiceIdClientAuthorizationUpdateClientId
+  clientAuthorizationUpdateRequest?:
+    | models.ClientAuthorizationUpdateRequest
     | undefined;
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientAuthorizationUpdateApiFormResponse = {
   /**
@@ -47,12 +47,11 @@ export const ClientAuthorizationUpdateApiFormRequest$inboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientId: z.string(),
-  api_serviceId_client_authorization_update_clientId: models
-    .ApiServiceIdClientAuthorizationUpdateClientId$inboundSchema.optional(),
+  ClientAuthorizationUpdateRequest: models
+    .ClientAuthorizationUpdateRequest$inboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_client_authorization_update_clientId":
-      "apiServiceIdClientAuthorizationUpdateClientId",
+    "ClientAuthorizationUpdateRequest": "clientAuthorizationUpdateRequest",
   });
 });
 
@@ -60,8 +59,8 @@ export const ClientAuthorizationUpdateApiFormRequest$inboundSchema: z.ZodType<
 export type ClientAuthorizationUpdateApiFormRequest$Outbound = {
   serviceId: string;
   clientId: string;
-  api_serviceId_client_authorization_update_clientId?:
-    | models.ApiServiceIdClientAuthorizationUpdateClientId$Outbound
+  ClientAuthorizationUpdateRequest?:
+    | models.ClientAuthorizationUpdateRequest$Outbound
     | undefined;
 };
 
@@ -73,12 +72,11 @@ export const ClientAuthorizationUpdateApiFormRequest$outboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientId: z.string(),
-  apiServiceIdClientAuthorizationUpdateClientId: models
-    .ApiServiceIdClientAuthorizationUpdateClientId$outboundSchema.optional(),
+  clientAuthorizationUpdateRequest: models
+    .ClientAuthorizationUpdateRequest$outboundSchema.optional(),
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdClientAuthorizationUpdateClientId:
-      "api_serviceId_client_authorization_update_clientId",
+    clientAuthorizationUpdateRequest: "ClientAuthorizationUpdateRequest",
   });
 });
 

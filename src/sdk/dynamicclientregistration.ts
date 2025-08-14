@@ -331,7 +331,7 @@ export class DynamicClientRegistration extends ClientSDK {
   async clientRegistrationGetApi(
     request: operations.ClientRegistrationGetApiRequest,
     options?: RequestOptions,
-  ): Promise<models.ApiServiceIdClientRegistration3> {
+  ): Promise<models.ClientRegistrationResponse> {
     return unwrapAsync(dynamicClientRegistrationClientRegistrationGetApi(
       this,
       request,

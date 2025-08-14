@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type AuthIntrospectionApiRequestBody = {
   /**
    * An access token to introspect.
@@ -136,11 +133,8 @@ export type AuthIntrospectionApiRequest = {
 export const AuthIntrospectionApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -151,7 +145,7 @@ export type AuthIntrospectionApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthIntrospectionApiResponse = {
   /**
@@ -308,10 +302,7 @@ export type AuthIntrospectionApiResponse = {
    * , which is supported by Authlete 2.3 and newer versions.
    */
   grantId?: string | undefined;
-  /**
-   * An object containing api_serviceid_auth_authorizationpropertiesgrant data
-   */
-  grant?: models.ApiServiceIdAuthAuthorizationpropertiesgrant | undefined;
+  grant?: models.AuthorizationGrant | undefined;
   /**
    * the flag which indicates whether the access token is for an external
    *
@@ -594,8 +585,7 @@ export const AuthIntrospectionApiResponse$inboundSchema: z.ZodType<
   clientAttributes: z.array(models.Pair$inboundSchema).optional(),
   scopeDetails: z.array(models.Scope$inboundSchema).optional(),
   grantId: z.string().optional(),
-  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant$inboundSchema
-    .optional(),
+  grant: models.AuthorizationGrant$inboundSchema.optional(),
   forExternalAttachment: z.boolean().optional(),
   consentedClaims: z.array(z.string()).optional(),
   grantType: models.GrantType$inboundSchema.optional(),
@@ -635,9 +625,7 @@ export type AuthIntrospectionApiResponse$Outbound = {
   clientAttributes?: Array<models.Pair$Outbound> | undefined;
   scopeDetails?: Array<models.Scope$Outbound> | undefined;
   grantId?: string | undefined;
-  grant?:
-    | models.ApiServiceIdAuthAuthorizationpropertiesgrant$Outbound
-    | undefined;
+  grant?: models.AuthorizationGrant$Outbound | undefined;
   forExternalAttachment?: boolean | undefined;
   consentedClaims?: Array<string> | undefined;
   grantType?: string | undefined;
@@ -681,8 +669,7 @@ export const AuthIntrospectionApiResponse$outboundSchema: z.ZodType<
   clientAttributes: z.array(models.Pair$outboundSchema).optional(),
   scopeDetails: z.array(models.Scope$outboundSchema).optional(),
   grantId: z.string().optional(),
-  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant$outboundSchema
-    .optional(),
+  grant: models.AuthorizationGrant$outboundSchema.optional(),
   forExternalAttachment: z.boolean().optional(),
   consentedClaims: z.array(z.string()).optional(),
   grantType: models.GrantType$outboundSchema.optional(),

@@ -21,11 +21,6 @@ export type AuthTokenDeleteApiRequest = {
   accessTokenIdentifier: string;
 };
 
-/**
- * Response for 204
- */
-export type AuthTokenDeleteApiResponse = {};
-
 /** @internal */
 export const AuthTokenDeleteApiRequest$inboundSchema: z.ZodType<
   AuthTokenDeleteApiRequest,
@@ -80,53 +75,5 @@ export function authTokenDeleteApiRequestFromJSON(
     jsonString,
     (x) => AuthTokenDeleteApiRequest$inboundSchema.parse(JSON.parse(x)),
     `Failed to parse 'AuthTokenDeleteApiRequest' from JSON`,
-  );
-}
-
-/** @internal */
-export const AuthTokenDeleteApiResponse$inboundSchema: z.ZodType<
-  AuthTokenDeleteApiResponse,
-  z.ZodTypeDef,
-  unknown
-> = z.object({});
-
-/** @internal */
-export type AuthTokenDeleteApiResponse$Outbound = {};
-
-/** @internal */
-export const AuthTokenDeleteApiResponse$outboundSchema: z.ZodType<
-  AuthTokenDeleteApiResponse$Outbound,
-  z.ZodTypeDef,
-  AuthTokenDeleteApiResponse
-> = z.object({});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace AuthTokenDeleteApiResponse$ {
-  /** @deprecated use `AuthTokenDeleteApiResponse$inboundSchema` instead. */
-  export const inboundSchema = AuthTokenDeleteApiResponse$inboundSchema;
-  /** @deprecated use `AuthTokenDeleteApiResponse$outboundSchema` instead. */
-  export const outboundSchema = AuthTokenDeleteApiResponse$outboundSchema;
-  /** @deprecated use `AuthTokenDeleteApiResponse$Outbound` instead. */
-  export type Outbound = AuthTokenDeleteApiResponse$Outbound;
-}
-
-export function authTokenDeleteApiResponseToJSON(
-  authTokenDeleteApiResponse: AuthTokenDeleteApiResponse,
-): string {
-  return JSON.stringify(
-    AuthTokenDeleteApiResponse$outboundSchema.parse(authTokenDeleteApiResponse),
-  );
-}
-
-export function authTokenDeleteApiResponseFromJSON(
-  jsonString: string,
-): SafeParseResult<AuthTokenDeleteApiResponse, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => AuthTokenDeleteApiResponse$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'AuthTokenDeleteApiResponse' from JSON`,
   );
 }

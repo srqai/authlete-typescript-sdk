@@ -15,8 +15,7 @@ export type BackchannelAuthenticationApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdBackchannelAuthentication:
-    models.ApiServiceIdBackchannelAuthentication;
+  backchannelAuthenticationRequest: models.BackchannelAuthenticationRequest;
 };
 
 /**
@@ -25,12 +24,8 @@ export type BackchannelAuthenticationApiFormRequest = {
 export const BackchannelAuthenticationApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  UserIdentification: "USER_IDENTIFICATION",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -40,7 +35,7 @@ export type BackchannelAuthenticationApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type BackchannelAuthenticationApiFormResponse = {
   /**
@@ -235,9 +230,6 @@ export type BackchannelAuthenticationApiFormResponse = {
    * @remarks
    */
   dynamicScopes?: Array<models.DynamicScope> | undefined;
-  /**
-   * A string value
-   */
   deliveryMode?: models.DeliveryMode | undefined;
   /**
    * The client authentication method that was performed.
@@ -245,15 +237,7 @@ export type BackchannelAuthenticationApiFormResponse = {
    * @remarks
    */
   clientAuthMethod?: string | undefined;
-  /**
-   * The grant management action of the device authorization request.
-   *
-   * @remarks
-   *
-   * The `grant_management_action` request parameter is defined in
-   * [Grant Management for OAuth 2.0](https://openid.net/specs/fapi-grant-management.html).
-   */
-  gmAction?: models.ApiServiceIdGmpropertiesgmAction1 | undefined;
+  gmAction?: models.GmAction | undefined;
   /**
    * the value of the `grant_id` request parameter of the device authorization request.
    *
@@ -264,10 +248,7 @@ export type BackchannelAuthenticationApiFormResponse = {
    * , which is supported by Authlete 2.3 and newer versions.
    */
   grantId?: string | undefined;
-  /**
-   * An object containing api_serviceid_auth_authorizationpropertiesgrant1 data
-   */
-  grant?: models.ApiServiceIdAuthAuthorizationpropertiesgrant1 | undefined;
+  grant?: models.AuthorizationGrant | undefined;
   /**
    * The subject identifying the user who has given the grant identified
    *
@@ -314,20 +295,19 @@ export const BackchannelAuthenticationApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_backchannel_authentication:
-    models.ApiServiceIdBackchannelAuthentication$inboundSchema,
+  BackchannelAuthenticationRequest:
+    models.BackchannelAuthenticationRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_backchannel_authentication":
-      "apiServiceIdBackchannelAuthentication",
+    "BackchannelAuthenticationRequest": "backchannelAuthenticationRequest",
   });
 });
 
 /** @internal */
 export type BackchannelAuthenticationApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_backchannel_authentication:
-    models.ApiServiceIdBackchannelAuthentication$Outbound;
+  BackchannelAuthenticationRequest:
+    models.BackchannelAuthenticationRequest$Outbound;
 };
 
 /** @internal */
@@ -337,12 +317,11 @@ export const BackchannelAuthenticationApiFormRequest$outboundSchema: z.ZodType<
   BackchannelAuthenticationApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdBackchannelAuthentication:
-    models.ApiServiceIdBackchannelAuthentication$outboundSchema,
+  backchannelAuthenticationRequest:
+    models.BackchannelAuthenticationRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdBackchannelAuthentication:
-      "api_serviceId_backchannel_authentication",
+    backchannelAuthenticationRequest: "BackchannelAuthenticationRequest",
   });
 });
 
@@ -447,10 +426,9 @@ export const BackchannelAuthenticationApiFormResponse$inboundSchema: z.ZodType<
   dynamicScopes: z.array(models.DynamicScope$inboundSchema).optional(),
   deliveryMode: models.DeliveryMode$inboundSchema.optional(),
   clientAuthMethod: z.string().optional(),
-  gmAction: models.ApiServiceIdGmpropertiesgmAction1$inboundSchema.optional(),
+  gmAction: models.GmAction$inboundSchema.optional(),
   grantId: z.string().optional(),
-  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant1$inboundSchema
-    .optional(),
+  grant: models.AuthorizationGrant$inboundSchema.optional(),
   grantSubject: z.string().optional(),
   clientEntityId: z.string().optional(),
   clientEntityIdUsed: z.boolean().optional(),
@@ -489,9 +467,7 @@ export type BackchannelAuthenticationApiFormResponse$Outbound = {
   clientAuthMethod?: string | undefined;
   gmAction?: string | undefined;
   grantId?: string | undefined;
-  grant?:
-    | models.ApiServiceIdAuthAuthorizationpropertiesgrant1$Outbound
-    | undefined;
+  grant?: models.AuthorizationGrant$Outbound | undefined;
   grantSubject?: string | undefined;
   clientEntityId?: string | undefined;
   clientEntityIdUsed?: boolean | undefined;
@@ -532,10 +508,9 @@ export const BackchannelAuthenticationApiFormResponse$outboundSchema: z.ZodType<
   dynamicScopes: z.array(models.DynamicScope$outboundSchema).optional(),
   deliveryMode: models.DeliveryMode$outboundSchema.optional(),
   clientAuthMethod: z.string().optional(),
-  gmAction: models.ApiServiceIdGmpropertiesgmAction1$outboundSchema.optional(),
+  gmAction: models.GmAction$outboundSchema.optional(),
   grantId: z.string().optional(),
-  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant1$outboundSchema
-    .optional(),
+  grant: models.AuthorizationGrant$outboundSchema.optional(),
   grantSubject: z.string().optional(),
   clientEntityId: z.string().optional(),
   clientEntityIdUsed: z.boolean().optional(),

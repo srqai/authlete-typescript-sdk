@@ -1,7 +1,5 @@
 # DynamicScope
 
-An object containing dynamicscope data
-
 ## Example Usage
 
 ```typescript

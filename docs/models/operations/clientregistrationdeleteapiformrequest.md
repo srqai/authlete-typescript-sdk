@@ -7,16 +7,13 @@ import { ClientRegistrationDeleteApiFormRequest } from "authlete-typescript-sdk/
 
 let value: ClientRegistrationDeleteApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdClientRegistrationDelete: {
-    clientId: 755634,
-    token: "<value>",
-  },
+  clientRegistration2Request: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                         | *string*                                                                                            | :heavy_check_mark:                                                                                  | A service ID.                                                                                       |
-| `apiServiceIdClientRegistrationDelete`                                                              | [models.ApiServiceIdClientRegistrationDelete](../../models/apiserviceidclientregistrationdelete.md) | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `serviceId`                                                                     | *string*                                                                        | :heavy_check_mark:                                                              | A service ID.                                                                   |
+| `clientRegistration2Request`                                                    | [models.ClientRegistration2Request](../../models/clientregistration2request.md) | :heavy_check_mark:                                                              | N/A                                                                             |

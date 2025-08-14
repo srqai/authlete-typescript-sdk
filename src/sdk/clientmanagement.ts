@@ -109,7 +109,7 @@ export class ClientManagement extends ClientSDK {
   async clientDeleteApi(
     request: operations.ClientDeleteApiRequest,
     options?: RequestOptions,
-  ): Promise<operations.ClientDeleteApiResponse> {
+  ): Promise<void> {
     return unwrapAsync(clientManagementClientDeleteApi(
       this,
       request,
@@ -275,7 +275,7 @@ export class ClientManagement extends ClientSDK {
   async clientAuthorizationDeleteApi(
     request: operations.ClientAuthorizationDeleteApiRequest,
     options?: RequestOptions,
-  ): Promise<models.ApiServiceIdClientGrantedScopesGetClientId> {
+  ): Promise<models.ClientGrantedScopesResponse> {
     return unwrapAsync(clientManagementClientAuthorizationDeleteApi(
       this,
       request,
@@ -397,7 +397,7 @@ export class ClientManagement extends ClientSDK {
   async clientExtensionRequestablesScopesDeleteApi(
     request: operations.ClientExtensionRequestablesScopesDeleteApiRequest,
     options?: RequestOptions,
-  ): Promise<operations.ClientExtensionRequestablesScopesDeleteApiResponse> {
+  ): Promise<void> {
     return unwrapAsync(
       clientManagementClientExtensionRequestablesScopesDeleteApi(
         this,

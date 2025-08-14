@@ -1,6 +1,6 @@
 # AuthUserinfoIssueApiFormResponse
 
-HTTP 200 response
+Successful operation
 
 ## Example Usage
 

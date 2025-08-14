@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type ClientRegistrationApiRequestBody = {
   /**
    * Client metadata in JSON format that complies with [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)
@@ -32,7 +29,7 @@ export type ClientRegistrationApiRequestBody = {
    *
    * @remarks
    */
-  clientId?: number | undefined;
+  clientId?: string | undefined;
 };
 
 export type ClientRegistrationApiRequest = {
@@ -52,11 +49,6 @@ export const ClientRegistrationApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
   Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -68,7 +60,7 @@ export type ClientRegistrationApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientRegistrationApiResponse = {
   /**
@@ -92,9 +84,6 @@ export type ClientRegistrationApiResponse = {
    * Its format varies depending on the value of `action` parameter.
    */
   responseContent?: string | undefined;
-  /**
-   * An object containing client data
-   */
   client?: models.Client | undefined;
 };
 
@@ -106,14 +95,14 @@ export const ClientRegistrationApiRequestBody$inboundSchema: z.ZodType<
 > = z.object({
   json: z.string(),
   token: z.string().optional(),
-  clientId: z.number().int().optional(),
+  clientId: z.string().optional(),
 });
 
 /** @internal */
 export type ClientRegistrationApiRequestBody$Outbound = {
   json: string;
   token?: string | undefined;
-  clientId?: number | undefined;
+  clientId?: string | undefined;
 };
 
 /** @internal */
@@ -124,7 +113,7 @@ export const ClientRegistrationApiRequestBody$outboundSchema: z.ZodType<
 > = z.object({
   json: z.string(),
   token: z.string().optional(),
-  clientId: z.number().int().optional(),
+  clientId: z.string().optional(),
 });
 
 /**

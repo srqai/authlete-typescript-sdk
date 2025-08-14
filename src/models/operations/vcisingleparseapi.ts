@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type VciSingleParseApiRequestBody = {
   /**
    * The access token that came along with the credential request.
@@ -36,14 +33,11 @@ export type VciSingleParseApiRequest = {
  * The next action that the credential endpoint should take.
  */
 export const VciSingleParseApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
+  Ok: "OK",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the credential endpoint should take.
@@ -53,7 +47,7 @@ export type VciSingleParseApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciSingleParseApiResponse = {
   /**
@@ -72,9 +66,6 @@ export type VciSingleParseApiResponse = {
    * The content of the response to the request sender.
    */
   responseContent?: string | undefined;
-  /**
-   * An object containing credentialrequestinfo data
-   */
   info?: models.CredentialRequestInfo | undefined;
 };
 

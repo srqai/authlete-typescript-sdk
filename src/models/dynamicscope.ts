@@ -7,9 +7,6 @@ import { safeParse } from "../lib/schemas.js";
 import { Result as SafeParseResult } from "../types/fp.js";
 import { SDKValidationError } from "./errors/sdkvalidationerror.js";
 
-/**
- * An object containing dynamicscope data
- */
 export type DynamicScope = {
   /**
    * The scope name.

@@ -7,15 +7,13 @@ import { AuthRevocationApiFormRequest } from "authlete-typescript-sdk/models/ope
 
 let value: AuthRevocationApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdAuthRevocation: {
-    parameters: "<value>",
-  },
+  revocationRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `serviceId`                                                                     | *string*                                                                        | :heavy_check_mark:                                                              | A service ID.                                                                   |
-| `apiServiceIdAuthRevocation`                                                    | [models.ApiServiceIdAuthRevocation](../../models/apiserviceidauthrevocation.md) | :heavy_check_mark:                                                              | N/A                                                                             |
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `serviceId`                                                   | *string*                                                      | :heavy_check_mark:                                            | A service ID.                                                 |
+| `revocationRequest`                                           | [models.RevocationRequest](../../models/revocationrequest.md) | :heavy_check_mark:                                            | N/A                                                           |

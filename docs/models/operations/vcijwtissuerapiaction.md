@@ -10,11 +10,11 @@ a response from Authlete's `/vci/jwtissuer` API.
 ```typescript
 import { VciJwtissuerApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: VciJwtissuerApiAction = "UNAUTHORIZED";
+let value: VciJwtissuerApiAction = "NOT_FOUND";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"OK" | "NOT_FOUND" | "INTERNAL_SERVER_ERROR"
 ```

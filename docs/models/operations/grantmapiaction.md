@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { GrantMApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: GrantMApiAction = "CREATED";
+let value: GrantMApiAction = "NO_CONTENT";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"OK" | "NO_CONTENT" | "UNAUTHORIZED" | "FORBIDDEN" | "NOT_FOUND" | "CALLER_ERROR" | "AUTHLETE_ERROR"
 ```

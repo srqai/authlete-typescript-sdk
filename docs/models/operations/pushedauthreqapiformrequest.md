@@ -7,15 +7,13 @@ import { PushedAuthReqApiFormRequest } from "authlete-typescript-sdk/models/oper
 
 let value: PushedAuthReqApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdPushedAuthReq: {
-    parameters: "<value>",
-  },
+  pushedAuthRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `serviceId`                                                                   | *string*                                                                      | :heavy_check_mark:                                                            | A service ID.                                                                 |
-| `apiServiceIdPushedAuthReq`                                                   | [models.ApiServiceIdPushedAuthReq](../../models/apiserviceidpushedauthreq.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `serviceId`                                                   | *string*                                                      | :heavy_check_mark:                                            | A service ID.                                                 |
+| `pushedAuthRequest`                                           | [models.PushedAuthRequest](../../models/pushedauthrequest.md) | :heavy_check_mark:                                            | N/A                                                           |

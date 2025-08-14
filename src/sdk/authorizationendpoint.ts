@@ -8,8 +8,9 @@ import { authorizationEndpointAuthAuthorizationFailApi } from "../funcs/authoriz
 import { authorizationEndpointAuthAuthorizationFailApiForm } from "../funcs/authorizationEndpointAuthAuthorizationFailApiForm.js";
 import { authorizationEndpointAuthAuthorizationIssueApi } from "../funcs/authorizationEndpointAuthAuthorizationIssueApi.js";
 import { authorizationEndpointAuthAuthorizationIssueApiForm } from "../funcs/authorizationEndpointAuthAuthorizationIssueApiForm.js";
-import { authorizationEndpointPostUpdateTicketInformation } from "../funcs/authorizationEndpointPostUpdateTicketInformation.js";
-import { authorizationEndpointPostUpdateTicketInformationForm } from "../funcs/authorizationEndpointPostUpdateTicketInformationForm.js";
+import { authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo } from "../funcs/authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo.js";
+import { authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate } from "../funcs/authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate.js";
+import { authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm } from "../funcs/authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
@@ -1624,30 +1625,53 @@ export class AuthorizationEndpoint extends ClientSDK {
   }
 
   /**
-   * Update Ticket Information
+   * Get Ticket Information
    */
-  async postUpdateTicketInformation(
-    request: operations.PostUpdateTicketInformationRequest,
+  async getApiServiceIdAuthAuthorizationTicketInfo(
+    request: operations.GetApiServiceIdAuthAuthorizationTicketInfoRequest,
     options?: RequestOptions,
-  ): Promise<operations.PostUpdateTicketInformationResponse> {
-    return unwrapAsync(authorizationEndpointPostUpdateTicketInformation(
-      this,
-      request,
-      options,
-    ));
+  ): Promise<operations.GetApiServiceIdAuthAuthorizationTicketInfoResponse> {
+    return unwrapAsync(
+      authorizationEndpointGetApiServiceIdAuthAuthorizationTicketInfo(
+        this,
+        request,
+        options,
+      ),
+    );
   }
 
   /**
    * Update Ticket Information
    */
-  async postUpdateTicketInformationForm(
-    request: operations.PostUpdateTicketInformationFormRequest,
+  async postApiServiceIdAuthAuthorizationTicketUpdate(
+    request: operations.PostApiServiceIdAuthAuthorizationTicketUpdateRequest,
     options?: RequestOptions,
-  ): Promise<operations.PostUpdateTicketInformationFormResponse> {
-    return unwrapAsync(authorizationEndpointPostUpdateTicketInformationForm(
-      this,
-      request,
-      options,
-    ));
+  ): Promise<operations.PostApiServiceIdAuthAuthorizationTicketUpdateResponse> {
+    return unwrapAsync(
+      authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdate(
+        this,
+        request,
+        options,
+      ),
+    );
+  }
+
+  /**
+   * Update Ticket Information
+   */
+  async postApiServiceIdAuthAuthorizationTicketUpdateForm(
+    request:
+      operations.PostApiServiceIdAuthAuthorizationTicketUpdateFormRequest,
+    options?: RequestOptions,
+  ): Promise<
+    operations.PostApiServiceIdAuthAuthorizationTicketUpdateFormResponse
+  > {
+    return unwrapAsync(
+      authorizationEndpointPostApiServiceIdAuthAuthorizationTicketUpdateForm(
+        this,
+        request,
+        options,
+      ),
+    );
   }
 }

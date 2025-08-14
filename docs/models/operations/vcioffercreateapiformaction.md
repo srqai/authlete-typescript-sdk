@@ -7,11 +7,11 @@ The result of the `/vci/offer/create` API call.
 ```typescript
 import { VciOfferCreateApiFormAction } from "authlete-typescript-sdk/models/operations";
 
-let value: VciOfferCreateApiFormAction = "JWT";
+let value: VciOfferCreateApiFormAction = "AUTHLETE_ERROR";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"CREATED" | "FORBIDDEN" | "CALLER_ERROR" | "AUTHLETE_ERROR"
 ```

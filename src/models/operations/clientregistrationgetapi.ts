@@ -14,7 +14,7 @@ export type ClientRegistrationGetApiRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdClientRegistration1: models.ApiServiceIdClientRegistration1;
+  clientRegistrationRequest: models.ClientRegistrationRequest;
 };
 
 /** @internal */
@@ -24,19 +24,17 @@ export const ClientRegistrationGetApiRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_client_registration1:
-    models.ApiServiceIdClientRegistration1$inboundSchema,
+  ClientRegistrationRequest: models.ClientRegistrationRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_client_registration1": "apiServiceIdClientRegistration1",
+    "ClientRegistrationRequest": "clientRegistrationRequest",
   });
 });
 
 /** @internal */
 export type ClientRegistrationGetApiRequest$Outbound = {
   serviceId: string;
-  api_serviceId_client_registration1:
-    models.ApiServiceIdClientRegistration1$Outbound;
+  ClientRegistrationRequest: models.ClientRegistrationRequest$Outbound;
 };
 
 /** @internal */
@@ -46,11 +44,10 @@ export const ClientRegistrationGetApiRequest$outboundSchema: z.ZodType<
   ClientRegistrationGetApiRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdClientRegistration1:
-    models.ApiServiceIdClientRegistration1$outboundSchema,
+  clientRegistrationRequest: models.ClientRegistrationRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdClientRegistration1: "api_serviceId_client_registration1",
+    clientRegistrationRequest: "ClientRegistrationRequest",
   });
 });
 

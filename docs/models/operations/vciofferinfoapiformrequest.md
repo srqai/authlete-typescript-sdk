@@ -7,13 +7,13 @@ import { VciOfferInfoApiFormRequest } from "authlete-typescript-sdk/models/opera
 
 let value: VciOfferInfoApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdVciOfferInfo: {},
+  vciOfferInfoRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `serviceId`                                                                 | *string*                                                                    | :heavy_check_mark:                                                          | A service ID.                                                               |
-| `apiServiceIdVciOfferInfo`                                                  | [models.ApiServiceIdVciOfferInfo](../../models/apiserviceidvciofferinfo.md) | :heavy_check_mark:                                                          | N/A                                                                         |
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `serviceId`                                                       | *string*                                                          | :heavy_check_mark:                                                | A service ID.                                                     |
+| `vciOfferInfoRequest`                                             | [models.VciOfferInfoRequest](../../models/vciofferinforequest.md) | :heavy_check_mark:                                                | N/A                                                               |

@@ -1,6 +1,6 @@
 # ClientExtensionRequestablesScopesUpdateApiResponse
 
-An object containing schema data
+Successful operation
 
 ## Example Usage
 
@@ -12,6 +12,6 @@ let value: ClientExtensionRequestablesScopesUpdateApiResponse = {};
 
 ## Fields
 
-| Field                               | Type                                | Required                            | Description                         |
-| ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
-| `requestableScopes`                 | *string*[]                          | :heavy_minus_sign:                  | An array of requestablescopes items |
+| Field               | Type                | Required            | Description         |
+| ------------------- | ------------------- | ------------------- | ------------------- |
+| `requestableScopes` | *string*[]          | :heavy_minus_sign:  | N/A                 |

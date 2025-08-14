@@ -20,14 +20,9 @@ export type HskGetListApiRequest = {
  * Result of the API call
  */
 export const HskGetListApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Success: "SUCCESS",
+  InvalidRequest: "INVALID_REQUEST",
+  ServerError: "SERVER_ERROR",
 } as const;
 /**
  * Result of the API call
@@ -35,7 +30,7 @@ export const HskGetListApiAction = {
 export type HskGetListApiAction = ClosedEnum<typeof HskGetListApiAction>;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type HskGetListApiResponse = {
   /**

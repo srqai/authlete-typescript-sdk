@@ -5,17 +5,11 @@
 import * as z from "zod";
 import { ClosedEnum } from "../types/enums.js";
 
-/**
- * A string value
- */
 export const DeliveryMode = {
   Ping: "PING",
   Poll: "POLL",
   Push: "PUSH",
 } as const;
-/**
- * A string value
- */
 export type DeliveryMode = ClosedEnum<typeof DeliveryMode>;
 
 /** @internal */

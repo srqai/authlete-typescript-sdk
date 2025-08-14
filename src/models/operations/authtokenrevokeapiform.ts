@@ -14,11 +14,11 @@ export type AuthTokenRevokeApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthTokenRevoke: models.ApiServiceIdAuthTokenRevoke;
+  tokenRevokeRequest: models.TokenRevokeRequest;
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthTokenRevokeApiFormResponse = {
   /**
@@ -42,18 +42,17 @@ export const AuthTokenRevokeApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_token_revoke:
-    models.ApiServiceIdAuthTokenRevoke$inboundSchema,
+  TokenRevokeRequest: models.TokenRevokeRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_token_revoke": "apiServiceIdAuthTokenRevoke",
+    "TokenRevokeRequest": "tokenRevokeRequest",
   });
 });
 
 /** @internal */
 export type AuthTokenRevokeApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_token_revoke: models.ApiServiceIdAuthTokenRevoke$Outbound;
+  TokenRevokeRequest: models.TokenRevokeRequest$Outbound;
 };
 
 /** @internal */
@@ -63,11 +62,10 @@ export const AuthTokenRevokeApiFormRequest$outboundSchema: z.ZodType<
   AuthTokenRevokeApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthTokenRevoke:
-    models.ApiServiceIdAuthTokenRevoke$outboundSchema,
+  tokenRevokeRequest: models.TokenRevokeRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthTokenRevoke: "api_serviceId_auth_token_revoke",
+    tokenRevokeRequest: "TokenRevokeRequest",
   });
 });
 

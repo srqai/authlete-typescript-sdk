@@ -1,7 +1,5 @@
 # AuthAuthorizationApiScope
 
-An object containing items data
-
 ## Example Usage
 
 ```typescript

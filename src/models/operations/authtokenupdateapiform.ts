@@ -15,7 +15,7 @@ export type AuthTokenUpdateApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthTokenUpdate: models.ApiServiceIdAuthTokenUpdate;
+  tokenUpdateRequest: models.TokenUpdateRequest;
 };
 
 /**
@@ -24,11 +24,8 @@ export type AuthTokenUpdateApiFormRequest = {
 export const AuthTokenUpdateApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
+  NotFound: "NOT_FOUND",
   Ok: "OK",
 } as const;
 /**
@@ -39,7 +36,7 @@ export type AuthTokenUpdateApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthTokenUpdateApiFormResponse = {
   /**
@@ -119,18 +116,17 @@ export const AuthTokenUpdateApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_token_update:
-    models.ApiServiceIdAuthTokenUpdate$inboundSchema,
+  TokenUpdateRequest: models.TokenUpdateRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_token_update": "apiServiceIdAuthTokenUpdate",
+    "TokenUpdateRequest": "tokenUpdateRequest",
   });
 });
 
 /** @internal */
 export type AuthTokenUpdateApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_token_update: models.ApiServiceIdAuthTokenUpdate$Outbound;
+  TokenUpdateRequest: models.TokenUpdateRequest$Outbound;
 };
 
 /** @internal */
@@ -140,11 +136,10 @@ export const AuthTokenUpdateApiFormRequest$outboundSchema: z.ZodType<
   AuthTokenUpdateApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthTokenUpdate:
-    models.ApiServiceIdAuthTokenUpdate$outboundSchema,
+  tokenUpdateRequest: models.TokenUpdateRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthTokenUpdate: "api_serviceId_auth_token_update",
+    tokenUpdateRequest: "TokenUpdateRequest",
   });
 });
 

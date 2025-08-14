@@ -7,11 +7,11 @@ The next action that the implementation of the token endpoint should take.
 ```typescript
 import { IdtokenReissueApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: IdtokenReissueApiAction = "JSON";
+let value: IdtokenReissueApiAction = "INTERNAL_SERVER_ERROR";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"OK" | "INTERNAL_SERVER_ERROR" | "CALLER_ERROR"
 ```

@@ -9,9 +9,6 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
-/**
- * An object containing schema data
- */
 export type PushedAuthReqApiRequestBody = {
   /**
    * The pushed authorization request body received from the client application.
@@ -27,7 +24,7 @@ export type PushedAuthReqApiRequestBody = {
    *
    * @remarks
    */
-  clientId?: number | undefined;
+  clientId?: string | undefined;
   /**
    * The client secret extracted from `Authorization` header of the pushed authorization request from the client application.
    *
@@ -76,14 +73,12 @@ export type PushedAuthReqApiRequest = {
  * The next action that the authorization server implementation should take. Any other value other than "CREATED" should be handled as unsuccessful result.
  */
 export const PushedAuthReqApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
   Created: "CREATED",
+  BadRequest: "BAD_REQUEST",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  PayloadTooLarge: "PAYLOAD_TOO_LARGE",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the authorization server implementation should take. Any other value other than "CREATED" should be handled as unsuccessful result.
@@ -118,7 +113,7 @@ export type PushedAuthReqApiClientAuthMethod = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type PushedAuthReqApiResponse = {
   /**
@@ -170,7 +165,7 @@ export const PushedAuthReqApiRequestBody$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   parameters: z.string(),
-  clientId: z.number().int().optional(),
+  clientId: z.string().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),
@@ -182,7 +177,7 @@ export const PushedAuthReqApiRequestBody$inboundSchema: z.ZodType<
 /** @internal */
 export type PushedAuthReqApiRequestBody$Outbound = {
   parameters: string;
-  clientId?: number | undefined;
+  clientId?: string | undefined;
   clientSecret?: string | undefined;
   clientCertificate?: string | undefined;
   clientCertificatePath?: string | undefined;
@@ -198,7 +193,7 @@ export const PushedAuthReqApiRequestBody$outboundSchema: z.ZodType<
   PushedAuthReqApiRequestBody
 > = z.object({
   parameters: z.string(),
-  clientId: z.number().int().optional(),
+  clientId: z.string().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),

@@ -7,16 +7,13 @@ import { AuthTokenFailApiFormRequest } from "authlete-typescript-sdk/models/oper
 
 let value: AuthTokenFailApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdAuthTokenFail: {
-    ticket: "<value>",
-    reason: "INVALID_TARGET",
-  },
+  tokenFailRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `serviceId`                                                                   | *string*                                                                      | :heavy_check_mark:                                                            | A service ID.                                                                 |
-| `apiServiceIdAuthTokenFail`                                                   | [models.ApiServiceIdAuthTokenFail](../../models/apiserviceidauthtokenfail.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| Field                                                       | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `serviceId`                                                 | *string*                                                    | :heavy_check_mark:                                          | A service ID.                                               |
+| `tokenFailRequest`                                          | [models.TokenFailRequest](../../models/tokenfailrequest.md) | :heavy_check_mark:                                          | N/A                                                         |

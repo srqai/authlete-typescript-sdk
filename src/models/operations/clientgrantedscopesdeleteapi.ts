@@ -18,16 +18,11 @@ export type ClientGrantedScopesDeleteApiRequest = {
    * @remarks
    */
   clientId: string;
-  /**
-   * Unique user ID of an end-user.
-   *
-   * @remarks
-   */
   subject: string;
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientGrantedScopesDeleteApiResponse = {
   /**

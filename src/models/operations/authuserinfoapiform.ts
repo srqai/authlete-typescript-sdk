@@ -15,7 +15,7 @@ export type AuthUserinfoApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthUserinfo: models.ApiServiceIdAuthUserinfo;
+  userinfoRequest: models.UserinfoRequest;
 };
 
 /**
@@ -24,11 +24,8 @@ export type AuthUserinfoApiFormRequest = {
 export const AuthUserinfoApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -39,7 +36,7 @@ export type AuthUserinfoApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthUserinfoApiFormResponse = {
   /**
@@ -294,17 +291,17 @@ export const AuthUserinfoApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_userinfo: models.ApiServiceIdAuthUserinfo$inboundSchema,
+  UserinfoRequest: models.UserinfoRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_userinfo": "apiServiceIdAuthUserinfo",
+    "UserinfoRequest": "userinfoRequest",
   });
 });
 
 /** @internal */
 export type AuthUserinfoApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_userinfo: models.ApiServiceIdAuthUserinfo$Outbound;
+  UserinfoRequest: models.UserinfoRequest$Outbound;
 };
 
 /** @internal */
@@ -314,10 +311,10 @@ export const AuthUserinfoApiFormRequest$outboundSchema: z.ZodType<
   AuthUserinfoApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthUserinfo: models.ApiServiceIdAuthUserinfo$outboundSchema,
+  userinfoRequest: models.UserinfoRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthUserinfo: "api_serviceId_auth_userinfo",
+    userinfoRequest: "UserinfoRequest",
   });
 });
 

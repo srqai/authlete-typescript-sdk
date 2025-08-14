@@ -21,12 +21,9 @@ export type ClientExtensionRequestablesScopesGetApiRequest = {
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientExtensionRequestablesScopesGetApiResponse = {
-  /**
-   * An array of requestablescopes items
-   */
   requestableScopes?: Array<string> | undefined;
 };
 

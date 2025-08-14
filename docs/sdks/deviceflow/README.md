@@ -131,7 +131,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "client_id=26888344961664&scope=history.read",
-      clientId: 26888344961664,
+      clientId: "26888344961664",
       clientSecret: "SfnYOLkJdofrb_66mTd6q03_SDoDEUnpXtvqFaE4k6L6UcpZzbdVJi2GpBj48AvGeDDllwsTruC62WYqQ_LGog",
     },
   });
@@ -163,7 +163,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "client_id=26888344961664&scope=history.read",
-      clientId: 26888344961664,
+      clientId: "26888344961664",
       clientSecret: "SfnYOLkJdofrb_66mTd6q03_SDoDEUnpXtvqFaE4k6L6UcpZzbdVJi2GpBj48AvGeDDllwsTruC62WYqQ_LGog",
     },
   });
@@ -195,10 +195,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## deviceAuthorizationApiForm
@@ -316,9 +312,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.deviceFlow.deviceAuthorizationApiForm({
     serviceId: "<id>",
-    apiServiceIdDeviceAuthorization: {
-      parameters: "<value>",
-    },
+    deviceAuthorizationRequest: {},
   });
 
   console.log(result);
@@ -346,9 +340,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await deviceFlowDeviceAuthorizationApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdDeviceAuthorization: {
-      parameters: "<value>",
-    },
+    deviceAuthorizationRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -378,10 +370,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## deviceVerificationApi
@@ -506,10 +494,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## deviceVerificationApiForm
@@ -572,9 +556,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.deviceFlow.deviceVerificationApiForm({
     serviceId: "<id>",
-    apiServiceIdDeviceVerification: {
-      userCode: "<value>",
-    },
+    deviceVerification: {},
   });
 
   console.log(result);
@@ -602,9 +584,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await deviceFlowDeviceVerificationApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdDeviceVerification: {
-      userCode: "<value>",
-    },
+    deviceVerification: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -634,10 +614,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## deviceCompleteApi
@@ -795,10 +771,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## deviceCompleteApiForm
@@ -890,11 +862,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.deviceFlow.deviceCompleteApiForm({
     serviceId: "<id>",
-    apiServiceIdDeviceComplete: {
-      userCode: "<value>",
-      result: "AUTHORIZED",
-      subject: "<value>",
-    },
+    deviceCompleteRequest: {},
   });
 
   console.log(result);
@@ -922,11 +890,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await deviceFlowDeviceCompleteApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdDeviceComplete: {
-      userCode: "<value>",
-      result: "AUTHORIZED",
-      subject: "<value>",
-    },
+    deviceCompleteRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -956,8 +920,4 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

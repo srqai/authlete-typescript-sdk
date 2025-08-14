@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { DeviceVerificationApiFormAction } from "authlete-typescript-sdk/models/operations";
 
-let value: DeviceVerificationApiFormAction = "JWT";
+let value: DeviceVerificationApiFormAction = "VALID";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"INTERNAL_SERVER_ERROR" | "NOT_EXIST" | "EXPIRED" | "VALID"
 ```

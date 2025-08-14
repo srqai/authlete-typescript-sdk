@@ -14,9 +14,6 @@ export type HskDeleteApiRequest = {
    * A service ID.
    */
   serviceId: string;
-  /**
-   * The handle path parameter
-   */
   handle: string;
 };
 
@@ -24,23 +21,16 @@ export type HskDeleteApiRequest = {
  * Result of the API call
  */
 export const HskDeleteApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Success: "SUCCESS",
+  InvalidRequest: "INVALID_REQUEST",
+  NotFound: "NOT_FOUND",
+  ServerError: "SERVER_ERROR",
 } as const;
 /**
  * Result of the API call
  */
 export type HskDeleteApiAction = ClosedEnum<typeof HskDeleteApiAction>;
 
-/**
- * An object containing schema data
- */
 export type HskDeleteApiResponse = {
   /**
    * The code which represents the result of the API call.

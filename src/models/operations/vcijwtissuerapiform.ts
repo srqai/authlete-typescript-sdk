@@ -15,7 +15,7 @@ export type VciJwtissuerApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdVciJwtissuer: models.ApiServiceIdVciJwtissuer;
+  vciJwtIssuerRequest: models.VciJwtIssuerRequest;
 };
 
 /**
@@ -26,14 +26,9 @@ export type VciJwtissuerApiFormRequest = {
  * a response from Authlete's `/vci/jwtissuer` API.
  */
 export const VciJwtissuerApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
+  NotFound: "NOT_FOUND",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the implementation of the JWT issuer metadata
@@ -47,7 +42,7 @@ export type VciJwtissuerApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciJwtissuerApiFormResponse = {
   /**
@@ -82,17 +77,17 @@ export const VciJwtissuerApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_vci_jwtissuer: models.ApiServiceIdVciJwtissuer$inboundSchema,
+  VciJwtIssuerRequest: models.VciJwtIssuerRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_vci_jwtissuer": "apiServiceIdVciJwtissuer",
+    "VciJwtIssuerRequest": "vciJwtIssuerRequest",
   });
 });
 
 /** @internal */
 export type VciJwtissuerApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_vci_jwtissuer: models.ApiServiceIdVciJwtissuer$Outbound;
+  VciJwtIssuerRequest: models.VciJwtIssuerRequest$Outbound;
 };
 
 /** @internal */
@@ -102,10 +97,10 @@ export const VciJwtissuerApiFormRequest$outboundSchema: z.ZodType<
   VciJwtissuerApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdVciJwtissuer: models.ApiServiceIdVciJwtissuer$outboundSchema,
+  vciJwtIssuerRequest: models.VciJwtIssuerRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdVciJwtissuer: "api_serviceId_vci_jwtissuer",
+    vciJwtIssuerRequest: "VciJwtIssuerRequest",
   });
 });
 

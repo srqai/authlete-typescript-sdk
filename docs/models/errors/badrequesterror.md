@@ -1,6 +1,6 @@
 # BadRequestError
 
-An object containing schema data
+Bad request - Invalid input
 
 ## Example Usage
 

@@ -7,17 +7,13 @@ import { DeviceCompleteApiFormRequest } from "authlete-typescript-sdk/models/ope
 
 let value: DeviceCompleteApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdDeviceComplete: {
-    userCode: "<value>",
-    result: "AUTHORIZED",
-    subject: "<value>",
-  },
+  deviceCompleteRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `serviceId`                                                                     | *string*                                                                        | :heavy_check_mark:                                                              | A service ID.                                                                   |
-| `apiServiceIdDeviceComplete`                                                    | [models.ApiServiceIdDeviceComplete](../../models/apiserviceiddevicecomplete.md) | :heavy_check_mark:                                                              | N/A                                                                             |
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `serviceId`                                                           | *string*                                                              | :heavy_check_mark:                                                    | A service ID.                                                         |
+| `deviceCompleteRequest`                                               | [models.DeviceCompleteRequest](../../models/devicecompleterequest.md) | :heavy_check_mark:                                                    | N/A                                                                   |

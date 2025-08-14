@@ -15,7 +15,7 @@ export type AuthAuthorizationFailApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthAuthorizationFail: models.ApiServiceIdAuthAuthorizationFail;
+  authorizationFailRequest: models.AuthorizationFailRequest;
 };
 
 /**
@@ -24,12 +24,8 @@ export type AuthAuthorizationFailApiFormRequest = {
 export const AuthAuthorizationFailApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  Location: "LOCATION",
+  Form: "FORM",
 } as const;
 /**
  * The next action that the authorization server implementation should take.
@@ -39,7 +35,7 @@ export type AuthAuthorizationFailApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthAuthorizationFailApiFormResponse = {
   /**
@@ -70,20 +66,17 @@ export const AuthAuthorizationFailApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_authorization_fail:
-    models.ApiServiceIdAuthAuthorizationFail$inboundSchema,
+  AuthorizationFailRequest: models.AuthorizationFailRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_authorization_fail":
-      "apiServiceIdAuthAuthorizationFail",
+    "AuthorizationFailRequest": "authorizationFailRequest",
   });
 });
 
 /** @internal */
 export type AuthAuthorizationFailApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_authorization_fail:
-    models.ApiServiceIdAuthAuthorizationFail$Outbound;
+  AuthorizationFailRequest: models.AuthorizationFailRequest$Outbound;
 };
 
 /** @internal */
@@ -93,11 +86,10 @@ export const AuthAuthorizationFailApiFormRequest$outboundSchema: z.ZodType<
   AuthAuthorizationFailApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthAuthorizationFail:
-    models.ApiServiceIdAuthAuthorizationFail$outboundSchema,
+  authorizationFailRequest: models.AuthorizationFailRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthAuthorizationFail: "api_serviceId_auth_authorization_fail",
+    authorizationFailRequest: "AuthorizationFailRequest",
   });
 });
 

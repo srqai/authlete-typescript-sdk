@@ -234,10 +234,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authUserinfoApiForm
@@ -400,9 +396,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.userInfoEndpoint.authUserinfoApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthUserinfo: {
-      token: "<value>",
-    },
+    userinfoRequest: {},
   });
 
   console.log(result);
@@ -430,9 +424,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await userInfoEndpointAuthUserinfoApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthUserinfo: {
-      token: "<value>",
-    },
+    userinfoRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -462,10 +454,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authUserinfoIssueApi
@@ -698,10 +686,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authUserinfoIssueApiForm
@@ -872,9 +856,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.userInfoEndpoint.authUserinfoIssueApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthUserinfoIssue: {
-      token: "<value>",
-    },
+    userinfoIssueRequest: {},
   });
 
   console.log(result);
@@ -902,9 +884,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await userInfoEndpointAuthUserinfoIssueApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthUserinfoIssue: {
-      token: "<value>",
-    },
+    userinfoIssueRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -934,8 +914,4 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

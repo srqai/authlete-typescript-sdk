@@ -7,11 +7,11 @@ The next action that the authorization server implementation should take.
 ```typescript
 import { AuthIntrospectionStandardApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: AuthIntrospectionStandardApiAction = "JSON";
+let value: AuthIntrospectionStandardApiAction = "OK";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "OK"
 ```

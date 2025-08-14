@@ -18,13 +18,11 @@ export type ClientFlagUpdateApiFormRequest = {
    * A client ID.
    */
   clientIdentifier: string;
-  apiServiceIdClientLockFlagUpdateClientIdenti?:
-    | models.ApiServiceIdClientLockFlagUpdateClientIdenti
-    | undefined;
+  clientLockFlagUpdateRequest?: models.ClientLockFlagUpdateRequest | undefined;
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientFlagUpdateApiFormResponse = {
   /**
@@ -45,12 +43,11 @@ export const ClientFlagUpdateApiFormRequest$inboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientIdentifier: z.string(),
-  api_serviceId_client_lock_flag_update_clientIdenti: models
-    .ApiServiceIdClientLockFlagUpdateClientIdenti$inboundSchema.optional(),
+  ClientLockFlagUpdateRequest: models.ClientLockFlagUpdateRequest$inboundSchema
+    .optional(),
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_client_lock_flag_update_clientIdenti":
-      "apiServiceIdClientLockFlagUpdateClientIdenti",
+    "ClientLockFlagUpdateRequest": "clientLockFlagUpdateRequest",
   });
 });
 
@@ -58,8 +55,8 @@ export const ClientFlagUpdateApiFormRequest$inboundSchema: z.ZodType<
 export type ClientFlagUpdateApiFormRequest$Outbound = {
   serviceId: string;
   clientIdentifier: string;
-  api_serviceId_client_lock_flag_update_clientIdenti?:
-    | models.ApiServiceIdClientLockFlagUpdateClientIdenti$Outbound
+  ClientLockFlagUpdateRequest?:
+    | models.ClientLockFlagUpdateRequest$Outbound
     | undefined;
 };
 
@@ -71,12 +68,11 @@ export const ClientFlagUpdateApiFormRequest$outboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientIdentifier: z.string(),
-  apiServiceIdClientLockFlagUpdateClientIdenti: models
-    .ApiServiceIdClientLockFlagUpdateClientIdenti$outboundSchema.optional(),
+  clientLockFlagUpdateRequest: models.ClientLockFlagUpdateRequest$outboundSchema
+    .optional(),
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdClientLockFlagUpdateClientIdenti:
-      "api_serviceId_client_lock_flag_update_clientIdenti",
+    clientLockFlagUpdateRequest: "ClientLockFlagUpdateRequest",
   });
 });
 

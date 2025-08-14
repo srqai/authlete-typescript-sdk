@@ -18,11 +18,6 @@ export type ClientDeleteApiRequest = {
   clientId: string;
 };
 
-/**
- * Response for 204
- */
-export type ClientDeleteApiResponse = {};
-
 /** @internal */
 export const ClientDeleteApiRequest$inboundSchema: z.ZodType<
   ClientDeleteApiRequest,
@@ -77,53 +72,5 @@ export function clientDeleteApiRequestFromJSON(
     jsonString,
     (x) => ClientDeleteApiRequest$inboundSchema.parse(JSON.parse(x)),
     `Failed to parse 'ClientDeleteApiRequest' from JSON`,
-  );
-}
-
-/** @internal */
-export const ClientDeleteApiResponse$inboundSchema: z.ZodType<
-  ClientDeleteApiResponse,
-  z.ZodTypeDef,
-  unknown
-> = z.object({});
-
-/** @internal */
-export type ClientDeleteApiResponse$Outbound = {};
-
-/** @internal */
-export const ClientDeleteApiResponse$outboundSchema: z.ZodType<
-  ClientDeleteApiResponse$Outbound,
-  z.ZodTypeDef,
-  ClientDeleteApiResponse
-> = z.object({});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace ClientDeleteApiResponse$ {
-  /** @deprecated use `ClientDeleteApiResponse$inboundSchema` instead. */
-  export const inboundSchema = ClientDeleteApiResponse$inboundSchema;
-  /** @deprecated use `ClientDeleteApiResponse$outboundSchema` instead. */
-  export const outboundSchema = ClientDeleteApiResponse$outboundSchema;
-  /** @deprecated use `ClientDeleteApiResponse$Outbound` instead. */
-  export type Outbound = ClientDeleteApiResponse$Outbound;
-}
-
-export function clientDeleteApiResponseToJSON(
-  clientDeleteApiResponse: ClientDeleteApiResponse,
-): string {
-  return JSON.stringify(
-    ClientDeleteApiResponse$outboundSchema.parse(clientDeleteApiResponse),
-  );
-}
-
-export function clientDeleteApiResponseFromJSON(
-  jsonString: string,
-): SafeParseResult<ClientDeleteApiResponse, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => ClientDeleteApiResponse$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'ClientDeleteApiResponse' from JSON`,
   );
 }

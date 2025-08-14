@@ -10,9 +10,6 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type DeviceAuthorizationApiRequestBody = {
   /**
    * Parameters of a device authorization request which are the request parameters that the device
@@ -35,7 +32,7 @@ export type DeviceAuthorizationApiRequestBody = {
    * contained its client ID in `Authorization` header, the value should be extracted and set to this
    * parameter.
    */
-  clientId?: number | undefined;
+  clientId?: string | undefined;
   /**
    * The client secret extracted from `Authorization` header of the device authorization request from
    *
@@ -78,11 +75,7 @@ export type DeviceAuthorizationApiRequest = {
 export const DeviceAuthorizationApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -93,7 +86,7 @@ export type DeviceAuthorizationApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type DeviceAuthorizationApiResponse = {
   /**
@@ -265,15 +258,7 @@ export type DeviceAuthorizationApiResponse = {
    * @remarks
    */
   dynamicScopes?: Array<models.DynamicScope> | undefined;
-  /**
-   * The grant management action of the device authorization request.
-   *
-   * @remarks
-   *
-   * The `grant_management_action` request parameter is defined in
-   * [Grant Management for OAuth 2.0](https://openid.net/specs/fapi-grant-management.html).
-   */
-  gmAction?: models.ApiServiceIdGmpropertiesgmAction2 | undefined;
+  gmAction?: models.GmAction | undefined;
   /**
    * the value of the `grant_id` request parameter of the device authorization request.
    *
@@ -284,10 +269,7 @@ export type DeviceAuthorizationApiResponse = {
    * , which is supported by Authlete 2.3 and newer versions.
    */
   grantId?: string | undefined;
-  /**
-   * An object containing api_serviceid_auth_authorizationpropertiesgrant2 data
-   */
-  grant?: models.ApiServiceIdAuthAuthorizationpropertiesgrant2 | undefined;
+  grant?: models.AuthorizationGrant | undefined;
   /**
    * The subject identifying the user who has given the grant identified
    *
@@ -334,7 +316,7 @@ export const DeviceAuthorizationApiRequestBody$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   parameters: z.string(),
-  clientId: z.number().int().optional(),
+  clientId: z.string().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),
@@ -343,7 +325,7 @@ export const DeviceAuthorizationApiRequestBody$inboundSchema: z.ZodType<
 /** @internal */
 export type DeviceAuthorizationApiRequestBody$Outbound = {
   parameters: string;
-  clientId?: number | undefined;
+  clientId?: string | undefined;
   clientSecret?: string | undefined;
   clientCertificate?: string | undefined;
   clientCertificatePath?: string | undefined;
@@ -356,7 +338,7 @@ export const DeviceAuthorizationApiRequestBody$outboundSchema: z.ZodType<
   DeviceAuthorizationApiRequestBody
 > = z.object({
   parameters: z.string(),
-  clientId: z.number().int().optional(),
+  clientId: z.string().optional(),
   clientSecret: z.string().optional(),
   clientCertificate: z.string().optional(),
   clientCertificatePath: z.string().optional(),
@@ -514,10 +496,9 @@ export const DeviceAuthorizationApiResponse$inboundSchema: z.ZodType<
   serviceAttributes: z.array(models.Pair$inboundSchema).optional(),
   clientAttributes: z.array(models.Pair$inboundSchema).optional(),
   dynamicScopes: z.array(models.DynamicScope$inboundSchema).optional(),
-  gmAction: models.ApiServiceIdGmpropertiesgmAction2$inboundSchema.optional(),
+  gmAction: models.GmAction$inboundSchema.optional(),
   grantId: z.string().optional(),
-  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant2$inboundSchema
-    .optional(),
+  grant: models.AuthorizationGrant$inboundSchema.optional(),
   grantSubject: z.string().optional(),
   clientEntityId: z.string().optional(),
   clientEntityIdUsed: z.boolean().optional(),
@@ -551,9 +532,7 @@ export type DeviceAuthorizationApiResponse$Outbound = {
   dynamicScopes?: Array<models.DynamicScope$Outbound> | undefined;
   gmAction?: string | undefined;
   grantId?: string | undefined;
-  grant?:
-    | models.ApiServiceIdAuthAuthorizationpropertiesgrant2$Outbound
-    | undefined;
+  grant?: models.AuthorizationGrant$Outbound | undefined;
   grantSubject?: string | undefined;
   clientEntityId?: string | undefined;
   clientEntityIdUsed?: boolean | undefined;
@@ -589,10 +568,9 @@ export const DeviceAuthorizationApiResponse$outboundSchema: z.ZodType<
   serviceAttributes: z.array(models.Pair$outboundSchema).optional(),
   clientAttributes: z.array(models.Pair$outboundSchema).optional(),
   dynamicScopes: z.array(models.DynamicScope$outboundSchema).optional(),
-  gmAction: models.ApiServiceIdGmpropertiesgmAction2$outboundSchema.optional(),
+  gmAction: models.GmAction$outboundSchema.optional(),
   grantId: z.string().optional(),
-  grant: models.ApiServiceIdAuthAuthorizationpropertiesgrant2$outboundSchema
-    .optional(),
+  grant: models.AuthorizationGrant$outboundSchema.optional(),
   grantSubject: z.string().optional(),
   clientEntityId: z.string().optional(),
   clientEntityIdUsed: z.boolean().optional(),

@@ -1,7 +1,5 @@
 # FapiMode
 
-A string value
-
 ## Example Usage
 
 ```typescript

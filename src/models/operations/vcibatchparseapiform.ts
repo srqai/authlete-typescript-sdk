@@ -15,21 +15,18 @@ export type VciBatchParseApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdVciBatchParse: models.ApiServiceIdVciBatchParse;
+  vciBatchParseRequest: models.VciBatchParseRequest;
 };
 
 /**
  * The next action that the batch credential endpoint should take.
  */
 export const VciBatchParseApiFormAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
+  Ok: "OK",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
 } as const;
 /**
  * The next action that the batch credential endpoint should take.
@@ -39,7 +36,7 @@ export type VciBatchParseApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciBatchParseApiFormResponse = {
   /**
@@ -74,17 +71,17 @@ export const VciBatchParseApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_vci_batch_parse: models.ApiServiceIdVciBatchParse$inboundSchema,
+  VciBatchParseRequest: models.VciBatchParseRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_vci_batch_parse": "apiServiceIdVciBatchParse",
+    "VciBatchParseRequest": "vciBatchParseRequest",
   });
 });
 
 /** @internal */
 export type VciBatchParseApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_vci_batch_parse: models.ApiServiceIdVciBatchParse$Outbound;
+  VciBatchParseRequest: models.VciBatchParseRequest$Outbound;
 };
 
 /** @internal */
@@ -94,10 +91,10 @@ export const VciBatchParseApiFormRequest$outboundSchema: z.ZodType<
   VciBatchParseApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdVciBatchParse: models.ApiServiceIdVciBatchParse$outboundSchema,
+  vciBatchParseRequest: models.VciBatchParseRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdVciBatchParse: "api_serviceId_vci_batch_parse",
+    vciBatchParseRequest: "VciBatchParseRequest",
   });
 });
 

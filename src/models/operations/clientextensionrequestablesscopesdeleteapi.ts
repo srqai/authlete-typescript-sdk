@@ -20,11 +20,6 @@ export type ClientExtensionRequestablesScopesDeleteApiRequest = {
   clientId: string;
 };
 
-/**
- * Response for 204
- */
-export type ClientExtensionRequestablesScopesDeleteApiResponse = {};
-
 /** @internal */
 export const ClientExtensionRequestablesScopesDeleteApiRequest$inboundSchema:
   z.ZodType<
@@ -93,67 +88,5 @@ export function clientExtensionRequestablesScopesDeleteApiRequestFromJSON(
         JSON.parse(x),
       ),
     `Failed to parse 'ClientExtensionRequestablesScopesDeleteApiRequest' from JSON`,
-  );
-}
-
-/** @internal */
-export const ClientExtensionRequestablesScopesDeleteApiResponse$inboundSchema:
-  z.ZodType<
-    ClientExtensionRequestablesScopesDeleteApiResponse,
-    z.ZodTypeDef,
-    unknown
-  > = z.object({});
-
-/** @internal */
-export type ClientExtensionRequestablesScopesDeleteApiResponse$Outbound = {};
-
-/** @internal */
-export const ClientExtensionRequestablesScopesDeleteApiResponse$outboundSchema:
-  z.ZodType<
-    ClientExtensionRequestablesScopesDeleteApiResponse$Outbound,
-    z.ZodTypeDef,
-    ClientExtensionRequestablesScopesDeleteApiResponse
-  > = z.object({});
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace ClientExtensionRequestablesScopesDeleteApiResponse$ {
-  /** @deprecated use `ClientExtensionRequestablesScopesDeleteApiResponse$inboundSchema` instead. */
-  export const inboundSchema =
-    ClientExtensionRequestablesScopesDeleteApiResponse$inboundSchema;
-  /** @deprecated use `ClientExtensionRequestablesScopesDeleteApiResponse$outboundSchema` instead. */
-  export const outboundSchema =
-    ClientExtensionRequestablesScopesDeleteApiResponse$outboundSchema;
-  /** @deprecated use `ClientExtensionRequestablesScopesDeleteApiResponse$Outbound` instead. */
-  export type Outbound =
-    ClientExtensionRequestablesScopesDeleteApiResponse$Outbound;
-}
-
-export function clientExtensionRequestablesScopesDeleteApiResponseToJSON(
-  clientExtensionRequestablesScopesDeleteApiResponse:
-    ClientExtensionRequestablesScopesDeleteApiResponse,
-): string {
-  return JSON.stringify(
-    ClientExtensionRequestablesScopesDeleteApiResponse$outboundSchema.parse(
-      clientExtensionRequestablesScopesDeleteApiResponse,
-    ),
-  );
-}
-
-export function clientExtensionRequestablesScopesDeleteApiResponseFromJSON(
-  jsonString: string,
-): SafeParseResult<
-  ClientExtensionRequestablesScopesDeleteApiResponse,
-  SDKValidationError
-> {
-  return safeParse(
-    jsonString,
-    (x) =>
-      ClientExtensionRequestablesScopesDeleteApiResponse$inboundSchema.parse(
-        JSON.parse(x),
-      ),
-    `Failed to parse 'ClientExtensionRequestablesScopesDeleteApiResponse' from JSON`,
   );
 }

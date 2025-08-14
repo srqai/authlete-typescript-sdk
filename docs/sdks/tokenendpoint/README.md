@@ -479,7 +479,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "grant_type=authorization_code&code=Xv_su944auuBgc5mfUnxXayiiQU9Z4-T_Yae_UfExmo&redirect_uri=https%3A%2F%2Fmy-client.example.com%2Fcb1&code_verifier=dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk",
-      clientId: 26478243745571,
+      clientId: "26478243745571",
       clientSecret: "gXz97ISgLs4HuXwOZWch8GEmgL4YMvUJwu3er_kDVVGcA0UOhA9avLPbEmoeZdagi9yC_-tEiT2BdRyH9dbrQQ",
     },
   });
@@ -511,7 +511,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "grant_type=authorization_code&code=Xv_su944auuBgc5mfUnxXayiiQU9Z4-T_Yae_UfExmo&redirect_uri=https%3A%2F%2Fmy-client.example.com%2Fcb1&code_verifier=dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk",
-      clientId: 26478243745571,
+      clientId: "26478243745571",
       clientSecret: "gXz97ISgLs4HuXwOZWch8GEmgL4YMvUJwu3er_kDVVGcA0UOhA9avLPbEmoeZdagi9yC_-tEiT2BdRyH9dbrQQ",
     },
   });
@@ -543,10 +543,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenApiForm
@@ -1011,9 +1007,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.tokenEndpoint.authTokenApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthToken: {
-      parameters: "<value>",
-    },
+    tokenRequest: {},
   });
 
   console.log(result);
@@ -1041,9 +1035,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await tokenEndpointAuthTokenApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthToken: {
-      parameters: "<value>",
-    },
+    tokenRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1073,10 +1065,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenFailApi
@@ -1231,10 +1219,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenFailApiForm
@@ -1325,10 +1309,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.tokenEndpoint.authTokenFailApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthTokenFail: {
-      ticket: "<value>",
-      reason: "UNKNOWN",
-    },
+    tokenFailRequest: {},
   });
 
   console.log(result);
@@ -1356,10 +1337,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await tokenEndpointAuthTokenFailApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthTokenFail: {
-      ticket: "<value>",
-      reason: "UNKNOWN",
-    },
+    tokenFailRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1389,10 +1367,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenIssueApi
@@ -1547,10 +1521,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## authTokenIssueApiForm
@@ -1641,10 +1611,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.tokenEndpoint.authTokenIssueApiForm({
     serviceId: "<id>",
-    apiServiceIdAuthTokenIssue: {
-      ticket: "<value>",
-      subject: "<value>",
-    },
+    tokenIssueRequest: {},
   });
 
   console.log(result);
@@ -1672,10 +1639,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await tokenEndpointAuthTokenIssueApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdAuthTokenIssue: {
-      ticket: "<value>",
-      subject: "<value>",
-    },
+    tokenIssueRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1705,10 +1669,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## idtokenReissueApi
@@ -1791,8 +1751,4 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |

@@ -8,7 +8,7 @@ dotenv.config();
  * Example usage of the authlete-typescript-sdk SDK
  *
  * To run this example from the examples directory:
- * npm run build && npx tsx serviceManagementServiceGetApi.ts
+ * npm run build && npx tsx serviceManagementServiceGetApi.example.ts
  */
 
 import { Authlete } from "authlete-typescript-sdk";

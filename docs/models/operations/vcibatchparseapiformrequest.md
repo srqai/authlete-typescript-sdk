@@ -7,13 +7,13 @@ import { VciBatchParseApiFormRequest } from "authlete-typescript-sdk/models/oper
 
 let value: VciBatchParseApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdVciBatchParse: {},
+  vciBatchParseRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `serviceId`                                                                   | *string*                                                                      | :heavy_check_mark:                                                            | A service ID.                                                                 |
-| `apiServiceIdVciBatchParse`                                                   | [models.ApiServiceIdVciBatchParse](../../models/apiserviceidvcibatchparse.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| Field                                                               | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `serviceId`                                                         | *string*                                                            | :heavy_check_mark:                                                  | A service ID.                                                       |
+| `vciBatchParseRequest`                                              | [models.VciBatchParseRequest](../../models/vcibatchparserequest.md) | :heavy_check_mark:                                                  | N/A                                                                 |

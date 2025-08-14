@@ -7,11 +7,11 @@ Result of the API call
 ```typescript
 import { HskDeleteApiAction } from "authlete-typescript-sdk/models/operations";
 
-let value: HskDeleteApiAction = "INTERNAL_SERVER_ERROR";
+let value: HskDeleteApiAction = "SUCCESS";
 ```
 
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"SUCCESS" | "INVALID_REQUEST" | "NOT_FOUND" | "SERVER_ERROR"
 ```

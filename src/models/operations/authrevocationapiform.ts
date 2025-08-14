@@ -15,7 +15,7 @@ export type AuthRevocationApiFormRequest = {
    * A service ID.
    */
   serviceId: string;
-  apiServiceIdAuthRevocation: models.ApiServiceIdAuthRevocation;
+  revocationRequest: models.RevocationRequest;
 };
 
 /**
@@ -23,12 +23,8 @@ export type AuthRevocationApiFormRequest = {
  */
 export const AuthRevocationApiFormAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
+  InvalidClient: "INVALID_CLIENT",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -39,7 +35,7 @@ export type AuthRevocationApiFormAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthRevocationApiFormResponse = {
   /**
@@ -70,18 +66,17 @@ export const AuthRevocationApiFormRequest$inboundSchema: z.ZodType<
   unknown
 > = z.object({
   serviceId: z.string(),
-  api_serviceId_auth_revocation:
-    models.ApiServiceIdAuthRevocation$inboundSchema,
+  RevocationRequest: models.RevocationRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_auth_revocation": "apiServiceIdAuthRevocation",
+    "RevocationRequest": "revocationRequest",
   });
 });
 
 /** @internal */
 export type AuthRevocationApiFormRequest$Outbound = {
   serviceId: string;
-  api_serviceId_auth_revocation: models.ApiServiceIdAuthRevocation$Outbound;
+  RevocationRequest: models.RevocationRequest$Outbound;
 };
 
 /** @internal */
@@ -91,10 +86,10 @@ export const AuthRevocationApiFormRequest$outboundSchema: z.ZodType<
   AuthRevocationApiFormRequest
 > = z.object({
   serviceId: z.string(),
-  apiServiceIdAuthRevocation: models.ApiServiceIdAuthRevocation$outboundSchema,
+  revocationRequest: models.RevocationRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdAuthRevocation: "api_serviceId_auth_revocation",
+    revocationRequest: "RevocationRequest",
   });
 });
 

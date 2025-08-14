@@ -9,9 +9,6 @@ import { ClosedEnum } from "../../types/enums.js";
 import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 
-/**
- * An object containing schema data
- */
 export type AuthIntrospectionStandardApiRequestBody = {
   /**
    * Request parameters which comply with the introspection request defined
@@ -56,11 +53,6 @@ export type AuthIntrospectionStandardApiRequest = {
 export const AuthIntrospectionStandardApiAction = {
   InternalServerError: "INTERNAL_SERVER_ERROR",
   BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
-  Unauthorized: "UNAUTHORIZED",
-  Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
   Ok: "OK",
 } as const;
 /**
@@ -71,7 +63,7 @@ export type AuthIntrospectionStandardApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type AuthIntrospectionStandardApiResponse = {
   /**

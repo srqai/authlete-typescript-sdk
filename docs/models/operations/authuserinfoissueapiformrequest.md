@@ -7,15 +7,13 @@ import { AuthUserinfoIssueApiFormRequest } from "authlete-typescript-sdk/models/
 
 let value: AuthUserinfoIssueApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdAuthUserinfoIssue: {
-    token: "<value>",
-  },
+  userinfoIssueRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `serviceId`                                                                           | *string*                                                                              | :heavy_check_mark:                                                                    | A service ID.                                                                         |
-| `apiServiceIdAuthUserinfoIssue`                                                       | [models.ApiServiceIdAuthUserinfoIssue](../../models/apiserviceidauthuserinfoissue.md) | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| Field                                                               | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `serviceId`                                                         | *string*                                                            | :heavy_check_mark:                                                  | A service ID.                                                       |
+| `userinfoIssueRequest`                                              | [models.UserinfoIssueRequest](../../models/userinfoissuerequest.md) | :heavy_check_mark:                                                  | N/A                                                                 |

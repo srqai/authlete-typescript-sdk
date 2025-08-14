@@ -10,17 +10,11 @@ import { Result as SafeParseResult } from "../../types/fp.js";
 import { SDKValidationError } from "../errors/sdkvalidationerror.js";
 import * as models from "../index.js";
 
-/**
- * An object containing schema data
- */
 export type VciSingleIssueApiRequestBody = {
   /**
    * The access token that came along with the credential request.
    */
   accessToken?: string | undefined;
-  /**
-   * An object containing credentialissuanceorder data
-   */
   order?: models.CredentialIssuanceOrder | undefined;
 };
 
@@ -39,14 +33,12 @@ export type VciSingleIssueApiRequest = {
  * should take.
  */
 export const VciSingleIssueApiAction = {
-  InternalServerError: "INTERNAL_SERVER_ERROR",
-  BadRequest: "BAD_REQUEST",
-  Created: "CREATED",
+  Ok: "OK",
+  Accepted: "ACCEPTED",
   Unauthorized: "UNAUTHORIZED",
   Forbidden: "FORBIDDEN",
-  Json: "JSON",
-  Jwt: "JWT",
-  Ok: "OK",
+  InternalServerError: "INTERNAL_SERVER_ERROR",
+  CallerError: "CALLER_ERROR",
 } as const;
 /**
  * The next action that the implementation of the credential endpoint
@@ -59,7 +51,7 @@ export type VciSingleIssueApiAction = ClosedEnum<
 >;
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type VciSingleIssueApiResponse = {
   /**

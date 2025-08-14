@@ -65,7 +65,7 @@ export class ServiceManagement extends ClientSDK {
    * Create a new service.
    */
   async serviceCreateApi(
-    request?: models.Service | undefined,
+    request?: models.ServiceInput | undefined,
     options?: RequestOptions,
   ): Promise<models.Service> {
     return unwrapAsync(serviceManagementServiceCreateApi(
@@ -101,7 +101,7 @@ export class ServiceManagement extends ClientSDK {
   async serviceDeleteApi(
     request: operations.ServiceDeleteApiRequest,
     options?: RequestOptions,
-  ): Promise<operations.ServiceDeleteApiResponse> {
+  ): Promise<void> {
     return unwrapAsync(serviceManagementServiceDeleteApi(
       this,
       request,

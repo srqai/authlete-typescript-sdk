@@ -18,11 +18,6 @@ export type ClientAuthorizationDeleteApiRequest = {
    * @remarks
    */
   clientId: string;
-  /**
-   * Unique user ID of an end-user.
-   *
-   * @remarks
-   */
   subject: string;
 };
 

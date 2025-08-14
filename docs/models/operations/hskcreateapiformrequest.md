@@ -7,13 +7,13 @@ import { HskCreateApiFormRequest } from "authlete-typescript-sdk/models/operatio
 
 let value: HskCreateApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdHskCreate: {},
+  hskCreateRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `serviceId`                                                           | *string*                                                              | :heavy_check_mark:                                                    | A service ID.                                                         |
-| `apiServiceIdHskCreate`                                               | [models.ApiServiceIdHskCreate](../../models/apiserviceidhskcreate.md) | :heavy_check_mark:                                                    | N/A                                                                   |
+| Field                                                       | Type                                                        | Required                                                    | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| `serviceId`                                                 | *string*                                                    | :heavy_check_mark:                                          | A service ID.                                               |
+| `hskCreateRequest`                                          | [models.HskCreateRequest](../../models/hskcreaterequest.md) | :heavy_check_mark:                                          | N/A                                                         |

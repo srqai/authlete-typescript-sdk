@@ -7,15 +7,13 @@ import { AuthIntrospectionStandardApiFormRequest } from "authlete-typescript-sdk
 
 let value: AuthIntrospectionStandardApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdAuthIntrospectionStandard: {
-    parameters: "<value>",
-  },
+  introspectionStandardRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `serviceId`                                                                                           | *string*                                                                                              | :heavy_check_mark:                                                                                    | A service ID.                                                                                         |
-| `apiServiceIdAuthIntrospectionStandard`                                                               | [models.ApiServiceIdAuthIntrospectionStandard](../../models/apiserviceidauthintrospectionstandard.md) | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `serviceId`                                                                         | *string*                                                                            | :heavy_check_mark:                                                                  | A service ID.                                                                       |
+| `introspectionStandardRequest`                                                      | [models.IntrospectionStandardRequest](../../models/introspectionstandardrequest.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |

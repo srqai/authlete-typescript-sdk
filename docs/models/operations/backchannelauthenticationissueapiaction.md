@@ -13,5 +13,5 @@ let value: BackchannelAuthenticationIssueApiAction = "INTERNAL_SERVER_ERROR";
 ## Values
 
 ```typescript
-"INTERNAL_SERVER_ERROR" | "BAD_REQUEST" | "CREATED" | "UNAUTHORIZED" | "FORBIDDEN" | "JSON" | "JWT" | "OK"
+"INTERNAL_SERVER_ERROR" | "INVALID_TICKET" | "OK"
 ```

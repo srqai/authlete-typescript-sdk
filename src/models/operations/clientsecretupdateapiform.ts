@@ -20,12 +20,11 @@ export type ClientSecretUpdateApiFormRequest = {
    * @remarks
    */
   clientIdentifier: string;
-  apiServiceIdClientSecretUpdateClientIdentifie:
-    models.ApiServiceIdClientSecretUpdateClientIdentifie;
+  clientSecretUpdateRequest: models.ClientSecretUpdateRequest;
 };
 
 /**
- * An object containing schema data
+ * Successful operation
  */
 export type ClientSecretUpdateApiFormResponse = {
   /**
@@ -58,12 +57,10 @@ export const ClientSecretUpdateApiFormRequest$inboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientIdentifier: z.string(),
-  api_serviceId_client_secret_update_clientIdentifie:
-    models.ApiServiceIdClientSecretUpdateClientIdentifie$inboundSchema,
+  ClientSecretUpdateRequest: models.ClientSecretUpdateRequest$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    "api_serviceId_client_secret_update_clientIdentifie":
-      "apiServiceIdClientSecretUpdateClientIdentifie",
+    "ClientSecretUpdateRequest": "clientSecretUpdateRequest",
   });
 });
 
@@ -71,8 +68,7 @@ export const ClientSecretUpdateApiFormRequest$inboundSchema: z.ZodType<
 export type ClientSecretUpdateApiFormRequest$Outbound = {
   serviceId: string;
   clientIdentifier: string;
-  api_serviceId_client_secret_update_clientIdentifie:
-    models.ApiServiceIdClientSecretUpdateClientIdentifie$Outbound;
+  ClientSecretUpdateRequest: models.ClientSecretUpdateRequest$Outbound;
 };
 
 /** @internal */
@@ -83,12 +79,10 @@ export const ClientSecretUpdateApiFormRequest$outboundSchema: z.ZodType<
 > = z.object({
   serviceId: z.string(),
   clientIdentifier: z.string(),
-  apiServiceIdClientSecretUpdateClientIdentifie:
-    models.ApiServiceIdClientSecretUpdateClientIdentifie$outboundSchema,
+  clientSecretUpdateRequest: models.ClientSecretUpdateRequest$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
-    apiServiceIdClientSecretUpdateClientIdentifie:
-      "api_serviceId_client_secret_update_clientIdentifie",
+    clientSecretUpdateRequest: "ClientSecretUpdateRequest",
   });
 });
 

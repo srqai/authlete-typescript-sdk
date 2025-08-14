@@ -7,13 +7,13 @@ import { VciOfferCreateApiFormRequest } from "authlete-typescript-sdk/models/ope
 
 let value: VciOfferCreateApiFormRequest = {
   serviceId: "<id>",
-  apiServiceIdVciOfferCreate: {},
+  vciOfferCreateRequest: {},
 };
 ```
 
 ## Fields
 
-| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `serviceId`                                                                     | *string*                                                                        | :heavy_check_mark:                                                              | A service ID.                                                                   |
-| `apiServiceIdVciOfferCreate`                                                    | [models.ApiServiceIdVciOfferCreate](../../models/apiserviceidvcioffercreate.md) | :heavy_check_mark:                                                              | N/A                                                                             |
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `serviceId`                                                           | *string*                                                              | :heavy_check_mark:                                                    | A service ID.                                                         |
+| `vciOfferCreateRequest`                                               | [models.VciOfferCreateRequest](../../models/vcioffercreaterequest.md) | :heavy_check_mark:                                                    | N/A                                                                   |

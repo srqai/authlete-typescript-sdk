@@ -347,7 +347,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "login_hint=john&scope=openid&client_notification_token=my-client-notification-token&user_code=my-user-code",
-      clientId: 26862190133482,
+      clientId: "26862190133482",
       clientSecret: "8J9pAEX6IQw7lYtYGsc_s9N4jlEz_DfkoCHIswJjFjfgKZX-nC4EvKtaHXcP9mHBfS7IU4jytjSZZpaK9UJ77A",
     },
   });
@@ -379,7 +379,7 @@ async function run() {
     serviceId: "<id>",
     requestBody: {
       parameters: "login_hint=john&scope=openid&client_notification_token=my-client-notification-token&user_code=my-user-code",
-      clientId: 26862190133482,
+      clientId: "26862190133482",
       clientSecret: "8J9pAEX6IQw7lYtYGsc_s9N4jlEz_DfkoCHIswJjFjfgKZX-nC4EvKtaHXcP9mHBfS7IU4jytjSZZpaK9UJ77A",
     },
   });
@@ -411,10 +411,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## backchannelAuthenticationApiForm
@@ -746,9 +742,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.ciba.backchannelAuthenticationApiForm({
     serviceId: "<id>",
-    apiServiceIdBackchannelAuthentication: {
-      parameters: "<value>",
-    },
+    backchannelAuthenticationRequest: {},
   });
 
   console.log(result);
@@ -776,9 +770,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await cibaBackchannelAuthenticationApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdBackchannelAuthentication: {
-      parameters: "<value>",
-    },
+    backchannelAuthenticationRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -808,10 +800,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## backchannelAuthenticationIssueApi
@@ -984,10 +972,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## backchannelAuthenticationIssueApiForm
@@ -1098,9 +1082,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.ciba.backchannelAuthenticationIssueApiForm({
     serviceId: "<id>",
-    apiServiceIdBackchannelAuthenticationIssue: {
-      ticket: "<value>",
-    },
+    backchannelAuthenticationIssueRequest: {},
   });
 
   console.log(result);
@@ -1128,9 +1110,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await cibaBackchannelAuthenticationIssueApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdBackchannelAuthenticationIssue: {
-      ticket: "<value>",
-    },
+    backchannelAuthenticationIssueRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1160,10 +1140,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## backchannelAuthenticationFailApi
@@ -1285,10 +1261,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## backchannelAuthenticationFailApiForm
@@ -1346,10 +1318,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.ciba.backchannelAuthenticationFailApiForm({
     serviceId: "<id>",
-    apiServiceIdBackchannelAuthenticationFail: {
-      ticket: "<value>",
-      reason: "MISSING_USER_CODE",
-    },
+    backchannelAuthenticationFailRequest: {},
   });
 
   console.log(result);
@@ -1377,10 +1346,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await cibaBackchannelAuthenticationFailApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdBackchannelAuthenticationFail: {
-      ticket: "<value>",
-      reason: "MISSING_USER_CODE",
-    },
+    backchannelAuthenticationFailRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1410,10 +1376,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## backchannelAuthenticationCompleteApi
@@ -1609,10 +1571,6 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## backchannelAuthenticationCompleteApiForm
@@ -1742,11 +1700,7 @@ const authlete = new Authlete({
 async function run() {
   const result = await authlete.ciba.backchannelAuthenticationCompleteApiForm({
     serviceId: "<id>",
-    apiServiceIdBackchannelAuthenticationComplete: {
-      ticket: "<value>",
-      result: "TRANSACTION_FAILED",
-      subject: "<value>",
-    },
+    backchannelAuthenticationCompleteRequest: {},
   });
 
   console.log(result);
@@ -1774,11 +1728,7 @@ const authlete = new AuthleteCore({
 async function run() {
   const res = await cibaBackchannelAuthenticationCompleteApiForm(authlete, {
     serviceId: "<id>",
-    apiServiceIdBackchannelAuthenticationComplete: {
-      ticket: "<value>",
-      result: "TRANSACTION_FAILED",
-      subject: "<value>",
-    },
+    backchannelAuthenticationCompleteRequest: {},
   });
   if (res.ok) {
     const { value: result } = res;
@@ -1808,8 +1758,4 @@ run();
 
 | Error Type                  | Status Code                 | Content Type                |
 | --------------------------- | --------------------------- | --------------------------- |
-| errors.Error400             | 400                         | application/json            |
-| errors.Error401             | 401                         | application/json            |
-| errors.Error403             | 403                         | application/json            |
-| errors.Error500             | 500                         | application/json            |
 | errors.AuthleteDefaultError | 4XX, 5XX                    | \*/\*                       |
