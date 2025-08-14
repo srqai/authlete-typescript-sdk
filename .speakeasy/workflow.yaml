@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     authlete-OAS:
         inputs:
-            - location: .speakeasy/spec/authlete.yaml
+            - location: .speakeasy/spec/authlete2.yaml
         output: .speakeasy/out.openapi.yaml
         registry:
             location: registry.speakeasyapi.dev/v0/1/authlete-oas
